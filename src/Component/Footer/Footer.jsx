@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   faPhone,
   faEnvelope,
@@ -17,32 +17,6 @@ import {
 
 const Footer = () => {
   const [showModal, setShowModal] = useState(false);
-  const [visitorCount, setVisitorCount] = useState(0);
-
-  // Simulate fetching or incrementing visitor count with animation
-  useEffect(() => {
-    const storedCount = localStorage.getItem("visitorCount") || 0;
-    const newCount = parseInt(storedCount) + 1;
-    localStorage.setItem("visitorCount", newCount);
-
-    // Animate counter
-    let start = 0;
-    const end = newCount;
-    const duration = 2000; // 2 seconds
-    const increment = end / (duration / 50);
-
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setVisitorCount(end);
-        clearInterval(timer);
-      } else {
-        setVisitorCount(Math.floor(start));
-      }
-    }, 50);
-
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <footer
@@ -64,7 +38,7 @@ const Footer = () => {
             <FontAwesomeIcon
               icon={faMapMarkerAlt}
               className="mr-3"
-              style={{ color: "#1E40AF", fontSize: "1.25rem" }}
+              style={{ color: "#F97316", fontSize: "1.25rem" }}
             />
             <span className="text-black">
               Delhi Skill and Entrepreneurship University,
@@ -98,7 +72,7 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Quick Links */}
+        
         <div className="w-full md:w-1/3 mb-8 md:mb-0 md:pl-6">
           <h3 className="text-xl font-bold border-b-2 border-blue-400 inline-block mb-6">
             Quick Links
@@ -114,33 +88,11 @@ const Footer = () => {
           </ul>
         </div>
 
+        
         <div className="w-full md:w-1/3">
-          <div className="flex justify-between items-center mb-6">
-            <h3 className="text-xl font-bold border-b-2 border-blue-400 inline-block">
-              Explore
-            </h3>
-            <div className="bg-blue-200 text-black px-6 py-3 rounded-lg shadow-md">
-              <div className="flex items-center space-x-3">
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-                  ></path>
-                </svg>
-                <span className="font-bold text-lg">
-                  {visitorCount.toLocaleString()} Visitors
-                </span>
-              </div>
-            </div>
-          </div>
+          <h3 className="text-xl font-bold border-b-2 border-blue-400 inline-block mb-6">
+            Explore
+          </h3>
           <ul className="space-y-3">
             {exploreLinks.map((link, i) => (
               <li key={i}>
