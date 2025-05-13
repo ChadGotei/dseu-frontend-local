@@ -67,22 +67,34 @@ export const DesktopNav = ({ activeTab, handleTabChange }) => {
 };
 
 export const MobileNav = ({ activeTab, handleTabChange }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="md:hidden w-full bg-white shadow-md rounded-xl px-4 py-3 flex items-center justify-between overflow-x-auto gap-2">
-      {navTabs.map(({ key, label, icon: Icon }) => (
-        <button
-          key={key}
-          onClick={() => handleTabChange(key)}
-          className={`flex flex-col items-center text-sm px-2 py-1 rounded-md whitespace-nowrap ${
-            activeTab === key
-              ? "text-blue-500 font-semibold"
-              : "text-gray-600 hover:text-blue-400"
-          }`}
-        >
-          <Icon className="w-5 h-5 mb-1" />
-          {label}
-        </button>
-      ))}
+    <div>
+      <div className="md:hidden w-full bg-white shadow-md rounded-xl px-4 py-3 flex items-center justify-between overflow-x-auto gap-2">
+        {navTabs.map(({ key, label, icon: Icon }) => (
+          <button
+            key={key}
+            onClick={() => handleTabChange(key)}
+            className={`flex flex-col items-center text-sm px-2 py-1 rounded-md whitespace-nowrap ${
+              activeTab === key
+                ? "text-blue-500 font-semibold"
+                : "text-gray-600 hover:text-blue-400"
+            }`}
+          >
+            <Icon className="w-5 h-5 mb-1" />
+            {label}
+          </button>
+        ))}
+      </div>
+
+      <button
+        type="button"
+        onClick={() => navigate("/admin/archive-uploads")}
+        className="w-full py-2 mt-3 rounded-lg border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold transition-colors duration-300"
+      >
+        Manual Archive
+      </button>
     </div>
   );
 };

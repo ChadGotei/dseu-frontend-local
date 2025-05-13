@@ -16,6 +16,7 @@ const UploadModal = ({
   mannualArchive = false,
   veryLargeModal = false,
   isVacancy = false,
+  sectionArray = false,
 }) => {
   const [name, setName] = useState("");
   const [file, setFile] = useState(null);
@@ -24,6 +25,7 @@ const UploadModal = ({
   const [endDate, setEndDate] = useState("");
   const [applyLink, setApplyLink] = useState("");
   const [vacancy, setVacancy] = useState("");
+  const [sectionFromArray, setSectionFromArray] = useState("");
 
   const queryClient = useQueryClient();
   const navigate = useNavigate();
@@ -62,7 +64,12 @@ const UploadModal = ({
     const formData = new FormData();
     formData.append("fileName", name);
     formData.append("pdf", file);
-    formData.append("section", section);
+
+    if (sectionArray) {
+      formData.append("section", sectionFromArray);
+    } else {
+      formData.append("section", section);
+    }
 
     if (autoArchive && validUntil) {
       formData.append("validUntil", new Date(validUntil).toISOString());
@@ -138,6 +145,27 @@ const UploadModal = ({
               className="w-full text-slate-500 font-medium text-base bg-gray-100 file:cursor-pointer cursor-pointer file:border-0 file:py-2.5 file:px-4 file:mr-4 file:bg-blue-400 file:hover:bg-orange-400 file:text-white rounded"
             />
           </div>
+
+          {sectionArray && (
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Select Section <span className="text-red-500">*</span>
+              </label>
+              <select
+                className="py-3 px-4 pe-9 block w-full bg-gray-100 border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                value={sectionFromArray}
+                onChange={(e) => setSectionFromArray(e.target.value)}
+                required
+              >
+                <option value="">Select Section</option>
+                {sectionArray().map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
 
           {isEndDate && (
             <div>

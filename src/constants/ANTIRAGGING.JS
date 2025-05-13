@@ -18,19 +18,19 @@ const antiRagging = {
   pdfLinks: [
     {
       name: "Affidavit by Parent",
-      url: "/Affidavit-by-Parent.pdf"
+      url: "/anti_ragging/Affidavit-by-Parent.pdf"
     },
     {
       name: "Affidavit by Student",
-      url: "/Affidavit-by-Student.pdf"
+      url: "/anti_ragging/Affidavit-by-Student.pdf"
     },
     {
       name: "UGC Regulations on Ragging",
-      url: "/Anti-Ragging-Rules-UGC.pdf"
+      url: "/anti_ragging/Anti-Ragging-Rules-UGC.pdf"
     },
     {
       name: "Supreme Court Guidelines",
-      url: "/Honourable-Supreme-Court-of-india-judgement.pdf"
+      url: "/anti_ragging/Honourable-Supreme-Court-of-india-judgement.pdf"
     }
   ]
 };

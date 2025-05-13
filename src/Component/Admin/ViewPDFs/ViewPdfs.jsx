@@ -110,6 +110,7 @@ const ViewPdfs = () => {
         endDate={endDate}
         setEndDate={setEndDate}
         handleClearFilters={handleClearFilters}
+        setCurrentPage={setCurrentPage}
       />
 
       {isLoading ? (

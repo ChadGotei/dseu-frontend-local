@@ -139,7 +139,7 @@ const ArchiveUploads = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4 sm:p-6 md:px-28 md:pb-20 pb-10">
+    <div className="min-h-screen bg-gray-100 p-4 sm:p-6 md:px-28 md:pb-20 pb-16 pt-6">
       <TopHeading />
 
       <main className="bg-white rounded-2xl shadow-xl p-8">
@@ -273,7 +273,7 @@ const TopHeading = () => {
           </h2>
 
           <button
-            onClick={() => navigate("/admin/dashboard")}
+            onClick={() => navigate("/admin/uploads")}
             className="block text-white bg-blue-400 hover:bg-orange-400 transition-colors font-semibold  text-sm rounded-lg px-2 md:hidden"
           >
             Dashboard
@@ -281,7 +281,7 @@ const TopHeading = () => {
         </div>
 
         <button
-          onClick={() => navigate("/admin/dashboard")}
+          onClick={() => navigate("/admin/uploads")}
           className="hidden md:block text-white bg-blue-400 hover:bg-orange-400 transition-colors font-semibold px-4 py-1.5 text-sm rounded-lg"
         >
           Go to Dashboard

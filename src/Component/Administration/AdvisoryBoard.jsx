@@ -3,9 +3,9 @@ import { FaArrowRight } from "react-icons/fa";
 const StatutoryCommittees = () => {
   const committees = [
     
-    { name: "Internal Complaints Committee (ICC)", file: "/ICC.pdf" },
-    { name: "Student Redressal Committee", file: "/Student Greivence.pdf" },
-    { name: "Equal Opportunity Cell", file: "/Equal Oppurtunity Cell.pdf" },
+    { name: "Internal Complaints Committee (ICC)", file: "/statutory_committees/ICC.pdf" },
+    { name: "Student Redressal Committee", file: "/statutory_committees/Student Greivence.pdf" },
+    { name: "Equal Opportunity Cell", file: "/statutory_committees/Equal Oppurtunity Cell.pdf" },
   ];
 
   return (

@@ -13,8 +13,6 @@ const ProgramsByDepartment = ({ deptId }) => {
   const [activeCategory, setActiveCategory] = useState("Diploma");
   const navigate = useNavigate();
 
-  console.log(deptId);
-
   // programs by department
   const {
     data: programData,
@@ -26,9 +24,13 @@ const ProgramsByDepartment = ({ deptId }) => {
     enabled: !!deptId && !!activeCategory,
   });
 
-  useEffect(() => {
-    console.log(programData);
-  }, [programData]);
+  const handleNavigate = (program) => {
+    if (program.years && typeof program.years === "object") {
+      navigate(`/programs/${program._id}`);
+      return;
+    }
+    return null;
+  };
 
   if (isProgramLoading) {
     return <ProgramsByDepartmentLoading />;
@@ -60,9 +62,7 @@ const ProgramsByDepartment = ({ deptId }) => {
             <div
               key={index}
               className="border-l-4 border-blue-500 bg-white p-4 shadow-md rounded-md cursor-pointer hover:shadow-lg hover:scale-105 hover:bg-blue-50 transition-all duration-300"
-              onClick={() =>
-                navigate(`/programs/${program._id}`)
-              }
+              onClick={() => handleNavigate(program)}
             >
               <p className="text-lg font-semibold text-gray-800">
                 {program.name}

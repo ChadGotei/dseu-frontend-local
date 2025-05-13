@@ -201,7 +201,7 @@ const Placement = () => {
             ensuring a transparent and fair process. Access the detailed policy document below.
           </p>
           <a
-            href="/Placement%20Policy%20DSEU%202024.pdf"
+            href="/placement/Placement%20Policy%20DSEU%202024.pdf"
             download
             className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors duration-300"
           >

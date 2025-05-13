@@ -1,7 +1,8 @@
-import { Edit, Trash } from "lucide-react";
+import { Archive, ArchiveRestore, Edit, Trash } from "lucide-react";
 import { getSectionName } from "../adminConstant";
 import { useState } from "react";
 import EditModal from "./EditModal";
+import ArchiveConfirmationModal from "./ArchiveConfirmationModal";
 
 const PdfTable = ({
   notices,
@@ -12,10 +13,16 @@ const PdfTable = ({
 }) => {
   const [showEditModal, setShowEditModal] = useState(false);
   const [selectedPdfData, setSelectedPdfData] = useState(null);
+  const [showArchiveModal, setShowArchiveModal] = useState(false);
 
   const handleEditClick = (pdfData) => {
     setSelectedPdfData(pdfData);
     setShowEditModal(true);
+  };
+
+  const handleArchiveClick = (pdfData) => {
+    setSelectedPdfData(pdfData);
+    setShowArchiveModal(true);
   };
 
   return (
@@ -70,6 +77,7 @@ const PdfTable = ({
                     View PDF
                   </a>
 
+                  {/* Buttons: edit,delete and archive */}
                   <div className="flex flex-row gap-2">
                     {notice.driveFileId && (
                       <button
@@ -88,6 +96,22 @@ const PdfTable = ({
                     <button onClick={() => handleEditClick(notice)}>
                       <Edit className="min-h-4 min-w-4 hover:scale-105 text-blue-400 hover:text-blue-500" />
                     </button>
+
+                    {notice.archive ? (
+                      <button
+                        title="Restore"
+                        onClick={() => handleArchiveClick(notice)}
+                      >
+                        <ArchiveRestore className="min-h-4 min-w-4 hover:scale-105 text-gray-400 hover:text-gray-500" />
+                      </button>
+                    ) : (
+                      <button
+                        title="Archive"
+                        onClick={() => handleArchiveClick(notice)}
+                      >
+                        <Archive className="min-h-4 min-w-4 hover:scale-105 text-green-400 hover:text-green-500" />
+                      </button>
+                    )}
                   </div>
                 </td>
               </tr>
@@ -110,6 +134,14 @@ const PdfTable = ({
           onClose={() => setShowEditModal(false)}
           setShowModal={setShowEditModal}
           data={selectedPdfData}
+        />
+      )}
+
+      {showArchiveModal && selectedPdfData && (
+        <ArchiveConfirmationModal
+          state={selectedPdfData.archive}
+          pdfData={selectedPdfData}
+          setShowModal={setShowArchiveModal}
         />
       )}
     </div>

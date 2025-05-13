@@ -136,9 +136,11 @@ export const getProgramData = async (id) => {
 // programs by level such as pg ug diploma
 export const getProgramsByLevel = async (level) => {
   const allPrograms = await getAllPrograms();
-  return allPrograms.filter(
+  const filteredPrograms = allPrograms.filter(
     (program) => program.programLevel?.toLowerCase() === level.toLowerCase()
   );
+
+  return filteredPrograms.sort((a, b) => a.name.localeCompare(b.name));
 };
 
 
@@ -295,6 +297,30 @@ export const updatePdf = async (id, formData) => {
         "Content-Type": "multipart/form-data",
       },
     });
+
+    return response;
+  } catch (err) {
+    console.error(err.response);
+    throw err;
+  }
+};
+
+
+// mannually archive pdf
+export const archivePdf = async (id, archiveState) => {
+  const token = sessionStorage.getItem("token");
+
+  try {
+    const response = await api.patch(
+      `notice/${id}`,
+      { archive: archiveState },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     return response;
   } catch (err) {

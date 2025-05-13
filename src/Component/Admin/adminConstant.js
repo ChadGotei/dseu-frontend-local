@@ -36,6 +36,13 @@ const getSectionOptions = () => [
     { value: "finance comittee", label: "MOM Finance Committee" },
 ];
 
+// for information bulletion 
+const getInformationBulletinOptions = () => [
+    { value: "admission", label: "Admission" },
+    { value: "students", label: "Students" },
+    { value: "important links", label: "Important Links" },
+    { value: "alerts and circulars", label: "Notices" },
+];
 
 // for view pdfs page
 const getSectionName = (section) => {
@@ -67,4 +74,4 @@ const getSectionName = (section) => {
 };
 
 
-export { getSectionOptions, getSectionName };
+export { getSectionOptions, getSectionName, getInformationBulletinOptions };

@@ -8,6 +8,7 @@ const FilterSection = ({
   endDate,
   setEndDate,
   handleClearFilters,
+  setCurrentPage,
 }) => (
   <div className="flex flex-col md:flex-row flex-wrap gap-4 mb-6 items-start md:items-center">
     <input

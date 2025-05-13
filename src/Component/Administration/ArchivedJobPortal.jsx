@@ -3,10 +3,11 @@ import { useNavigate, useParams } from "react-router-dom";
 import ArchiveBanner from "../../assets/ArchiveBanner.jpg";
 import { jobPortalTabs as categoryTabs } from "../../constants/JOBPORTAL.JS";
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
-import { FileText } from "lucide-react";
+import { FileText, FilterX } from "lucide-react";
 import UploadModal from "../Admin/UploadModal";
 import ReactPaginate from "react-paginate";
 import { Pagination } from "../Reusable/Pagination";
+import Tooltip from "../Reusable/Tooltip";
 
 const ArchivedJobPortal = () => {
   const { category } = useParams();
@@ -54,8 +55,10 @@ const ArchivedJobPortal = () => {
     }
   }, [data]);
 
-  const handlePageClick = ({ selected }) => {
-    setPage(selected + 1);
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setSearchInput(e.target.value);
+    setPage(1);
   };
 
   return (
@@ -85,10 +88,17 @@ const ArchivedJobPortal = () => {
           <input
             type="text"
             value={searchInput}
-            onChange={(e) => setSearchInput(e.target.value)}
+            onChange={handleSearch}
             placeholder="Search by file name..."
             className="w-full px-4 py-2 rounded-xl border-2 border-blue-300 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-200 transition duration-300 shadow-sm"
           />
+
+          <Tooltip text={"Clear Filter"} bg="red-500" textColor="gray-100">
+            <FilterX
+              onClick={() => setSearchInput("")}
+              className="min-h-5 min-w-5 text-red-600 hover:text-red-500 transition-colors hover:scale-[1.02] hover:cursor-pointer"
+            />
+          </Tooltip>
         </div>
 
         <div className="bg-white rounded-lg shadow p-6 mt-6">
@@ -105,9 +115,12 @@ const ArchivedJobPortal = () => {
                     <th className="p-2 text-left border">Title</th>
                     <th className="p-2 text-left border">Notification</th>
 
-                    {category !== "results" && category != "recruitments and notice" &&(
-                      <th className="p-2 text-left border">No of Vacancies</th>
-                    )}
+                    {category !== "results" &&
+                      category != "recruitments and notice" && (
+                        <th className="p-2 text-left border">
+                          No of Vacancies
+                        </th>
+                      )}
                     {category === "results" ? (
                       <th className="p-2 text-left border">Publish Date</th>
                     ) : (
@@ -140,11 +153,12 @@ const ArchivedJobPortal = () => {
                           Notice <FileText className="text-red-500" size={16} />
                         </a>
                       </td>
-                      {category !== "results" && category != "recruitments and notice" && (
-                        <td className="p-2 border">
-                          {item.vacancies ? item.vacancies : "-"}
-                        </td>
-                      )}
+                      {category !== "results" &&
+                        category != "recruitments and notice" && (
+                          <td className="p-2 border">
+                            {item.vacancies ? item.vacancies : "-"}
+                          </td>
+                        )}
                       <td className="p-2 border">
                         {item.endDate
                           ? new Date(item.endDate).toLocaleDateString("en-GB")

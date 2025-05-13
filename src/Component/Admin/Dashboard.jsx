@@ -6,7 +6,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col min-h-screen md:min-h-[70vh] items-center justify-center px-4 bg-gray-50">
+    <div className="flex flex-col min-h-[92vh] md:min-h-[70vh] items-center justify-center px-4 bg-gray-50">
 
       <HeadingText
         heading="Dashboard"
