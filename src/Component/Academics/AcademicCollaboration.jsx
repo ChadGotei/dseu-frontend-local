@@ -1,23 +1,24 @@
-import { useState } from "react";
-import data from "./collaboration.json";
+import { useEffect, useState } from "react";
+import collaboration from "./collaboration.json";
 import HeadingText from "../Reusable/HeadingText";
+import ReactPaginate from "react-paginate";
 
 const AcademicCollaboration = () => {
-  const [archived, setArchived] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1); 
+  const [data, setData] = useState([]);
 
-  const handleArchivedButton = (e) => {
-    e.preventDefault();
-    setArchived((prev) => !prev);
+  useEffect(() => {
+    setData(collaboration.filter((coll) => coll.page === currentPage));
+  }, [currentPage]);
+
+  const handlePageChange = ({ selected }) => {
+    setCurrentPage(selected + 1); 
   };
-
-  const sectionTitle = archived
-    ? "Archived Collaborations"
-    : "Academic Collaborations";
 
   return (
     <div className="p-6 bg-gray-100 min-h-screen text-gray-800 pt-10 pb-20">
       <HeadingText
-        heading={sectionTitle}
+        heading={"Academic Collaboration"}
         headingCN="text-3xl sm:text-4xl md:text-5xl font-semibold text-center"
       />
 
@@ -45,21 +46,47 @@ const AcademicCollaboration = () => {
 
           <tbody>
             {data.map((item, index) => (
-            <tr key={item.sno} className="border-b hover:bg-emerald-50 cursor-pointer">
-              <td className="px-6 py-4 text-sm text-gray-700">{index + 1}</td>
-              <td className="px-6 py-4 text-sm text-gray-800 font-semibold">{item.title}</td>
-              <td className="px-6 py-4 text-sm text-gray-700">{item.date}</td>
-              <td className="px-6 py-4 text-sm text-gray-700">
-                {item.duration || "-"}
-              </td>
-              <td className="px-6 py-4 text-sm text-gray-700">
-                {item.domain || "-"}
-              </td>
-            </tr>
+              <tr
+                key={item.sno}
+                className="border-b hover:bg-emerald-100 cursor-pointer"
+              >
+                <td className="px-6 py-4 text-sm text-gray-700">{index + 1}</td>
+                <td className="px-6 py-4 text-sm text-gray-800 font-semibold">
+                  {item.title}
+                </td>
+                <td className="px-6 py-4 text-sm text-gray-700">{item.date}</td>
+                <td className="px-6 py-4 text-sm text-gray-700">
+                  {item.duration || "-"}
+                </td>
+                <td className="px-6 py-4 text-sm text-gray-700">
+                  {item.domain || "-"}
+                </td>
+              </tr>
             ))}
           </tbody>
         </table>
       </div>
+      <ReactPaginate
+        breakLabel="..."
+        nextLabel="Next"
+        previousLabel="Prev"
+        onPageChange={handlePageChange}
+        pageRangeDisplayed={3}
+        marginPagesDisplayed={2}
+        pageCount={10}
+        forcePage={currentPage - 1}
+        containerClassName="flex justify-center gap-2 my-8 items-center"
+        pageClassName="px-3 md:py-1 py-2 rounded-xl md:rounded-full cursor-pointer bg-gray-100 text-gray-800 hover:bg-blue-500 hover:text-white transition"
+        activeClassName="bg-orange-500 text-white"
+        previousClassName="px-3 py-1 rounded-full bg-gray-200 hover:bg-blue-500 hover:text-white"
+        nextClassName="px-3 py-1 rounded-full bg-gray-200 hover:bg-blue-500 hover:text-white"
+        breakClassName="px-3 py-1 text-gray-600"
+        disabledClassName="opacity-50 cursor-not-allowed"
+        nextLinkClassName={
+          currentPage === 10 ? "pointer-events-none" : ""
+        }
+        previousLinkClassName={currentPage === 1 ? "pointer-events-none" : ""}
+      />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FileText } from "lucide-react";
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 import { jobPortalTabs as tabs } from "../../constants/JOBPORTAL.JS";
@@ -152,9 +152,7 @@ const JobListings = () => {
                 {/* Archive Button */}
                 <div className="mt-4 text-right">
                   <Link
-                    to={`/recruitment/archive/${encodeURIComponent(
-                      activeTab
-                    )}`}
+                    to={`/recruitment/archive/${encodeURIComponent(activeTab)}`}
                     className="inline-block bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors"
                   >
                     Archived
@@ -167,9 +165,7 @@ const JobListings = () => {
                   "No data available."}
                 <div className="mt-4 text-center">
                   <Link
-                    to={`/recruitment/archive/${encodeURIComponent(
-                      activeTab
-                    )}`}
+                    to={`/recruitment/archive/${encodeURIComponent(activeTab)}`}
                     className="inline-block bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors"
                   >
                     Archived
