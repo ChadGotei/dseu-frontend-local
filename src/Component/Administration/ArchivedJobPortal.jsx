@@ -215,6 +215,7 @@ const ArchivedJobPortal = () => {
           onClose={() => setShowModal(false)}
           setShowModal={setShowModal}
           section={category}
+          showModal={showModal}
           isEndDate
           isApplyLink
           title={category.toLocaleUpperCase()}

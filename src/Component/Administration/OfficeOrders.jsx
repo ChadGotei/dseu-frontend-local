@@ -109,6 +109,7 @@ const OfficeOrders = () => {
           setShowModal={setShowModal}
           section={"ad office orders"}
           title={"Office Orders PDF"}
+          showModal={showModal}
           mannualArchive={archived}
         />
       )}

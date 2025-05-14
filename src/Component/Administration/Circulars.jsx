@@ -107,6 +107,7 @@ const Circulars = () => {
           setShowModal={setShowModal}
           section={"ad circulars"}
           title={"Circulars PDF"}
+          showModal={showModal}
           mannualArchive={archived}
         />
       )}

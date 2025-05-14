@@ -197,6 +197,7 @@ const JobListings = () => {
         <UploadModal
           onClose={() => setShowModal(false)}
           setShowModal={setShowModal}
+          showModal={showModal}
           section={activeTab}
           isEndDate
           isApplyLink

@@ -12,7 +12,6 @@ import GrievanceForm from "./Component/Grievance/Grievance";
 import IndustryPartnership from "./Component/News/news1";
 import LoginPage from "./Component/Login/LoginPage";
 import AcademicRegulation from "./Component/AcademicRegulation/page";
-import RecuirtmentUploads from "./Component/Admin/RecuirtmentUploads";
 
 // admission
 import AdmissionGuidelines from "./Component/Admission/AdmissionGuidelines";
@@ -219,7 +218,6 @@ function App() {
 
             <Route path="/admin/dashboard" element={<Dashboard />} />
             <Route path="/admin/archive-uploads" element={<ArchiveUploads />} />
-            <Route path="/admin/uploads" element={<RecuirtmentUploads />} />
 
             <Route path="/Entrepreneurship" element={<Entrepreneurship />} />
 

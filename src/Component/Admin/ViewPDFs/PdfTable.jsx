@@ -1,6 +1,6 @@
 import { Archive, ArchiveRestore, Edit, Trash } from "lucide-react";
 import { getSectionName } from "../adminConstant";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import EditModal from "./EditModal";
 import ArchiveConfirmationModal from "./ArchiveConfirmationModal";
 
@@ -14,6 +14,10 @@ const PdfTable = ({
   const [showEditModal, setShowEditModal] = useState(false);
   const [selectedPdfData, setSelectedPdfData] = useState(null);
   const [showArchiveModal, setShowArchiveModal] = useState(false);
+
+  // useEffect(() => {
+  //   console.log(showEditModal);
+  // }, [showEditModal]);
 
   const handleEditClick = (pdfData) => {
     setSelectedPdfData(pdfData);
@@ -134,6 +138,7 @@ const PdfTable = ({
           onClose={() => setShowEditModal(false)}
           setShowModal={setShowEditModal}
           data={selectedPdfData}
+          showEditModal={showEditModal}
         />
       )}
 

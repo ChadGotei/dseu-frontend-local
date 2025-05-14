@@ -73,5 +73,17 @@ const getSectionName = (section) => {
     }
 };
 
+const isJobPortal = (section) => {
+    const jobPortalSections = [
+        "academic positions",
+        "non academic positions",
+        "short term positions",
+        "results",
+        "recruitments and notice",
+    ];
 
-export { getSectionOptions, getSectionName, getInformationBulletinOptions };
+    return jobPortalSections.includes(section);
+};
+
+
+export { getSectionOptions, getSectionName, getInformationBulletinOptions, isJobPortal };

@@ -1,5 +1,5 @@
 // have to add buttons here to upload pdf
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import UploadModal from "../Admin/UploadModal";
 import { getInformationBulletinOptions } from "../Admin/adminConstant";
@@ -154,6 +154,7 @@ const InformationBulletin = () => {
         <UploadModal
           onClose={() => setShowModal(false)}
           setShowModal={setShowModal}
+          showModal={showModal}
           title={"Information Bulletin Uploads"}
           sectionArray={getInformationBulletinOptions}
         />
