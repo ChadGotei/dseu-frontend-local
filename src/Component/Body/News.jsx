@@ -60,7 +60,7 @@ const News = () => {
           {newsItems.map((item) => (
             <div key={item.id} className="px-3 pb-4">
               <div
-                onClick={() => navigate(item.link)}
+                // onClick={() => navigate(item.link)}
                 className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer h-[400px]" // Fixed card height
               >
                 <div className="relative h-1/2 overflow-hidden">
