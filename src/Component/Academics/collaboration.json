@@ -1,722 +1,321 @@
 [
-  {
-    "sno": 1,
-    "title": "Pathkind Diagnostics Pvt. Ltd.",
-    "date": "23-Aug-2022",
-    "duration": "5 years",
-    "domain": "B.Sc/Diploma in MLT",
-    "page": 1
-  },
-  {
-    "sno": 2,
-    "title": "Janakpuri Super Speciality Hospital",
-    "date": "10-Aug-2022",
-    "duration": "5 yrs",
-    "domain": "Diploma in MLT and Diploma in Pharmacy",
-    "page": 1
-  },
-  {
-    "sno": 3,
-    "title": "Forus Health",
-    "date": "11-Aug-2022",
-    "duration": "2 yrs",
-    "domain": "BA Aesthetics and Beauty Therapy",
-    "page": 1
-  },
-  {
-    "sno": 4,
-    "title": "Hero Electric Vehicles Private Limited and WRI India",
-    "date": "29-Aug-2022",
-    "duration": "3yrs",
-    "domain": "EV Mechanic Training Program, Diploma in Automobile Engineering",
-    "page": 1
-  },
-  {
-    "sno": 5,
-    "title": "Connecting Dreams Foundation",
-    "date": "3-Oct-2022",
-    "duration": "",
-    "domain": "Community formulation for Social Change",
-    "page": 1
-  },
-  {
-    "sno": 6,
-    "title": "Sales Force",
-    "date": "26-Jul-2022",
-    "duration": "3 Years",
-    "domain": "BSc Data Analytics",
-    "page": 1
-  },
-  {
-    "sno": 7,
-    "title": "DSIIDC",
-    "date": "21-Sep-2022",
-    "duration": "5 yrs",
-    "domain": "Engineerng and Management",
-    "page": 1
-  },
-  {
-    "sno": 8,
-    "title": "Lotus Herbal",
-    "date": "30-Aug-2022",
-    "duration": "1 yr (term Expired)- Renewal proposed",
-    "domain": "BA Aesthtics and Beauty",
-    "page": 1
-  },
-  {
-    "sno": 9,
-    "title": "Enrich",
-    "date": "14-Jul-2022",
-    "duration": "5 yrs",
-    "domain": "BA Aesthetics and Beauty Therapy/ Diploma in Cosmetology",
-    "page": 1
-  },
-  {
-    "sno": 10,
-    "title": "Manikaran Power Ltd.",
-    "date": "15 March 2022",
-    "duration": "5 yrs",
-    "domain": "BCA, BA (DMD), B.Com BPM, BBA FHM, BSc Data Analytics, Diploma in Architecture, Diploma in Civil Engineering, Diploma in ELectrical Engg, Diploma in Interior Design",
-    "page": 1
-  },
-  {
-    "sno": 11,
-    "title": "LOI between DSEU & Indian Exposition Mart",
-    "date": "1st May 2022",
-    "duration": "Letter of Intent",
-    "domain": "BBA FHM",
-    "page": 2
-  },
-  {
-    "sno": 12,
-    "title": "SAP",
-    "date": "17-May-2022",
-    "duration": "2 yrs",
-    "domain": "BSc Data Analytics",
-    "page": 2
-  },
-  {
-    "sno": 13,
-    "title": "NBCC",
-    "date": "7-Jun-2022",
-    "duration": "5 yrs",
-    "domain": "Diploma in Civil Engineering",
-    "page": 2
-  },
-  {
-    "sno": 15,
-    "title": "Chetak Foundation and Chetak Logistics",
-    "date": "23-Sep-2021",
-    "duration": "3yrs",
-    "domain": "BMS (Land Transport)",
-    "page": 2
-  },
-  {
-    "sno": 16,
-    "title": "TSSC",
-    "date": "18-Feb-2022",
-    "duration": "3yrs",
-    "domain": "Centre for excellence",
-    "page": 2
-  },
-  {
-    "sno": 17,
-    "title": "Integreon",
-    "date": "6-Oct-2021",
-    "duration": "3yrs",
-    "domain": "BA Digital Media and Design",
-    "page": 2
-  },
-  {
-    "sno": 18,
-    "title": "HDFC Bank",
-    "date": "27-Sep-2021",
-    "duration": "4 yrs",
-    "domain": "BBA BFSI",
-    "page": 2
-  },
-  {
-    "sno": 19,
-    "title": "IKIGAI LAB",
-    "date": "13-Sep-2021",
-    "duration": "5 yrs",
-    "domain": "BSc Data Analytics",
-    "page": 2
-  },
-  {
-    "sno": 20,
-    "title": "TCS",
-    "date": "19-Nov-2021",
-    "duration": "3 yrs",
-    "domain": "BSc Data Analytics and BA Digital Media and Design",
-    "page": 2
-  },
-  {
-    "sno": 21,
-    "title": "RR Donnelley",
-    "date": "17-Feb-2022",
-    "duration": "3 yrs",
-    "domain": "BA Digital Media and Design",
-    "page": 3
-  },
-  {
-    "sno": 22,
-    "title": "Lagozon & DSEU",
-    "date": "9-Aug-2021",
-    "duration": "3 yrs",
-    "domain": "BSc Data Analytics",
-    "page": 3
-  },
-  {
-    "sno": 23,
-    "title": "Quess Corp.",
-    "date": "28-Sep-2021",
-    "duration": "5yrs",
-    "domain": "BBA BFSI, BBA FHM, BCom BPM, Retail Management",
-    "page": 3
-  },
-  {
-    "sno": 24,
-    "title": "HDFC Life Insurance",
-    "date": "22-Nov-2021",
-    "duration": "3 yrs",
-    "domain": "BBA BFSI",
-    "page": 3
-  },
-  {
-    "sno": 25,
-    "title": "NID Kurukshetra",
-    "date": "17-Dec-2021",
-    "duration": "3 yrs",
-    "domain": "Academic Collaboration, design, entreprenuership etc.",
-    "page": 3
-  },
-  {
-    "sno": 26,
-    "title": "Bluestar (CoE)",
-    "date": "24-Dec-2021",
-    "duration": "3yrs",
-    "domain": "NA",
-    "page": 3
-  },
-  {
-    "sno": 27,
-    "title": "HI NO DE Foundation",
-    "date": "7-Jul-2021",
-    "duration": "5 yrs",
-    "domain": "Japanesse Language",
-    "page": 3
-  },
-  {
-    "sno": 28,
-    "title": "James and Douglas",
-    "date": "7-Jun-2022",
-    "duration": "5yrs",
-    "domain": "Diploma in Interior Design",
-    "page": 3
-  },
-  {
-    "sno": 29,
-    "title": "Oneline Wellness",
-    "date": "9-May-2022",
-    "duration": "5yrs",
-    "domain": "Aesthetics and Beauty Therapy",
-    "page": 3
-  },
-  {
-    "sno": 30,
-    "title": "Sun Foundation",
-    "date": "19-Jan-2022",
-    "duration": "3 yrs",
-    "domain": "Scholarship * BA DMD, BMS (E-Commerce), Automobile Engineering, Computer Engineering, Cosmetology and Health, Electronics Engineering, Interior Design",
-    "page": 3
-  },
-  {
-    "sno": 31,
-    "title": "Electronics Sector Skills Council of India",
-    "date": "16-Mar-2022",
-    "duration": "3 yrs",
-    "domain": "Electrical, Mechanical, Automobile, Computer, Electronics, BCA (Note sheet not in file)",
-    "page": 4
-  },
-  {
-    "sno": 32,
-    "title": "Reliance Brands Ltd.",
-    "date": "27-Jul-2021",
-    "duration": "3yrs",
-    "domain": "BBA Retail Management",
-    "page": 4
-  },
-  {
-    "sno": 33,
-    "title": "Infiniti Retail (Croma)",
-    "date": "9-Aug-2021",
-    "duration": "3yrs",
-    "domain": "BBA Retail Management",
-    "page": 4
-  },
-  {
-    "sno": 34,
-    "title": "I-Dream Career",
-    "date": "13-Aug-2021",
-    "duration": "5yrs",
-    "domain": "BBA BFSI, BCom BPM",
-    "page": 4
-  },
-  {
-    "sno": 35,
-    "title": "Tech Mahindra Foundation",
-    "date": "1-Aug-2021",
-    "duration": "3 Years",
-    "domain": "Communication & Soft Sklls",
-    "page": 4
-  },
-  {
-    "sno": 36,
-    "title": "CILT",
-    "date": "31-Mar-2022",
-    "duration": "5 Years",
-    "domain": "Logistics & e-commerce",
-    "page": 4
-  },
-  {
-    "sno": 37,
-    "title": "Mother Dairy fruits and vegetable Pvt. Ltd.",
-    "date": "2-Sep-2021",
-    "duration": "11 Month",
-    "domain": "Student Facility",
-    "page": 4
-  },
-  {
-    "sno": 38,
-    "title": "Thompson Press",
-    "date": "1-Dec-2021",
-    "duration": "5 Year",
-    "domain": "Printing Technology",
-    "page": 4
-  },
-  {
-    "sno": 39,
-    "title": "Thyrocare",
-    "date": "14-Oct-2021",
-    "duration": "3 Years",
-    "domain": "Medical Lab Science",
-    "page": 4
-  },
-  {
-    "sno": 40,
-    "title": "SRL",
-    "date": "8-Jul-2021",
-    "duration": "5 years",
-    "domain": "Medical Lab Science",
-    "page": 4
-  },
-  {
-    "sno": 41,
-    "title": "NIELIT",
-    "date": "29-Aug-2022",
-    "duration": "null",
-    "domain": "Content Development, Training, Exchange of Information, Joint Seminars/Conference etc",
-    "page": 5
-  },
-  {
-    "sno": 42,
-    "title": "Partnership between DSEU & Master G and Daughters",
-    "date": "21-Jul-2022",
-    "duration": "5 Years",
-    "domain": "BBA, BFD",
-    "page": 5
-  },
-  {
-    "sno": 43,
-    "title": "Cognizant",
-    "date": "13-Sep-2021",
-    "duration": "2Year",
-    "domain": "Digital Media and Design Course",
-    "page": 5
-  },
-  {
-    "sno": 44,
-    "title": "TATA Power-DDL",
-    "date": "3-Aug-2022",
-    "duration": "5 Years",
-    "domain": "Electrical Engineering, Industraial training /industry Institute interaction & All the Trades",
-    "page": 5
-  },
-  {
-    "sno": 45,
-    "title": "Schneider & Kotak Mahindra Bank Ltd.",
-    "date": "9-Mar-2022",
-    "duration": "4 Years (01.01.2022 to 31.12.2025)",
-    "domain": "Electrical",
-    "page": 5
-  },
+  { "sno": 1, "title": "Pathkind Diagnostics Pvt. Ltd.", "domain": "B.Sc/Diploma in MLT", "page": 1 },
+  { "sno": 2, "title": "Janakpuri Super Speciality Hospital", "domain": "Diploma in MLT and Diploma in Pharmacy", "page": 1 },
+  { "sno": 3, "title": "Forus Health", "domain": "BA Aesthetics and Beauty Therapy", "page": 1 },
+  { "sno": 4, "title": "Hero Electric Vehicles Private Limited and WRI India", "domain": "EV Mechanic Training Program, Diploma in Automobile Engineering", "page": 1 },
+  { "sno": 5, "title": "Connecting Dreams Foundation", "domain": "Community formulation for Social Change", "page": 1 },
+  { "sno": 6, "title": "Sales Force", "domain": "BSc Data Analytics", "page": 1 },
+  { "sno": 7, "title": "DSIIDC", "domain": "Engineerng and Management", "page": 1 },
+  { "sno": 8, "title": "Lotus Herbal", "domain": "BA Aesthtics and Beauty", "page": 1 },
+  { "sno": 9, "title": "Enrich", "domain": "BA Aesthetics and Beauty Therapy/ Diploma in Cosmetology", "page": 1 },
+  { "sno": 10, "title": "Manikaran Power Ltd.", "domain": "BCA, BA (DMD), B.Com BPM, BBA FHM, BSc Data Analytics, Diploma in Architecture, Diploma in Civil Engineering, Diploma in ELectrical Engg, Diploma in Interior Design", "page": 1 },
+
+  { "sno": 11, "title": "LOI between DSEU & Indian Exposition Mart", "domain": "BBA FHM", "page": 2 },
+  { "sno": 12, "title": "SAP", "domain": "BSc Data Analytics", "page": 2 },
+  { "sno": 13, "title": "NBCC", "domain": "Diploma in Civil Engineering", "page": 2 },
+  { "sno": 14, "title": "Chetak Foundation and Chetak Logistics", "domain": "BMS (Land Transport)", "page": 2 },
+  { "sno": 15, "title": "TSSC", "domain": "Centre for excellence", "page": 2 },
+  { "sno": 16, "title": "Integreon", "domain": "BA Digital Media and Design", "page": 2 },
+  { "sno": 17, "title": "HDFC Bank", "domain": "BBA BFSI", "page": 2 },
+  { "sno": 18, "title": "IKIGAI LAB", "domain": "BSc Data Analytics", "page": 2 },
+  { "sno": 19, "title": "TCS", "domain": "BSc Data Analytics and BA Digital Media and Design", "page": 2 },
+  { "sno": 20, "title": "RR Donnelley", "domain": "BA Digital Media and Design", "page": 2 },
+
+  { "sno": 21, "title": "Lagozon & DSEU", "domain": "BSc Data Analytics", "page": 3 },
+  { "sno": 22, "title": "Quess Corp.", "domain": "BBA BFSI, BBA FHM, BCom BPM, Retail Management", "page": 3 },
+  { "sno": 23, "title": "HDFC Life Insurance", "domain": "BBA BFSI", "page": 3 },
+  { "sno": 24, "title": "NID Kurukshetra", "domain": "Academic Collaboration, design, entreprenuership etc.", "page": 3 },
+  { "sno": 25, "title": "Bluestar (CoE)", "domain": "NA", "page": 3 },
+  { "sno": 26, "title": "HI NO DE Foundation", "domain": "Japanesse Language", "page": 3 },
+  { "sno": 27, "title": "James and Douglas", "domain": "Diploma in Interior Design", "page": 3 },
+  { "sno": 28, "title": "Oneline Wellness", "domain": "Aesthetics and Beauty Therapy", "page": 3 },
+  { "sno": 29, "title": "Sun Foundation", "domain": "Scholarship * BA DMD, BMS (E-Commerce), Automobile Engineering, Computer Engineering, Cosmetology and Health, Electronics Engineering, Interior Design", "page": 3 },
+  { "sno": 30, "title": "Electronics Sector Skills Council of India", "domain": "Electrical, Mechanical, Automobile, Computer, Electronics, BCA (Note sheet not in file)", "page": 3 },
+
+  { "sno": 31, "title": "Reliance Brands Ltd.", "domain": "BBA Retail Management", "page": 4 },
+  { "sno": 32, "title": "Infiniti Retail (Croma)", "domain": "BBA Retail Management", "page": 4 },
+  { "sno": 33, "title": "I-Dream Career", "domain": "BBA BFSI, BCom BPM", "page": 4 },
+  { "sno": 34, "title": "Tech Mahindra Foundation", "domain": "Communication & Soft Sklls", "page": 4 },
+  { "sno": 35, "title": "CILT", "domain": "Logistics & e-commerce", "page": 4 },
+  { "sno": 36, "title": "Mother Dairy fruits and vegetable Pvt. Ltd.", "domain": "Student Facility", "page": 4 },
+  { "sno": 37, "title": "Thompson Press", "domain": "Printing Technology", "page": 4 },
+  { "sno": 38, "title": "Thyrocare", "domain": "Medical Lab Science", "page": 4 },
+  { "sno": 39, "title": "SRL", "domain": "Medical Lab Science", "page": 4 },
+  { "sno": 40, "title": "NIELIT", "domain": "Content Development, Training, Exchange of Information, Joint Seminars/Conference etc", "page": 4 },
+
+  { "sno": 41, "title": "Partnership between DSEU & Master G and Daughters", "domain": "BBA, BFD", "page": 5 },
+  { "sno": 42, "title": "Cognizant", "domain": "Digital Media and Design Course", "page": 5 },
+  { "sno": 43, "title": "TATA Power-DDL", "domain": "Electrical Engineering, Industraial training /industry Institute interaction & All the Trades", "page": 5 },
+  { "sno": 44, "title": "Schneider & Kotak Mahindra Bank Ltd.", "domain": "Electrical", "page": 5 },
+  { "sno": 45, "title": "Mercedes Benz India Pvt. Ltd.", "domain": "ADAM", "page": 5 },
   {
     "sno": 46,
-    "title": "Mercedes Benz India Pvt. Ltd.",
-    "date": "23-Jul-2021",
-    "duration": "3 Years",
-    "domain": "ADAM",
-    "page": 5
-  },
-  {
-    "sno": 47,
     "title": "Erisha Agritech",
-    "date": "29-Jun-2022",
-    "duration": "5 Year",
     "domain": "Automobile & Mechanical Scholarship, Under Graduate Programme",
     "page": 5
   },
   {
-    "sno": 48,
+    "sno": 47,
     "title": "Darsh Aerospace",
-    "date": "29-Jun-2022",
-    "duration": "5 year",
     "domain": "Automobile Engineering",
     "page": 5
   },
   {
-    "sno": 49,
+    "sno": 48,
     "title": "Erisha E-mobility",
-    "date": "29-Jun-2022",
-    "duration": "5 Year",
     "domain": "Scholarship & Placement, Automobile & Mechanical, Under Graduate Programme",
     "page": 5
   },
   {
-    "sno": 50,
+    "sno": 49,
     "title": "Fincart",
-    "date": "15-Jun-2022",
-    "duration": "5Year",
     "domain": "Scholarship stipend & Placement",
     "page": 5
   },
   {
-    "sno": 51,
+    "sno": 50,
     "title": "Paints & Coatings Skill Council",
-    "date": "6-Jul-2022",
-    "duration": "null",
     "domain": "null",
-    "page": 6
+    "page": 5
   },
   {
-    "sno": 52,
+    "sno": 51,
     "title": "Mansycom Consultants Private Limited",
-    "date": "30-Jul-2022",
-    "duration": "5 Years",
     "domain": "Civil Engineering",
     "page": 6
   },
   {
-    "sno": 53,
+    "sno": 52,
     "title": "Even Cargo",
-    "date": "17-Mar-2022",
-    "duration": "5 Years",
     "domain": "Logistic, Land Transportation and E-commerce sector",
     "page": 6
   },
   {
-    "sno": 54,
+    "sno": 53,
     "title": "Metropolis",
-    "date": "21-Oct-2021",
-    "duration": "",
     "domain": "",
     "page": 6
   },
   {
-    "sno": 55,
+    "sno": 54,
     "title": "Academy for Computer Training (ACT) for Short term (Eng) Courses",
-    "date": "26-May-2022",
-    "duration": "6 Months",
+    "domain": "Spoken English",
+    "page": 6
+  },
+  {
+    "sno": 55,
+    "title": "Macmillan for Short term (Eng) Courses",
     "domain": "Spoken English",
     "page": 6
   },
   {
     "sno": 56,
-    "title": "Macmillan for Short term (Eng) Courses",
-    "date": "26-May-2022",
-    "duration": "12 Months",
+    "title": "Cambridge for Short term (Eng) Courses",
     "domain": "Spoken English",
     "page": 6
   },
   {
     "sno": 57,
-    "title": "Cambridge for Short term (Eng) Courses",
-    "date": "26-May-2022",
-    "duration": "12 Months",
-    "domain": "Spoken English",
+    "title": "BIBA & RASCI",
+    "domain": "",
     "page": 6
   },
   {
     "sno": 58,
-    "title": "BIBA & RASCI",
-    "date": "4-Aug-2021",
-    "duration": "",
+    "title": "ABFRL & RASCI",
     "domain": "",
     "page": 6
   },
   {
     "sno": 59,
-    "title": "ABFRL & RASCI",
-    "date": "1-Feb-2022",
-    "duration": "",
-    "domain": "",
-    "page": 6
-  },
-  {
-    "sno": 60,
     "title": "Partnership between DSEU & Global Alliance for Mass Entrepreneurship",
-    "date": "27-Apr-2022",
-    "duration": "3 Years",
     "domain": "Entrepreneurship",
     "page": 6
   },
   {
-    "sno": 61,
+    "sno": 60,
     "title": "QAGENIC Technologies Pvt. Ltd.",
-    "date": "22-Sep-2022",
-    "duration": "5 Years",
     "domain": "B.Sc. Data Analytics, BCA, MCA & M.Tech",
-    "page": 7
+    "page": 6
   },
   {
-    "sno": 62,
+    "sno": 61,
     "title": "CBRE South Asia Private Limited",
-    "date": "4-Oct-2022",
-    "duration": "3 Years",
     "domain": "Building Research - Civil, Architecture, Facility Management, Project Management & Real Estate Consultancy Services",
     "page": 7
   },
   {
-    "sno": 63,
+    "sno": 62,
     "title": "National Dong Hwa University, Taiwan",
-    "date": "10-Oct-2022",
-    "duration": "Mutually Agreed - To be reviewed periodically",
     "domain": "BFSI, Financial and Insurance",
     "page": 7
   },
   {
-    "sno": 64,
+    "sno": 63,
     "title": "Green Genome Pvt. Ltd.",
-    "date": "16-Nov-2022",
-    "duration": "With 3-months prior notice",
     "domain": "Agriculture development, Farm Enterprise development, Value Chain Management",
     "page": 7
   },
   {
-    "sno": 65,
+    "sno": 64,
     "title": "Truecaller",
-    "date": "25-Nov-2022",
-    "duration": "3 Years",
     "domain": "Cyber Safety and Entrepreneurial Skill",
     "page": 7
   },
   {
-    "sno": 66,
+    "sno": 65,
     "title": "Altz Technologies Pvt. Ltd.",
-    "date": "12-Dec-2022",
-    "duration": "3 Years (until 11-Dec-2025)",
     "domain": "B.Tech, BCA, MCA and Diploma (Computer Engineering)",
     "page": 7
   },
   {
-    "sno": 67,
+    "sno": 66,
     "title": "Agreement between DSEU & YARS Enterprises Pvt. Ltd.",
-    "date": "19-Dec-2022",
-    "duration": "3 Years",
     "domain": "Artificial Intelligence, Machine Learning, Deep Learning, IoT, Blockchain",
     "page": 7
   },
   {
-    "sno": 68,
+    "sno": 67,
     "title": "9 Growers India Private Limited",
-    "date": "12-Dec-2022",
-    "duration": "5 Years",
     "domain": "Controlled Environment Agriculture (CEA)",
     "page": 7
   },
   {
-    "sno": 69,
+    "sno": 68,
     "title": "IBM",
-    "date": "17-Oct-2022",
-    "duration": "2 Years",
     "domain": "Computer Science & Design Thinking",
     "page": 7
   },
   {
-    "sno": 70,
+    "sno": 69,
     "title": "Rotary Delhiites Foundation",
-    "date": "31-Mar-2023",
-    "duration": "",
     "domain": "",
     "page": 7
   },
   {
-    "sno": 71,
+    "sno": 70,
     "title": "NBM Media Pvt. Ltd.",
-    "date": "21-Oct-2022",
-    "duration": "5 Years",
     "domain": "Architecture, Interior Design & Mechanical Engineering",
+    "page": 7
+  },
+  {
+    "sno": 71,
+    "title": "Jakson Welfare Trust of Jakson Group",
+    "domain": "",
     "page": 8
   },
   {
     "sno": 72,
-    "title": "Jakson Welfare Trust of Jakson Group",
-    "date": "13-Mar-2023",
-    "duration": "",
-    "domain": "",
-    "page": 8
-  },
-  {
-    "sno": 73,
     "title": "De Box Global IT Solution Pvt. Ltd.",
-    "date": "27-Apr-2023",
-    "duration": "5 Years",
     "domain": "ERP Development",
     "page": 8
   },
   {
-    "sno": 74,
+    "sno": 73,
     "title": "Bank of Baroda",
-    "date": "2-May-2023",
-    "duration": "5 Years",
     "domain": "Content Development & Staff Development",
     "page": 8
   },
   {
-    "sno": 75,
+    "sno": 74,
     "title": "Firstsource Solution Limited",
-    "date": "16-Jan-2023",
-    "duration": "5 Years",
     "domain": "Business Process Management",
     "page": 8
   },
   {
-    "sno": 76,
+    "sno": 75,
     "title": "Partnership between DSEU and Space 2 Grow",
-    "date": "25-Apr-2022",
-    "duration": "1 Year",
     "domain": "",
     "page": 8
   },
   {
-    "sno": 77,
+    "sno": 76,
     "title": "Electronics Sector Skills Council of India (ESSCI)",
-    "date": "16-Mar-2022",
-    "duration": "3 Years",
     "domain": "Electronic Sector",
     "page": 8
   },
   {
-    "sno": 78,
+    "sno": 77,
     "title": "One Line Wellness",
-    "date": "09-May-2022",
-    "duration": "5 Years",
     "domain": "Beauty & Aesthetic Therapy",
     "page": 8
   },
   {
-    "sno": 79,
+    "sno": 78,
     "title": "Blue Star (HVAC)",
-    "date": "06-Mar-2024",
-    "duration": "3 Years",
+    "domain": "",
+    "page": 8
+  },
+  {
+    "sno": 79,
+    "title": "Department of Delhi Prisons Govt. of Delhi",
     "domain": "",
     "page": 8
   },
   {
     "sno": 80,
-    "title": "Department of Delhi Prisons Govt. of Delhi",
-    "date": "26-May-2022",
-    "duration": "",
-    "domain": "",
+    "title": "RASCI & Tata Starbucks",
+    "domain": "BBA Retail Management",
     "page": 8
   },
   {
-    "sno": 82,
-    "title": "RASCI & Tata Starbucks",
-    "date": "27-Dec-2021",
-    "duration": "3 Years",
-    "domain": "BBA Retail Management",
-    "page": 9
-  },
-  {
-    "sno": 83,
+    "sno": 81,
     "title": "Hyundai Motors India Limited",
-    "date": "07-Dec-2020",
-    "duration": "4 Years",
     "domain": "Automobile",
     "page": 9
   },
   {
-    "sno": 84,
+    "sno": 82,
     "title": "Lighthouse Communities Foundation (LCF)",
-    "date": "15-Jun-2021",
-    "duration": "5 Years",
     "domain": "Skilling and Sustainable Livelihood for Youth from Low Income Communities",
     "page": 9
   },
   {
-    "sno": 85,
+    "sno": 83,
     "title": "Dept. of Women and Child Development (DWCD)",
-    "date": "18-Apr-2022",
-    "duration": "3 Years",
     "domain": "Women Entrepreneurship Program under Project Samridhi",
     "page": 9
   },
   {
-    "sno": 86,
+    "sno": 84,
     "title": "Sewan Foods Pvt. Ltd.",
-    "date": "18-Nov-2021",
-    "duration": "11 Months (extendable up to 4 terms)",
     "domain": "Student Facility",
     "page": 9
   },
   {
-    "sno": 87,
+    "sno": 85,
     "title": "Blue Star Limited",
-    "date": "06-Mar-2024",
-    "duration": "",
+    "domain": "",
+    "page": 9
+  },
+  {
+    "sno": 86,
+    "title": "Regional Institute of Education NCERT, Bhubaneswar",
+    "domain": "",
+    "page": 9
+  },
+  {
+    "sno": 87,
+    "title": "Johnson Controls-Hitachi Air Conditioning India Limited",
     "domain": "",
     "page": 9
   },
   {
     "sno": 88,
-    "title": "Regional Institute of Education NCERT, Bhubaneswar",
-    "date": "05-Aug-2024",
-    "duration": "",
+    "title": "Jakson Welfare Trust",
     "domain": "",
     "page": 9
   },
   {
     "sno": 89,
-    "title": "Johnson Controls-Hitachi Air Conditioning India Limited",
-    "date": "18-Oct-2024",
-    "duration": "",
+    "title": "Entrepreneurship Development Institute of India (EDII), Ahmedabad",
     "domain": "",
     "page": 9
   },
   {
     "sno": 90,
-    "title": "Jakson Welfare Trust",
-    "date": "23-Oct-2024",
-    "duration": "",
+    "title": "Tech Mahindra Foundation",
     "domain": "",
     "page": 9
-  },
-  {
-    "sno": 91,
-    "title": "Entrepreneurship Development Institute of India (EDII), Ahmedabad",
-    "date": "12-Nov-2024",
-    "duration": "",
-    "domain": "",
-    "page": 10
-  },
-  {
-    "sno": 92,
-    "title": "Tech Mahindra Foundation",
-    "date": "13-Dec-2024",
-    "duration": "",
-    "domain": "",
-    "page": 10
   }
 ] 

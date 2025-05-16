@@ -3,6 +3,9 @@ import collaboration from "./collaboration.json";
 import HeadingText from "../Reusable/HeadingText";
 import ReactPaginate from "react-paginate";
 
+const allDataLength = collaboration.length;
+const totalPages = collaboration[allDataLength - 1].page;
+
 const AcademicCollaboration = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [data, setData] = useState([]);
@@ -74,7 +77,7 @@ const AcademicCollaboration = () => {
         onPageChange={handlePageChange}
         pageRangeDisplayed={1}
         marginPagesDisplayed={2}
-        pageCount={10}
+        pageCount={totalPages}
         forcePage={currentPage - 1}
         containerClassName="flex justify-center gap-2 my-8 items-center"
         pageClassName="px-3 md:py-1 py-2 rounded-xl md:rounded-full cursor-pointer bg-gray-100 text-gray-800 hover:bg-blue-500 hover:text-white transition"
@@ -83,7 +86,9 @@ const AcademicCollaboration = () => {
         nextClassName="px-3 py-1 rounded-full bg-gray-200 hover:bg-blue-500 hover:text-white"
         breakClassName="px-3 py-1 text-gray-600"
         disabledClassName="opacity-50 cursor-not-allowed"
-        nextLinkClassName={currentPage === 10 ? "pointer-events-none" : ""}
+        nextLinkClassName={
+          currentPage === totalPages ? "pointer-events-none" : ""
+        }
         previousLinkClassName={currentPage === 1 ? "pointer-events-none" : ""}
       />
     </div>
