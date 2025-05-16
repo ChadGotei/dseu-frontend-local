@@ -3,8 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
 import "./App.css";
-import MidNavbar from "./Component/Header/MidNavbar";
-import Footer from "./Component/Footer/Footer";
 import Loader from "./Component/PageLoader/Loader";
 import UnderConstruction from "./Component/Reusable/UnderConstruction";
 import StudyProgramsSection from "./Component/Body/StudentProgram";
@@ -51,7 +49,6 @@ const CoursesByLevel = lazy(() => import("./Component/Courses/CoursesByLevel"));
 // Academic & Faculty
 const ListOfFaculties = lazy(() => import("./Component/Body/ListOfFaculties"));
 const DepartmentById = lazy(() => import("./Component/Department/DepartmentById"));
-const FacultyInfo = lazy(() => import("./Component/Department/FacultyInfo"));
 
 // Administration
 const ViceChancellorPage = lazy(() => import('./Component/Body/ViceChancellorPage'));
@@ -84,11 +81,9 @@ const Dashboard = lazy(() => import('./Component/Admin/Dashboard'));
 const TestPage = lazy(() => import('./Component/Admin/TestPage'));
 
 import RegistararPage from "./Component/Body/RegistararPage";
-import ChatWidget from "./Component/chatbot";
 import Socials from "./Component/Footer/Socials";
 import NotFound from "./Component/NotFound/page";
 import UserLayout from "./Component/Layouts/UserLayout";
-import AdminLayout from "./Component/Layouts/AdminLayout";
 import FacultyById from "./Component/Department/FacultyById";
 import HistoryDSEU from "./Component/NavItems/HistoryDSEU";
 import Scholarship from "./Component/Student Services/Scholarship";

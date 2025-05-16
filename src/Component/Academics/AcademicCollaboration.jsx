@@ -4,7 +4,7 @@ import HeadingText from "../Reusable/HeadingText";
 import ReactPaginate from "react-paginate";
 
 const AcademicCollaboration = () => {
-  const [currentPage, setCurrentPage] = useState(1); 
+  const [currentPage, setCurrentPage] = useState(1);  
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const AcademicCollaboration = () => {
                 key={item.sno}
                 className="border-b hover:bg-emerald-100 cursor-pointer"
               >
-                <td className="px-6 py-4 text-sm text-gray-700">{index + 1}</td>
+                <td className="px-6 py-4 text-sm text-gray-700">{item.sno}</td>
                 <td className="px-6 py-4 text-sm text-gray-800 font-semibold">
                   {item.title}
                 </td>
@@ -71,7 +71,7 @@ const AcademicCollaboration = () => {
         nextLabel="Next"
         previousLabel="Prev"
         onPageChange={handlePageChange}
-        pageRangeDisplayed={3}
+        pageRangeDisplayed={1}
         marginPagesDisplayed={2}
         pageCount={10}
         forcePage={currentPage - 1}
