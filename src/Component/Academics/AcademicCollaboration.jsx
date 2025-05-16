@@ -4,7 +4,7 @@ import HeadingText from "../Reusable/HeadingText";
 import ReactPaginate from "react-paginate";
 
 const AcademicCollaboration = () => {
-  const [currentPage, setCurrentPage] = useState(1);  
+  const [currentPage, setCurrentPage] = useState(1);
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ const AcademicCollaboration = () => {
   }, [currentPage]);
 
   const handlePageChange = ({ selected }) => {
-    setCurrentPage(selected + 1); 
+    setCurrentPage(selected + 1);
   };
 
   return (
@@ -23,7 +23,11 @@ const AcademicCollaboration = () => {
       />
 
       <div className="overflow-x-auto shadow-lg rounded-2xl mt-10">
-        <table className="min-w-full bg-white border border-gray-200">
+        <table
+          className={`min-w-full bg-white border border-gray-200 ${
+            data.length >= 9 ? "md:min-h-[90vh] min-h-[170vh]" : "h-fit"
+          }`}
+        >
           <thead className="bg-blue-100">
             <tr>
               <th className="px-6 py-3 text-left text-[12px] font-semibold text-blue-700 uppercase tracking-wider border-b whitespace-nowrap">
@@ -32,12 +36,7 @@ const AcademicCollaboration = () => {
               <th className="px-6 py-3 text-left text-[12px] font-semibold text-blue-700 uppercase tracking-wider border-b">
                 Title
               </th>
-              <th className="px-6 py-3 text-left text-[12px] font-semibold text-blue-700 uppercase tracking-wider border-b">
-                Date
-              </th>
-              <th className="px-6 py-3 text-left text-[12px] font-semibold text-blue-700 uppercase tracking-wider border-b">
-                Duration
-              </th>
+
               <th className="px-6 py-3 text-left text-[12px] font-semibold text-blue-700 uppercase tracking-wider border-b">
                 Target Program
               </th>
@@ -45,20 +44,22 @@ const AcademicCollaboration = () => {
           </thead>
 
           <tbody>
-            {data.map((item, index) => (
+            {data.map((item) => (
               <tr
                 key={item.sno}
                 className="border-b hover:bg-emerald-100 cursor-pointer"
               >
-                <td className="px-6 py-4 text-sm text-gray-700">{item.sno}</td>
-                <td className="px-6 py-4 text-sm text-gray-800 font-semibold">
+                <td className="px-6 py-4 text-sm text-gray-700 w-[100px]">
+                  {item.sno}
+                </td>
+                <td className="px-6 py-4 text-sm text-gray-800 font-semibold md:w-[40%]">
                   {item.title}
                 </td>
-                <td className="px-6 py-4 text-sm text-gray-700">{item.date}</td>
+                {/* <td className="px-6 py-4 text-sm text-gray-700">{item.date}</td>
                 <td className="px-6 py-4 text-sm text-gray-700">
                   {item.duration || "-"}
-                </td>
-                <td className="px-6 py-4 text-sm text-gray-700">
+                </td> */}
+                <td className="px-6 py-4 text-sm text-gray-700 ">
                   {item.domain || "-"}
                 </td>
               </tr>
@@ -82,9 +83,7 @@ const AcademicCollaboration = () => {
         nextClassName="px-3 py-1 rounded-full bg-gray-200 hover:bg-blue-500 hover:text-white"
         breakClassName="px-3 py-1 text-gray-600"
         disabledClassName="opacity-50 cursor-not-allowed"
-        nextLinkClassName={
-          currentPage === 10 ? "pointer-events-none" : ""
-        }
+        nextLinkClassName={currentPage === 10 ? "pointer-events-none" : ""}
         previousLinkClassName={currentPage === 1 ? "pointer-events-none" : ""}
       />
     </div>
