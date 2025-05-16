@@ -3,6 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 import { campusOptions } from "./CampusOption";
 import { departmentOptions } from "./DepartmentOption";
 import { toast } from "react-hot-toast";
+import { baseUrl } from "../../constants/LOCALES.JS";
 
 const StudentForm = () => {
   const [formData, setFormData] = useState({
@@ -17,17 +18,16 @@ const StudentForm = () => {
     grievanceDescription: "",
     pdf: null,
   });
-  const [uploadDocument, setUploadDocument] = useState('');
+  const [uploadDocument, setUploadDocument] = useState("");
 
   const mutation = useMutation({
     mutationFn: async (formPayload) => {
-      const res = await fetch("https://dseu-backend.onrender.com/api/v1/studentGrievance", {
+      const res = await fetch(`${baseUrl}studentGrievance`, {
         method: "POST",
         body: formPayload,
       });
       if (!res.ok) throw new Error();
       return res.json();
-
     },
     onSuccess: () => {
       toast.success("Form submitted successfully!");
@@ -43,7 +43,7 @@ const StudentForm = () => {
         grievanceDescription: "",
         pdf: null,
       });
-      setUploadDocument('')
+      setUploadDocument("");
     },
     onError: () => {
       toast.error("Error. Please try again.");
@@ -56,32 +56,28 @@ const StudentForm = () => {
       setFormData((prev) => ({ ...prev, pdf: files[0] }));
     } else {
       setFormData((prev) => ({ ...prev, [name]: value, pdf: null }));
-
     }
-
   };
 
   const handleSubmit = (e) => {
-    console.log('hello')
+    console.log("hello");
     e.preventDefault();
     if (!/^\d{10}$/.test(formData.mobile)) {
       alert("Please enter a valid 10-digit mobile number.");
       return;
     }
 
-
     const formPayload = new FormData();
-    formPayload.append('fullName', formData.fullName);
-    formPayload.append('email', formData.email);
-    formPayload.append('enrollmentNumber', formData.enrollmentNumber);
-    formPayload.append('mobile', formData.mobile);
-    formPayload.append('grievanceCategory', formData.grievanceCategory);
-    formPayload.append('department', formData.department);
-    formPayload.append('description', formData.grievanceDescription);
-    if (uploadDocument === 'yes') formPayload.append('pdf', formData.pdf);
-    formPayload.append('program', formData.program);
-    formPayload.append('campus', formData.campus);
-
+    formPayload.append("fullName", formData.fullName);
+    formPayload.append("email", formData.email);
+    formPayload.append("enrollmentNumber", formData.enrollmentNumber);
+    formPayload.append("mobile", formData.mobile);
+    formPayload.append("grievanceCategory", formData.grievanceCategory);
+    formPayload.append("department", formData.department);
+    formPayload.append("description", formData.grievanceDescription);
+    if (uploadDocument === "yes") formPayload.append("pdf", formData.pdf);
+    formPayload.append("program", formData.program);
+    formPayload.append("campus", formData.campus);
 
     mutation.mutate(formPayload);
   };
@@ -100,7 +96,7 @@ const StudentForm = () => {
         grievanceDescription: "",
         pdf: null,
       });
-      setUploadDocument('')
+      setUploadDocument("");
     }
   };
 
@@ -110,15 +106,22 @@ const StudentForm = () => {
         Student Grievance Form
       </div>
 
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white p-6 rounded-lg shadow-md"
+      >
         {/* Personal Details Section */}
         <div className="bg-blue-100 p-4 mb-6 rounded-lg">
-          <h2 className="text-lg font-semibold text-blue-800">Personal Details</h2>
+          <h2 className="text-lg font-semibold text-blue-800">
+            Personal Details
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">Full Name</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Full Name
+            </label>
             <input
               type="text"
               name="fullName"
@@ -131,7 +134,9 @@ const StudentForm = () => {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">Email</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Email
+            </label>
             <input
               type="email"
               name="email"
@@ -144,7 +149,9 @@ const StudentForm = () => {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">Mobile</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Mobile
+            </label>
             <input
               type="tel"
               name="mobile"
@@ -157,7 +164,9 @@ const StudentForm = () => {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">Enrollment Number</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Enrollment Number
+            </label>
             <input
               type="text"
               name="enrollmentNumber"
@@ -170,7 +179,9 @@ const StudentForm = () => {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">Department</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Department
+            </label>
             <select
               name="department"
               value={formData.department}
@@ -178,7 +189,9 @@ const StudentForm = () => {
               className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               required
             >
-              <option selected disabled value="">--select--</option>
+              <option selected disabled value="">
+                --select--
+              </option>
               {departmentOptions.map((option) => (
                 <option key={option.value} value={option.value}>
                   {option.label}
@@ -188,7 +201,9 @@ const StudentForm = () => {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">Program</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Program
+            </label>
             <input
               type="text"
               name="program"
@@ -201,7 +216,9 @@ const StudentForm = () => {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">Campus</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Campus
+            </label>
             <select
               name="campus"
               value={formData.campus}
@@ -211,7 +228,7 @@ const StudentForm = () => {
             >
               <option value="">--select--</option>
               {campusOptions.map((group) => (
-                <optgroup key={group.label} label={group.label} >
+                <optgroup key={group.label} label={group.label}>
                   {group.options.map((option) => (
                     <option key={option.value} value={option.value}>
                       {option.label}
@@ -224,12 +241,16 @@ const StudentForm = () => {
         </div>
 
         <div className="bg-blue-100 p-4 mb-6 rounded-lg">
-          <h2 className="text-lg font-semibold text-blue-800">Grievance Details</h2>
+          <h2 className="text-lg font-semibold text-blue-800">
+            Grievance Details
+          </h2>
         </div>
 
         <div className="space-y-6 mb-6">
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">Grievance Category</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Grievance Category
+            </label>
             <select
               name="grievanceCategory"
               value={formData.grievanceCategory}
@@ -237,7 +258,9 @@ const StudentForm = () => {
               className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               required
             >
-              <option selected disabled value="">--select--</option>
+              <option selected disabled value="">
+                --select--
+              </option>
               <option value="academic">Academic Issues</option>
               <option value="exam">Exam Issues</option>
               <option value="admin">Administrative Issues</option>
@@ -246,7 +269,9 @@ const StudentForm = () => {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">Grievance Description</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Grievance Description
+            </label>
             <textarea
               name="grievanceDescription"
               value={formData.grievanceDescription}
@@ -260,26 +285,32 @@ const StudentForm = () => {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">Want to Upload Document?</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Want to Upload Document?
+            </label>
             <select
               name="uploadDocument"
               value={uploadDocument}
               onChange={(e) => {
-                setUploadDocument(e.target.value)
+                setUploadDocument(e.target.value);
               }}
               className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               defaultValue={uploadDocument}
               required
             >
-              <option selected disabled value="">--select--</option>
-              <option value={'yes'}>Yes</option>
-              <option value={'no'}>No</option>
+              <option selected disabled value="">
+                --select--
+              </option>
+              <option value={"yes"}>Yes</option>
+              <option value={"no"}>No</option>
             </select>
           </div>
 
           {uploadDocument === "yes" && (
             <div className="space-y-2">
-              <label className="block text-sm font-medium text-gray-700">Upload File</label>
+              <label className="block text-sm font-medium text-gray-700">
+                Upload File
+              </label>
               <input
                 type="file"
                 name="pdf"
@@ -290,14 +321,13 @@ const StudentForm = () => {
           )}
         </div>
 
-
         <div className="flex justify-center space-x-4 mt-8">
           <button
             type="submit"
             className="bg-green-600 hover:bg-green-700 text-white py-2 px-6 rounded-md shadow-sm transition duration-200 ease-in-out transform hover:scale-105"
             disabled={mutation.isPending}
           >
-            {mutation.isPending ? 'Submitting...' : 'Submit'}
+            {mutation.isPending ? "Submitting..." : "Submit"}
           </button>
           <button
             type="button"

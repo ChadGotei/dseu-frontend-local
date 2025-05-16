@@ -1,5 +1,6 @@
 import axios from "axios";
 import { getFaculties } from "./apiservice";
+import { baseUrl } from '../constants/LOCALES.JS';
 
 export const getFacutlyByEmail = async (email) => {
   const allFaculties = await getFaculties();
@@ -13,7 +14,7 @@ export const updateFacultyOverview = async (overviewText, facultyId) => {
 
   try {
     const response = await axios.put(
-      `https://dseu-backend.onrender.com/api/v1/faculty/${facultyId}`,
+      `${baseUrl}faculty/${facultyId}`,
       { overview: overviewText },
       {
         headers: {
@@ -35,7 +36,7 @@ export const addResearch = async (facultyId, researchData) => {
 
   try {
     const response = await axios.post(
-      `https://dseu-backend.onrender.com/api/v1/faculty/${facultyId}/research`,
+      `${baseUrl}faculty/${facultyId}/research`,
       researchData,
       {
         headers: {
@@ -56,7 +57,7 @@ export const deleteResearch = async (facultyId, researchId) => {
   const token = sessionStorage.getItem("token");
   try {
     const response = await axios.delete(
-      `https://dseu-backend.onrender.com/api/v1/faculty/${facultyId}/research/${researchId}`,
+      `${baseUrl}faculty/${facultyId}/research/${researchId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -76,7 +77,7 @@ export const updateResearch = async (facultyId, researchId, researchData) => {
 
   try {
     const response = await axios.patch(
-      `https://dseu-backend.onrender.com/api/v1/faculty/${facultyId}/research/${researchId}`,
+      `${baseUrl}faculty/${facultyId}/research/${researchId}`,
       researchData,
       {
         headers: {
