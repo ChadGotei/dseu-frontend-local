@@ -91,7 +91,7 @@ export const MobileNav = ({ activeTab, handleTabChange }) => {
       <button
         type="button"
         onClick={() => navigate("/admin/archive-uploads")}
-        className="w-full py-2 mt-3 rounded-lg border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold transition-colors duration-300"
+        className="w-full py-2 mt-3 rounded-lg border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold transition-colors duration-300 md:hidden"
       >
         Manual Archive
       </button>
