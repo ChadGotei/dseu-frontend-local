@@ -14,9 +14,14 @@ import {
   exploreLinks,
   quickLinks,
 } from "./constant.js";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [showModal, setShowModal] = useState(false);
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <footer
@@ -72,7 +77,6 @@ const Footer = () => {
           </p>
         </div>
 
-        
         <div className="w-full md:w-1/3 mb-8 md:mb-0 md:pl-6">
           <h3 className="text-xl font-bold border-b-2 border-blue-400 inline-block mb-6">
             Quick Links
@@ -80,15 +84,19 @@ const Footer = () => {
           <ul className="space-y-3">
             {quickLinks.map((link, i) => (
               <li key={i}>
-                <a href={link.href} className="text-base hover:text-blue-600">
+                <Link
+                  onClick={handleClick}
+                  href={link.href}
+                  to={link.href}
+                  className="text-base hover:text-blue-600"
+                >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </div>
 
-        
         <div className="w-full md:w-1/3">
           <h3 className="text-xl font-bold border-b-2 border-blue-400 inline-block mb-6">
             Explore
@@ -96,19 +104,25 @@ const Footer = () => {
           <ul className="space-y-3">
             {exploreLinks.map((link, i) => (
               <li key={i}>
-                <a href={link.href} className="text-base hover:text-blue-600">
+                <Link
+                  to={link.href}
+                  className="text-base hover:text-blue-600"
+                  onClick={handleClick}
+                >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
             <li className="flex items-center">
-              <span className="text-base hover:text-blue-600 mr-4">Connect with Us</span>
+              <span className="text-base hover:text-blue-600 mr-4">
+                Connect with Us
+              </span>
               <div className="flex space-x-4">
                 {socialLinks.map((item, i) =>
                   !item.modal ? (
-                    <a
+                    <Link
                       key={i}
-                      href={item.href}
+                      to={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="social"
@@ -117,7 +131,7 @@ const Footer = () => {
                         icon={item.icon}
                         style={{ color: item.color, fontSize: "24px" }}
                       />
-                    </a>
+                    </Link>
                   ) : (
                     <div key={i} className="cursor-pointer">
                       <div onClick={() => setShowModal(true)}>

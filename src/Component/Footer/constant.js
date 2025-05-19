@@ -23,7 +23,7 @@ export const exploreLinks = [
   { name: "Student Life", href: "/ncc" },
   { name: "Library", href: "/amenities/Library" },
   { name: "Vision & Mission", href: "/about-us/Vision-and-Mission" },
-  { name: "Fee Refund Policy", href: "#" },
+  { name: "Fee Refund Policy", href: "/" },
 ];
 
 export const socialLinks = [
