@@ -125,6 +125,7 @@ const RecruitmentRules = () => {
           setShowModal={setShowModal}
           section={"recruitment rules"}
           mannualArchive={archived}
+          showModal={showModal}
         />
       )}
     </div>

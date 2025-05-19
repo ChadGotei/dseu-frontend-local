@@ -1,11 +1,12 @@
 // have to add buttons here to upload pdf
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import UploadModal from "../Admin/UploadModal";
 import { getInformationBulletinOptions } from "../Admin/adminConstant";
-import { Plus } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileCirclePlus, faPlus } from "@fortawesome/free-solid-svg-icons";
+
+const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
 const InformationBulletin = () => {
   const [cards, setCards] = useState([
@@ -38,7 +39,7 @@ const InformationBulletin = () => {
 
         const requests = sections.map((section) =>
           axios.get(
-            `https://dseu-backend.onrender.com/api/v1/notice?section=${encodeURIComponent(
+            `${baseUrl}notice?section=${encodeURIComponent(
               section.key
             )}&limit=50&page=1`
           )
@@ -154,6 +155,7 @@ const InformationBulletin = () => {
         <UploadModal
           onClose={() => setShowModal(false)}
           setShowModal={setShowModal}
+          showModal={showModal}
           title={"Information Bulletin Uploads"}
           sectionArray={getInformationBulletinOptions}
         />

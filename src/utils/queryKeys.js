@@ -16,3 +16,4 @@ export const QUERY_KEYS = Object.freeze({
     GET_CAMPUS_BY_ZONE: "getCampusByZone",
     GET_NOTICES: "notices",
 });
+

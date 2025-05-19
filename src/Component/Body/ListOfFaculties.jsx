@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUniversity } from "@fortawesome/free-solid-svg-icons";
 import ListOfFacultiesLoading from "../ShimmerUI/ListOfFacultiesLoading";
+import { baseUrl } from "../../constants/LOCALES.JS";
 
 export default function ListOfFaculties() {
   const [departments, setDepartments] = useState([]);
@@ -12,11 +13,11 @@ export default function ListOfFaculties() {
 
   useEffect(() => {
     axios
-      .get("https://dseu-backend.onrender.com/api/v1/departmentSchools")
+      .get(`${baseUrl}departmentSchools`)
       .then((response) => {
         if (response.data?.data?.departmentSchools) {
-          const sortedDepartments = response.data.data.departmentSchools.sort((a, b) =>
-            a.name.localeCompare(b.name)
+          const sortedDepartments = response.data.data.departmentSchools.sort(
+            (a, b) => a.name.localeCompare(b.name)
           );
           setDepartments(sortedDepartments);
         } else {
@@ -33,10 +34,8 @@ export default function ListOfFaculties() {
 
   const handleClick = () => window.scrollTo(0, 0);
 
-  if(loading) {
-    return (
-      <ListOfFacultiesLoading />
-    )
+  if (loading) {
+    return <ListOfFacultiesLoading />;
   }
 
   return (

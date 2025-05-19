@@ -1,5 +1,6 @@
 import axios from "axios";
 import api from "./api";
+import { baseUrl } from '../constants/LOCALES.JS';
 
 const getAuthHeaders = () => {
   const token = localStorage.getItem("token");
@@ -226,7 +227,7 @@ export const getCampusByZone = async (zoneName) => {
 export const login = async ({ email, password }) => {
   try {
     const response = await axios.post(
-      "https://dseu-backend.onrender.com/api/v1/auth/login",
+      `${baseUrl}auth/login`,
       { email, password }
     );
 
@@ -247,7 +248,7 @@ export const login = async ({ email, password }) => {
 export const uploadPdf = async (formData) => {
   const token = sessionStorage.getItem("token");
   try {
-    const response = await axios.post("https://dseu-backend.onrender.com/api/v1/notice/upload",
+    const response = await axios.post(`${baseUrl}notice/upload`,
       formData,
       {
         headers: {
@@ -271,7 +272,7 @@ export const deletePdf = async (id) => {
 
   try {
     const response = await axios.delete(
-      `https://dseu-backend.onrender.com/api/v1/notice/${id}`,
+      `${baseUrl}notice/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

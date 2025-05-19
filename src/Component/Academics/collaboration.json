@@ -1,0 +1,321 @@
+[
+  { "sno": 1, "title": "Pathkind Diagnostics Pvt. Ltd.", "domain": "B.Sc/Diploma in MLT", "page": 1 },
+  { "sno": 2, "title": "Janakpuri Super Speciality Hospital", "domain": "Diploma in MLT and Diploma in Pharmacy", "page": 1 },
+  { "sno": 3, "title": "Forus Health", "domain": "BA Aesthetics and Beauty Therapy", "page": 1 },
+  { "sno": 4, "title": "Hero Electric Vehicles Private Limited and WRI India", "domain": "EV Mechanic Training Program, Diploma in Automobile Engineering", "page": 1 },
+  { "sno": 5, "title": "Connecting Dreams Foundation", "domain": "Community formulation for Social Change", "page": 1 },
+  { "sno": 6, "title": "Sales Force", "domain": "BSc Data Analytics", "page": 1 },
+  { "sno": 7, "title": "DSIIDC", "domain": "Engineerng and Management", "page": 1 },
+  { "sno": 8, "title": "Lotus Herbal", "domain": "BA Aesthtics and Beauty", "page": 1 },
+  { "sno": 9, "title": "Enrich", "domain": "BA Aesthetics and Beauty Therapy/ Diploma in Cosmetology", "page": 1 },
+  { "sno": 10, "title": "Manikaran Power Ltd.", "domain": "BCA, BA (DMD), B.Com BPM, BBA FHM, BSc Data Analytics, Diploma in Architecture, Diploma in Civil Engineering, Diploma in ELectrical Engg, Diploma in Interior Design", "page": 1 },
+
+  { "sno": 11, "title": "LOI between DSEU & Indian Exposition Mart", "domain": "BBA FHM", "page": 2 },
+  { "sno": 12, "title": "SAP", "domain": "BSc Data Analytics", "page": 2 },
+  { "sno": 13, "title": "NBCC", "domain": "Diploma in Civil Engineering", "page": 2 },
+  { "sno": 14, "title": "Chetak Foundation and Chetak Logistics", "domain": "BMS (Land Transport)", "page": 2 },
+  { "sno": 15, "title": "TSSC", "domain": "Centre for excellence", "page": 2 },
+  { "sno": 16, "title": "Integreon", "domain": "BA Digital Media and Design", "page": 2 },
+  { "sno": 17, "title": "HDFC Bank", "domain": "BBA BFSI", "page": 2 },
+  { "sno": 18, "title": "IKIGAI LAB", "domain": "BSc Data Analytics", "page": 2 },
+  { "sno": 19, "title": "TCS", "domain": "BSc Data Analytics and BA Digital Media and Design", "page": 2 },
+  { "sno": 20, "title": "RR Donnelley", "domain": "BA Digital Media and Design", "page": 2 },
+
+  { "sno": 21, "title": "Lagozon & DSEU", "domain": "BSc Data Analytics", "page": 3 },
+  { "sno": 22, "title": "Quess Corp.", "domain": "BBA BFSI, BBA FHM, BCom BPM, Retail Management", "page": 3 },
+  { "sno": 23, "title": "HDFC Life Insurance", "domain": "BBA BFSI", "page": 3 },
+  { "sno": 24, "title": "NID Kurukshetra", "domain": "Academic Collaboration, design, entreprenuership etc.", "page": 3 },
+  { "sno": 25, "title": "Bluestar (CoE)", "domain": "NA", "page": 3 },
+  { "sno": 26, "title": "HI NO DE Foundation", "domain": "Japanesse Language", "page": 3 },
+  { "sno": 27, "title": "James and Douglas", "domain": "Diploma in Interior Design", "page": 3 },
+  { "sno": 28, "title": "Oneline Wellness", "domain": "Aesthetics and Beauty Therapy", "page": 3 },
+  { "sno": 29, "title": "Sun Foundation", "domain": "Scholarship * BA DMD, BMS (E-Commerce), Automobile Engineering, Computer Engineering, Cosmetology and Health, Electronics Engineering, Interior Design", "page": 3 },
+  { "sno": 30, "title": "Electronics Sector Skills Council of India", "domain": "Electrical, Mechanical, Automobile, Computer, Electronics, BCA (Note sheet not in file)", "page": 3 },
+
+  { "sno": 31, "title": "Reliance Brands Ltd.", "domain": "BBA Retail Management", "page": 4 },
+  { "sno": 32, "title": "Infiniti Retail (Croma)", "domain": "BBA Retail Management", "page": 4 },
+  { "sno": 33, "title": "I-Dream Career", "domain": "BBA BFSI, BCom BPM", "page": 4 },
+  { "sno": 34, "title": "Tech Mahindra Foundation", "domain": "Communication & Soft Sklls", "page": 4 },
+  { "sno": 35, "title": "CILT", "domain": "Logistics & e-commerce", "page": 4 },
+  { "sno": 36, "title": "Mother Dairy fruits and vegetable Pvt. Ltd.", "domain": "Student Facility", "page": 4 },
+  { "sno": 37, "title": "Thompson Press", "domain": "Printing Technology", "page": 4 },
+  { "sno": 38, "title": "Thyrocare", "domain": "Medical Lab Science", "page": 4 },
+  { "sno": 39, "title": "SRL", "domain": "Medical Lab Science", "page": 4 },
+  { "sno": 40, "title": "NIELIT", "domain": "Content Development, Training, Exchange of Information, Joint Seminars/Conference etc", "page": 4 },
+
+  { "sno": 41, "title": "Partnership between DSEU & Master G and Daughters", "domain": "BBA, BFD", "page": 5 },
+  { "sno": 42, "title": "Cognizant", "domain": "Digital Media and Design Course", "page": 5 },
+  { "sno": 43, "title": "TATA Power-DDL", "domain": "Electrical Engineering, Industraial training /industry Institute interaction & All the Trades", "page": 5 },
+  { "sno": 44, "title": "Schneider & Kotak Mahindra Bank Ltd.", "domain": "Electrical", "page": 5 },
+  { "sno": 45, "title": "Mercedes Benz India Pvt. Ltd.", "domain": "ADAM", "page": 5 },
+  {
+    "sno": 46,
+    "title": "Erisha Agritech",
+    "domain": "Automobile & Mechanical Scholarship, Under Graduate Programme",
+    "page": 5
+  },
+  {
+    "sno": 47,
+    "title": "Darsh Aerospace",
+    "domain": "Automobile Engineering",
+    "page": 5
+  },
+  {
+    "sno": 48,
+    "title": "Erisha E-mobility",
+    "domain": "Scholarship & Placement, Automobile & Mechanical, Under Graduate Programme",
+    "page": 5
+  },
+  {
+    "sno": 49,
+    "title": "Fincart",
+    "domain": "Scholarship stipend & Placement",
+    "page": 5
+  },
+  {
+    "sno": 50,
+    "title": "Paints & Coatings Skill Council",
+    "domain": "null",
+    "page": 5
+  },
+  {
+    "sno": 51,
+    "title": "Mansycom Consultants Private Limited",
+    "domain": "Civil Engineering",
+    "page": 6
+  },
+  {
+    "sno": 52,
+    "title": "Even Cargo",
+    "domain": "Logistic, Land Transportation and E-commerce sector",
+    "page": 6
+  },
+  {
+    "sno": 53,
+    "title": "Metropolis",
+    "domain": "",
+    "page": 6
+  },
+  {
+    "sno": 54,
+    "title": "Academy for Computer Training (ACT) for Short term (Eng) Courses",
+    "domain": "Spoken English",
+    "page": 6
+  },
+  {
+    "sno": 55,
+    "title": "Macmillan for Short term (Eng) Courses",
+    "domain": "Spoken English",
+    "page": 6
+  },
+  {
+    "sno": 56,
+    "title": "Cambridge for Short term (Eng) Courses",
+    "domain": "Spoken English",
+    "page": 6
+  },
+  {
+    "sno": 57,
+    "title": "BIBA & RASCI",
+    "domain": "",
+    "page": 6
+  },
+  {
+    "sno": 58,
+    "title": "ABFRL & RASCI",
+    "domain": "",
+    "page": 6
+  },
+  {
+    "sno": 59,
+    "title": "Partnership between DSEU & Global Alliance for Mass Entrepreneurship",
+    "domain": "Entrepreneurship",
+    "page": 6
+  },
+  {
+    "sno": 60,
+    "title": "QAGENIC Technologies Pvt. Ltd.",
+    "domain": "B.Sc. Data Analytics, BCA, MCA & M.Tech",
+    "page": 6
+  },
+  {
+    "sno": 61,
+    "title": "CBRE South Asia Private Limited",
+    "domain": "Building Research - Civil, Architecture, Facility Management, Project Management & Real Estate Consultancy Services",
+    "page": 7
+  },
+  {
+    "sno": 62,
+    "title": "National Dong Hwa University, Taiwan",
+    "domain": "BFSI, Financial and Insurance",
+    "page": 7
+  },
+  {
+    "sno": 63,
+    "title": "Green Genome Pvt. Ltd.",
+    "domain": "Agriculture development, Farm Enterprise development, Value Chain Management",
+    "page": 7
+  },
+  {
+    "sno": 64,
+    "title": "Truecaller",
+    "domain": "Cyber Safety and Entrepreneurial Skill",
+    "page": 7
+  },
+  {
+    "sno": 65,
+    "title": "Altz Technologies Pvt. Ltd.",
+    "domain": "B.Tech, BCA, MCA and Diploma (Computer Engineering)",
+    "page": 7
+  },
+  {
+    "sno": 66,
+    "title": "Agreement between DSEU & YARS Enterprises Pvt. Ltd.",
+    "domain": "Artificial Intelligence, Machine Learning, Deep Learning, IoT, Blockchain",
+    "page": 7
+  },
+  {
+    "sno": 67,
+    "title": "9 Growers India Private Limited",
+    "domain": "Controlled Environment Agriculture (CEA)",
+    "page": 7
+  },
+  {
+    "sno": 68,
+    "title": "IBM",
+    "domain": "Computer Science & Design Thinking",
+    "page": 7
+  },
+  {
+    "sno": 69,
+    "title": "Rotary Delhiites Foundation",
+    "domain": "",
+    "page": 7
+  },
+  {
+    "sno": 70,
+    "title": "NBM Media Pvt. Ltd.",
+    "domain": "Architecture, Interior Design & Mechanical Engineering",
+    "page": 7
+  },
+  {
+    "sno": 71,
+    "title": "Jakson Welfare Trust of Jakson Group",
+    "domain": "",
+    "page": 8
+  },
+  {
+    "sno": 72,
+    "title": "De Box Global IT Solution Pvt. Ltd.",
+    "domain": "ERP Development",
+    "page": 8
+  },
+  {
+    "sno": 73,
+    "title": "Bank of Baroda",
+    "domain": "Content Development & Staff Development",
+    "page": 8
+  },
+  {
+    "sno": 74,
+    "title": "Firstsource Solution Limited",
+    "domain": "Business Process Management",
+    "page": 8
+  },
+  {
+    "sno": 75,
+    "title": "Partnership between DSEU and Space 2 Grow",
+    "domain": "",
+    "page": 8
+  },
+  {
+    "sno": 76,
+    "title": "Electronics Sector Skills Council of India (ESSCI)",
+    "domain": "Electronic Sector",
+    "page": 8
+  },
+  {
+    "sno": 77,
+    "title": "One Line Wellness",
+    "domain": "Beauty & Aesthetic Therapy",
+    "page": 8
+  },
+  {
+    "sno": 78,
+    "title": "Blue Star (HVAC)",
+    "domain": "",
+    "page": 8
+  },
+  {
+    "sno": 79,
+    "title": "Department of Delhi Prisons Govt. of Delhi",
+    "domain": "",
+    "page": 8
+  },
+  {
+    "sno": 80,
+    "title": "RASCI & Tata Starbucks",
+    "domain": "BBA Retail Management",
+    "page": 8
+  },
+  {
+    "sno": 81,
+    "title": "Hyundai Motors India Limited",
+    "domain": "Automobile",
+    "page": 9
+  },
+  {
+    "sno": 82,
+    "title": "Lighthouse Communities Foundation (LCF)",
+    "domain": "Skilling and Sustainable Livelihood for Youth from Low Income Communities",
+    "page": 9
+  },
+  {
+    "sno": 83,
+    "title": "Dept. of Women and Child Development (DWCD)",
+    "domain": "Women Entrepreneurship Program under Project Samridhi",
+    "page": 9
+  },
+  {
+    "sno": 84,
+    "title": "Sewan Foods Pvt. Ltd.",
+    "domain": "Student Facility",
+    "page": 9
+  },
+  {
+    "sno": 85,
+    "title": "Blue Star Limited",
+    "domain": "",
+    "page": 9
+  },
+  {
+    "sno": 86,
+    "title": "Regional Institute of Education NCERT, Bhubaneswar",
+    "domain": "",
+    "page": 9
+  },
+  {
+    "sno": 87,
+    "title": "Johnson Controls-Hitachi Air Conditioning India Limited",
+    "domain": "",
+    "page": 9
+  },
+  {
+    "sno": 88,
+    "title": "Jakson Welfare Trust",
+    "domain": "",
+    "page": 9
+  },
+  {
+    "sno": 89,
+    "title": "Entrepreneurship Development Institute of India (EDII), Ahmedabad",
+    "domain": "",
+    "page": 9
+  },
+  {
+    "sno": 90,
+    "title": "Tech Mahindra Foundation",
+    "domain": "",
+    "page": 9
+  }
+] 

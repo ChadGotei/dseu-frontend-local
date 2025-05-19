@@ -119,6 +119,7 @@ const ImportantForms = () => {
           onClose={() => setShowModal(false)}
           setShowModal={setShowModal}
           section={"ad important forms"}
+          showModal={showModal}
         />
       )}
     </div>

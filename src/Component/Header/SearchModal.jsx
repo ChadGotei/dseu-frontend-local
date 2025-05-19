@@ -1,7 +1,9 @@
+import axios from "axios";
 import { useState, useEffect } from "react";
 import { Search, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+
+import { baseUrl } from "../../constants/LOCALES.JS";
 
 const SearchModal = ({ isOpen, onClose, navItems }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -31,11 +33,10 @@ const SearchModal = ({ isOpen, onClose, navItems }) => {
     return flatItems;
   };
 
-
   useEffect(() => {
     if (isOpen) {
       axios
-        .get("https://dseu-backend.onrender.com/api/v1/faculty?limit=500")
+        .get(`${baseUrl}faculty?limit=500`)
         .then((res) => setFacultyData(res.data.data.faculty))
         .catch((err) => console.error("Error fetching faculty data:", err));
     }
@@ -59,7 +60,8 @@ const SearchModal = ({ isOpen, onClose, navItems }) => {
 
       const facultyResults = facultyData
         .filter((f) => {
-          const fullName = `${f.salutation} ${f.firstname} ${f.surname}`.toLowerCase();
+          const fullName =
+            `${f.salutation} ${f.firstname} ${f.surname}`.toLowerCase();
           return fullName.includes(searchQuery.toLowerCase());
         })
         .map((f) => ({

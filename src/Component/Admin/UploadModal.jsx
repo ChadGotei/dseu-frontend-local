@@ -1,15 +1,17 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";
 
 import { SESSION_EXPIRE } from "../../constants/LOCALES.JS";
 import { uploadPdf } from "../../utils/apiservice";
 import { useNavigate } from "react-router-dom";
+import { useModalClose } from "../../hooks/useModalClose";
 
 const UploadModal = ({
   title,
   onClose,
   setShowModal,
+  showModal,
   section,
   isEndDate,
   isApplyLink,
@@ -29,6 +31,8 @@ const UploadModal = ({
 
   const queryClient = useQueryClient();
   const navigate = useNavigate();
+
+  const modalRef = useRef();
 
   const mutation = useMutation({
     mutationFn: (formData) => uploadPdf(formData),
@@ -95,9 +99,14 @@ const UploadModal = ({
     mutation.mutate(formData);
   };
 
+  useModalClose(modalRef, showModal, () => setShowModal(false));
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-      <div className="min-h-[50vh] w-[90%] max-w-2xl bg-gray-100 p-6 sm:p-8 lg:p-10 rounded-xl shadow-lg relative">
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center overflow-y-scroll hide-scrollbar">
+      <div
+        className={`min-h-[50vh] w-[90%] max-w-2xl bg-gray-100 p-6 sm:p-8 lg:p-10 rounded-xl shadow-lg relative ${veryLargeModal && 'mt-20'}`}
+        ref={modalRef}
+      >
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-600 hover:text-red-500 text-xl font-bold"

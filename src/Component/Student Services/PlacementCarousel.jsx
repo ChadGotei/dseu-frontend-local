@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import HeadingText from "../Reusable/HeadingText";
+import { useMemo } from "react";
 
 const PlacementCarousel = ({ images = [], heading }) => {
   const CustomPrevArrow = ({ onClick }) => (
@@ -22,6 +22,27 @@ const PlacementCarousel = ({ images = [], heading }) => {
       <ChevronRight className="h-6 w-6 text-blue-600" />
     </button>
   );
+
+  const renderedSlides = useMemo(() => {
+    {
+      return images.map((item, index) => (
+        <div key={index} className="px-2">
+          <div className="bg-white rounded-lg shadow-md p-4 h-48 flex flex-col items-center justify-center transition-transform hover:scale-105 hover:shadow-xl">
+            <img
+              src={item.src || "/fallback-image.png"}
+              alt={item.id || `Image ${index + 1}`}
+              className="h-24 object-contain"
+            />
+            {item.data && (
+              <p className="text-center text-gray-700 font-semibold mt-2">
+                {item.data}
+              </p>
+            )}
+          </div>
+        </div>
+      ));
+    }
+  }, [images]);
 
   const settings = {
     dots: false,
@@ -43,29 +64,13 @@ const PlacementCarousel = ({ images = [], heading }) => {
 
   return (
     <div className="w-full py-8 pt-5">
-     
       <div className="relative px-4 md:px-8">
         {images.length > 0 ? (
-          <Slider {...settings}>
-            {images.map((item, index) => (
-              <div key={index} className="px-2">
-                <div className="bg-white rounded-lg shadow-md p-4 h-48 flex flex-col items-center justify-center transition-transform hover:scale-105 hover:shadow-xl">
-                  <img
-                    src={item.src || "/fallback-image.png"}
-                    alt={item.id || `Image ${index + 1}`}
-                    className="h-24 object-contain"
-                  />
-                  {item.data && (
-                    <p className="text-center text-gray-700 font-semibold mt-2">
-                      {item.data}
-                    </p>
-                  )}
-                </div>
-              </div>
-            ))}
-          </Slider>
+          <Slider {...settings}>{renderedSlides}</Slider>
         ) : (
-          <p className="text-center text-gray-500">No placement data available.</p>
+          <p className="text-center text-gray-500">
+            No placement data available.
+          </p>
         )}
       </div>
     </div>

@@ -1,14 +1,15 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";
 
 import { SESSION_EXPIRE } from "../../../constants/LOCALES.JS";
 import { updatePdf } from "../../../utils/apiservice";
 import { X } from "lucide-react";
-import { getSectionOptions } from "../adminConstant";
+import { getSectionOptions, isJobPortal } from "../adminConstant";
+import { useModalClose } from "../../../hooks/useModalClose";
 
-const EditModal = ({ onClose, setShowModal, data }) => {
+const EditModal = ({ onClose, setShowModal, data, showEditModal }) => {
   const [fileName, setFileName] = useState(data.fileName || "");
   const [section, setSection] = useState(data.section || "");
   const [endDate, setEndDate] = useState(data.endDate?.split("T")[0] || "");
@@ -17,6 +18,8 @@ const EditModal = ({ onClose, setShowModal, data }) => {
 
   const queryClient = useQueryClient();
   const navigate = useNavigate();
+
+  const modalRef = useRef();
 
   const mutation = useMutation({
     mutationFn: ({ id, formData }) => updatePdf(id, formData),
@@ -35,6 +38,8 @@ const EditModal = ({ onClose, setShowModal, data }) => {
       }
     },
   });
+
+  useModalClose(modalRef, showEditModal, () => setShowModal(false));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -55,8 +60,11 @@ const EditModal = ({ onClose, setShowModal, data }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-      <div className="min-h-[50vh] w-[90%] max-w-2xl bg-gray-100 p-6 sm:p-8 lg:p-10 rounded-xl shadow-lg relative">
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center overflow-y-auto hide-scrollbar">
+      <div
+        className="min-h-[50vh] w-[90%] max-w-2xl bg-gray-100 p-6 sm:p-8 rounded-xl shadow-lg relative my-10"
+        ref={modalRef}
+      >
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-600 hover:text-red-500 text-xl font-bold"
@@ -111,30 +119,35 @@ const EditModal = ({ onClose, setShowModal, data }) => {
             />
           </div>
 
-          <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
-              Apply Link
-            </label>
-            <input
-              type="url"
-              value={apply}
-              onChange={(e) => setApply(e.target.value)}
-              placeholder="https://example.com/apply"
-              className="w-full bg-gray-100 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-2 border-blue-200"
-            />
-          </div>
+          {isJobPortal(section) && (
+            /* As these are the only sections where vacancies and apply link are needed */
+            <>
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Apply Link
+                </label>
+                <input
+                  type="url"
+                  value={apply}
+                  onChange={(e) => setApply(e.target.value)}
+                  placeholder="https://example.com/apply"
+                  className="w-full bg-gray-100 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-2 border-blue-200"
+                />
+              </div>
 
-          <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
-              Vacancies
-            </label>
-            <input
-              type="number"
-              value={vacancies}
-              onChange={(e) => setVacancies(e.target.value)}
-              className="w-full bg-gray-100 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-2 border-blue-200"
-            />
-          </div>
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Vacancies
+                </label>
+                <input
+                  type="number"
+                  value={vacancies}
+                  onChange={(e) => setVacancies(e.target.value)}
+                  className="w-full bg-gray-100 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-2 border-blue-200"
+                />
+              </div>
+            </>
+          )}
 
           <button
             type="submit"
