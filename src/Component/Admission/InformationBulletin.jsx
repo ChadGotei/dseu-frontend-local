@@ -2,7 +2,7 @@
     {
         id: 1,
         name: "Information Bulletin 2025",
-        link: "/DSEU_Admission_Brochure_2025_final.pdf",
+        link: "/DSEU_Admission Brochure_2025_final.pdf",
     },
     ];
 
