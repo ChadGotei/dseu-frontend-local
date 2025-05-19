@@ -77,9 +77,18 @@ const navItems = [
     name: "Admission",
     dropdownItems: [
       {
-        name: "Admission Portal",
-        path: "/",
+        name: "Diploma Program Admission",
+        path: "https://dseuadm.samarth.edu.in/",
       },
+      {
+        name: "UG & Certificate Program Admission",
+        path: "https://dseuadm.samarth.edu.in/ug",
+      },
+      {
+        name: "PG Program Admission",
+        path: "https://dseuadm.samarth.edu.in/pg",
+      },
+      
       {
         name: "Information Bulletin",
         path: "",
