@@ -98,7 +98,7 @@ import ViewPdfs from "./Component/Admin/ViewPDFs/ViewPdfs";
 import Tenders from "./Component/Tenders/Tenders.jsx";
 import COE from './Component/Administration/COE';
 import COF from './Component/Administration/COF';
-import Infoadmission from "./Component/Admission/InformationBulletin.jsx";
+import Counter from "./Component/temp/Counter.jsx";
 
 function App() {
   return (
@@ -167,7 +167,6 @@ function App() {
             {/* About us */}
             <Route path="/about-us/About-the-University" element={<About />} />
             <Route path="/about-us/Vision-and-Mission" element={<VissionMission />} />
-            <Route path="/information-bulletin" element={<Infoadmission />} />
             <Route path="/about-us/history" element={<HistoryDSEU />} />
             <Route path="/UGC-Guidelines" element={<UnderConstruction />} />
             <Route path="/about-us/annualReport" element={<AnnualReport/>} />
@@ -182,7 +181,6 @@ function App() {
             <Route path="/admission/guidelines" element={<AdmissionGuidelines />} />
             <Route path="/admission/refund-policy" element={<FeeRefundPolicy />} />
             <Route path="/admission/process-and-guidelines" element={<ProcessAndGuidelines />} />
-            <Route path="/admission/information-admission" element={<Infoadmission/>} />
 
             {/* Misc */}
             <Route path="/holiday-calendar" element={<HolidayCalendar />} />
@@ -219,6 +217,7 @@ function App() {
             <Route path="/Entrepreneurship" element={<Entrepreneurship />} />
 
             <Route path="/tenders" element={<Tenders />} />
+            <Route path="/counter" element={<Counter />} />
           </Route>
           
             <Route path="*" element={<NotFound />} />

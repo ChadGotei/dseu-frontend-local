@@ -88,11 +88,7 @@ const navItems = [
         name: "Programs after Bachelor",
         path: "https://dseuadm.samarth.edu.in/pg",
       },
-      
-      {
-        name: "Information Bulletin",
-        path: "/information-bulletin",
-      },
+
       {
         name: "Process and guidelines",
         path: "/admission/process-and-guidelines",
@@ -144,7 +140,6 @@ const navItems = [
     name: "Entrepreneurship",
     path: "/Entrepreneurship",
   },
-  
 ];
 
 //? for mobile view
