@@ -98,7 +98,7 @@ import ViewPdfs from "./Component/Admin/ViewPDFs/ViewPdfs";
 import Tenders from "./Component/Tenders/Tenders.jsx";
 import COE from './Component/Administration/COE';
 import COF from './Component/Administration/COF';
-import Counter from "./Component/temp/Counter.jsx";
+// import Counter from "./Component/temp/Counter.jsx";
 
 function App() {
   return (
@@ -217,7 +217,7 @@ function App() {
             <Route path="/Entrepreneurship" element={<Entrepreneurship />} />
 
             <Route path="/tenders" element={<Tenders />} />
-            <Route path="/counter" element={<Counter />} />
+            {/* <Route path="/counter" element={<Counter />} /> */}
           </Route>
           
             <Route path="*" element={<NotFound />} />
