@@ -71,7 +71,7 @@ const Ncc = () => {
     ),
   };
 
-  const tabs = ["About", "Notices", "Coordinator"];
+  const tabs = ["About", "Notices"];
 
   return (
     <div className="relative md:p-6 sm:p-2 p-0 flex flex-col items-center justify-center my-10 mb-16 md:mb-12">

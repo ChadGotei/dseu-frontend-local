@@ -77,6 +77,10 @@ const navItems = [
     name: "Admission",
     dropdownItems: [
       {
+        name: "Information Bulletin",
+        path: "/admission/information-bulletin",
+      },
+      {
         name: "Programs after 10th  ",
         path: "https://dseuadm.samarth.edu.in/",
       },
@@ -88,11 +92,7 @@ const navItems = [
         name: "Programs after Bachelor",
         path: "https://dseuadm.samarth.edu.in/pg",
       },
-      
-      {
-        name: "Information Bulletin",
-        path: "/information-bulletin",
-      },
+
       {
         name: "Process and guidelines",
         path: "/admission/process-and-guidelines",
@@ -144,7 +144,6 @@ const navItems = [
     name: "Entrepreneurship",
     path: "/Entrepreneurship",
   },
-  
 ];
 
 //? for mobile view
