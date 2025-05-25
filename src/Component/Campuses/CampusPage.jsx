@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 
@@ -12,6 +12,37 @@ import CampusCourses from "./CampusCourses";
 import CampusLabs from "./CampusLabs";
 import CampusActivities from "./CampusActivities";
 
+import {
+  aryabhatt,
+  pusa1,
+  pusa2,
+  jaffarpur,
+  siri,
+  rajokri,
+  dheerpur,
+  gbpant,
+  okhla1,
+  okhlacamps,
+  wazirpur,
+  kasturba,
+} from "./campusimages";
+
+const getCampusImage = (name, backendPhoto) => {
+  const lower = name.toLowerCase();
+  if (lower.includes("pusa ii")) return pusa2;
+  if (lower.includes("pusa i")) return pusa1;
+  if (lower.includes("rajokri")) return rajokri;
+  if (lower.includes("siri fort")) return siri;
+  if (lower.includes("aryabhatt")) return aryabhatt;
+  if (lower.includes("dheerpur")) return dheerpur;
+  if (lower.includes("wazirpur")) return wazirpur;
+  if (lower.includes("kasturba")) return kasturba;
+  if (lower.includes("champs")) return okhlacamps;
+  if (lower.includes("okhla")) return okhla1;
+  if (lower.includes("gb pant")) return gbpant;
+  return backendPhoto || "/default-campus.jpg";
+};
+
 const CampusPage = () => {
   const { name } = useParams();
   const lowercasedName = unslugify(name).toLowerCase();
@@ -24,17 +55,13 @@ const CampusPage = () => {
   });
 
   if (isLoading) return <OrangeLoader />;
-  
-  // if someone entered wrong campus name or zone which doesnt exists 
+
   if (!data) {
     return (
       <div className="w-full h-[60vh] md:h-[40vh] flex flex-col items-center justify-center text-center px-4">
-        <h2 className="text-3xl font-bold text-red-500 mb-4">
-          Campus Not Found
-        </h2>
+        <h2 className="text-3xl font-bold text-red-500 mb-4">Campus Not Found</h2>
         <p className="text-gray-600 text-base md:text-lg mb-2">
-          We couldn’t find any campus by that name. Please check the spelling or
-          try searching for a different zone.
+          We couldn’t find any campus by that name. Please check the spelling or try searching for a different zone.
         </p>
         <p className="text-sm text-gray-400">
           If you think this is a mistake, contact support or the admin team.
@@ -58,7 +85,7 @@ const CampusPage = () => {
           <p className="text-base leading-7">{data.campus_message}</p>
         </div>
       ),
-    },    
+    },
     courses: {
       title: "Programs Offered",
       content: <CampusCourses {...data} />,
@@ -79,7 +106,7 @@ const CampusPage = () => {
       <div
         className="w-full h-56 sm:h-64 rounded-lg mb-6 relative overflow-hidden shadow-lg md:pb-10 pb-3"
         style={{
-          backgroundImage: `url(${data.campus_photo})`,
+          backgroundImage: `url(${getCampusImage(data.name, data.campus_photo)})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
