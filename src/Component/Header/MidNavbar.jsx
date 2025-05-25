@@ -77,6 +77,10 @@ const navItems = [
     name: "Admission",
     dropdownItems: [
       {
+        name: "Information Bulletin",
+        path: "/admission/information-bulletin",
+      },
+      {
         name: "Programs after 10th  ",
         path: "https://dseuadm.samarth.edu.in/",
       },

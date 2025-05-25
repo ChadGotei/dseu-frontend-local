@@ -98,6 +98,7 @@ import ViewPdfs from "./Component/Admin/ViewPDFs/ViewPdfs";
 import Tenders from "./Component/Tenders/Tenders.jsx";
 import COE from './Component/Administration/COE';
 import COF from './Component/Administration/COF';
+import IB from "./Component/Admission/IB.jsx";
 // import Counter from "./Component/temp/Counter.jsx";
 
 function App() {
@@ -181,6 +182,7 @@ function App() {
             <Route path="/admission/guidelines" element={<AdmissionGuidelines />} />
             <Route path="/admission/refund-policy" element={<FeeRefundPolicy />} />
             <Route path="/admission/process-and-guidelines" element={<ProcessAndGuidelines />} />
+            <Route path="/admission/information-bulletin" element={<IB />}  />
 
             {/* Misc */}
             <Route path="/holiday-calendar" element={<HolidayCalendar />} />
