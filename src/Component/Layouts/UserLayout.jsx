@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import ChatWidget from "../chatbot";
+// import ChatWidget from "../chatbot";
 import Footer from "../Footer/Footer";
 import ResponsiveHeader from "../Header/MidNavbar";
 import { DesktopNav } from "../Admin/AdminNavBar";
@@ -12,7 +12,7 @@ const UserLayout = () => (
     <ResponsiveHeader />
     
     <Outlet />
-    <ChatWidget />
+    {/* <ChatWidget /> */}
     <Footer />
   </>
 );
