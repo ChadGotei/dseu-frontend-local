@@ -1,3 +1,5 @@
+import InformationBulletin from "../Body/InformationBulletin";
+
     const IB = [
     {
         id: 1,
@@ -61,7 +63,9 @@
             </div>
             ))}
         </div>
+        
         </main>
+        
     );
     };
 
