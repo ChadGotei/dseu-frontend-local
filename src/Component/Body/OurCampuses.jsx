@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import Slider from "react-slick";
 
@@ -8,6 +8,46 @@ import "slick-carousel/slick/slick-theme.css";
 import { generateSlug } from "../../utils/helper";
 import { getAllCampus } from "../../utils/apiservice";
 import { QUERY_KEYS } from "../../utils/queryKeys";
+
+import {
+  pusa1,
+  aryabhatt,
+  dheerpur,
+  gbpant,
+  jaffarpur,
+  kasturba,
+  okhla1,
+  okhlacamps,
+  pusa2,
+  rajokri,
+  siri,
+  wazirpur,
+} from "../Campuses/campusimages";
+
+const localCampusImages = {
+  pusa: pusa1,
+  "DSEU pusa": pusa2,
+  aryabhatt,
+  dheerpur,
+  gbpant,
+  jaffarpur,
+  kasturba,
+  okhla1,
+  champs: okhlacamps,
+  rajokri,
+  siri,
+  wazirpur,
+};
+
+const getCampusImage = (campusName, backendImage) => {
+  const lowerName = campusName.toLowerCase();
+  for (const key in localCampusImages) {
+    if (lowerName.includes(key)) {
+      return localCampusImages[key];
+    }
+  }
+  return backendImage;
+};
 
 const CustomArrow = ({ onClick, direction }) => (
   <div
@@ -28,9 +68,11 @@ const CarouselSection = () => {
     queryKey: [QUERY_KEYS.GET_CAMPUS],
   });
 
-  // useEffect(() => {
-  //   console.log(campuses);
-  // }, [campuses]);
+  useEffect(() => {
+    if (campuses) {
+      console.log(campuses);
+    }
+  }, [campuses]);
 
   if (isCampusLoading) {
     return <div>Loading...</div>;
@@ -50,7 +92,6 @@ const CarouselSection = () => {
   };
 
   const mobileSettings = {
-    dots: true,
     infinite: true,
     slidesToShow: 1,
     autoplay: true,
@@ -79,7 +120,7 @@ const CarouselSection = () => {
                 >
                   <div className="group h-64">
                     <img
-                      src={campus.campus_photo}
+                      src={getCampusImage(campus.name, campus.campus_photo)}
                       alt={campus.name}
                       className="h-full min-w-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-50 rounded-t-lg"
                     />
@@ -115,7 +156,7 @@ const CarouselSection = () => {
               <a href={`/campus/${generateSlug(campus.name)}`}>
                 <div className="rounded-lg overflow-hidden shadow-md">
                   <img
-                    src={campus.campus_photo}
+                    src={getCampusImage(campus.name, campus.campus_photo)}
                     alt={campus.name}
                     className="w-full h-48 object-cover"
                   />
