@@ -1,42 +1,28 @@
-import { useEffect, useState } from "react";
 import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUniversity } from "@fortawesome/free-solid-svg-icons";
 import ListOfFacultiesLoading from "../ShimmerUI/ListOfFacultiesLoading";
 import { baseUrl } from "../../constants/LOCALES.JS";
+import { getSchools } from "../../utils/apiservice";
 
 export default function ListOfFaculties() {
-  const [departments, setDepartments] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    axios
-      .get(`${baseUrl}departmentSchools`)
-      .then((response) => {
-        if (response.data?.data?.departmentSchools) {
-          const sortedDepartments = response.data.data.departmentSchools.sort(
-            (a, b) => a.name.localeCompare(b.name)
-          );
-          setDepartments(sortedDepartments);
-        } else {
-          console.error("Unexpected API response format:", response.data);
-          setError("Unexpected data format");
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        setError("Failed to fetch data");
-      })
-      .finally(() => setLoading(false));
-  }, []);
+  const { data, isLoading, isError, error } = useQuery({
+    queryFn: getSchools,
+    queryKey: ["schools"],
+    staleTime: 5 * 60 * 1000,
+  });
 
   const handleClick = () => window.scrollTo(0, 0);
 
-  if (loading) {
-    return <ListOfFacultiesLoading />;
-  }
+  if (isLoading) return <ListOfFacultiesLoading />;
+  if (isError)
+    return (
+      <p className="text-center text-red-500">
+        {error?.message || "Failed to fetch data"}
+      </p>
+    );
 
   return (
     <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-24 py-12">
@@ -45,11 +31,9 @@ export default function ListOfFaculties() {
           List of Faculties
         </h2>
 
-        {error && <p className="text-center text-red-500">{error}</p>}
-
-        {!loading && !error && Array.isArray(departments) && (
+        {Array.isArray(data) && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {departments.map((department) => (
+            {data.map((department) => (
               <div
                 key={department._id}
                 className="group relative bg-slate-100 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 flex flex-col justify-between h-full"

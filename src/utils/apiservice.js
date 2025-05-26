@@ -81,7 +81,6 @@ export const updateFacultyResearch = async (id, data) => {
   }
 };
 
-
 // get school name by id
 export const getSchoolById = async (id) => {
   const response = await api.get(`/departmentSchools`);
@@ -89,8 +88,6 @@ export const getSchoolById = async (id) => {
 
   return schools.find((school) => school._id === id);
 }
-
-
 
 // get department by school
 export const getDepartmentsBySchool = async (id) => {
@@ -100,6 +97,18 @@ export const getDepartmentsBySchool = async (id) => {
   );
 
   return { departments: data.dept_id, name: data.name };
+};
+
+export const getSchools = async () => {
+  const response = await api.get('/departmentSchools');
+  if (response.status !== 200) {
+    throw new Error('Network response was not ok');
+  }
+  const schools = response.data?.data?.departmentSchools;
+  if (!Array.isArray(schools)) {
+    throw new Error('Unexpected data format');
+  }
+  return schools.sort((a, b) => a.name.localeCompare(b.name));
 };
 
 // get hod info

@@ -22,6 +22,7 @@ const ProgramsByDepartment = ({ deptId }) => {
     queryFn: () => getProgramByDepartment(deptId, activeCategory),
     queryKey: [QUERY_KEYS.GET_PROGRAM_BY_DEPARTMENT, deptId, activeCategory],
     enabled: !!deptId && !!activeCategory,
+    staleTime: 5 * 60 * 1000,
   });
 
   const handleNavigate = (program) => {
