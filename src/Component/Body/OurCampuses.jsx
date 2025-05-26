@@ -23,6 +23,7 @@ import {
   siri,
   wazirpur,
 } from "../Campuses/campusimages";
+import { generateCampusImage } from "../../utils/getCampusImages";
 
 const localCampusImages = {
   pusa: pusa1,
@@ -39,15 +40,15 @@ const localCampusImages = {
   wazirpur,
 };
 
-const getCampusImage = (campusName, backendImage) => {
-  const lowerName = campusName.toLowerCase();
-  for (const key in localCampusImages) {
-    if (lowerName.includes(key)) {
-      return localCampusImages[key];
-    }
-  }
-  return backendImage;
-};
+// const getCampusImage = (campusName, backendImage) => {
+//   const lowerName = campusName.toLowerCase();
+//   for (const key in localCampusImages) {
+//     if (lowerName.includes(key)) {
+//       return localCampusImages[key];
+//     }
+//   }
+//   return backendImage;
+// };
 
 const CustomArrow = ({ onClick, direction }) => (
   <div
@@ -114,7 +115,11 @@ const CarouselSection = () => {
                 >
                   <div className="group h-64">
                     <img
-                      src={getCampusImage(campus.name, campus.campus_photo)}
+                      // src={getCampusImage(campus.name, campus.campus_photo)}
+                      src={generateCampusImage(
+                        campus.name,
+                        campus.campus_photo
+                      )}
                       alt={campus.name}
                       className="h-full min-w-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-50 rounded-t-lg"
                     />
@@ -150,10 +155,11 @@ const CarouselSection = () => {
               <a href={`/campus/${generateSlug(campus.name)}`}>
                 <div className="rounded-lg overflow-hidden shadow-md">
                   <img
-                    src={getCampusImage(campus.name, campus.campus_photo)}
+                    src={generateCampusImage(campus.name, campus.campus_photo)}
                     alt={campus.name}
                     className="w-full h-48 object-cover"
                   />
+
                   <p className="text-center text-base font-semibold mt-2 text-black pb-3">
                     {campus.name}
                   </p>

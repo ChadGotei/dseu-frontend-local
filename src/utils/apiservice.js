@@ -219,11 +219,6 @@ export const getCampusByZone = async (zoneName) => {
     params: { zone: zoneName }
   });
 
-  // const data = res?.data?.data?.campuses.map((campus) => {
-  //   console.log(campus);
-  //   return campus.name;
-  // })
-
   return res.data;
 }
 
@@ -243,7 +238,7 @@ export const login = async ({ email, password }) => {
 
     return response.data;
   } catch (error) {
-    console.error("Error while logging in:", error);
+    console.error("Error while logging:", error);
     throw error;
   }
 };

@@ -5,6 +5,7 @@ import { User, FileText, LogOut, ChevronLeft } from "lucide-react";
 
 import { getFacultyById } from "../../utils/apiservice";
 import { addResearch } from "../../utils/facultyApi";
+import { showSuccessToast } from "../../utils/toasts";
 
 import TabBtn from "../Reusable/TabBtn";
 import FacultyInfoLoading from "../ShimmerUI/FacultyInfoLoading";
@@ -49,6 +50,7 @@ const FacultyById = () => {
   const handleLogout = () => {
     sessionStorage.clear();
     navigate("/");
+    showSuccessToast("Logged out successfully!");
   };
 
   if (isLoading) return <FacultyInfoLoading />;
@@ -87,7 +89,7 @@ const FacultyById = () => {
         hover:scale-[1.01]"
       >
         <ChevronLeft />
-         Back
+        Back
       </button>
 
       <div className="flex flex-col md:flex-row gap-10">
