@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import Slider from "react-slick";
 
@@ -67,12 +67,6 @@ const CarouselSection = () => {
     queryFn: getAllCampus,
     queryKey: [QUERY_KEYS.GET_CAMPUS],
   });
-
-  useEffect(() => {
-    if (campuses) {
-      console.log(campuses);
-    }
-  }, [campuses]);
 
   if (isCampusLoading) {
     return <div>Loading...</div>;

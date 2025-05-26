@@ -99,6 +99,7 @@ import Tenders from "./Component/Tenders/Tenders.jsx";
 import COE from './Component/Administration/COE';
 import COF from './Component/Administration/COF';
 import IB from "./Component/Admission/IB.jsx";
+import AdmissionPage from "./Component/Admission/AdmissionPage.jsx";
 // import Counter from "./Component/temp/Counter.jsx";
 
 function App() {
@@ -179,6 +180,7 @@ function App() {
             <Route path="/news/innovation-hub" element={<IndustryPartnership />} />
 
             {/* Admission */}
+            <Route path="/admission" element={<AdmissionPage />} />
             <Route path="/admission/guidelines" element={<AdmissionGuidelines />} />
             <Route path="/admission/refund-policy" element={<FeeRefundPolicy />} />
             <Route path="/admission/process-and-guidelines" element={<ProcessAndGuidelines />} />

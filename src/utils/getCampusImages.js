@@ -1,0 +1,1 @@
+import { aryabhatt, dheerpur, gbpant, jaffarpur, kasturba, okhla1, okhlacamps, pusa1, pusa2, rajokri, siri, wazirpur } from '../Component/Campuses/campusimages'; 

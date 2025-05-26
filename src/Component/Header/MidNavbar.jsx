@@ -77,6 +77,10 @@ const navItems = [
     name: "Admission",
     dropdownItems: [
       {
+        name: "Admission 2025-26",
+        path: "/admission"
+      },
+      {
         name: "Information Bulletin",
         path: "/admission/information-bulletin",
       },
@@ -92,7 +96,6 @@ const navItems = [
         name: "Programs after Bachelor",
         path: "https://dseuadm.samarth.edu.in/pg",
       },
-
       {
         name: "Process and guidelines",
         path: "/admission/process-and-guidelines",

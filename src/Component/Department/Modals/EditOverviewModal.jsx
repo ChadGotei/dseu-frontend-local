@@ -1,15 +1,25 @@
 import { useState } from "react";
 import { updateFacultyOverview } from "../../../utils/facultyApi";
+import { useQueryClient } from "@tanstack/react-query";
 
-const EditOverviewModal = ({ facultyId, initialOverview, onClose, onUpdated }) => {
+const EditOverviewModal = ({
+  facultyId,
+  initialOverview,
+  onClose,
+  onUpdated,
+}) => {
   const [overview, setOverview] = useState(initialOverview || "");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  const queryClient = useQueryClient();
 
   const handleSave = async () => {
     setLoading(true);
     try {
       await updateFacultyOverview(overview, facultyId);
+      queryClient.invalidateQueries(["getFacultyById", facultyId]);
+
       onUpdated(overview);
       onClose();
     } catch (err) {

@@ -17,20 +17,28 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (sessionStorage.getItem("token") && sessionStorage.getItem("email")) {
+    const storedEmail = sessionStorage.getItem("email");
+    if (sessionStorage.getItem("token") && storedEmail) {
+      setEmail(storedEmail);
       setIsLoggedIn(true);
     }
-  }, [navigate]);
+  }, []);
 
   const mutation = useMutation({
-    mutationFn: () => login({ email, password, emailFlag: true }),
+    mutationFn: () => {
+      console.log("Logging in with:", { email, password });
+      return login({ email, password });
+    },
     onSuccess: async () => {
       const facultyData = await getFacutlyByEmail(email);
       sessionStorage.setItem("facultyId", facultyData._id);
       sessionStorage.setItem("email", email);
+      showSuccessToast("Logged in successfully!");
       setLoginSuccess(true);
     },
     onError: (error) => {
+      console.log(error?.response?.data?.message);
+
       showErrorToast(
         error?.response?.data?.message || "Login failed. Please try again."
       );
@@ -46,6 +54,7 @@ const LoginPage = () => {
     sessionStorage.removeItem("email");
     sessionStorage.removeItem("token");
     sessionStorage.removeItem("currentRole");
+    sessionStorage.removeItem("facultyId");
     setShowLogoutModal(false);
     navigate("/");
     showSuccessToast("Logged out succesfully!");
@@ -54,18 +63,8 @@ const LoginPage = () => {
   const getRedirectPath = () => {
     const role = sessionStorage.getItem("currentRole");
     const storedFacultyId = sessionStorage.getItem("facultyId");
-    switch (role) {
-      case "Test":
-      case "Faculty":
-        return `/faculty/${storedFacultyId}`;
-      case "Training & Placement Officer":
-      case "Executive Engineer":
-      case "Deputy Registrar":
-      case "Assistant Registrar":
-        return "/academics/faculty";
-      default:
-        return "/academics/faculty";
-    }
+
+    return `/faculty/${storedFacultyId}`;
   };
 
   const handleRedirect = () => {
@@ -172,6 +171,7 @@ const LoginPage = () => {
                   <button
                     onClick={handleRedirect}
                     className="bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
+                    type="button"
                   >
                     🚀 Go to Profile
                   </button>
