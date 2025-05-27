@@ -54,6 +54,10 @@ const CampusPage = () => {
     enabled: !!lowercasedName,
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   if (isLoading) return <OrangeLoader />;
 
   if (!data) {

@@ -53,6 +53,7 @@ const AnnouncementStrip = () => {
               href={announcement.fileLink}
               className="flex items-center hover:text-blue-800 transition-colors mx-4 text-blue-600"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <ExternalLink className="w-4 h-4 mr-2" />
               <span>{announcement.fileName}</span>

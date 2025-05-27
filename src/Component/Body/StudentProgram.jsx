@@ -25,16 +25,11 @@ const StudyProgramsSection = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const normalizeProgramType = (programType) => {
-    return programType.toLowerCase().replace(/\s+/g, "");
-  };
-
-  const handleProgramClick = (programType) => {
-    const normalizedType = normalizeProgramType(programType);
-    navigate(`/courses/${normalizedType}`);
-  };
-
-  const { data: fetchedPrograms = [], isLoading, isError } = useQuery({
+  const {
+    data: fetchedPrograms = [],
+    isLoading,
+    isError,
+  } = useQuery({
     queryKey: ["programs", selectedProgram],
     queryFn: () => getProgramsByLevel(selectedProgram),
     staleTime: 5 * 60 * 1000,
@@ -62,6 +57,7 @@ const StudyProgramsSection = () => {
                 src={carouselItems[currentCarouselIndex].image}
                 alt="Achievement"
                 className="w-full h-full object-cover absolute inset-0"
+                loading="lazy"
               />
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                 {carouselItems.map((_, index) => (
@@ -126,7 +122,6 @@ const StudyProgramsSection = () => {
                       style={{
                         backgroundImage: `url(${study})`,
                       }}
-                      // onClick={() => handleProgramClick(selectedProgram)}
                       onClick={() => navigate(`/programs/${program._id}`)}
                     >
                       <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>

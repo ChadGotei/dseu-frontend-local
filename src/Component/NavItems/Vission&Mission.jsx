@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowRightCircle } from "lucide-react";
 
 import HeadingText from "../Reusable/HeadingText";
 

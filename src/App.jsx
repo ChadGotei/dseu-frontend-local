@@ -57,7 +57,6 @@ const ViceChancellorPage = lazy(() => import('./Component/Body/ViceChancellorPag
 const About = lazy(() => import("./Component/NavItems/About"));
 const VissionMission = lazy(() => import("./Component/NavItems/Vission&Mission"));
 const Amenities = lazy(() => import("./Component/NavItems/Amenities"));
-const ResearchDev = lazy(() => import("./Component/Body/ResearchDev"));
 const AlumniSection = lazy(() => import("./Component/Alumni Page/AlumniSection"));
 const JobPortal = lazy(() => import("./Component/Body/JobPortal"));
 const HolidayCalendar = lazy(() => import("./Component/Calendar/HolidayCalendar"));
@@ -160,7 +159,6 @@ function App() {
             <Route path="/administration/Support-Services" element={<UnderConstruction />} />
             <Route path="/administration/Other-Academic-Units" element={<UnderConstruction />} />
             <Route path="/registrar" element={<RegistararPage />} />
-            <Route path="/research/*" element={<ResearchDev />} />
             <Route path="/administration/vice-chancellor" element={<ViceChancellorPage />} />
             <Route path="/administration/chancellor" element={<ChancellorPage />} />
             <Route path="/administration/coe" element={<COE />} />

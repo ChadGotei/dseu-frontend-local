@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
@@ -8,47 +9,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { generateSlug } from "../../utils/helper";
 import { getAllCampus } from "../../utils/apiservice";
 import { QUERY_KEYS } from "../../utils/queryKeys";
-
-import {
-  pusa1,
-  aryabhatt,
-  dheerpur,
-  gbpant,
-  jaffarpur,
-  kasturba,
-  okhla1,
-  okhlacamps,
-  pusa2,
-  rajokri,
-  siri,
-  wazirpur,
-} from "../Campuses/campusimages";
 import { generateCampusImage } from "../../utils/getCampusImages";
 
-const localCampusImages = {
-  pusa: pusa1,
-  "DSEU pusa": pusa2,
-  aryabhatt,
-  dheerpur,
-  gbpant,
-  jaffarpur,
-  kasturba,
-  okhla1,
-  champs: okhlacamps,
-  rajokri,
-  siri,
-  wazirpur,
-};
-
-// const getCampusImage = (campusName, backendImage) => {
-//   const lowerName = campusName.toLowerCase();
-//   for (const key in localCampusImages) {
-//     if (lowerName.includes(key)) {
-//       return localCampusImages[key];
-//     }
-//   }
-//   return backendImage;
-// };
+import OrangeLoader from "../PageLoader/OrangeLoader";
 
 const CustomArrow = ({ onClick, direction }) => (
   <div
@@ -67,11 +30,8 @@ const CarouselSection = () => {
   const { data: campuses, isLoading: isCampusLoading } = useQuery({
     queryFn: getAllCampus,
     queryKey: [QUERY_KEYS.GET_CAMPUS],
+    staleTime: 30 * 60 * 1000,
   });
-
-  if (isCampusLoading) {
-    return <div>Loading...</div>;
-  }
 
   const desktopSettings = {
     centerMode: true,
@@ -93,6 +53,10 @@ const CarouselSection = () => {
     autoplaySpeed: 2000,
   };
 
+  if (isCampusLoading) {
+    return <OrangeLoader />;
+  }
+
   return (
     <section className="pb-12 pt-3 bg-gray-100 mt-10">
       <h2 className="text-4xl font-extrabold text-center text-blue-900 mb-8 mt-10 font-sans">
@@ -105,7 +69,7 @@ const CarouselSection = () => {
         <Slider {...desktopSettings}>
           {campuses.map((campus, index) => (
             <div key={campus._id} className="px-6">
-              <a href={`/campus/${generateSlug(campus.name)}`}>
+              <Link to={`/campus/${generateSlug(campus.name)}`}>
                 <div
                   className={`relative overflow-hidden shadow-lg transition-transform duration-500 ${
                     index === activeIndex
@@ -141,7 +105,7 @@ const CarouselSection = () => {
                     {campus.name}
                   </p>
                 </div>
-              </a>
+              </Link>
             </div>
           ))}
         </Slider>

@@ -7,6 +7,7 @@ export const useNoticesBySection = (section, archived = false, limit, page, rege
     queryKey: [QUERY_KEYS.GET_NOTICES, section, archived, page, limit, regex],
     queryFn: () => getPdfBySections(section, archived, limit, page, regex),
     enabled: !!section && !!limit && !!page,
+    staleTime: 5 * 60 * 1000, 
   });
 };
 
