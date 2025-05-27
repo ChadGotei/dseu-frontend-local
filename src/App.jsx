@@ -80,27 +80,27 @@ const AdminLogin = lazy(() => import('./Component/Admin/LoginForm'));
 const Dashboard = lazy(() => import('./Component/Admin/Dashboard'));
 const TestPage = lazy(() => import('./Component/Admin/TestPage'));
 
-import RegistararPage from "./Component/Body/RegistararPage";
-import Socials from "./Component/Footer/Socials";
-import NotFound from "./Component/NotFound/page";
-import UserLayout from "./Component/Layouts/UserLayout";
-import FacultyById from "./Component/Department/FacultyById";
-import HistoryDSEU from "./Component/NavItems/HistoryDSEU";
-import Scholarship from "./Component/Student Services/Scholarship";
-import ArchiveUploads from "./Component/Admin/ArchiveUploads";
-import ArchivedJobPortal from "./Component/Administration/ArchivedJobPortal";
-import ChancellorPage from "./Component/Administration/ChancellorPage";
-import Entrepreneurship from './Component/NavItems/Entrepreneurship';
-import RecruitmentRules from "./Component/Administration/RecruitmentRules";
-import AnnualReport from "./Component/NavItems/AnnualReport";
-import AdministrationTemp from "./Component/Administration/page";
-import ViewPdfs from "./Component/Admin/ViewPDFs/ViewPdfs";
-import Tenders from "./Component/Tenders/Tenders.jsx";
-import COE from './Component/Administration/COE';
-import COF from './Component/Administration/COF';
-import IB from "./Component/Admission/IB.jsx";
-import AdmissionPage from "./Component/Admission/AdmissionPage.jsx";
-// import Counter from "./Component/temp/Counter.jsx";
+const RegistararPage = lazy(() => import("./Component/Body/RegistararPage"));
+const Socials = lazy(() => import("./Component/Footer/Socials"));
+const UserLayout = lazy(() => import("./Component/Layouts/UserLayout"));
+const FacultyById = lazy(() => import("./Component/Department/FacultyById"));
+const HistoryDSEU = lazy(() => import("./Component/NavItems/HistoryDSEU"));
+const Scholarship = lazy(() => import("./Component/Student Services/Scholarship"));
+const ArchiveUploads = lazy(() => import("./Component/Admin/ArchiveUploads"));
+const ArchivedJobPortal = lazy(() => import("./Component/Administration/ArchivedJobPortal"));
+const ChancellorPage = lazy(() => import("./Component/Administration/ChancellorPage"));
+const Entrepreneurship = lazy(() => import('./Component/NavItems/Entrepreneurship'));
+const RecruitmentRules = lazy(() => import("./Component/Administration/RecruitmentRules"));
+const AnnualReport = lazy(() => import("./Component/NavItems/AnnualReport"));
+const AdministrationTemp = lazy(() => import("./Component/Administration/page"));
+const ViewPdfs = lazy(() => import("./Component/Admin/ViewPDFs/ViewPdfs"));
+const Tenders = lazy(() => import("./Component/Tenders/Tenders.jsx"));
+const COE = lazy(() => import('./Component/Administration/COE'));
+const COF = lazy(() => import('./Component/Administration/COF'));
+const IB = lazy(() => import("./Component/Admission/IB.jsx"));
+const AdmissionPage = lazy(() => import("./Component/Admission/AdmissionPage.jsx"));
+
+import NotFound from './Component/NotFound/page.jsx';
 
 function App() {
   return (

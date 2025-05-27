@@ -52,13 +52,13 @@ const Footer = () => {
             </span>
           </p>
           <p className="mt-6 text-base">
-            <FontAwesomeIcon
+            {/* <FontAwesomeIcon
               icon={faPhone}
               className="mr-3"
               style={{ color: "#1E40AF", fontSize: "1.25rem" }}
             />
             011-2659-7135
-            <br />
+            <br /> */}
             <FontAwesomeIcon
               icon={faEnvelope}
               className="mr-3"
