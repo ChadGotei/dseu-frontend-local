@@ -82,7 +82,6 @@ const TestPage = lazy(() => import('./Component/Admin/TestPage'));
 
 const RegistararPage = lazy(() => import("./Component/Body/RegistararPage"));
 const Socials = lazy(() => import("./Component/Footer/Socials"));
-const UserLayout = lazy(() => import("./Component/Layouts/UserLayout"));
 const FacultyById = lazy(() => import("./Component/Department/FacultyById"));
 const HistoryDSEU = lazy(() => import("./Component/NavItems/HistoryDSEU"));
 const Scholarship = lazy(() => import("./Component/Student Services/Scholarship"));
@@ -99,6 +98,7 @@ const COE = lazy(() => import('./Component/Administration/COE'));
 const COF = lazy(() => import('./Component/Administration/COF'));
 const IB = lazy(() => import("./Component/Admission/IB.jsx"));
 const AdmissionPage = lazy(() => import("./Component/Admission/AdmissionPage.jsx"));
+import UserLayout from './Component/Layouts/UserLayout.jsx';
 
 import NotFound from './Component/NotFound/page.jsx';
 
