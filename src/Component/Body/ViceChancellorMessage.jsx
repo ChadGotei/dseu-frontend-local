@@ -1,4 +1,3 @@
-import React from "react";
 import VCsir from "../../assets/VCsir.jpg";
 
 const ViceChancellorMessage = () => {
@@ -30,26 +29,21 @@ const ViceChancellorMessage = () => {
         </div>
       </div>
 
-
       <h4 className="text-[1.3rem] whitespace-nowrap md:text-2xl font-semibold text-gray-700 mb-2 text-center md:text-left">
         Message from the Vice Chancellor
       </h4>
-      <div className="md:w-[400px] w-100px  h-1 bg-orange-400 rounded-full mb-8 md:mb-6 mx-auto md:mx-0 animate-pulse" />
+      <div className="md:w-[400px] w-100px h-1 bg-orange-400 rounded-full mb-8 md:mb-6 mx-auto md:mx-0 animate-pulse" />
 
       <div className="space-y-5 text-[16px] md:text-[17px] text-gray-800 leading-relaxed text-justify">
         <p>
-          Welcome to Delhi Skill and Entrepreneurship University (DSEU), where innovation, inclusivity, and impact drive our mission.
+          Prof. Ashok Kumar Nagawat is an accomplished academic leader, theoretical physicist, and higher education reformer with 44 years of experience in teaching, research, and university governance. A Ph.D. in Theoretical High Energy Physics, his work on physics beyond the Standard Model has gained international recognition.
         </p>
         <p>
-          At DSEU, we offer skill-integrated, industry-aligned programs inspired by the National Education Policy 2020. Our learner-centric approach combines academic excellence with practical experience, preparing you to thrive in a dynamic global economy.
+          Before joining DSEU, he held key leadership roles at the University of Rajasthan and Rajasthan ILD Skills University, pioneering interdisciplinary education as the architect of the Centre for Converging Technologies—integrating nanotechnology, biotechnology, IT, and cognitive sciences. He has designed innovative programs, and created flagship centres, while driving academic reforms, technology initiatives and policy formulations.
         </p>
         <p>
-          Our campuses foster a supportive and inclusive environment, encouraging you to explore, innovate, and lead with purpose.
+          As Vice Chancellor of DSEU, he now champions a transformative vision, integrating academic excellence with employability and entrepreneurship, leveraging his expertise in STEM, converging technologies, and skill-based education to position DSEU as a national leader in skill and entrepreneurial learning.
         </p>
-        <p>
-          Embrace the opportunities ahead, stay curious, and make the most of your journey with us. We are excited to support your aspirations and witness your growth at DSEU.
-        </p>
-
       </div>
     </div>
   );

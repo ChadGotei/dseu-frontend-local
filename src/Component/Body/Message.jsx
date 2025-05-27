@@ -18,7 +18,7 @@ const leaders = [
     name: "Prof. Ashok Kumar Nagawat",
     image: VCsir,
     message:
-      "Embrace the opportunities ahead, stay curious, and make the most of your journey with us. We are excited to support your aspirations and witness your growth at DSEU.",
+      " Prof. Ashok Kumar Nagawat is an accomplished academic leader, theoretical physicist, and higher education reformer with 44 years of experience in teaching, research, and university governance.",
     link: "/vice-chancellor",
     newPage: false,
   },

@@ -14,9 +14,17 @@ import PdfTable from "./PdfTable";
 const ViewPdfs = () => {
   const [selectedTab, setSelectedTab] = useState("non-archived");
   const [currentPage, setCurrentPage] = useState(1);
+
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
+
+  const [filters, setFilters] = useState({
+    searchInput: "",
+    startDate: "",
+    endDate: "",
+  });
+
   const [showModal, setShowModal] = useState(false);
   const [deleteId, setDeleteId] = useState(null);
 
@@ -29,18 +37,18 @@ const ViewPdfs = () => {
       QUERY_KEYS.GET_NOTICES,
       isArchived,
       currentPage,
-      searchInput,
-      startDate,
-      endDate,
+      filters.searchInput,
+      filters.startDate,
+      filters.endDate,
     ],
     queryFn: () =>
       getAllPdfs(
         isArchived,
         limit,
         currentPage,
-        searchInput,
-        startDate,
-        endDate
+        filters.searchInput,
+        filters.startDate,
+        filters.endDate
       ),
     keepPreviousData: true,
   });
@@ -69,9 +77,16 @@ const ViewPdfs = () => {
   };
 
   const handleClearFilters = () => {
-    setEndDate("");
-    setStartDate("");
     setSearchInput("");
+    setStartDate("");
+    setEndDate("");
+    setFilters({ searchInput: "", startDate: "", endDate: "" });
+    setCurrentPage(1);
+  };
+
+  const handleSearch = () => {
+    setFilters({ searchInput, startDate, endDate });
+    setCurrentPage(1);
   };
 
   const notices = data?.data?.notices || [];
@@ -111,6 +126,7 @@ const ViewPdfs = () => {
         setEndDate={setEndDate}
         handleClearFilters={handleClearFilters}
         setCurrentPage={setCurrentPage}
+        onSearch={handleSearch}
       />
 
       {isLoading ? (

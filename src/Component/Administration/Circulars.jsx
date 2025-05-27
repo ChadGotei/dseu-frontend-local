@@ -11,6 +11,7 @@ const Circulars = () => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [circulars, setCirculars] = useState([]);
   const [searchInput, setSearchInput] = useState("");
+  const [inputSearch, setInputSearch] = useState("");
 
   const token = sessionStorage.getItem("token");
   const currentRole = sessionStorage.getItem("currentRole");
@@ -38,6 +39,16 @@ const Circulars = () => {
     setArchived((prev) => !prev);
   };
 
+  const handleSearch = () => {
+    if(!inputSearch) return;
+    setSearchInput(inputSearch);
+  }
+
+  const handleClearFilter = () => {
+    setSearchInput("");
+    setInputSearch("");
+  }
+
   const sectionTitle = archived ? "Archived Circulars" : "Latest Circulars";
 
   return (
@@ -48,8 +59,10 @@ const Circulars = () => {
         </h2>
 
         <SearchAndUpload
-          searchInput={searchInput}
-          setSearchInput={setSearchInput}
+          handleClearFilter={handleClearFilter}
+          handleSearch={handleSearch}
+          inputField={inputSearch}
+          setInputField={setInputSearch}
           isAdmin={isAdmin}
           handleShowModal={() => setShowModal(true)}
           includeUpload={true}

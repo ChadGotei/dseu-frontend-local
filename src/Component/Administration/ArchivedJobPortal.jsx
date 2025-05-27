@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import ArchiveBanner from "../../assets/ArchiveBanner.jpg";
-import { jobPortalTabs as categoryTabs } from "../../constants/JOBPORTAL.JS";
-import { useNoticesBySection } from "../../hooks/useNoticesBySection";
-import { FileText, FilterX } from "lucide-react";
-import UploadModal from "../Admin/UploadModal";
-import ReactPaginate from "react-paginate";
-import { Pagination } from "../Reusable/Pagination";
+import { FileText, FilterX, Search } from "lucide-react";
+
 import Tooltip from "../Reusable/Tooltip";
+import UploadModal from "../Admin/UploadModal";
+import { Pagination } from "../Reusable/Pagination";
+
+import ArchiveBanner from "../../assets/ArchiveBanner.jpg";
+import { useNoticesBySection } from "../../hooks/useNoticesBySection";
+import { jobPortalTabs as categoryTabs } from "../../constants/JOBPORTAL.JS";
 
 const ArchivedJobPortal = () => {
   const { category } = useParams();
@@ -16,16 +17,17 @@ const ArchivedJobPortal = () => {
   const [showModal, setShowModal] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [noticeData, setNoticeData] = useState([]);
-  const [page, setPage] = useState(1); // for the page number
+  const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(3);
   const [searchInput, setSearchInput] = useState("");
+  const [inputField, setInputField] = useState("");
 
   const { data, isLoading } = useNoticesBySection(
     category,
     true,
     10,
     page,
-    searchInput
+    inputField
   );
 
   const currentRole = sessionStorage.getItem("currentRole");
@@ -55,9 +57,9 @@ const ArchivedJobPortal = () => {
     }
   }, [data]);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    setSearchInput(e.target.value);
+  const handleSearch = () => {
+    if (searchInput === "") return;
+    setInputField(searchInput);
     setPage(1);
   };
 
@@ -77,7 +79,7 @@ const ArchivedJobPortal = () => {
       </div>
 
       <main className="w-full max-w-6xl p-4">
-        <div className="flex flex-row w-full items-center justify-center gap-6 mt-5">
+        <div className="flex flex-row w-full items-center justify-center gap-2 sm:gap-4 md:gap-6 mt-5">
           <label
             htmlFor={searchInput}
             className="whitespace-nowrap text-lg font-semibold hidden md:block"
@@ -88,14 +90,33 @@ const ArchivedJobPortal = () => {
           <input
             type="text"
             value={searchInput}
-            onChange={handleSearch}
+            onChange={(e) => setSearchInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") handleSearch();
+            }}
             placeholder="Search by file name..."
             className="w-full px-4 py-2 rounded-xl border-2 border-blue-300 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-200 transition duration-300 shadow-sm"
           />
 
-          <Tooltip text={"Clear Filter"} bg="red-500" textColor="gray-100">
+          <Tooltip text={"Search"} bg="blue-600" textColor="black">
+            <Search
+              className="min-h-5 min-w-5 text-blue-500 hover:text-blue-600 cursor-pointer"
+              onClick={handleSearch}
+            />
+          </Tooltip>
+
+          <Tooltip
+            text={"Clear Filter"}
+            bg="red-500"
+            textColor="gray-100"
+            hiddenForMobile
+          >
             <FilterX
-              onClick={() => setSearchInput("")}
+              onClick={() => {
+                setInputField("");
+                setSearchInput("");
+                setPage(1);
+              }}
               className="min-h-5 min-w-5 text-red-600 hover:text-red-500 transition-colors hover:scale-[1.02] hover:cursor-pointer"
             />
           </Tooltip>

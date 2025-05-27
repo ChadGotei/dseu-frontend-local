@@ -1,4 +1,5 @@
-import { X } from "lucide-react";
+import { FilterX, Search, X } from "lucide-react";
+import Tooltip from "../../Reusable/Tooltip";
 
 const FilterSection = ({
   searchInput,
@@ -9,6 +10,7 @@ const FilterSection = ({
   setEndDate,
   handleClearFilters,
   setCurrentPage,
+  onSearch,
 }) => (
   <div className="flex flex-col md:flex-row flex-wrap gap-4 mb-6 items-start md:items-center">
     <input
@@ -58,12 +60,45 @@ const FilterSection = ({
       </div>
     </div>
 
-    <button
-      onClick={handleClearFilters}
-      className="flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-200 w-full justify-center md:w-fit"
-    >
-      <X size={16} /> Clear Filters
-    </button>
+    <div className="flex gap-3 items-center">
+      {/* Mobile buttons */}
+      <div className="flex gap-3 md:hidden items-center justify-center">
+        <button
+          onClick={onSearch}
+          className="bg-blue-600 text-white px-4 py-2 rounded-md shadow hover:bg-blue-700 transition-colors"
+        >
+          Search
+        </button>
+        <button
+          onClick={handleClearFilters}
+          className="bg-red-500 text-white px-4 py-2 rounded-md shadow hover:bg-red-600 transition-colors"
+        >
+          Clear Filters
+        </button>
+      </div>
+
+      {/* Desktop icons */}
+      <div className="hidden md:flex gap-3 items-center">
+        <Tooltip text={"Search"} bg="blue-600" textColor="white">
+          <Search
+            className="min-h-5 min-w-5 text-blue-500 hover:text-blue-600 cursor-pointer"
+            onClick={onSearch}
+          />
+        </Tooltip>
+
+        <Tooltip
+          text={"Clear Filter"}
+          bg="red-500"
+          textColor="gray-100"
+          hiddenForMobile
+        >
+          <FilterX
+            onClick={handleClearFilters}
+            className="min-h-5 min-w-5 text-red-600 hover:text-red-500 transition-colors hover:scale-[1.02] hover:cursor-pointer"
+          />
+        </Tooltip>
+      </div>
+    </div>
   </div>
 );
 

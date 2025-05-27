@@ -11,6 +11,7 @@ const OfficeOrders = () => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [orders, setOrders] = useState([]);
   const [searchInput, setSearchInput] = useState("");
+  const [inputField, setInputField] = useState("");
 
   const token = sessionStorage.getItem("token");
   const currentRole = sessionStorage.getItem("currentRole");
@@ -19,6 +20,16 @@ const OfficeOrders = () => {
     e.preventDefault();
     setArchived((prev) => !prev);
   };
+
+  const handleSearch = () => {
+    if(!inputField) return;
+    setSearchInput(inputField);
+  }
+
+  const handleClearFilter = () => {
+    setSearchInput("");
+    setInputField("");
+  }
 
   const { data, isLoading } = useNoticesBySection(
     "ad office orders",
@@ -50,12 +61,14 @@ const OfficeOrders = () => {
         </h2>
 
         <SearchAndUpload
-          searchInput={searchInput}
-          setSearchInput={setSearchInput}
+          inputField={inputField}
+          setInputField={setInputField}
           isAdmin={isAdmin}
           handleShowModal={() => setShowModal(true)}
           includeUpload={true}
           containerClass={"flex flex-row w-full md:w-[70%] gap-2"}
+          handleSearch={handleSearch}
+          handleClearFilter={handleClearFilter}
         />
       </div>
 
