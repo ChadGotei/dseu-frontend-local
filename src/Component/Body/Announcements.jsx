@@ -51,7 +51,7 @@ const AnnouncementStrip = () => {
           Announcements
         </span>
       </div>
-      <div className="h-10 flex items-center overflow-hidden relative w-full">
+      <div className="h-10 flex items-center overflow-hidden relative w-full text-xs sm:text-sm md:text-base">
         <div className="animate-marquee inline-flex items-center absolute whitespace-nowrap">
           {announcements.map((announcement, index) =>
             announcement.fileLink ? (
@@ -88,7 +88,7 @@ const AnnouncementStrip = () => {
 const style = `
   @keyframes marquee {
     0% {
-      transform: translateX(100%);
+      transform: translateX(20%);
     }
     100% {
       transform: translateX(-100%);
