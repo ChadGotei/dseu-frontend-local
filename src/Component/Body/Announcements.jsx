@@ -39,7 +39,7 @@ const AnnouncementStrip = () => {
   }
 
   return (
-    <div className="flex bg-white border-y border-gray-200">
+    <div className="flex bg-white border-y border-gray-200 mt-4">
       <div className="bg-blue-600 text-white flex w-28 lg:w-auto items-center px-5">
         <span className="text-[12px] ml-[-10px] sm:text-[10px] lg:text-[14px] font-bold">
           Announcements
