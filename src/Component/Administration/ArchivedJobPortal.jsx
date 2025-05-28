@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { FileText, FilterX, Search } from "lucide-react";
 
@@ -15,10 +15,7 @@ const ArchivedJobPortal = () => {
   const navigate = useNavigate();
 
   const [showModal, setShowModal] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false);
-  const [noticeData, setNoticeData] = useState([]);
   const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(3);
   const [searchInput, setSearchInput] = useState("");
   const [inputField, setInputField] = useState("");
 
@@ -40,22 +37,15 @@ const ArchivedJobPortal = () => {
     if (!isValidCategory) {
       navigate("/recruitment");
     }
-
-    if (currentRole === "Admin" && token) {
-      setIsAdmin(true);
-    }
   }, [category, currentRole, token, navigate]);
 
-  // for data and pagination
-  useEffect(() => {
-    if (data?.data?.notices) {
-      setNoticeData(data.data.notices);
-    }
+  const isAdmin = useMemo(
+    () => currentRole === "Admin" && !!token,
+    [currentRole, token]
+  );
 
-    if (data) {
-      setTotalPages(data.metadata.totalPages);
-    }
-  }, [data]);
+  const noticeData = data?.data?.notices || [];
+  const totalPages = data?.metadata?.totalPages || 1;
 
   const handleSearch = () => {
     if (searchInput === "") return;

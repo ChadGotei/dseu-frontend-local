@@ -23,7 +23,7 @@ const AdmissionPage = () => {
   return (
     <main className="flex flex-col mt-8 md:mt-12 md:mb-10 mb-16 justify-center items-center w-full max-w-3xl gap-4 sm:gap-6 md:gap-8 mx-auto">
       <div className="text-center">
-        <h2 className="text-3xl md:text-[2.4rem] font-bold text-[#222] tracking-wide">
+        <h2 className="text-[2rem] md:text-[2.4rem] font-bold text-[#222] tracking-wide">
           Admission Cycle 2025-26
         </h2>
         <div className="flex items-center justify-center mt-4 w-[150px] mx-auto">
@@ -40,7 +40,7 @@ const AdmissionPage = () => {
             className="border-l-[3px] border-blue-600 bg-gray-50 p-5 shadow-sm rounded-lg hover:shadow-md transition-all duration-300"
           >
             <div className="flex justify-between items-center">
-              <p className="text-lg font-medium text-gray-800">
+              <p className="text-base md:text-lg font-medium text-gray-800">
                 {text} <span className="font-bold">{bolded}</span>
               </p>
               <a

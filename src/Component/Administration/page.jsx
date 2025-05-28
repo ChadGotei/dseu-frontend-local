@@ -1,7 +1,6 @@
-import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-import DirectorsOffice from "./DirectorsOffice";
 import BoardOfManagement from "./BoardOfManagement";
 import ImportantForms from "./ImportantForms";
 import AdvisoryBoard from "./AdvisoryBoard";
@@ -16,15 +15,15 @@ import SideBar from "./SideBar";
 import MobileSideBar from "./MobileSideBar";
 
 const AdministrationTemp = () => {
-  const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
-  
     if (window.location.pathname === "/administration/administrative") {
-      navigate("/administration/administrative/board-of-management", { replace: true });
+      navigate("/administration/administrative/board-of-management", {
+        replace: true,
+      });
     }
-  }, []); 
+  }, []);
 
   return (
     <div className="flex flex-col my-1 sm:my-4 md:my-10 lg:flex-row gap-6">
@@ -32,7 +31,6 @@ const AdministrationTemp = () => {
       <MobileSideBar />
       <div className="flex-1 px-10">
         <Routes>
-          <Route path="directors-office" element={<DirectorsOffice />} />
           <Route path="board-of-management" element={<BoardOfManagement />} />
           <Route path="important-forms" element={<ImportantForms />} />
           <Route path="advisory-board" element={<AdvisoryBoard />} />

@@ -18,7 +18,11 @@ const AnnouncementStrip = () => {
     if (data) {
       if (data.data && Array.isArray(data.data.notices)) {
         const updated = [
-          { fileName: toAdd, fileLink: "" },
+          {
+            fileName: toAdd,
+            fileLink: "https://dseu.ac.in/admission",
+            samePage: true,
+          },
           ...data.data.notices,
         ];
         setAnnouncements(updated);
@@ -59,8 +63,8 @@ const AnnouncementStrip = () => {
                 key={index}
                 href={announcement.fileLink}
                 className="flex items-center hover:text-blue-800 transition-colors mx-4 text-blue-600"
-                target="_blank"
-                rel="noopener noreferrer"
+                target={announcement.samePage ? "_self" : "_blank"}
+                rel={announcement.samePage ? undefined : "noopener noreferrer"}
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
                 <span>{announcement.fileName}</span>
@@ -88,10 +92,21 @@ const AnnouncementStrip = () => {
 const style = `
   @keyframes marquee {
     0% {
-      transform: translateX(20%);
+      transform: translateX(70%);
     }
     100% {
       transform: translateX(-100%);
+    }
+  }
+
+  @media (max-width: 640px) {
+    @keyframes marquee {
+      0% {
+        transform: translateX(15%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
   }
 

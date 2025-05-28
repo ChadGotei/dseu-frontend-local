@@ -11,13 +11,13 @@ const SearchAndUpload = ({
   includeUpload,
   containerClass = false,
   handleSearch,
-  handleClearFilter
+  handleClearFilter,
 }) => {
   return (
     <div
       className={`${
         containerClass ||
-        "flex flex-row items-center justify-center w-full gap-4 my-4"
+        "flex flex-row items-center justify-center gap-4 my-4 w-full"
       }`}
     >
       <div className="flex flex-row w-full items-center gap-5 md:gap-2 justify-center md:justify-normal">
@@ -26,7 +26,7 @@ const SearchAndUpload = ({
           value={inputField}
           onChange={(e) => setInputField(e.target.value)}
           placeholder="Search by file name..."
-          className="w-[70%] px-4 py-2 rounded-xl border-2 border-blue-300 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-200 transition duration-300 shadow-sm"
+          className="px-4 py-2 rounded-xl border-2 border-blue-300 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-200 transition duration-300 shadow-sm w-full"
         />
         <Search
           className="text-blue-500 w-7 h-7 hover:cursor-pointer"
@@ -40,7 +40,7 @@ const SearchAndUpload = ({
 
       {includeUpload && isAdmin && (
         <button
-          className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm md:text-base hover:bg-blue-700 transition-colors duration-300 shadow-md"
+          className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm md:text-base hover:bg-blue-700 transition-colors duration-300 shadow-md whitespace-nowrap"
           onClick={handleShowModal}
         >
           + Upload <span className="hidden md:inline-block">PDF</span>

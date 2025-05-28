@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
+import { Plus } from "lucide-react";
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 import StatutoryBodiesLoading from "../ShimmerUI/StatutoryBodiesLoading";
-import { Plus } from "lucide-react";
 import UploadModal from "../Admin/UploadModal";
 
 const StatutoryBodiesComponent = () => {

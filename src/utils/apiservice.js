@@ -64,23 +64,6 @@ export const getDepartmentById = async (id) => {
 };
 
 
-export const updateFacultyResearch = async (id, data) => {
-  try {
-    console.log("Sending research update for faculty ID:", id, "Data:", data);
-    const response = await api.patch(`/faculty/${id}/research`, data, {
-      headers: {
-        ...getAuthHeaders(),
-        "Content-Type": "application/json",
-      },
-    });
-    console.log("Research update response:", response.data);
-    return response.data.data.faculty;
-  } catch (error) {
-    console.error("Error updating faculty research:", error.response?.data || error.message);
-    throw error;
-  }
-};
-
 // get school name by id
 export const getSchoolById = async (id) => {
   const response = await api.get(`/departmentSchools`);
@@ -168,15 +151,6 @@ export const getCampusByName = async (name) => {
 
   return data || null;
 }
-
-
-// get academic council notices
-export const getAcademicCouncilNotices = async () => {
-  const response = await api.get('/notice', {
-    params: { section: 'academic council' },
-  });
-  return response.data.data.notices;
-};
 
 // pdf through category such as circular, students, board of management etc.
 export const getPdfBySections = async (section, archived = false, limit, page, regex = "") => {
@@ -289,7 +263,7 @@ export const deletePdf = async (id) => {
       }
     );
 
-    console.log(response);
+    // console.log(response);
     return response;
   } catch (err) {
     console.error(err.response);

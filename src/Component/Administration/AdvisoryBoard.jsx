@@ -1,13 +1,21 @@
-import { FaArrowRight } from "react-icons/fa";
+import { ArrowRight } from "lucide-react";
+
+const committees = [
+  {
+    name: "Internal Complaints Committee (ICC)",
+    file: "/statutory_committees/ICC.pdf",
+  },
+  {
+    name: "Student Redressal Committee",
+    file: "/statutory_committees/Student Greivence.pdf",
+  },
+  {
+    name: "Equal Opportunity Cell",
+    file: "/statutory_committees/Equal Oppurtunity Cell.pdf",
+  },
+];
 
 const StatutoryCommittees = () => {
-  const committees = [
-    
-    { name: "Internal Complaints Committee (ICC)", file: "/statutory_committees/ICC.pdf" },
-    { name: "Student Redressal Committee", file: "/statutory_committees/Student Greivence.pdf" },
-    { name: "Equal Opportunity Cell", file: "/statutory_committees/Equal Oppurtunity Cell.pdf" },
-  ];
-
   return (
     <div className="p-6 max-w-4xl mx-auto">
       <h2 className="text-3xl md:text-4xl font-bold text-[#333] mb-6 text-center">
@@ -19,7 +27,9 @@ const StatutoryCommittees = () => {
             key={index}
             className="flex items-center justify-between bg-white shadow-md rounded-lg px-5 py-3 hover:shadow-lg transition-shadow"
           >
-            <span className="text-lg font-medium text-[#333]">{committee.name}</span>
+            <span className="text-base md:text-lg font-medium text-[#333]">
+              {committee.name}
+            </span>
             <a
               href={committee.file}
               target="_blank"
@@ -27,7 +37,7 @@ const StatutoryCommittees = () => {
               className="text-[#c4933f] hover:text-[#8f5206] flex items-center"
             >
               <span className="mr-1">View</span>
-              <FaArrowRight />
+              <ArrowRight />
             </a>
           </li>
         ))}

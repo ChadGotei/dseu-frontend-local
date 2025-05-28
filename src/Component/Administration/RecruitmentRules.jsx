@@ -67,6 +67,7 @@ const RecruitmentRules = () => {
         searchInput={searchInput}
         setSearchInput={setSearchInput}
         includeUpload
+        containerClass="w-full flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 md:px-[10rem] mt-4 px-10"
       />
 
       {isLoading ? (

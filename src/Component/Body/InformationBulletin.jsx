@@ -68,7 +68,8 @@ const InformationBulletin = () => {
         cards[section.index].content = [
           {
             name: "Admissions are now open for various Diploma, Undergraduate, and Postgraduate programs.",
-            link: "",
+            link: "https://dseu.ac.in/admission",
+            samePage: true,
           },
           ...notices,
         ];
@@ -154,8 +155,10 @@ const InformationBulletin = () => {
                         {item.link ? (
                           <a
                             href={item.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            target={item.samePage ? "_self" : "_blank"}
+                            rel={
+                              item.samePage ? undefined : "noopener noreferrer"
+                            }
                             className="text-gray-700 hover:text-blue-900 flex items-center w-full"
                           >
                             {item.name}

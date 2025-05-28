@@ -1,6 +1,5 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { BarChart2, BookOpen, FileText, ChevronRight } from "lucide-react"; // Changed from ArrowRight to ChevronRight
+import { BarChart2, BookOpen, FileText, ChevronRight } from "lucide-react"; 
 import HeadingText from "../Reusable/HeadingText";
 
 const IQAC = () => {

@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-import { FaFilePdf } from "react-icons/fa";
+import { FileText } from "lucide-react";
+
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
-import UploadModal from "../Admin/UploadModal";
+
 import ArchiveButton from "../Reusable/ArchiveButton";
+import UploadModal from "../Admin/UploadModal";
 
 const ImportantForms = () => {
   const [archived, setArchived] = useState(false);
@@ -102,7 +104,7 @@ const ImportantForms = () => {
                   </a>
                 </div>
                 <div className="mt-2 sm:mt-0 sm:ml-4 flex justify-end">
-                  <FaFilePdf className="text-red-600 text-[18px] sm:text-xl ml-1 sm:ml-2" />
+                  <FileText className="text-red-600 text-[18px] sm:text-xl ml-1 sm:ml-2 cursor-pointer" />
                 </div>
               </li>
             ))}

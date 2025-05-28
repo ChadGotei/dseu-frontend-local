@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { FaDownload } from "react-icons/fa";
+import { DownloadIcon } from "lucide-react";
+
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
+
 import UploadModal from "../Admin/UploadModal";
 import ToggleButton from "../Reusable/ArchiveButton";
 import SearchAndUpload from "../Reusable/SearchAndUpload";
@@ -52,7 +54,7 @@ const Circulars = () => {
   const sectionTitle = archived ? "Archived Circulars" : "Latest Circulars";
 
   return (
-    <div className="mb-10 px-4 md:px-0">
+    <div className="mb-10 md:px-0">
       <div className="flex flex-col md:flex-row items-center justify-between gap-2 mb-10 md:mb-3">
         <h2 className="text-2xl font-semibold mb-2 md:mb-0 text-center md:text-left text-[#333]">
           {sectionTitle}
@@ -94,7 +96,7 @@ const Circulars = () => {
                 </a>
               </div>
               <div className="mt-2 sm:mt-0 sm:ml-4 flex justify-end">
-                <FaDownload className="text-blue-600 text-[18px] sm:text-xl ml-1 sm:ml-2" />
+                <DownloadIcon className="text-blue-600 text-[18px] sm:text-xl ml-1 sm:ml-2" />
               </div>
             </li>
           ))}
