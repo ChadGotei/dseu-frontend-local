@@ -1,7 +1,9 @@
 import { ExternalLink } from "lucide-react";
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+
+const toAdd =
+  "Admissions are now open for various Diploma, Undergraduate, and Postgraduate programs";
 
 const AnnouncementStrip = () => {
   const [announcements, setAnnouncements] = useState([]);
@@ -15,9 +17,13 @@ const AnnouncementStrip = () => {
   useEffect(() => {
     if (data) {
       if (data.data && Array.isArray(data.data.notices)) {
-        setAnnouncements(data.data.notices);
+        const updated = [
+          { fileName: toAdd, fileLink: "" },
+          ...data.data.notices,
+        ];
+        setAnnouncements(updated);
       } else {
-        setAnnouncements([]);
+        setAnnouncements([{ fileName: toAdd, fileLink: "" }]);
       }
     }
   }, [data]);
@@ -47,22 +53,32 @@ const AnnouncementStrip = () => {
       </div>
       <div className="h-10 flex items-center overflow-hidden relative w-full">
         <div className="animate-marquee inline-flex items-center absolute whitespace-nowrap">
-          {announcements.map((announcement, index) => (
-            <a
-              key={index}
-              href={announcement.fileLink}
-              className="flex items-center hover:text-blue-800 transition-colors mx-4 text-blue-600"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <ExternalLink className="w-4 h-4 mr-2" />
-              <span>{announcement.fileName}</span>
-              <span className="new-badge ml-2">New</span>
-              {index !== announcements.length - 1 && (
-                <span className="mx-4 text-gray-400">|</span>
-              )}
-            </a>
-          ))}
+          {announcements.map((announcement, index) =>
+            announcement.fileLink ? (
+              <a
+                key={index}
+                href={announcement.fileLink}
+                className="flex items-center hover:text-blue-800 transition-colors mx-4 text-blue-600"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ExternalLink className="w-4 h-4 mr-2" />
+                <span>{announcement.fileName}</span>
+                <span className="new-badge ml-2">New</span>
+                {index !== announcements.length - 1 && (
+                  <span className="mx-4 text-gray-400">|</span>
+                )}
+              </a>
+            ) : (
+              <div key={index} className="flex items-center text-blue-600 mx-4">
+                <span>{announcement.fileName}</span>
+                <span className="new-badge ml-2">New</span>
+                {index !== announcements.length - 1 && (
+                  <span className="mx-4 text-gray-400">|</span>
+                )}
+              </div>
+            )
+          )}
         </div>
       </div>
     </div>

@@ -17,7 +17,11 @@ const sectionKeys = [
 
 const fetchSectionNotices = async () => {
   const requests = sectionKeys.map((section) =>
-    axios.get(`${baseUrl}notice?section=${encodeURIComponent(section.key)}&limit=50&page=1`)
+    axios.get(
+      `${baseUrl}notice?section=${encodeURIComponent(
+        section.key
+      )}&limit=50&page=1`
+    )
   );
   const responses = await Promise.all(requests);
   return responses.map((res, i) => ({
@@ -42,7 +46,7 @@ const InformationBulletin = () => {
   const { data, isLoading, error } = useQuery({
     queryKey: ["information-bulletin"],
     queryFn: fetchSectionNotices,
-    staleTime: 5 * 60 * 1000, 
+    staleTime: 5 * 60 * 1000,
   });
 
   const cards = [
@@ -55,10 +59,22 @@ const InformationBulletin = () => {
   // Fill fetched content
   if (data) {
     data.forEach((section) => {
-      cards[section.index].content = section.content.map((notice) => ({
+      const notices = section.content.map((notice) => ({
         name: notice.fileName,
         link: notice.fileLink,
       }));
+
+      if (section.index === 0) {
+        cards[section.index].content = [
+          {
+            name: "Admissions are now open for various Diploma, Undergraduate, and Postgraduate programs.",
+            link: "",
+          },
+          ...notices,
+        ];
+      } else {
+        cards[section.index].content = notices;
+      }
     });
   }
 
@@ -78,8 +94,14 @@ const InformationBulletin = () => {
             >
               <div className="flex flex-row items-center justify-center">
                 <div className="relative w-6 h-6 flex items-center justify-center mr-2">
-                  <FontAwesomeIcon icon={faPlus} className="absolute group-hover:scale-0 text-base transition-scale duration-300 ease-in-out" />
-                  <FontAwesomeIcon icon={faFileCirclePlus} className="absolute scale-0 group-hover:scale-105 text-base transition-scale duration-300 ease-in-out" />
+                  <FontAwesomeIcon
+                    icon={faPlus}
+                    className="absolute group-hover:scale-0 text-base transition-scale duration-300 ease-in-out"
+                  />
+                  <FontAwesomeIcon
+                    icon={faFileCirclePlus}
+                    className="absolute scale-0 group-hover:scale-105 text-base transition-scale duration-300 ease-in-out"
+                  />
                 </div>
                 <span>Upload</span>
               </div>
@@ -99,16 +121,24 @@ const InformationBulletin = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {cards.map((card, index) => (
-          <div key={index} className="bg-blue-50 rounded-lg shadow-lg overflow-hidden flex flex-col" style={{ height: "400px" }}>
+          <div
+            key={index}
+            className="bg-blue-50 rounded-lg shadow-lg overflow-hidden flex flex-col"
+            style={{ height: "400px" }}
+          >
             <h3 className="text-xl font-semibold px-3 py-2 text-blue-800 border-b border-blue-200 text-center">
               {card.title}
             </h3>
 
             <div className="relative flex-grow overflow-hidden group p-4">
               {isLoading ? (
-                <div className="text-center text-gray-500 italic">Loading...</div>
+                <div className="text-center text-gray-500 italic">
+                  Loading...
+                </div>
               ) : error ? (
-                <div className="text-center text-red-500">Error loading notices</div>
+                <div className="text-center text-red-500">
+                  Error loading notices
+                </div>
               ) : card.content.length === 0 ? (
                 <div className="my-auto p-2 text-center text-gray-500 italic">
                   No Notices available for now.
@@ -117,11 +147,26 @@ const InformationBulletin = () => {
                 <div className="animate-scroll group-hover:paused-scroll">
                   <ul className="space-y-2">
                     {card.content.map((item, idx) => (
-                      <li key={idx} className="hover:bg-blue-100 rounded py-1 px-2 transition-colors duration-200">
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-900 flex items-center w-full">
-                          {item.name}
-                          <span className="ml-2 animated-label">NEW</span>
-                        </a>
+                      <li
+                        key={idx}
+                        className="hover:bg-blue-100 rounded py-1 px-2 transition-colors duration-200"
+                      >
+                        {item.link ? (
+                          <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-700 hover:text-blue-900 flex items-center w-full"
+                          >
+                            {item.name}
+                            <span className="ml-2 animated-label">NEW</span>
+                          </a>
+                        ) : (
+                          <span className="text-gray-700 flex items-center w-full">
+                            {item.name}
+                            <span className="ml-2 animated-label">NEW</span>
+                          </span>
+                        )}
                       </li>
                     ))}
                   </ul>
