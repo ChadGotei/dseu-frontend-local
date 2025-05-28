@@ -115,8 +115,8 @@ function App() {
               path="/"
               element={
                 <>
-                  <HomeBody />
                   <Announcements />
+                  <HomeBody />
                   <Message />
                   <Socials />
                   <InformationBulletin />
