@@ -1,16 +1,15 @@
-import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUniversity } from "@fortawesome/free-solid-svg-icons";
 import ListOfFacultiesLoading from "../ShimmerUI/ListOfFacultiesLoading";
-import { baseUrl } from "../../constants/LOCALES.JS";
 import { getSchools } from "../../utils/apiservice";
+import { QUERY_KEYS } from "../../utils/queryKeys";
 
 export default function ListOfFaculties() {
   const { data, isLoading, isError, error } = useQuery({
     queryFn: getSchools,
-    queryKey: ["schools"],
+    queryKey: [QUERY_KEYS.GET_SCHOOLS],
     staleTime: 5 * 60 * 1000,
   });
 

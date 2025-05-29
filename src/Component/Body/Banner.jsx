@@ -22,7 +22,6 @@ const HomeBody = () => {
     { image: Banner3 },
     { image: Banner4 },
     { image: Banner5 },
-    { image: Banner6 },
   ];
 
   useEffect(() => {
@@ -56,7 +55,9 @@ const HomeBody = () => {
             <img
               src={slide.image}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover brightness-110 contrast-105"
+              className={`w-full h-full brightness-110 contrast-105 ${
+                slide.image === admissionbanner ? "object-contain" : "object-cover"
+              }`}
               loading={index === 0 ? "eager" : "lazy"}
             />
           </div>

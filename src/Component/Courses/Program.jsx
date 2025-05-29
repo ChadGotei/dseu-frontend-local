@@ -15,6 +15,7 @@ const Program = () => {
     queryFn: () => getProgramData(id),
     queryKey: [QUERY_KEYS.GET_PROGRAM_BY_ID, id],
     enabled: !!id,
+    staleTime: 5 * 60 * 1000,
   });
 
   const years = data?.years ? Object.values(data.years) : [];

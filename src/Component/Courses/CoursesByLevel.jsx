@@ -19,7 +19,8 @@ const CoursesByLevel = () => {
   const { data: programs, isLoading: isProgramLoading } = useQuery({
     queryFn: () => getProgramsByLevel(programLevel),
     queryKey: [QUERY_KEYS.GET_PROGRAMS_BY_LEVEL, programLevel],
-    enabled: isValidLevel,
+    enabled: !!isValidLevel,
+    staleTime: 7 * 60 * 1000,
   });
 
   const handleClick = (data) => {

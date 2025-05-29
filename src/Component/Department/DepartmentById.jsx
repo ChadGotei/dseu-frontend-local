@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 
-import { getDepartmentsBySchool, getSchoolById } from "../../utils/apiservice";
+import { getDepartmentsBySchool } from "../../utils/apiservice";
 
 import ProgramsByDepartment from "./ProgramsByDepartment";
 import FacultyByDepartment from "./FacultyByDepartment";
@@ -17,27 +17,35 @@ const DepartmentById = () => {
   const { data, isLoading, error } = useQuery({
     queryKey: ["getDepartmentById", id],
     queryFn: () => getDepartmentsBySchool(id),
-  });
-
-  const { data: school, isLoading: isSchoolLoading } = useQuery({
-    queryKey: ["getSchoolById", id],
-    queryFn: () => getSchoolById(id),
-    enabled: !!id,
+    staleTime: 5 * 60 * 1000,
   });
 
   useEffect(() => {
     if (!deptId) {
-      if (data?.departments) {
+      if (data?.departments && data.departments.length > 0) {
         setDeptId(data.departments[0]._id);
       }
     }
-  }, [deptId, data, school]);
+  }, [deptId, data]);
+
+  const departmentButtons = useMemo(() => {
+    if (!data?.departments) return null;
+    return data.departments.map((dept) => (
+      <button
+        key={dept._id}
+        className={`flex items-center justify-center p-2 rounded-md transition-colors ${
+          deptId === dept._id
+            ? "bg-blue-500 text-white"
+            : "bg-white hover:bg-blue-100 text-gray-700"
+        } shadow`}
+        onClick={() => setDeptId(dept._id)}
+      >
+        <span className="text-center p-1">{dept.name}</span>
+      </button>
+    ));
+  }, [data?.departments, deptId]);
 
   if (isLoading) {
-    return <OrangeLoader />;
-  }
-
-  if (isSchoolLoading) {
     return <OrangeLoader />;
   }
 
@@ -62,31 +70,20 @@ const DepartmentById = () => {
         <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-4 text-[#333]">
           Departments
         </h3>
-        <div className="grid grid-cols-1 gap-3">
-          {data.departments &&
-            data.departments.map((dept) => (
-              <button
-                key={dept._id}
-                className={` flex items-center justify-center p-2 rounded-md transition-colors ${
-                  deptId === dept._id
-                    ? "bg-blue-500 text-white"
-                    : "bg-white hover:bg-blue-100 text-gray-700"
-                } shadow`}
-                onClick={() => setDeptId(dept._id)}
-              >
-                <span className="text-center p-1">{dept.name}</span>
-              </button>
-            ))}
-        </div>
+        <div className="grid grid-cols-1 gap-3">{departmentButtons}</div>
       </div>
 
       {/* Mobile departments bar */}
-      <h1 className="text-center text-xl font-bold block md:hidden">{school?.name}</h1>
+      <h1 className="text-center text-xl font-bold block md:hidden">
+        {data?.name}
+      </h1>
       <MobileSelectBar deptId={deptId} setDeptId={setDeptId} data={data} />
 
       {/*  main content, either faculty or program  */}
       <div className="flex-1 flex flex-col">
-      <h1 className="text-center text-3xl mt-6 mb-10 font-bold md:block hidden">{school?.name}</h1>
+        <h1 className="text-center text-3xl mt-6 mb-10 font-bold md:block hidden">
+          {data?.name}
+        </h1>
         <div className="flex border-b border-gray-300">
           <button
             className={`flex-1 py-2 text-center ${
@@ -119,9 +116,12 @@ const DepartmentById = () => {
   );
 };
 
-const MobileSelectBar = ({ deptId, setDeptId, data }) => {
+const MobileSelectBar = React.memo(({ deptId, setDeptId, data }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const selectedDept = data.departments.find((dept) => dept._id === deptId);
+
+  const selectedDept = useMemo(() => {
+    return data.departments.find((dept) => dept._id === deptId);
+  }, [data.departments, deptId]);
 
   return (
     <div className="md:hidden w-full flex justify-center items-center mb-4 relative">
@@ -153,6 +153,6 @@ const MobileSelectBar = ({ deptId, setDeptId, data }) => {
       )}
     </div>
   );
-};
+});
 
 export default DepartmentById;

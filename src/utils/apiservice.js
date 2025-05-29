@@ -64,14 +64,6 @@ export const getDepartmentById = async (id) => {
 };
 
 
-// get school name by id
-export const getSchoolById = async (id) => {
-  const response = await api.get(`/departmentSchools`);
-  const schools = response.data.data.departmentSchools;
-
-  return schools.find((school) => school._id === id);
-}
-
 // get department by school
 export const getDepartmentsBySchool = async (id) => {
   const response = await api.get(`/departmentSchools`);
@@ -79,7 +71,7 @@ export const getDepartmentsBySchool = async (id) => {
     (school) => school._id === id
   );
 
-  return { departments: data.dept_id, name: data.name };
+  return { departments: data.dept_id, name: data.name, schoolName: data.name };
 };
 
 export const getSchools = async () => {
@@ -123,7 +115,9 @@ export const getAllPrograms = async () => {
 // get information of a single program
 export const getProgramData = async (id) => {
   const allPrograms = await getAllPrograms();
-  return allPrograms.find((program) => program._id === id) ?? "data not found";
+  const program = allPrograms.find((program) => program._id === id) ?? "data not found";
+
+  return program;
 };
 
 // programs by level such as pg ug diploma

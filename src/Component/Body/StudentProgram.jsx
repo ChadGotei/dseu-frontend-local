@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getProgramsByLevel } from "../../utils/apiservice";
 import study from "/src/assets/achievements/study.jpg";
 import { carouselItems } from "../../constants/STUDENTPROGRAM";
+import { QUERY_KEYS } from "../../utils/queryKeys";
 
 const getRandomPrograms = (programs, count = 6) => {
   const shuffled = [...programs].sort(() => 0.5 - Math.random());
@@ -30,9 +31,9 @@ const StudyProgramsSection = () => {
     isLoading,
     isError,
   } = useQuery({
-    queryKey: ["programs", selectedProgram],
+    queryKey: [QUERY_KEYS.GET_PROGRAMS_BY_LEVEL, selectedProgram.toLowerCase()],
     queryFn: () => getProgramsByLevel(selectedProgram),
-    staleTime: 5 * 60 * 1000,
+    staleTime: 7 * 60 * 1000,
   });
 
   // ✅ Memoized random selection (stable until selectedProgram changes)
