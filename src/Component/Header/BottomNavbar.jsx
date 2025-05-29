@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Search } from "lucide-react";
-import SearchModal from "./SearchModal";
-import { searchItems } from "./SearchItems";
 
 const navItems = [
   {

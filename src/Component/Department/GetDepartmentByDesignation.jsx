@@ -1,19 +1,20 @@
 // get faculty by department
 
-import { Link, useNavigate } from "react-router-dom";
+import { useMemo } from "react";
+import { Link } from "react-router-dom";
 
 const GetDepartmentByDesignation = ({ faculty, designation, facultyType }) => {
-  const navigate = useNavigate();
+  const filteredFaculty = useMemo(() => {
+    return faculty?.filter((person) => {
+      const designationValue = person?.designation?.trim() || "Professor";
+      const facultyTypeValue = person?.faculty_type?.trim() || "DSEU";
 
-  const filteredFaculty = faculty?.filter((person) => {
-    const designationValue = person?.designation?.trim() || "Professor";
-    const facultyTypeValue = person?.faculty_type?.trim() || "DSEU";
-
-    return (
-      designationValue.toLowerCase() === designation.toLowerCase() &&
-      facultyTypeValue.toLowerCase() === facultyType.toLowerCase()
-    );
-  });
+      return (
+        designationValue.toLowerCase() === designation.toLowerCase() &&
+        facultyTypeValue.toLowerCase() === facultyType.toLowerCase()
+      );
+    });
+  }, [faculty, designation, facultyType]);
 
   const totalFaculty = filteredFaculty?.length;
 

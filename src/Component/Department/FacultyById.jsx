@@ -28,6 +28,7 @@ const FacultyById = () => {
     queryKey: ["getFacultyById", id],
     queryFn: () => getFacultyById(id),
     enabled: !!id,
+    staleTime: 5 * 60 * 1000,
   });
 
   const [activeTab, setActiveTab] = useState("overview");

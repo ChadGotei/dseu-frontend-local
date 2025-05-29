@@ -41,8 +41,6 @@ const CampusByZone = lazy(() => import('./Component/Campuses/CampusByZone'));
 
 // Courses
 const CoursesPage = lazy(() => import("./Component/Courses/CoursesPage"));
-const CourseStructure = lazy(() => import("./Component/Courses/CourseStructure"));
-const Curriculum = lazy(() => import("./Component/Courses/Curriculum"));
 const Program = lazy(() => import("./Component/Courses/Program"));
 const CoursesByLevel = lazy(() => import("./Component/Courses/CoursesByLevel"));
 
@@ -139,9 +137,7 @@ function App() {
             {/* Courses */}
             <Route path="/courses" element={<CoursesPage />} />
             <Route path="/programs/:id" element={<Program />} />
-            <Route path="/curriculum" element={<Curriculum />} />
             <Route path="/courses/:programLevel" element={<CoursesByLevel />} />
-            <Route path="/course-structure/:programCode" element={<CourseStructure />} />
 
             {/* Academics */}
             <Route path="/academics/faculty" element={<ListOfFaculties />} />

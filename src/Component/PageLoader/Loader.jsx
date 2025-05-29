@@ -1,4 +1,3 @@
-import React from "react";
 import loader from "../../assets/DSEULogo/loader.gif"; 
 import vector from "../../assets/DSEULogo/Vector.svg";
 

@@ -8,8 +8,6 @@ import { Loader2 } from "lucide-react";
 import { getSectionOptions } from "./adminConstant";
 
 const ArchiveUploads = () => {
-  const navigate = useNavigate();
-
   const [name, setName] = useState("");
   const [section, setSection] = useState("");
   const [file, setFile] = useState(null);
@@ -242,7 +240,7 @@ const ArchiveUploads = () => {
 
           <button
             type="submit"
-            disabled={mutation.status === 'pending'}
+            disabled={mutation.status === "pending"}
             className="w-full py-3 bg-blue-400 text-white font-semibold rounded-lg hover:bg-orange-400 transition-colors disabled:cursor-not-allowed"
           >
             {mutation.isPending ? (

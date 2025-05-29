@@ -36,12 +36,14 @@ const FacultyByDepartment = ({ deptId }) => {
     queryFn: () => getHodInfo(deptId),
     queryKey: [QUERY_KEYS.GET_HOD_INFO, deptId],
     enabled: !!deptId,
+    staleTime: 7 * 60 * 1000,
   });
 
   const { data: faculty, isLoading: isFacultyLoading } = useQuery({
     queryFn: () => getFacultyByDepartment(deptId),
     queryKey: [QUERY_KEYS.GET_FACULTIES_BY_DEPARTMENT, deptId],
     enabled: !!deptId,
+    staleTime: 5 * 60 * 1000,
   });
 
   if (hodLoading) {
