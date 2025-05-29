@@ -16,6 +16,7 @@ import activity15 from "/src/assets/Activities/Activities15.jpg";
 import activity16 from "/src/assets/Activities/Activities16.jpg";
 import activity17 from "/src/assets/Activities/Activities17.jpg";
 import activity18 from "/src/assets/Activities/Activities18.jpg";
+import activity19 from "../assets/Activities/Activities19.jpg"
 
 import thumbnail1 from "/src/assets/thumbnail/thumbnail1.jpg";
 import thumbnail3 from "/src/assets/thumbnail/thumbnail3.jpg";
@@ -29,6 +30,7 @@ export const allImages = [
   activity3,
   activity4,
   activity5,
+  activity19,
   activity6,
   activity7,
   activity8,
