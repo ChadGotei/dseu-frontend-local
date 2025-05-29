@@ -10,6 +10,7 @@ const RecruitmentRules = () => {
   const [archived, setArchived] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [inputField, setInputField] = useState("");
   const [searchInput, setSearchInput] = useState("");
   const [rules, setRules] = useState([]);
 
@@ -25,7 +26,6 @@ const RecruitmentRules = () => {
     if (data) {
       setRules(data.data.notices);
     }
-    console.log(data);
   }, [data]);
 
   const currentRole = sessionStorage.getItem("currentRole");
@@ -40,6 +40,15 @@ const RecruitmentRules = () => {
   const handleArchivedButton = (e) => {
     e.preventDefault();
     setArchived((prev) => !prev);
+  };
+
+  const handleSearch = () => {
+    setSearchInput(inputField.trim());
+  };
+
+  const handleClearFilter = () => {
+    setInputField("");
+    setSearchInput("");
   };
 
   const sectionTitle = archived
@@ -62,12 +71,14 @@ const RecruitmentRules = () => {
       />
 
       <SearchAndUpload
-        handleShowModal={() => setShowModal(true)}
+        inputField={inputField}
+        setInputField={setInputField}
         isAdmin={isAdmin}
-        searchInput={searchInput}
-        setSearchInput={setSearchInput}
+        handleShowModal={() => setShowModal(true)}
         includeUpload
         containerClass="w-full flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 md:px-[10rem] mt-4 px-10"
+        handleSearch={handleSearch}
+        handleClearFilter={handleClearFilter}
       />
 
       {isLoading ? (

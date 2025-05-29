@@ -192,7 +192,7 @@ const InformationBulletin = () => {
 
       <style>{`
         @keyframes scroll {
-          0% { transform: translateY(100%); }
+          0% { transform: translateY(20%); }
           100% { transform: translateY(-100%); }
         }
 

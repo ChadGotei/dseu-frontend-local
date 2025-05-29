@@ -64,8 +64,8 @@ const Footer = () => {
               className="mr-3"
               style={{ color: "#1E40AF", fontSize: "1.25rem" }}
             />
-            <a href="https://www.dseu.ac.in" className="text-blue-600">
-              www.dseu.ac.in
+            <a href="https://dseu.ac.in" className="text-blue-600">
+              dseu.ac.in
             </a>
           </p>
         </div>
