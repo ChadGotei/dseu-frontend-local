@@ -3,18 +3,18 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import dseuPic1 from "../../assets/BannerImg/dseuPic1.jpg";
 import banner from "../../assets/DSEULogo/Banner.jpg";
+import admissionbanner from "../../assets/BannerImg/admissionBanner.jpg";
 import Image6 from "../../assets/DSEULogo/BANNER-DESIGN-1.jpg";
 import Banner3 from "../../assets/DSEULogo/BANNER-DESIGN-3.jpg";
 import Banner4 from "../../assets/DSEULogo/BANNER-DESIGN-4.jpg";
 import Banner5 from "../../assets/DSEULogo/BANNER-DESIGN-5.jpg";
-import Banner6 from "../../assets/DSEULogo/banner-design-6.jpg";
-
 import Image7 from "../../assets/7.png";
 
 const HomeBody = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
+    { image: admissionbanner },
     { image: dseuPic1 },
     { image: banner },
     { image: Image6 },
@@ -56,11 +56,7 @@ const HomeBody = () => {
             <img
               src={slide.image}
               alt={`Slide ${index + 1}`}
-              className={`w-full h-full ${
-                slide.image === Banner6
-                  ? "object-contain p-4" 
-                  : "object-cover brightness-110 contrast-105"
-              }`}
+              className="w-full h-full object-cover brightness-110 contrast-105"
               loading={index === 0 ? "eager" : "lazy"}
             />
           </div>
