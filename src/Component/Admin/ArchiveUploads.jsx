@@ -8,6 +8,8 @@ import { Loader2 } from "lucide-react";
 import { getSectionOptions } from "./adminConstant";
 
 const ArchiveUploads = () => {
+  const navigate = useNavigate();
+
   const [name, setName] = useState("");
   const [section, setSection] = useState("");
   const [file, setFile] = useState(null);

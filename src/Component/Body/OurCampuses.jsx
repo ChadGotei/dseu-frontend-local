@@ -11,7 +11,7 @@ import { getAllCampus } from "../../utils/apiservice";
 import { QUERY_KEYS } from "../../utils/queryKeys";
 import { generateCampusImage } from "../../utils/getCampusImages";
 
-import OrangeLoader from "../PageLoader/OrangeLoader";
+import OurCampusesLoading from "../ShimmerUI/OurCampusesLoading";
 
 const CustomArrow = ({ onClick, direction }) => (
   <div
@@ -54,7 +54,7 @@ const CarouselSection = () => {
   };
 
   if (isCampusLoading) {
-    return <OrangeLoader />;
+    return <OurCampusesLoading />;
   }
 
   return (

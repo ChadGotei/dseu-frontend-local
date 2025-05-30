@@ -98,6 +98,7 @@ const AdmissionPage = lazy(() => import("./Component/Admission/AdmissionPage.jsx
 import UserLayout from './Component/Layouts/UserLayout.jsx';
 
 import NotFound from './Component/NotFound/page.jsx';
+import SectionWrapper from "./Component/HOC/SectionWrapper.jsx";
 
 function App() {
   return (
@@ -117,9 +118,9 @@ function App() {
                   <HomeBody />
                   <Message />
                   <Socials />
-                  <InformationBulletin />
-                  <OurCampuses />
-                  <StudyProgramsSection />
+                  <SectionWrapper><InformationBulletin /></SectionWrapper>
+                  <SectionWrapper><OurCampuses /></SectionWrapper>
+                  <SectionWrapper><StudyProgramsSection /></SectionWrapper>
                   <OurPartners />
                   <News />
                   <EventsAndActivities />
