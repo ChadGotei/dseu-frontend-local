@@ -5,6 +5,7 @@ import UploadModal from "../Admin/UploadModal";
 import { getInformationBulletinOptions } from "../Admin/adminConstant";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileCirclePlus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import OrangeLoader from "../PageLoader/OrangeLoader";
 
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
@@ -77,6 +78,10 @@ const InformationBulletin = () => {
         cards[section.index].content = notices;
       }
     });
+  }
+
+  if(isLoading) {
+    return <OrangeLoader />
   }
 
   return (
