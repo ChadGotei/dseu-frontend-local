@@ -8,19 +8,7 @@ const SectionWrapper = ({ children }) => {
 
   if (isVisible && !hasBeenVisible) setHasBeenVisible(true);
 
-  return (
-    <div ref={ref}>
-      {hasBeenVisible ? (
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
-          {children}
-        </motion.div>
-      ) : null}
-    </div>
-  );
+  return <div ref={ref}>{hasBeenVisible ? <div>{children}</div> : null}</div>;
 };
 
 export default SectionWrapper;
