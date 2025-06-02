@@ -44,6 +44,14 @@ const StudyProgramsSection = () => {
 
   const programLevels = ["DIPLOMA", "UG", "PG"];
 
+  const handleNavigate = (data) => {
+    if (data.years && typeof data.years === "object") {
+      navigate(`/programs/${data._id}`);
+    }
+
+    return null;
+  };
+
   return (
     <div className="w-full bg-blue-50 p-8 mt-10">
       <div className="max-w-7xl mx-auto">
@@ -119,11 +127,15 @@ const StudyProgramsSection = () => {
                   {displayPrograms.map((program, index) => (
                     <div
                       key={index}
-                      className="relative bg-cover bg-center rounded-lg shadow-sm p-8 hover:shadow-lg duration-300 cursor-pointer h-28 hover:scale-[1.02] transition-all"
+                      className={`relative bg-cover bg-center rounded-lg shadow-sm p-8 hover:shadow-lg duration-300 h-28 hover:scale-[1.02] transition-all ${
+                        program.years && typeof program.years === "object"
+                          ? "cursor-pointer"
+                          : "cursor-default"
+                      }`}
                       style={{
                         backgroundImage: `url(${study})`,
                       }}
-                      onClick={() => navigate(`/programs/${program._id}`)}
+                      onClick={() => handleNavigate(program)}
                     >
                       <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
                       <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-2">

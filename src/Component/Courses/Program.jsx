@@ -56,7 +56,9 @@ const Program = () => {
             Duration
           </span>
           <span className="text-gray-700 text-base sm:text-lg">
-            {data?.duration || "-"}
+            {data?.name.toLowerCase().includes("pg diploma")
+              ? "1 Year"
+              : data?.duration || "-"}
           </span>
         </div>
         <div className="flex flex-col sm:flex-row justify-between py-3 sm:py-4 border-b">
@@ -67,101 +69,92 @@ const Program = () => {
             {data?.mode || "-"}
           </span>
         </div>
-        {/* Remvoe karne ki bol diya tha  */}
-        {/*   <div className="flex flex-col sm:flex-row justify-between py-3 sm:py-4">
-          <span className="text-base sm:text-lg font-semibold text-blue-600">
-            Exit Options
-          </span>
-          <div className="text-gray-700 text-base sm:text-lg sm:text-right">
-            {data?.exit_options?.map((option, idx) => (
-              <p key={idx}>{option}</p>
-            )) || "-"}
+      </section>
+
+      {data?.years && typeof data?.years === "object" && (
+        <section className="w-full flex flex-col items-center text-center">
+          <h3 className="text-xl sm:text-3xl md:text-[2rem] font-bold text-gray-800">
+            NEP Based Structure
+          </h3>
+          <div className="mt-3 sm:mt-4 flex justify-center items-center w-full max-w-xs">
+            <div className="h-1 flex-1 bg-blue-700 rounded-full"></div>
+            <div className="h-2 w-10 sm:w-12 bg-blue-900 mx-2 rounded-full"></div>
+            <div className="h-1 flex-1 bg-blue-700 rounded-full"></div>
           </div>
-        </div> */}
-      </section>
 
-      <section className="w-full flex flex-col items-center text-center">
-        <h3 className="text-xl sm:text-3xl md:text-[2rem] font-bold text-gray-800">
-          NEP Based Structure
-        </h3>
-        <div className="mt-3 sm:mt-4 flex justify-center items-center w-full max-w-xs">
-          <div className="h-1 flex-1 bg-blue-700 rounded-full"></div>
-          <div className="h-2 w-10 sm:w-12 bg-blue-900 mx-2 rounded-full"></div>
-          <div className="h-1 flex-1 bg-blue-700 rounded-full"></div>
-        </div>
-
-        <div className="mt-6 sm:mt-8 overflow-x-auto w-full">
-          <table className="w-full border-collapse shadow-md text-sm sm:text-base">
-            <thead>
-              <tr className="bg-blue-100">
-                {years.map((_, idx) => (
-                  <th
-                    key={idx}
-                    className={`px-4 sm:px-6 py-3 sm:py-4 text-blue-600 font-semibold ${
-                      idx !== years.length - 1 ? "border-r" : ""
-                    }`}
-                  >
-                    Year {idx + 1}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-b">
-                {years.map((year, idx) => (
-                  <td
-                    key={idx}
-                    className={`px-4 sm:px-6 py-3 sm:py-4 text-center text-gray-700 ${
-                      idx !== years.length - 1 ? "border-r" : ""
-                    }`}
-                  >
-                    {year.year_credit_text || "-"}
-                  </td>
-                ))}
-              </tr>
-              <tr className="border-b">
-                {years.map((year, idx) => (
-                  <td
-                    key={idx}
-                    className={`px-4 sm:px-6 py-3 sm:py-4 text-center text-gray-700 ${
-                      idx !== years.length - 1 ? "border-r" : ""
-                    }`}
-                  >
-                    {year.year_exit_text || "-"}
-                  </td>
-                ))}
-              </tr>
-              <tr>
-                {years.map((year, idx) => (
-                  <td
-                    key={idx}
-                    className={`px-4 sm:px-6 py-3 sm:py-4 text-center text-blue-500 cursor-pointer hover:text-blue-400 hover:underline ${
-                      idx !== years.length - 1 ? "border-r" : ""
-                    }`}
-                  >
-                    {year.year_syllabus_link ? (
-                      <a
-                        href={year.year_syllabus_link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Curriculum link
-                      </a>
-                    ) : (
-                      <div className="relative group inline-block text-gray-400 cursor-not-allowed">
-                        Curriculum link
-                        <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-1 text-xs bg-orange-500 text-white rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
-                          Curriculum not available
+          <div className="mt-6 sm:mt-8 overflow-x-auto w-full">
+            <table className="w-full border-collapse shadow-md text-sm sm:text-base">
+              <thead>
+                <tr className="bg-blue-100">
+                  {years.map((_, idx) => (
+                    <th
+                      key={idx}
+                      className={`px-4 sm:px-6 py-3 sm:py-4 text-blue-600 font-semibold ${
+                        idx !== years.length - 1 ? "border-r" : ""
+                      }`}
+                    >
+                      Year {idx + 1}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b">
+                  {years.map((year, idx) => (
+                    <td
+                      key={idx}
+                      className={`px-4 sm:px-6 py-3 sm:py-4 text-center text-gray-700 ${
+                        idx !== years.length - 1 ? "border-r" : ""
+                      }`}
+                    >
+                      {year.year_credit_text || "-"}
+                    </td>
+                  ))}
+                </tr>
+                <tr className="border-b">
+                  {years.map((year, idx) => (
+                    <td
+                      key={idx}
+                      className={`px-4 sm:px-6 py-3 sm:py-4 text-center text-gray-700 ${
+                        idx !== years.length - 1 ? "border-r" : ""
+                      }`}
+                    >
+                      {year.year_exit_text || "-"}
+                    </td>
+                  ))}
+                </tr>
+                <tr>
+                  {years.map((year, idx) => (
+                    <td
+                      key={idx}
+                      className={`px-4 sm:px-6 py-3 sm:py-4 text-center text-blue-500 cursor-pointer hover:text-blue-400 hover:underline ${
+                        idx !== years.length - 1 ? "border-r" : ""
+                      }`}
+                    >
+                      {year.year_syllabus_link ? (
+                        <a
+                          href={year.year_syllabus_link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Curriculum link
+                        </a>
+                      ) : (
+                        <div className="relative group inline-block text-gray-400 cursor-not-allowed">
+                          Curriculum link
+                          <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-1 text-xs bg-orange-500 text-white rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
+                            Curriculum not available
+                          </div>
                         </div>
-                      </div>
-                    )}
-                  </td>
-                ))}
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+                      )}
+                    </td>
+                  ))}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
     </main>
   );
 };
