@@ -63,7 +63,11 @@ const CoursesByLevel = () => {
           {programs.map((program, index) => (
             <div
               key={index}
-              className="border-l-4 border-yellow-500 bg-white p-4 shadow-md rounded-md cursor-pointer hover:shadow-lg hover:scale-105 hover:bg-blue-50 transition-all duration-300"
+              className={`border-l-4 border-yellow-500 bg-white p-4 shadow-md rounded-md  ${
+                program.years && typeof program.years === "object"
+                  ? "cursor-pointer hover:shadow-lg hover:scale-105 hover:bg-blue-50 transition-all duration-300"
+                  : "cursor-normal"
+              }`}
               onClick={() => handleClick(program)}
             >
               <p className="text-lg font-semibold text-gray-800">

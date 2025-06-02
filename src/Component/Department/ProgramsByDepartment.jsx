@@ -62,14 +62,14 @@ const ProgramsByDepartment = ({ deptId }) => {
           programData.map((program, index) => (
             <div
               key={index}
-              className="border-l-4 border-blue-500 bg-white p-4 shadow-md rounded-md cursor-pointer hover:shadow-lg hover:scale-105 hover:bg-blue-50 transition-all duration-300"
+              className={`border-l-4 border-blue-500 bg-white p-4 shadow-md rounded-md cursor-pointer hover:shadow-lg hover:scale-105 hover:bg-blue-50 transition-all duration-300`}
               onClick={() => handleNavigate(program)}
             >
               <p className="text-lg font-semibold text-gray-800">
                 {program.name}
               </p>
               <p className="text-sm text-gray-500">
-                Duration: {program.duration}
+                Duration: {program.name.toLowerCase().includes("pg diploma") ? "1 Year" : "2 Years"}
               </p>
             </div>
           ))
