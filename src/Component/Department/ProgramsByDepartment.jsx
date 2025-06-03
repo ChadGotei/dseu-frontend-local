@@ -69,7 +69,10 @@ const ProgramsByDepartment = ({ deptId }) => {
                 {program.name}
               </p>
               <p className="text-sm text-gray-500">
-                Duration: {program.name.toLowerCase().includes("pg diploma") ? "1 Year" : "2 Years"}
+                Duration:{" "}
+                {program.name.toLowerCase().includes("pg diploma")
+                  ? "1 Year"
+                  : program.duration}
               </p>
             </div>
           ))
