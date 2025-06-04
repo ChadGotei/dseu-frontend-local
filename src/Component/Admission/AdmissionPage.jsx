@@ -98,13 +98,13 @@ const AdmissionPage = () => {
         )}
 
         {/* Demo Video Section */}
-        <div className="w-full p-5 space-y-4">
-          <h3 className="text-xl md:text-3xl font-semibold text-[#333] text-center hover:underline hover:text-blue-500">
+        <div className="w-full p-1 md:p-5 space-y-4">
+          <h3 className="text-xl whitespace-nowrap md:text-3xl font-semibold text-[#333] text-center hover:underline hover:text-blue-500">
             <a href={youtube_heading_link} target="_blank" rel="noreferrer noopener">
               DSEU Admission form filling steps
             </a>
           </h3>
-          <div className="h-[300px] w-full">
+          <div className="h-[200px] md:h-[300px] w-full">
             <iframe
               src={youtube_link}
               title="Demo process for applying"
