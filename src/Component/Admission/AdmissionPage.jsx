@@ -1,5 +1,3 @@
-import React from "react";
-
 const portals = [
   {
     id: "diploma",
@@ -36,9 +34,12 @@ const portals = [
     link: "https://drive.google.com/file/d/1JbSp7w_g2fcSTNzIRVcaBYN_JlAaWBOw/view",
     cta: "View PDF",
     ctaColor: "orange",
-    bluetin: true, 
+    bluetin: true,
   },
 ];
+
+const youtube_link = "https://www.youtube.com/embed/MB3TbJOf0S4?si=w6oItBxiAgCs18tA";
+const youtube_heading_link = "https://youtu.be/MB3TbJOf0S4"
 
 const AdmissionPage = () => {
   return (
@@ -95,6 +96,25 @@ const AdmissionPage = () => {
             </div>
           )
         )}
+
+        {/* Demo Video Section */}
+        <div className="w-full p-5 space-y-4">
+          <h3 className="text-xl md:text-3xl font-semibold text-[#333] text-center hover:underline hover:text-blue-500">
+            <a href={youtube_heading_link} target="_blank" rel="noreferrer noopener">
+              DSEU Admission form filling steps
+            </a>
+          </h3>
+          <div className="h-[300px] w-full">
+            <iframe
+              src={youtube_link}
+              title="Demo process for applying"
+              className="w-full h-full rounded-md"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
       </div>
     </main>
   );

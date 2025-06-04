@@ -24,6 +24,8 @@ import thumbnail4 from "/src/assets/thumbnail/thumbnail4.jpg";
 import thumbnail5 from "/src/assets/thumbnail/thumbnail5.jpg";
 import thumbnail6 from "/src/assets/thumbnail/thumbnail6.jpg";
 
+import admissionthumb from '../assets/thumbnail/admission.png'
+
 export const allImages = [
   activity1,
   activity2,
@@ -45,6 +47,13 @@ export const allImages = [
   activity17,
   activity18,
 ];
+
+export const priorityVideo = {
+  thumbnail: admissionthumb,
+  title: "DSEU Admission form filling steps",
+  subheading: "",
+  link: "https://youtu.be/MB3TbJOf0S4", 
+};
 
 export const videoData = [
   {

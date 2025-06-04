@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { allImages } from "../../constants/STUDENTEVENTS.JS";
 import { videoData } from "../../constants/STUDENTEVENTS.JS";
+import { priorityVideo } from "../../constants/STUDENTEVENTS.JS";
 
 const getRandomImages = (array, count) => {
   const shuffled = [...array].sort(() => 0.5 - Math.random());
@@ -14,7 +15,11 @@ const StudentEvents = () => {
 
   useEffect(() => {
     setCarouselImages(getRandomImages(allImages, 14));
-    setRandomVideos(getRandomImages(videoData, 4));
+
+    const otherVideos = getRandomImages(videoData, 3).filter(
+      (v) => v.link !== priorityVideo.link
+    );
+    setRandomVideos([priorityVideo, ...otherVideos.slice(0, 3)]);
   }, []);
 
   useEffect(() => {
