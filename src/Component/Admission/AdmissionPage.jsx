@@ -104,7 +104,7 @@ const AdmissionPage = () => {
               DSEU Admission form filling steps
             </a>
           </h3>
-          <div className="h-[200px] md:h-[300px] w-full">
+          <div className="h-[250px] md:h-[300px] w-full">
             <iframe
               src={youtube_link}
               title="Demo process for applying"
