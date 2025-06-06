@@ -136,12 +136,12 @@ const JobListings = () => {
                         </td>
                         <td className="p-2 border">
                           <a
-                            href={item.apply}
+                            href={item?.apply}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-blue-600 hover:text-blue-800"
                           >
-                            Apply
+                            {item?.apply ? "Apply" : "-"}
                           </a>
                         </td>
                       </tr>
