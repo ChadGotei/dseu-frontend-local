@@ -50,7 +50,7 @@ const FacultyByDepartment = ({ deptId }) => {
     return <HodInfoLoading />;
   }
 
-  const importantIds = ["67fcb6a3594afd76950ae3a0", "67fcb6a3594afd76950ae422"];
+  const importantIds = ["67fcb6a3594afd76950ae424"];
   const modifiedFaculty = movePeopleToFront(faculty, importantIds);
 
   return (
