@@ -14,7 +14,7 @@ const StudentEvents = () => {
   const [randomVideos, setRandomVideos] = useState([]);
 
   useEffect(() => {
-    setCarouselImages(getRandomImages(allImages, 14));
+    setCarouselImages(allImages);
 
     const otherVideos = getRandomImages(videoData, 3).filter(
       (v) => v.link !== priorityVideo.link

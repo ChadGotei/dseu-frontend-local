@@ -1,4 +1,3 @@
-import React from 'react';
 import flowchart from "../../assets/flowchartfinal.png";
 
 export const AcademicAdministration = () => {

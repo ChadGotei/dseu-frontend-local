@@ -15,17 +15,18 @@ export default function GrievanceForms() {
             <button
               key={tab}
               className={`py-2 px-4 sm:px-6 md:px-7 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 rounded-t-md
-            ${activeTab === tab
-                  ? "text-blue-600 border-blue-600 bg-blue-50 shadow-sm"
-                  : "text-gray-600 border-transparent hover:border-gray-300 hover:bg-gray-100"
-                }`}
+            ${
+              activeTab === tab
+                ? "text-blue-600 border-blue-600 bg-blue-50 shadow-sm"
+                : "text-gray-600 border-transparent hover:border-gray-300 hover:bg-gray-100"
+            }`}
               onClick={() => setActiveTab(tab)}
             >
               {tab === "student"
                 ? "Student Grievance"
                 : tab === "employee"
-                  ? "Employee Grievance"
-                  : "RTI"}
+                ? "Employee Grievance"
+                : "RTI"}
             </button>
           ))}
         </div>
@@ -41,21 +42,15 @@ export default function GrievanceForms() {
           )}
         </div>
         <div className="mt-8 text-sm text-center text-gray-700">
-        For advanced service of court-related petitions, email us at{' '}
-        <a
-          href="mailto:osd.legal@dseu.ac.in"
-          className="text-orange-600 hover:underline font-medium"
-        >
-          osd.legal@dseu.ac.in
-        </a>
-      </div>
+          For advanced service of court-related petitions, email us at{" "}
+          <a
+            href="mailto:osd.legal@dseu.ac.in"
+            className="text-orange-600 hover:underline font-medium"
+          >
+            osd.legal@dseu.ac.in
+          </a>
+        </div>
       </div>
     </div>
-
-
   );
 }
-
-
-
-

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import HeadingText from "../Reusable/HeadingText";
 import { data } from "../../constants/SCHOLARSHIP.JS";
+import HeadingText from "../Reusable/HeadingText";
 
 const Scholarship = () => {
   return (

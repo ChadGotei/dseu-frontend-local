@@ -1,103 +1,94 @@
-import React, { Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
 import "./App.css";
 import Loader from "./Component/PageLoader/Loader";
+import NotFound from './Component/NotFound/page.jsx';
+import UserLayout from './Component/Layouts/UserLayout.jsx';
 import UnderConstruction from "./Component/Reusable/UnderConstruction";
-import StudyProgramsSection from "./Component/Body/StudentProgram";
-import GrievanceForm from "./Component/Grievance/Grievance";
-import IndustryPartnership from "./Component/News/news1";
-import LoginPage from "./Component/Login/LoginPage";
-import AcademicRegulation from "./Component/AcademicRegulation/page";
+import Home from './Component/Home/page.jsx';
 
-// admission
-import AdmissionGuidelines from "./Component/Admission/AdmissionGuidelines";
-import FeeRefundPolicy from "./Component/Admission/FeeRefundPolicy";
-import ProcessAndGuidelines from "./Component/Admission/ProcessAndGuidelines";
+// Home page components
 
-// Academics
-import AcademicCollabration from "./Component/Academics/AcademicCollaboration";
-import AcademicAdministration from './Component/Academics/AcademicAdministration';
-const AcademicCalendar = lazy(() => import("./Component/Calendar/AcademicCalendar"));
-import IQAC from "./Component/Academics/IQAC";
-
-// Lazy Load Components
-const HomeBody = lazy(() => import("./Component/Body/Banner"));
-const Announcements = lazy(() => import("./Component/Body/Announcements"));
-const Message = lazy(() => import("./Component/Body/Message"));
 const ChancellorMessage = lazy(() => import("./Component/Body/ChancellorMessage"));
 const ViceChancellorMessage = lazy(() => import("./Component/Body/ViceChancellorMessage"));
-const InformationBulletin = lazy(() => import("./Component/Body/InformationBulletin"));
 
-const News = lazy(() => import("./Component/Body/News"));
-const OurPartners = lazy(() => import("./Component/Body/OurPartners"));
-const EventsAndActivities = lazy(() => import("./Component/Body/StudentEvents"));
+// About us
+const About = lazy(() => import("./Component/NavItems/About"));
+const HistoryDSEU = lazy(() => import("./Component/NavItems/HistoryDSEU"));
+const VissionMission = lazy(() => import("./Component/NavItems/Vission&Mission"));
+const AnnualReport = lazy(() => import("./Component/NavItems/AnnualReport"));
+
+// Academics
+const ListOfFaculties = lazy(() => import("./Component/Body/ListOfFaculties"));
+const AcademicCalendar = lazy(() => import("./Component/Calendar/AcademicCalendar"));
+const FacultyById = lazy(() => import("./Component/Department/FacultyById"));
+const AcademicRegulation = lazy(() => import("./Component/AcademicRegulation/page"));
+const AcademicCollabration = lazy(() => import("./Component/Academics/AcademicCollaboration"));
+const AcademicAdministration = lazy(() => import("./Component/Academics/AcademicAdministration"));
+const IQAC = lazy(() => import("./Component/Academics/IQAC"));
+const Library = lazy(() => import("./Component/Student Services/Library"));
+const DepartmentById = lazy(() => import("./Component/Department/DepartmentById"));
 
 // Campuses
-const OurCampuses = lazy(() => import("./Component/Body/OurCampuses"));
 const CampusPage = lazy(() => import("./Component/Campuses/CampusPage"));
 const CampusByZone = lazy(() => import('./Component/Campuses/CampusByZone'));
+
+// Admission
+const AdmissionPage = lazy(() => import("./Component/Admission/AdmissionPage.jsx"));
+const IB = lazy(() => import("./Component/Admission/IB.jsx"));
+const AdmissionGuidelines = lazy(() => import("./Component/Admission/AdmissionGuidelines"));
+const FeeRefundPolicy = lazy(() => import("./Component/Admission/FeeRefundPolicy"));
+const ProcessAndGuidelines = lazy(() => import("./Component/Admission/ProcessAndGuidelines"));
+
+// Administrative
+const AdministrationTemp = lazy(() => import("./Component/Administration/page"));
+const ChancellorPage = lazy(() => import("./Component/Administration/ChancellorPage"));
+const ViceChancellorPage = lazy(() => import('./Component/Body/ViceChancellorPage'));
+const RegistararPage = lazy(() => import("./Component/Body/RegistararPage"));
+const COE = lazy(() => import('./Component/Administration/COE'));
+const COF = lazy(() => import('./Component/Administration/COF'));
+const RecruitmentRules = lazy(() => import("./Component/Administration/RecruitmentRules"));
+
+// Student Services
+const Ncc = lazy(() => import("./Component/Student Services/Ncc"));
+const Sports = lazy(() => import("./Component/Student Services/Sports"));
+const ICC = lazy(() => import("./Component/Student Services/ICC"));
+const AntiRagging = lazy(() => import("./Component/Student Services/AntiRagging"));
+const Scholarship = lazy(() => import("./Component/Student Services/Scholarship"));
+const EqualOpportunity = lazy(() => import("./Component/Student Services/EqualOpportunity"));
+
+// T&P Cell
+const Placement = lazy(() => import("./Component/Student Services/Placement"));
+
+// Job portal
+const JobPortal = lazy(() => import("./Component/Body/JobPortal"));
+const ArchivedJobPortal = lazy(() => import("./Component/Administration/ArchivedJobPortal"));
+
+// Enterpreneurship
+const Entrepreneurship = lazy(() => import('./Component/NavItems/Entrepreneurship'));
+
+// Top bar
+const GrievanceForm = lazy(() => import("./Component/Grievance/Grievance"));
+const LoginPage = lazy(() => import("./Component/Login/LoginPage"));
+const Tenders = lazy(() => import("./Component/Tenders/Tenders.jsx"));
+const AlumniSection = lazy(() => import("./Component/Alumni Page/AlumniSection"));
 
 // Courses
 const CoursesPage = lazy(() => import("./Component/Courses/CoursesPage"));
 const Program = lazy(() => import("./Component/Courses/Program"));
 const CoursesByLevel = lazy(() => import("./Component/Courses/CoursesByLevel"));
 
-// Academic & Faculty
-const ListOfFaculties = lazy(() => import("./Component/Body/ListOfFaculties"));
-const DepartmentById = lazy(() => import("./Component/Department/DepartmentById"));
-
-// Administration
-const ViceChancellorPage = lazy(() => import('./Component/Body/ViceChancellorPage'));
-
 // Other Sections
-const About = lazy(() => import("./Component/NavItems/About"));
-const VissionMission = lazy(() => import("./Component/NavItems/Vission&Mission"));
-const Amenities = lazy(() => import("./Component/NavItems/Amenities"));
-const AlumniSection = lazy(() => import("./Component/Alumni Page/AlumniSection"));
-const JobPortal = lazy(() => import("./Component/Body/JobPortal"));
 const HolidayCalendar = lazy(() => import("./Component/Calendar/HolidayCalendar"));
-
-
-// Student Services
-const Ncc = lazy(() => import("./Component/Student Services/Ncc"));
-const Placement = lazy(() => import("./Component/Student Services/Placement"));
-const Canteen = lazy(() => import("./Component/Student Services/Canteen"));
-const Library = lazy(() => import("./Component/Student Services/Library"));
-const Sports = lazy(() => import("./Component/Student Services/Sports"));
-const ComputerCentre = lazy(() => import("./Component/Student Services/ComputerCentre"));
-const HealthFacilities = lazy(() => import("./Component/Student Services/HealthFacilities"));
-const EqualOpportunity = lazy(() => import("./Component/Student Services/EqualOpportunity"));
-const ICC = lazy(() => import("./Component/Student Services/ICC"));
-const AntiRagging = lazy(() => import("./Component/Student Services/AntiRagging"));
 
 // Admins
 const AdminLogin = lazy(() => import('./Component/Admin/LoginForm'));
 const Dashboard = lazy(() => import('./Component/Admin/Dashboard'));
 const TestPage = lazy(() => import('./Component/Admin/TestPage'));
-
-const RegistararPage = lazy(() => import("./Component/Body/RegistararPage"));
-const Socials = lazy(() => import("./Component/Footer/Socials"));
-const FacultyById = lazy(() => import("./Component/Department/FacultyById"));
-const HistoryDSEU = lazy(() => import("./Component/NavItems/HistoryDSEU"));
-const Scholarship = lazy(() => import("./Component/Student Services/Scholarship"));
 const ArchiveUploads = lazy(() => import("./Component/Admin/ArchiveUploads"));
-const ArchivedJobPortal = lazy(() => import("./Component/Administration/ArchivedJobPortal"));
-const ChancellorPage = lazy(() => import("./Component/Administration/ChancellorPage"));
-const Entrepreneurship = lazy(() => import('./Component/NavItems/Entrepreneurship'));
-const RecruitmentRules = lazy(() => import("./Component/Administration/RecruitmentRules"));
-const AnnualReport = lazy(() => import("./Component/NavItems/AnnualReport"));
-const AdministrationTemp = lazy(() => import("./Component/Administration/page"));
 const ViewPdfs = lazy(() => import("./Component/Admin/ViewPDFs/ViewPdfs"));
-const Tenders = lazy(() => import("./Component/Tenders/Tenders.jsx"));
-const COE = lazy(() => import('./Component/Administration/COE'));
-const COF = lazy(() => import('./Component/Administration/COF'));
-const IB = lazy(() => import("./Component/Admission/IB.jsx"));
-const AdmissionPage = lazy(() => import("./Component/Admission/AdmissionPage.jsx"));
-import UserLayout from './Component/Layouts/UserLayout.jsx';
-
-import NotFound from './Component/NotFound/page.jsx';
 
 function App() {
   return (
@@ -113,16 +104,7 @@ function App() {
               path="/"
               element={
                 <>
-                  <Announcements />
-                  <HomeBody />
-                  <Message />
-                  <Socials />
-                  <InformationBulletin />
-                  <OurCampuses />
-                  <StudyProgramsSection />
-                  <OurPartners />
-                  <News />
-                  <EventsAndActivities />
+                  <Home />
                 </>
               }
             />
@@ -167,11 +149,6 @@ function App() {
             <Route path="/UGC-Guidelines" element={<UnderConstruction />} />
             <Route path="/about-us/annualReport" element={<AnnualReport/>} />
 
-            {/* News */}
-            <Route path="/news/achievement" element={<IndustryPartnership />} />
-            <Route path="/news/partnership" element={<IndustryPartnership />} />
-            <Route path="/news/outreach" element={<IndustryPartnership />} />
-            <Route path="/news/innovation-hub" element={<IndustryPartnership />} />
 
             {/* Admission */}
             <Route path="/admission" element={<AdmissionPage />} />
@@ -193,12 +170,8 @@ function App() {
 
             {/* Amenities */}
             <Route path="/ncc" element={<Ncc />} />
-            <Route path="/amenities/Facilities" element={<Amenities />} />
-            <Route path="/amenities/Computer-Centre" element={<ComputerCentre />} />
-            <Route path="/amenities/Canteen" element={<Canteen />} />
             <Route path="/amenities/Sports" element={<Sports />} />
             <Route path="/amenities/Library" element={<Library />} />
-            <Route path="/amenities/Health-Facilities" element={<HealthFacilities />} />
             <Route path="/amenities/Equal-Opportunity" element={<EqualOpportunity />} />
             <Route path="/amenities/ICC" element={<ICC />} />
             <Route path="/amenities/Anti-Ragging" element={<AntiRagging />} />

@@ -23,7 +23,6 @@ const Sport = () => {
     setCurrent((prev) => (prev + 1) % total);
   };
 
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % total);
@@ -40,6 +39,7 @@ const Sport = () => {
           src={sports11}
           alt="Sports Banner"
           className="w-full h-full object-cover brightness-75"
+          loading="lazy"
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-white text-3xl sm:text-4xl md:text-6xl font-semibold text-center drop-shadow-2xl px-2">

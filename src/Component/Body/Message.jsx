@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import DG from "../../assets/DG.jpg";
 import VCsir from "../../assets/VCsir.jpg";
@@ -64,15 +64,15 @@ const Message = () => {
                 </div>
 
                 <div>
-                  <a
+                  <Link
                     target={leader.newPage ? "_blank" : "_self"}
-                    href={leader.link}
+                    to={leader.link}
                     rel="noopener noreferrer"
                     className="px-4 py-2 bg-white text-blue-700 font-semibold rounded-md inline-flex items-center space-x-2 hover:bg-gray-100 transition-colors"
                   >
                     <span>Know More</span>
                     <ArrowRight className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
