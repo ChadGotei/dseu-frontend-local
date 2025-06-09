@@ -339,6 +339,13 @@ const members = [
     name: "Dr. Ravinder Jhorar",
     src: ravinderJohar,
     category: "Training and Placement Officers",
+  },
+  {
+    id: 42,
+    name: "Prof. Kamna Sachdeva",
+    src: kamnaSachdeva,
+    designation: "Director Academics",
+    category: "Director Academics"
   }
 ];
 
