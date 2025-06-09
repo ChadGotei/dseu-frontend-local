@@ -1,6 +1,6 @@
 const IB = () => {
   const ibLink =
-    "https://drive.google.com/file/d/1JbSp7w_g2fcSTNzIRVcaBYN_JlAaWBOw/view";
+    "https://drive.google.com/file/d/172q9bxIpL3MJbDA6P24vvWyveb4pZSG5/view";
 
   return (
     <main className="flex flex-col mt-8 md:mt-12 md:mb-10 mb-16 justify-center items-center w-full max-w-3xl gap-4 sm:gap-6 md:gap-8 mx-auto">

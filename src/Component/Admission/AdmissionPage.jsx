@@ -31,7 +31,7 @@ const portals = [
     text: "Download the latest",
     bolded: "Information Bulletin 2025",
     including: "for complete admission and program details",
-    link: "https://drive.google.com/file/d/1JbSp7w_g2fcSTNzIRVcaBYN_JlAaWBOw/view",
+    link: "https://drive.google.com/file/d/172q9bxIpL3MJbDA6P24vvWyveb4pZSG5/view",
     cta: "View PDF",
     ctaColor: "orange",
     bluetin: true,
