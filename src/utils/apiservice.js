@@ -171,8 +171,10 @@ export const getAllPdfs = async (
   page,
   regex = "",
   created_at_gteq,
-  created_at_lteq
+  created_at_lteq,
+  section
 ) => {
+
   let query = archived
     ? `/notice/archived?limit=${limit}&page=${page}&regex=${encodeURIComponent(regex)}`
     : `/notice?limit=${limit}&page=${page}&regex=${encodeURIComponent(regex)}`;
@@ -183,6 +185,10 @@ export const getAllPdfs = async (
 
   if (created_at_lteq) {
     query += `&created_at_lteq=${encodeURIComponent(created_at_lteq)}`;
+  }
+
+  if (section) {
+    query += `&section=${section}`;
   }
 
   const res = await api.get(query);

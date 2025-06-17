@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  faPhone,
   faEnvelope,
   faGlobe,
   faMapMarkerAlt,
@@ -15,6 +14,7 @@ import {
   quickLinks,
 } from "./constant.js";
 import { Link } from "react-router-dom";
+import Logo from "../Reusable/Logo.jsx";
 
 const Footer = () => {
   const [showModal, setShowModal] = useState(false);

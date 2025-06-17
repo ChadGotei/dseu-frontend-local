@@ -18,11 +18,13 @@ const ViewPdfs = () => {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
+  const [section, setSection] = useState("");
 
   const [filters, setFilters] = useState({
     searchInput: "",
     startDate: "",
     endDate: "",
+    section: "",
   });
 
   const [showModal, setShowModal] = useState(false);
@@ -40,6 +42,7 @@ const ViewPdfs = () => {
       filters.searchInput,
       filters.startDate,
       filters.endDate,
+      filters.section,
     ],
     queryFn: () =>
       getAllPdfs(
@@ -48,8 +51,10 @@ const ViewPdfs = () => {
         currentPage,
         filters.searchInput,
         filters.startDate,
-        filters.endDate
+        filters.endDate,
+        filters.section
       ),
+    staleTime: 5 * 60 * 1000,
     keepPreviousData: true,
   });
 
@@ -80,12 +85,13 @@ const ViewPdfs = () => {
     setSearchInput("");
     setStartDate("");
     setEndDate("");
-    setFilters({ searchInput: "", startDate: "", endDate: "" });
+    setSection("");
+    setFilters({ searchInput: "", startDate: "", endDate: "", section: "" });
     setCurrentPage(1);
   };
 
   const handleSearch = () => {
-    setFilters({ searchInput, startDate, endDate });
+    setFilters({ searchInput, startDate, endDate, section });
     setCurrentPage(1);
   };
 
@@ -127,6 +133,8 @@ const ViewPdfs = () => {
         handleClearFilters={handleClearFilters}
         setCurrentPage={setCurrentPage}
         onSearch={handleSearch}
+        section={section}
+        setSection={setSection}
       />
 
       {isLoading ? (

@@ -10,6 +10,7 @@ import Group24 from "../../assets/DSEULogo/Group24.svg";
 import Orange from "../../assets/DSEULogo/Orange.svg";
 import SearchModal from "./SearchModal";
 import { searchItems } from "./SearchItems";
+import Logo from "../Reusable/Logo";
 
 const carouselImages = [
   {
@@ -78,7 +79,7 @@ const navItems = [
     dropdownItems: [
       {
         name: "Admission 2025-26",
-        path: "/admission"
+        path: "/admission",
       },
       {
         name: "Information Bulletin",
@@ -187,7 +188,8 @@ const SidebarNav = ({ isOpen, onClose, navItems }) => {
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
           >
             <div className="p-4 border-b flex justify-between items-center">
-              <img src={DSEULOGOTHICK} alt="DSEU Logo" className="h-12" />
+              {/* <img src={DSEULOGOTHICK} alt="DSEU Logo" className="h-12" /> */}
+              <Logo cn={"h-12"} />
               <button
                 onClick={onClose}
                 className="p-2 hover:bg-gray-100 rounded-full"
@@ -406,7 +408,8 @@ const ResponsiveHeader = () => {
               onClick={() => navigate("/")}
               className="flex-shrink-0 cursor-pointer"
             >
-              <img src={DSEULOGOTHICK} alt="DSEU Logo" className="h-28" />
+              {/* <img src={DSEULOGOTHICK} alt="DSEU Logo" className="h-28" /> */}
+              <Logo cn={"h-28"} />
             </div>
             <div className="relative h-32 w-64 overflow-hidden rounded-lg">
               <AnimatePresence mode="wait">
@@ -460,7 +463,7 @@ const ResponsiveHeader = () => {
         <div className="px-2 ">
           <div className="flex items-center justify-between mb-1">
             <div className="flex items-center space-x-4">
-              <img
+              {/* <img
                 src={DSEULOGOTHICK}
                 alt="DSEU Logo"
                 className="h-16"
@@ -469,6 +472,13 @@ const ResponsiveHeader = () => {
                   window.location.href = "/";
                 }}
                 style={{ cursor: "pointer" }}
+              /> */}
+              <Logo 
+                cn={"h-16"}
+                handleClick={() => {
+                  navigate("/");
+                  window.location.href = "/";
+                }}
               />
               <div className="relative h-24 w-32 overflow-hidden rounded-lg">
                 <AnimatePresence mode="wait">

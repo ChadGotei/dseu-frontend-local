@@ -1,7 +1,7 @@
 const HeadingText = ({ heading, headingCN }) => {
   return (
     <div className="flex flex-col items-center">
-      <h2 className={headingCN ? headingCN : "text-3xl mb-2 font-bold"}>
+      <h2 className={`text-3xl mb-2 font-bold ${headingCN}`}>
         {heading}
       </h2>
       <div className="flex items-center w-[120px] mt-1">

@@ -32,6 +32,7 @@ const GetDepartmentByDesignation = ({ faculty, designation, facultyType }) => {
         <Link
           key={person._id}
           to={`/faculty/${person._id}`}
+          state={{ faculty: person }} 
           className="bg-gray-50 p-4 py-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg hover:scale-[1.01] hover:cursor-pointer hover:shadow-blue-300 transition duration-300"
         >
           <img

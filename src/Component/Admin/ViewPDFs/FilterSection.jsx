@@ -1,5 +1,6 @@
 import { FilterX, Search, X } from "lucide-react";
 import Tooltip from "../../Reusable/Tooltip";
+import { getSectionOptions } from "../adminConstant";
 
 const FilterSection = ({
   searchInput,
@@ -11,6 +12,8 @@ const FilterSection = ({
   handleClearFilters,
   setCurrentPage,
   onSearch,
+  section,
+  setSection,
 }) => (
   <div className="flex flex-col md:flex-row flex-wrap gap-4 mb-6 items-start md:items-center">
     <input
@@ -71,11 +74,27 @@ const FilterSection = ({
         </button>
         <button
           onClick={handleClearFilters}
-          className="bg-red-500 text-white px-4 py-2 rounded-md shadow hover:bg-red-600 transition-colors"
+          className="bg-red-500 text-white px-4 py-2 rounded-md shadow hover:bg-red-600 transition-colors whitespace-nowrap"
         >
           Clear Filters
         </button>
       </div>
+
+      <select
+        value={section}
+        onChange={(e) => {
+          setSection(e.target.value);
+          setCurrentPage(1);
+        }}
+        className="px-4 py-2 rounded-md border border-gray-300 shadow-sm"
+      >
+        <option value="">Select Section</option>
+        {getSectionOptions().map(({ value, label }) => (
+          <option key={value} value={value}>
+            {label}
+          </option>
+        ))}
+      </select>
 
       {/* Desktop icons */}
       <div className="hidden md:flex gap-3 items-center">

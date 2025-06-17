@@ -6,7 +6,10 @@ const About = () => {
   return (
     <div className="w-4/5 p-1 sm:p-3 md:p-4 mx-auto my-8 rounded-lg text-gray-800">
       <div className="text-left mb-10">
-        <HeadingText heading={"About DSEU"} />
+        <HeadingText 
+        heading={"About DSEU"} 
+        headingCN={"mb-0"}
+        />
 
         {aboutTheUniversity.info1.map((info, index) => (
           <p key={index} className="my-4 text-gray-600 text-justify">

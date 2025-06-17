@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { showErrorToast, showSuccessToast } from "../../utils/toasts";
 import logo from "../../assets/DSEULogo/DSEULOGOTHICK.svg";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import Logo from "../Reusable/Logo";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -54,7 +55,7 @@ const LoginForm = () => {
         className="w-full max-w-md bg-white shadow-2xl rounded-3xl p-8 md:p-10"
       >
         <div className="flex justify-center mb-6">
-          <img src={logo} alt="Logo" className="w-20 h-auto" />
+          <Logo cn={"w-20 h-auto"} />
         </div>
 
         <h2 className="text-2xl font-bold text-center text-[#333] mb-6">

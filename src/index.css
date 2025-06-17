@@ -110,3 +110,8 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none; 
 }
+
+.blue-heading::selection {
+  color: blue;
+  background-color: '#1d4ed8';
+}
