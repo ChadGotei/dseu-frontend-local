@@ -3,7 +3,7 @@ import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 import { useEffect, useState } from "react";
 
 const toAdd =
-  "The Admission registration deadline for all programs - Diploma, Undergraduate (UG), and Postgraduate (PG) is hereby extended till July 7, 2025";
+  "The last date for DSEU admission registration for the academic year 2025–2026 has been extended till 7th July. For the counselling schedule, please stay vigilant and visit the DSEU website and Admission portals regularly.";
 
 const AnnouncementStrip = () => {
   const [announcements, setAnnouncements] = useState([]);
@@ -111,7 +111,7 @@ const style = `
   }
 
   .animate-marquee {
-    animation: marquee 35s linear infinite;
+    animation: marquee 45s linear infinite;
   }
 
   .animate-marquee:hover {
