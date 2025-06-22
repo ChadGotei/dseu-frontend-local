@@ -35,7 +35,7 @@ const Page = () => {
       >
         <button
           onClick={handleClose}
-          className="absolute top-2 right-2 text-gray-700 hover:text-red-500 text-2xl font-bold"
+          className="absolute top-2 right-2 text-gray-700 hover:text-red-500 text-2xl font-bold z-50"
         >
           &times;
         </button>
