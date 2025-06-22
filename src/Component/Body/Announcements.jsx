@@ -3,7 +3,7 @@ import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 import { useEffect, useState } from "react";
 
 const toAdd =
-  "Admissions are now open for various Diploma, Undergraduate, and Postgraduate programs";
+  "The Admission registration deadline for all programs - Diploma, Undergraduate (UG), and Postgraduate (PG) is hereby extended till July 7, 2025";
 
 const AnnouncementStrip = () => {
   const [announcements, setAnnouncements] = useState([]);
