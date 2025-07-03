@@ -70,7 +70,7 @@ const Tenders = () => {
                   <td className="px-6 py-4 text-sm text-blue-600 whitespace-nowrap">
                     {item.tenderNo || "__"}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-800">
+                  <td className="px-6 py-4 text-sm text-gray-800 min-w-[300px] sm:min-w-[250px] md:min-w-[200px]">
                     {item.title || "__"}
                   </td>
                   <td className="px-6 py-4 text-sm text-gray-700">
