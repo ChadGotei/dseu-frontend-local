@@ -10,6 +10,7 @@ export const data = [
         document: '/tenders/GEM2024B5340435.pdf',
         preMinutes: null,
         corrigendum: '/tenders/Corrigendum_Bid-4_0435.pdf',
+        archived: true
     },
     {
         id: 2,
@@ -22,6 +23,7 @@ export const data = [
         document: '/tenders/GeM-Bidding-5339952.pdf',
         preMinutes: null,
         corrigendum: '/tenders/Corrigendum_Bid-3_9952.pdf',
+        archived: true,
     },
     {
         id: 3,
@@ -34,6 +36,7 @@ export const data = [
         document: '/tenders/GeM-Bidding-5339660.pdf',
         preMinutes: null,
         corrigendum: '/tenders/Corrigendum_Bid-2_9660.pdf',
+        archived: true,
     },
     {
         id: 4,
@@ -46,6 +49,7 @@ export const data = [
         document: '/tenders/GeM-Bidding-6835640.pdf',
         preMinutes: null,
         corrigendum: null,
+        archived: true,
     },
     {
         id: 5,
@@ -58,5 +62,21 @@ export const data = [
         document: '/tenders/GeM-Bidding-6713527.pdf',
         preMinutes: null,
         corrigendum: null,
+        archived: true,
     },
+
+    //! LATEST ONES
+    {
+        id: 6,
+        tenderNo: "GEM/2025/B/6290806",
+        title: "GeM Bid - Repair and Overhauling Service - Air Conditioner one and half Ton and 2 T Window and Split; Daikin, Hitachi, Voltas, General, havells, tata, LG, LLoyd; Yes; Buyer Premises",
+        department: "DSEU",
+        category: "BID",
+        startDate: "02-07-2025",
+        endDate: "14-07-2025",
+        document: "/tenders/GEM2025B6290806.pdf",
+        preMinutes: null,
+        corrigendum: null,
+        archived: false,
+    }
 ];

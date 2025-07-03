@@ -26,6 +26,9 @@ const Tenders = () => {
 
   const sectionTitle = archived ? "Archived Tenders" : "Tenders";
 
+  // Filter data based on archived state
+  const filteredTenders = data.filter((item) => item.archived === archived);
+
   return (
     <div className="p-6">
       <HeadingText
@@ -49,38 +52,38 @@ const Tenders = () => {
           </thead>
 
           <tbody>
-            {archived ? (
+            {filteredTenders.length === 0 ? (
               <tr>
                 <td
                   colSpan="10"
                   className="text-center py-10 text-gray-500 text-md"
                 >
-                  No archived tenders available.
+                  No {archived ? "archived" : "active"} tenders available.
                 </td>
               </tr>
             ) : (
-              data.map((item, index) => (
+              filteredTenders.map((item, index) => (
                 <tr key={item.id} className="border-b">
                   <td className="px-6 py-4 text-sm text-gray-700">
                     {index + 1}
                   </td>
                   <td className="px-6 py-4 text-sm text-blue-600 whitespace-nowrap">
-                    {item.tenderNo}
+                    {item.tenderNo || "__"}
                   </td>
                   <td className="px-6 py-4 text-sm text-gray-800">
-                    {item.title}
+                    {item.title || "__"}
                   </td>
                   <td className="px-6 py-4 text-sm text-gray-700">
-                    {item.department}
+                    {item.department || "__"}
                   </td>
                   <td className="px-6 py-4 text-sm text-gray-700">
-                    {item.category}
+                    {item.category || "__"}
+                  </td>
+                  <td className="px-6 py-4 text-sm text-gray-700 whitespace-nowrap">
+                    {item.startDate || "__"}
                   </td>
                   <td className="px-6 py-4 text-sm text-gray-700">
-                    {item.startDate}
-                  </td>
-                  <td className="px-6 py-4 text-sm text-gray-700">
-                    {item.endDate}
+                    {item.endDate || "__"}
                   </td>
                   <td className="px-6 py-4 text-sm text-blue-600">
                     <a
