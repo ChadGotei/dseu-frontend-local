@@ -2,13 +2,23 @@ import { useEffect, useRef, useState } from "react";
 import { FiMail } from "react-icons/fi"; // For mail icon (optional)
 
 const Page = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   const modalRef = useRef(null);
+
+  // Show modal only once per session
+  useEffect(() => {
+    const hasSeenModal = sessionStorage.getItem("hasSeenModal");
+    if (!hasSeenModal) {
+      setIsVisible(true);
+      sessionStorage.setItem("hasSeenModal", "true");
+    }
+  }, []);
 
   const handleClose = () => {
     setIsVisible(false);
   };
 
+  // Close modal when clicking outside of it
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
@@ -62,7 +72,7 @@ const Page = () => {
           </a>
         </div>
 
-        {/* Optional CTA Button */}
+        {/* CTA Button */}
         <div className="mt-6">
           <button
             onClick={handleClose}
