@@ -1,24 +1,20 @@
 import { useEffect, useRef, useState } from "react";
-import { FiMail } from "react-icons/fi"; // For mail icon (optional)
+import { FiAlertCircle } from "react-icons/fi"; // Icon for alert/notice
 
 const Page = () => {
   const [isVisible, setIsVisible] = useState(false);
   const modalRef = useRef(null);
 
-  // Show modal only once per session
+  // Always show modal on page load
   useEffect(() => {
-    const hasSeenModal = sessionStorage.getItem("hasSeenModal");
-    if (!hasSeenModal) {
-      setIsVisible(true);
-      sessionStorage.setItem("hasSeenModal", "true");
-    }
+    setIsVisible(true);
   }, []);
 
   const handleClose = () => {
     setIsVisible(false);
   };
 
-  // Close modal when clicking outside of it
+  // Close modal when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
@@ -38,7 +34,7 @@ const Page = () => {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 animate-fade-in">
       <div
         ref={modalRef}
-        className="relative bg-white rounded-xl shadow-2xl p-6 w-[90%] max-w-lg mx-auto border border-blue-200"
+        className="relative bg-white rounded-xl shadow-2xl p-6 w-[90%] max-w-lg mx-auto border border-yellow-300"
       >
         {/* Close Button */}
         <button
@@ -48,37 +44,41 @@ const Page = () => {
           &times;
         </button>
 
-        {/* Header Section */}
+        {/* Header */}
         <div className="flex items-center gap-3 mb-4">
-          <div className="bg-blue-100 text-blue-600 p-2 rounded-full">
-            <FiMail className="text-xl" />
+          <div className="bg-yellow-100 text-yellow-600 p-2 rounded-full">
+            <FiAlertCircle className="text-xl" />
           </div>
-          <h2 className="text-lg sm:text-xl font-semibold text-blue-800">
-            Need Help With Admission?
+          <h2 className="text-lg sm:text-xl font-semibold text-yellow-800">
+            Important: Correction Window for DSEU Admissions
           </h2>
         </div>
 
-        {/* Message Section */}
-        <p className="text-gray-700 text-base leading-relaxed">
-          For any <span className="font-medium text-blue-700">admission-related queries</span>, feel free to reach out to us at:
-        </p>
+        {/* Message Content */}
+        <div className="text-gray-700 text-base leading-relaxed">
+          <p>
+            All applicants are hereby informed that the{" "}
+            <span className="font-medium text-yellow-700">
+              correction window for the DSEU online admission registration form
+              2025
+            </span>{" "}
+            will be open for 3 days from{" "}
+            <span className="font-semibold">8th July 2025</span> to{" "}
+            <span className="font-semibold">10th July 2025</span>.
+          </p>
 
-        <div className="mt-3">
-          <a
-            href="mailto:helpdesk-admission@dseu.ac.in"
-            className="inline-block mt-2 text-blue-600 font-semibold hover:text-orange-500 transition-colors duration-200"
-          >
-            helpdesk-admission@dseu.ac.in
-          </a>
+          <p className="mt-3 text-red-600 font-medium">
+            No corrections will be allowed after the correction window closes.
+          </p>
         </div>
 
         {/* CTA Button */}
         <div className="mt-6">
           <button
             onClick={handleClose}
-            className="bg-blue-600 hover:bg-orange-500 text-white font-medium px-5 py-2 rounded-lg shadow transition duration-300"
+            className="bg-yellow-600 hover:bg-orange-500 text-white font-medium px-5 py-2 rounded-lg shadow transition duration-300"
           >
-            Got it!
+            Understood
           </button>
         </div>
       </div>
