@@ -15,6 +15,7 @@ const OurCampuses = lazy(() => import("../Body/OurCampuses"));
 const Socials = lazy(() => import("../Footer/Socials"));
 import StudyProgramsSection from "../Body/StudentProgram";
 import EventModal from '../EventModel/page.jsx';
+import Disclaimer from './Disclaimer.jsx';
 
 const page = () => {
   return (
@@ -30,6 +31,7 @@ const page = () => {
       <OurPartners />
       <News />
       <EventsAndActivities />
+      <Disclaimer />
     </>
   );
 };
