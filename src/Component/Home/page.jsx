@@ -31,7 +31,6 @@ const page = () => {
       <OurPartners />
       <News />
       <EventsAndActivities />
-      <Disclaimer />
     </>
   );
 };

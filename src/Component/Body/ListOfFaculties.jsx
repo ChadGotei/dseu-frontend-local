@@ -5,6 +5,7 @@ import { faUniversity } from "@fortawesome/free-solid-svg-icons";
 import ListOfFacultiesLoading from "../ShimmerUI/ListOfFacultiesLoading";
 import { getSchools } from "../../utils/apiservice";
 import { QUERY_KEYS } from "../../utils/queryKeys";
+import Disclaimer from "../Home/Disclaimer";
 
 export default function ListOfFaculties() {
   const { data, isLoading, isError, error } = useQuery({
@@ -24,8 +25,9 @@ export default function ListOfFaculties() {
     );
 
   return (
-    <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-24 py-12">
+    <div className="bg-white px-4 sm:px-8 md:px-16 lg:px-24 pt-5 pb-16">
       <div className="mx-auto max-w-7xl">
+      <Disclaimer />
         <h2 className="text-3xl font-bold text-center tracking-tight text-gray-900 mb-10">
           List of Faculties
         </h2>
