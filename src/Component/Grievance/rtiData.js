@@ -216,7 +216,7 @@ export const rtiData = {
       mail:"rti@dseu.ac.in"
     },
     {
-      title: "Dr. Gagan Dhawan",
+      title: "Prof. Gagan Dhawan",
       designation: "First Appellate Authority",
       mail:"rti@dseu.ac.in"
     }
