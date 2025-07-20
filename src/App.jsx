@@ -41,6 +41,8 @@ const IB = lazy(() => import("./Component/Admission/IB.jsx"));
 const AdmissionGuidelines = lazy(() => import("./Component/Admission/AdmissionGuidelines"));
 const FeeRefundPolicy = lazy(() => import("./Component/Admission/FeeRefundPolicy"));
 const ProcessAndGuidelines = lazy(() => import("./Component/Admission/ProcessAndGuidelines"));
+const Result = lazy(() => import("./Component/Admission/Result"));
+const ShowResult = lazy(() => import("./Component/Admission/ShowResult"));
 
 // Administrative
 const AdministrationTemp = lazy(() => import("./Component/Administration/page"));
@@ -156,7 +158,9 @@ function App() {
             <Route path="/admission/refund-policy" element={<FeeRefundPolicy />} />
             <Route path="/admission/process-and-guidelines" element={<ProcessAndGuidelines />} />
             <Route path="/admission/information-bulletin" element={<IB />}  />
-
+            <Route path="/admission/result" element={<Result />} />
+            <Route path="/admission/result/show" element={<ShowResult />} />
+ 
             {/* Misc */}
             <Route path="/holiday-calendar" element={<HolidayCalendar />} />
             <Route path="/alumni" element={<AlumniSection />} />

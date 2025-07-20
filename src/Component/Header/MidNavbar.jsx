@@ -86,6 +86,10 @@ const navItems = [
         path: "/admission/information-bulletin",
       },
       {
+        name: "Admission Seat Allocation",
+        path: "/admission/result"
+      },
+      {
         name: "Programs after 10th  ",
         path: "https://dseuadm.samarth.edu.in/",
       },

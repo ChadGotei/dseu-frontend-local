@@ -14,6 +14,7 @@ const EventsAndActivities = lazy(() =>
 const OurCampuses = lazy(() => import("../Body/OurCampuses"));
 const Socials = lazy(() => import("../Footer/Socials"));
 import StudyProgramsSection from "../Body/StudentProgram";
+import EventModel from '../EventModel/page'
 
 const page = () => {
   return (
@@ -28,6 +29,7 @@ const page = () => {
       <OurPartners />
       <News />
       <EventsAndActivities />
+      <EventModel />
     </>
   );
 };

@@ -312,3 +312,45 @@ export const archivePdf = async (id, archiveState) => {
     throw err;
   }
 };
+
+//? get result by student credentials
+export const getStudentResult = async (formData) => {
+  try {
+    const response = await api.post(
+      `/result`,
+      formData,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        }
+      }
+    );
+
+    return response.data
+
+  } catch (error) {
+    // console.error(error);
+    throw error;
+  }
+}
+
+
+export const changeStudentStatus = async (id, status) => {
+  try {
+    const response = await api.put(
+      `/result/${id}`,
+      { status },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        }
+      }
+    )
+
+    return response.data;
+
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
