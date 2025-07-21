@@ -232,9 +232,8 @@ const SidebarNav = ({ isOpen, onClose, navItems }) => {
                     )}
                     {item.dropdownItems && (
                       <ChevronDown
-                        className={`ml-2 transition-transform duration-200 ${
-                          openDropdown === item.name ? "rotate-180" : ""
-                        }`}
+                        className={`ml-2 transition-transform duration-200 ${openDropdown === item.name ? "rotate-180" : ""
+                          }`}
                       />
                     )}
                   </div>
@@ -281,11 +280,10 @@ const SidebarNav = ({ isOpen, onClose, navItems }) => {
                                 )}
                                 {subItem.dropdownItems && (
                                   <ChevronDown
-                                    className={`w-4 h-4 ml-2 transition-transform duration-200 ${
-                                      openNestedDropdown === subItem.name
+                                    className={`w-4 h-4 ml-2 transition-transform duration-200 ${openNestedDropdown === subItem.name
                                         ? "rotate-180"
                                         : ""
-                                    }`}
+                                      }`}
                                   />
                                 )}
                               </div>
@@ -477,7 +475,7 @@ const ResponsiveHeader = () => {
                 }}
                 style={{ cursor: "pointer" }}
               /> */}
-              <Logo 
+              <Logo
                 cn={"h-16"}
                 handleClick={() => {
                   navigate("/");
@@ -575,9 +573,8 @@ const ResponsiveHeader = () => {
                       {item.name}
                       {item.dropdownItems && (
                         <ChevronDown
-                          className={`ml-0.5 h-3 w-3 transition-transform duration-300 ${
-                            openDropdown === item.name ? "rotate-180" : ""
-                          }`}
+                          className={`ml-0.5 h-3 w-3 transition-transform duration-300 ${openDropdown === item.name ? "rotate-180" : ""
+                            }`}
                         />
                       )}
 
@@ -640,11 +637,10 @@ const ResponsiveHeader = () => {
                                   <span>{subItem.name}</span>
                                   {subItem.dropdownItems && (
                                     <ChevronDown
-                                      className={`inline-block ml-2 h-4 w-4 transition-transform duration-300 ${
-                                        openNestedDropdown === subItem.name
+                                      className={`inline-block ml-2 h-4 w-4 transition-transform duration-300 ${openNestedDropdown === subItem.name
                                           ? "rotate-180"
                                           : "rotate-270"
-                                      }`}
+                                        }`}
                                     />
                                   )}
                                 </span>

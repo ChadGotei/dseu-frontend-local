@@ -36,9 +36,9 @@ const contacts = [
         email: "kaushalender.varma@dseu.ac.in"
     },
     {
-        name: "Mr. Agrim Tomar, TPO, South Zone",
+        name: "Dr. Agrim Kumar, TPO, South Zone",
         contact: "9368611379",
-        email: "agrim.tomar@dseu.ac.in"
+        email: "agrim.kumar@dseu.ac.in"
     }
 ];
 

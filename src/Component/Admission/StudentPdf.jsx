@@ -56,7 +56,7 @@ const StudentPdf = ({ student }) => {
             doc.internal.pageSize.height - 10
         );
 
-        doc.save(`${student.name.split(' ')[0] ?? ''} ${student.applicant_id}_Admission_Form.pdf`);
+        doc.save(`${student.name.split(' ')[0] ?? ''} ${student.form_number}_Admission_Form.pdf`);
     };
 
     const convertImageToBase64 = (url) => {
