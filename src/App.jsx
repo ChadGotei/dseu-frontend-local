@@ -158,8 +158,8 @@ function App() {
             <Route path="/admission/refund-policy" element={<FeeRefundPolicy />} />
             <Route path="/admission/process-and-guidelines" element={<ProcessAndGuidelines />} />
             <Route path="/admission/information-bulletin" element={<IB />}  />
-            <Route path="/admission/result" element={<Result />} />
-            <Route path="/admission/result/show" element={<ShowResult />} />
+            {/* <Route path="/admission/result" element={<Result />} />
+            <Route path="/admission/result/show" element={<ShowResult />} /> */}
  
             {/* Misc */}
             <Route path="/holiday-calendar" element={<HolidayCalendar />} />

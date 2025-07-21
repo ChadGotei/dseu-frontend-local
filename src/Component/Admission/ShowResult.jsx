@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { useMutation } from '@tanstack/react-query'
 
 import Logo from "../Reusable/Logo";
+import StudentPdf from "./StudentPdf";
 import ConfirmationModal from '../UI/ConfirmationModal'
 
 import { showErrorToast, showSuccessToast } from "../../utils/toasts";
 import { changeStudentStatus } from "../../utils/apiservice";
-import StudentPdf from "./StudentPdf";
 import { getCategoryFullname } from "../../utils/helper";
 
 const ShowResult = () => {
@@ -55,11 +55,11 @@ const ShowResult = () => {
     const student = data.data?.student;
 
     const resultInfo = [
-        { label: "Form Number", value: student.applicant_id }, // to be changed later
+        { label: "Form Number", value: student.form_number }, // to be changed later
         { label: "Name", value: student.name },
         { label: "Program Allocated", value: student.program },
         { label: "Campus Allocated", value: student.campus },
-        { label: "Register Category", value: getCategoryFullname(student.category_applied) ?? "null" },   // tbcl
+        { label: "Registered Category", value: student.registered_category },   // tbcl
         { label: "Admission Category", value: getCategoryFullname(student.category_allocated) },
         { label: "Program Preference", value: student.program_preference },
         { label: "Generated Rank", value: student.rank },
@@ -121,12 +121,13 @@ const ShowResult = () => {
                                 >
                                     Freeze
                                 </button>
-                                <button
-                                    onClick={() => setModalInfo({ open: true, action: "Accept and Upgrade" })}
-                                    className="bg-green-600 hover:bg-green-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
-                                >
-                                    Accept and Upgrade
-                                </button>
+                                {student.program_preference !== 1 &&
+                                    <button
+                                        onClick={() => setModalInfo({ open: true, action: "Accept and Upgrade" })}
+                                        className="bg-green-600 hover:bg-green-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
+                                    >
+                                        Accept and Upgrade
+                                    </button>}
                             </div>
 
                             <div className="text-sm text-gray-800 mt-4 max-w-2xl p-4 rounded-lg border border-yellow-400 bg-yellow-100/60 backdrop-blur-md shadow-md">

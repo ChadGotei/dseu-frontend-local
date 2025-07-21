@@ -2,6 +2,7 @@ import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 
 import logoUrl from "../../assets/DSEULogo/logo.png";
+import { getCategoryFullname } from '../../utils/helper';
 
 const StudentPdf = ({ student }) => {
     const handleDownload = async () => {
@@ -36,12 +37,13 @@ const StudentPdf = ({ student }) => {
             styles: { fontSize: 10 },
             head: [['Field', 'Value']],
             body: [
-                ['Form Number', student.applicant_id],  // later change to form number
+                ['Form Number', student.form_number],  // later change to form number
                 ['Name', student.name],
                 ['Program', student.program],
                 ['Campus', student.campus],
                 ['Program Preference', student.program_preference],
-                ['Category Allocated', student.category_allocated],
+                ['Registered Category', student.registered_category],   // change it later
+                ['Category Allocated', getCategoryFullname(student.category_allocated)],
                 ['Rank', student.rank],
             ],
         });

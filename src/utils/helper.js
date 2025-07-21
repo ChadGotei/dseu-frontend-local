@@ -13,25 +13,23 @@ export const unslugify = (slug) => {
 export const getCategoryFullname = (category) => {
   let fullform;
 
-  console.log(category);
-
   switch (category) {
-    case "DB_UR":
+    case "DEL_UR":
       fullform = "Delhi General";
       break;
-    case "DB_SC":
+    case "DEL_SC":
       fullform = "Delhi SC";
       break;
-    case "DB_ST":
+    case "DEL_ST":
       fullform = "Delhi ST";
       break;
-    case "DB_OBC":
+    case "DEL_OBC":
       fullform = "Delhi OBC";
       break;
     case "OD_DEL_UR":
       fullform = "Outside Delhi General";
       break;
-    case "OD_DEL_SC":
+    case "OD_DEL_SC":``
       fullform = "Outside Delhi SC";
       break;
     case "OD_DEL_ST":
