@@ -9,8 +9,6 @@ const StudentPdf = ({ student }) => {
         await generatePDF(student);
     };
 
-    // fix the url
-
     const generatePDF = async (student) => {
         const doc = new jsPDF();
 
@@ -37,18 +35,33 @@ const StudentPdf = ({ student }) => {
             styles: { fontSize: 10 },
             head: [['Field', 'Value']],
             body: [
-                ['Form Number', student.form_number],  // later change to form number
+                ['Form Number', student.form_number],
                 ['Name', student.name],
                 ['Program', student.program],
                 ['Campus', student.campus],
                 ['Program Preference', student.program_preference],
-                ['Registered Category', student.registered_category],   // change it later
+                ['Registered Category', student.registered_category],
                 ['Category Allocated', getCategoryFullname(student.category_allocated)],
                 ['Rank', student.rank],
             ],
         });
 
+        const finalY = doc.lastAutoTable.finalY || 80;
+
+        // Add the important note
+        doc.setFontSize(9);
+        doc.setFont('helvetica', 'italic');
+        doc.setTextColor(80);
+        doc.text(
+            'This is an auto-generated document. It does not require any signature and is only valid when presented with the fee slip.',
+            20,
+            finalY + 10,
+            { maxWidth: 170 }
+        );
+
+        // Add contact email
         doc.setFontSize(8);
+        doc.setFont('helvetica', 'normal');
         doc.setTextColor(100);
         doc.text(
             'helpdesk-admission@dseu.ac.in',

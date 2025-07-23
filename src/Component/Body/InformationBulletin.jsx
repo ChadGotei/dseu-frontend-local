@@ -202,7 +202,7 @@ const InformationBulletin = () => {
         }
 
         .animate-scroll {
-          animation: scroll linear 20s infinite;
+          animation: scroll linear 30s infinite;
           will-change: transform;
           display: inline-block;
         }

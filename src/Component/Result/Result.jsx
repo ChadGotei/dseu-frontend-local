@@ -1,12 +1,14 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Eye, EyeOff, Info } from 'lucide-react';
+import { FaQuestionCircle } from 'react-icons/fa';
+import { useMutation } from '@tanstack/react-query';
+
 import { getStudentResult } from '../../utils/apiservice';
 import { showErrorToast, showSuccessToast } from '../../utils/toasts';
-import { useMutation } from '@tanstack/react-query';
-import { FaQuestionCircle } from 'react-icons/fa';
-import Tooltip from '../Reusable/Tooltip';
-import { useNavigate } from 'react-router-dom';
 import dseulogo from "../../assets/dseulogofullnew.svg";
+
+import Tooltip from '../Reusable/Tooltip';
 
 const Result = () => {
   const [isHindi, setIsHindi] = useState(false);

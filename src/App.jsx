@@ -10,7 +10,6 @@ import UnderConstruction from "./Component/Reusable/UnderConstruction";
 import Home from './Component/Home/page.jsx';
 
 // Home page components
-
 const ChancellorMessage = lazy(() => import("./Component/Body/ChancellorMessage"));
 const ViceChancellorMessage = lazy(() => import("./Component/Body/ViceChancellorMessage"));
 
@@ -41,8 +40,6 @@ const IB = lazy(() => import("./Component/Admission/IB.jsx"));
 const AdmissionGuidelines = lazy(() => import("./Component/Admission/AdmissionGuidelines"));
 const FeeRefundPolicy = lazy(() => import("./Component/Admission/FeeRefundPolicy"));
 const ProcessAndGuidelines = lazy(() => import("./Component/Admission/ProcessAndGuidelines"));
-const Result = lazy(() => import("./Component/Admission/Result"));
-const ShowResult = lazy(() => import("./Component/Admission/ShowResult"));
 
 // Administrative
 const AdministrationTemp = lazy(() => import("./Component/Administration/page"));
@@ -91,6 +88,10 @@ const Dashboard = lazy(() => import('./Component/Admin/Dashboard'));
 const TestPage = lazy(() => import('./Component/Admin/TestPage'));
 const ArchiveUploads = lazy(() => import("./Component/Admin/ArchiveUploads"));
 const ViewPdfs = lazy(() => import("./Component/Admin/ViewPDFs/ViewPdfs"));
+
+// result
+const Result = lazy(() => import("./Component/Result/Result.jsx"));
+const ShowResult = lazy(() => import("./Component/Result/ShowResult.jsx"));
 
 function App() {
   return (
@@ -149,7 +150,7 @@ function App() {
             <Route path="/about-us/Vision-and-Mission" element={<VissionMission />} />
             <Route path="/about-us/history" element={<HistoryDSEU />} />
             <Route path="/UGC-Guidelines" element={<UnderConstruction />} />
-            <Route path="/about-us/annualReport" element={<AnnualReport/>} />
+            <Route path="/about-us/annualReport" element={<AnnualReport />} />
 
 
             {/* Admission */}
@@ -157,10 +158,8 @@ function App() {
             <Route path="/admission/guidelines" element={<AdmissionGuidelines />} />
             <Route path="/admission/refund-policy" element={<FeeRefundPolicy />} />
             <Route path="/admission/process-and-guidelines" element={<ProcessAndGuidelines />} />
-            <Route path="/admission/information-bulletin" element={<IB />}  />
-            {/* <Route path="/admission/result" element={<Result />} />
-            <Route path="/admission/result/show" element={<ShowResult />} /> */}
- 
+            <Route path="/admission/information-bulletin" element={<IB />} />
+
             {/* Misc */}
             <Route path="/holiday-calendar" element={<HolidayCalendar />} />
             <Route path="/alumni" element={<AlumniSection />} />
@@ -168,7 +167,7 @@ function App() {
             <Route path="/grievance-form" element={<GrievanceForm />} />
             <Route path="/placement" element={<Placement />} />
 
-            {/* Work with us */}              
+            {/* Work with us */}
             <Route path="recruitment-rules" element={<RecruitmentRules />} />
             <Route path="/recruitment" element={<JobPortal />} />
 
@@ -185,17 +184,19 @@ function App() {
             <Route path="/admin-login" element={<AdminLogin />} />
             <Route path="/admin/uploads" element={<TestPage />} />
             <Route path="/admin/view-pdfs" element={<ViewPdfs />} />
-
             <Route path="/admin/dashboard" element={<Dashboard />} />
             <Route path="/admin/archive-uploads" element={<ArchiveUploads />} />
 
-            <Route path="/Entrepreneurship" element={<Entrepreneurship />} />
+            {/* Result */}
+            {/* <Route path="/admission/result" element={<Result />} />
+            <Route path="/admission/result/show" element={<ShowResult />} /> */}
 
+            {/* Others */}
+            <Route path="/Entrepreneurship" element={<Entrepreneurship />} />
             <Route path="/tenders" element={<Tenders />} />
-            {/* <Route path="/counter" element={<Counter />} /> */}
           </Route>
-          
-            <Route path="*" element={<NotFound />} />
+
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

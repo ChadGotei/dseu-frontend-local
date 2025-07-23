@@ -50,3 +50,21 @@ export const getCategoryFullname = (category) => {
 
   return fullform;
 };
+
+
+export const getStatusFromAction = (action) => {
+    switch (action) {
+        case "Freeze":
+        case "Final Acceptance":
+            return "freeze";
+        case "Reject":
+        case "Not Accepted":
+            return "reject";
+        case "Accept and Upgrade":
+            return "float";
+        case "Not Accepted and Upgrade":
+            return "upgrade";
+        default:
+            return null; // or throw an error if needed
+    }
+};

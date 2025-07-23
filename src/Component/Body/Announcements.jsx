@@ -18,11 +18,11 @@ const AnnouncementStrip = () => {
     if (data) {
       if (data.data && Array.isArray(data.data.notices)) {
         const updated = [
-          {
-            fileName: toAdd,
-            fileLink: "https://dseu.ac.in/admission",
-            samePage: true,
-          },
+          // {
+          //   fileName: toAdd,
+          //   fileLink: "https://dseu.ac.in/admission",
+          //   samePage: true,
+          // },
           ...data.data.notices,
         ];
         setAnnouncements(updated);
