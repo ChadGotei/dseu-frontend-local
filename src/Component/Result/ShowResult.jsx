@@ -10,6 +10,7 @@ import StudentStatusMessage from "./StudentStatusMessage";
 import { showErrorToast, showSuccessToast } from "../../utils/toasts";
 import { changeStudentStatus } from "../../utils/apiservice";
 import { getCategoryFullname, getStatusFromAction } from "../../utils/helper";
+import { NoSeatAllocationMessage, PwdMessage } from "./PwdMessage";
 
 const ShowResult = () => {
     const navigate = useNavigate();
@@ -45,16 +46,11 @@ const ShowResult = () => {
 
     if (!data) return null;
 
-    if (data.message && !data.data) {
+    if (data.message === "You have not alloted any seat please try again in next round") {
         return (
-            <div className="flex flex-col justify-center items-center bg-white p-6 my-10">
-                <Logo cn="h-20 mb-6" />
-                <h2 className="text-xl text-red-600 font-semibold mb-2">No Seat Allotted</h2>
-                <p className="text-gray-700 text-center max-w-md">
-                    {data.message || "You have not been allotted a seat. Please try again in the next round."}
-                </p>
-            </div>
-        );
+            <PwdMessage />
+            // <NoSeatAllocationMessage />
+        )
     }
 
     const student = data.data?.student;
@@ -176,7 +172,7 @@ const ShowResult = () => {
                     {/* change later according to backend */}
                     <StudentStatusMessage status={student.status} />
                 </div>
-                
+
                 {/* Only generate the pdf if student accepted the seat */}
                 {(student.status === "freeze" || student.status === "float") &&
                     <StudentPdf student={student} />}
@@ -223,5 +219,6 @@ const ButtonsDescription = ({ student }) => {
         </div>
     )
 }
+
 
 export default ShowResult;

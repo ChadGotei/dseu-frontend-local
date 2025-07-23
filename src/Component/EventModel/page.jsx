@@ -3,16 +3,8 @@ import { FiInfo } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 const Page = () => {
-  const [isVisible, setIsVisible] = useState(false); // default: hidden
+  const [isVisible, setIsVisible] = useState(true); // Show modal by default
   const modalRef = useRef(null);
-
-  useEffect(() => {
-    const hasShown = sessionStorage.getItem("admissionModalShown");
-    if (!hasShown) {
-      setIsVisible(true);
-      sessionStorage.setItem("admissionModalShown", "true");
-    }
-  }, []);
 
   const handleClose = () => {
     setIsVisible(false);
@@ -53,21 +45,28 @@ const Page = () => {
             <FiInfo className="text-xl" />
           </div>
           <h2 className="text-sm sm:text-xl font-semibold text-blue-700">
-            <Link to="/admission">
-              Important Update for AY 2025 Admissions
-            </Link>
+            Diploma Round 1 Results Are Live!
           </h2>
         </div>
 
         {/* Official Content */}
         <div className="text-gray-800 text-sm md:text-base leading-relaxed space-y-4">
-          <p>Dear Students,</p>
+          <p><strong>📢 Dear Candidate,</strong></p>
           <p>
-            We are pleased to announce that the <strong>first merit list</strong> for{" "}
-            <strong>Diploma and Bachelor's programs</strong> will be released this week.
-            The admission process will be conducted <strong>online</strong>. To stay updated, please check our website regularly.
+            The <strong>seat allocation result</strong> for <strong>Diploma Round 1</strong> of the current admission year is now live.
           </p>
-          <p className="mt-4 font-medium text-gray-600">Admission Team</p>
+          <p>
+            Students can check their result by clicking the button below:
+          </p>
+          <p>
+            <Link
+              to="/admission/result"
+              className="inline-block mt-2 bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
+            >
+              View My Result
+            </Link>
+          </p>
+          <p className="mt-4 font-medium text-gray-600">– Admission Cell, DSEU</p>
         </div>
       </div>
     </div>

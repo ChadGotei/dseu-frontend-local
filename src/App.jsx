@@ -188,8 +188,8 @@ function App() {
             <Route path="/admin/archive-uploads" element={<ArchiveUploads />} />
 
             {/* Result */}
-            {/* <Route path="/admission/result" element={<Result />} />
-            <Route path="/admission/result/show" element={<ShowResult />} /> */}
+            <Route path="/admission/result" element={<Result />} />
+            <Route path="/admission/result/show" element={<ShowResult />} />
 
             {/* Others */}
             <Route path="/Entrepreneurship" element={<Entrepreneurship />} />
