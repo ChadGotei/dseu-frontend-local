@@ -125,6 +125,15 @@ const Result = () => {
           </p>
         </div>
       </div>
+
+      <a
+        href="/seat-confirmation-process.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-80"
+      >
+        View Seat Confirmation Process (PDF)
+      </a>
     </div>
   );
 };

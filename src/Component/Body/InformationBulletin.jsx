@@ -67,11 +67,11 @@ const InformationBulletin = () => {
 
       if (section.index === 0) {
         cards[section.index].content = [
-          {
-            name: "The Admission registration deadline for all programs - Diploma, Undergraduate (UG), and Postgraduate (PG) is hereby extended till July 7, 2025",
-            link: "https://dseu.ac.in/admission",
-            samePage: true,
-          },
+          // {
+          //   name: "The Admission registration deadline for all programs - Diploma, Undergraduate (UG), and Postgraduate (PG) is hereby extended till July 7, 2025",
+          //   link: "https://dseu.ac.in/admission",
+          //   samePage: true,
+          // },
           ...notices,
         ];
       } else {

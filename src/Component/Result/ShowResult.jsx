@@ -48,9 +48,12 @@ const ShowResult = () => {
 
     if (data.message === "You have not alloted any seat please try again in next round") {
         return (
-            <PwdMessage />
-            // <NoSeatAllocationMessage />
+            <NoSeatAllocationMessage />
         )
+    }
+
+    if (data.message === "PWD Student Found" || data.message === 'defence Student Found') {
+        return <PwdMessage />
     }
 
     const student = data.data?.student;
@@ -194,6 +197,17 @@ const ShowResult = () => {
                         </a>
                     </p>
                 </div>}
+
+                <div className="flex items-center justify-center w-full">
+                    <a
+                        href="/seat-confirmation-process.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-80 mt-10"
+                    >
+                        View Seat Confirmation Process (PDF)
+                    </a>
+                </div>
             </div>
         </div>
     );

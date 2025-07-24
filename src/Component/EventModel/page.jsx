@@ -51,10 +51,11 @@ const Page = () => {
 
         {/* Official Content */}
         <div className="text-gray-800 text-sm md:text-base leading-relaxed space-y-4">
-          <p><strong>📢 Dear Candidate,</strong></p>
+          <p><strong>📢 Dear Applicant,</strong></p>
           <p>
-            The <strong>seat allocation result</strong> for <strong>Diploma Round 1</strong> of the current admission year is now live.
+            The <strong>seat allocation result</strong> for <strong>Diploma Round 1</strong> of the current admission year is now live <strong>(except Diploma in Pharmacy)</strong>.
           </p>
+
           <p>
             Students can check their result by clicking the button below:
           </p>
