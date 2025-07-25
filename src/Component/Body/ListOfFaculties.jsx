@@ -19,7 +19,7 @@ export default function ListOfFaculties() {
   if (isLoading) return <ListOfFacultiesLoading />;
   if (isError)
     return (
-      <p className="text-center text-red-500">
+      <p className="text-center text-red-500 my-10">
         {error?.message || "Failed to fetch data"}
       </p>
     );

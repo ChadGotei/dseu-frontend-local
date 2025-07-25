@@ -10,13 +10,15 @@ import StudentStatusMessage from "./StudentStatusMessage";
 import { showErrorToast, showSuccessToast } from "../../utils/toasts";
 import { changeStudentStatus } from "../../utils/apiservice";
 import { getCategoryFullname, getStatusFromAction } from "../../utils/helper";
-import { NoSeatAllocationMessage, PwdMessage } from "./PwdMessage";
+import { NoSeatAllocationMessage, PwdMessage, PwdMessagebtech } from "./PwdMessage";
 
 const ShowResult = () => {
     const navigate = useNavigate();
     const data = JSON.parse(sessionStorage.getItem("studentResult"));
     const [modalInfo, setModalInfo] = useState({ open: false, action: "" });
 
+    const isBtech = data.btech;
+    const studentId = data.allStudentId;
 
     const statusMutation = useMutation({
         mutationFn: ({ id, status }) => changeStudentStatus(id, status),
@@ -46,14 +48,18 @@ const ShowResult = () => {
 
     if (!data) return null;
 
-    if (data.message === "You have not alloted any seat please try again in next round") {
+    if (data.message === "You have not been allotted any seat, please try again in next round") {
         return (
-            <NoSeatAllocationMessage />
+            <NoSeatAllocationMessage isBtech={isBtech} />
         )
     }
 
-    if (data.message === "PWD Student Found" || data.message === 'defence Student Found') {
+    if (data.message === "PWD Student Found" || data.message === 'Defence Student Found') {
         return <PwdMessage />
+    }
+
+    if(data.message === "Defence BTech Student Found" || data.message === "PWD BTech Student Found") {
+        return <PwdMessagebtech />
     }
 
     const student = data.data?.student;
@@ -72,7 +78,7 @@ const ShowResult = () => {
     const handleConfirm = () => {
         const status = getStatusFromAction(modalInfo.action);
         if (status) {
-            statusMutation.mutate({ id: student._id, status });
+            statusMutation.mutate({ id: studentId, status });
         } else {
             showErrorToast("Invalid action selected.");
         }
@@ -200,7 +206,7 @@ const ShowResult = () => {
 
                 <div className="flex items-center justify-center w-full">
                     <a
-                        href="/seat-confirmation-process.pdf"
+                        href={`${isBtech ? "/seat-confirmation-btech.pdf" : "/seat-confirmation-process.pdf"}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-80 mt-10"
@@ -209,7 +215,7 @@ const ShowResult = () => {
                     </a>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

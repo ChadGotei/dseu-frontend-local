@@ -44,8 +44,14 @@ export const getCategoryFullname = (category) => {
     case "OB_DEL_ST":
       fullform = "Outside Delhi ST";
       break;
+    case "OD_DEL_EWS":
+      fullform = "Outside Delhi EWS";
+      break;
+    case "EWS":
+      fullform = "EWS";
+      break;
     default:
-      fullform = "Unknown Category";
+      fullform = category;
   }
 
   return fullform;
