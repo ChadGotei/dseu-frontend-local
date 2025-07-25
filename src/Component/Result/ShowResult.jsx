@@ -50,7 +50,7 @@ const ShowResult = () => {
 
     if (data.message === "You have not been allotted any seat, please try again in next round") {
         return (
-            <NoSeatAllocationMessage isBtech={isBtech} />
+            <NoSeatAllocationMessage />
         )
     }
 
@@ -58,7 +58,7 @@ const ShowResult = () => {
         return <PwdMessage />
     }
 
-    if(data.message === "Defence BTech Student Found" || data.message === "PWD BTech Student Found") {
+    if (data.message === "Defence BTech Student Found" || data.message === "PWD BTech Student Found") {
         return <PwdMessagebtech />
     }
 

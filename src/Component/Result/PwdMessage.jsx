@@ -26,30 +26,15 @@ const PwdMessage = () => {
 
 }
 
-const NoSeatAllocationMessage = ({ isBtech = false }) => {
+const NoSeatAllocationMessage = () => {
     return (
-        <main className="flex flex-col">
-
-            <div className="flex flex-col justify-center items-center bg-white p-6 mt-10">
-                <Logo cn="h-20 mb-6" />
-                <h2 className="text-xl text-red-600 font-semibold mb-2">No Seat Allotted</h2>
-                <p className="text-gray-700 text-center max-w-md">
-                    {"You have not been allotted a seat. Please wait for next round."}
-                </p>
-            </div>
-
-            {isBtech &&
-                <div className="flex items-center justify-center w-full mb-10">
-                    <a
-                        href={"/seat-confirmation-btech.pdf"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-80 mt-10"
-                    >
-                        View Seat Confirmation Process (PDF)
-                    </a>
-                </div>}
-        </main>
+        <div className="flex flex-col justify-center items-center bg-white p-6 mt-10">
+            <Logo cn="h-20 mb-6" />
+            <h2 className="text-xl text-red-600 font-semibold mb-2">No Seat Allotted</h2>
+            <p className="text-gray-700 text-center max-w-md">
+                {"You have not been allotted a seat. Please wait for next round."}
+            </p>
+        </div>
     );
 }
 
