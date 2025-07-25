@@ -18,11 +18,6 @@ const AnnouncementStrip = () => {
     if (data) {
       if (data.data && Array.isArray(data.data.notices)) {
         const updated = [
-          // {
-          //   fileName: toAdd,
-          //   fileLink: "https://dseu.ac.in/admission",
-          //   samePage: true,
-          // },
           ...data.data.notices,
         ];
         setAnnouncements(updated);
@@ -45,7 +40,12 @@ const AnnouncementStrip = () => {
   }
 
   if (!announcements || announcements.length === 0) {
-    return <p>No announcements as of now.</p>;
+    return (
+      <div className="flex items-center justify-center h-12 bg-white border-y border-gray-200 w-full text-sm sm:text-base text-gray-500 italic text-center">
+        No announcements at the moment. Please check back soon or Check your internet!
+      </div>
+    );
+
   }
 
   return (

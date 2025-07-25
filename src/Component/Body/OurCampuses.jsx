@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Link } from "react-router-dom";
+import { data, Link } from "react-router-dom";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
@@ -15,9 +15,8 @@ import OurCampusesLoading from "../ShimmerUI/OurCampusesLoading";
 
 const CustomArrow = ({ onClick, direction }) => (
   <div
-    className={`absolute top-1/2 transform -translate-y-1/2 ${
-      direction === "prev" ? "-left-2 lg:left-1" : "-right-2 lg:right-1"
-    } z-10 bg-white text-black rounded-full w-10 h-10 flex items-center justify-center cursor-pointer opacity-65`}
+    className={`absolute top-1/2 transform -translate-y-1/2 ${direction === "prev" ? "-left-2 lg:left-1" : "-right-2 lg:right-1"
+      } z-10 bg-white text-black rounded-full w-10 h-10 flex items-center justify-center cursor-pointer opacity-65`}
     onClick={onClick}
   >
     {direction === "prev" ? "<" : ">"}
@@ -71,11 +70,10 @@ const CarouselSection = () => {
             <div key={campus._id} className="px-6">
               <Link to={`/campus/${generateSlug(campus.name)}`}>
                 <div
-                  className={`relative overflow-hidden shadow-lg transition-transform duration-500 ${
-                    index === activeIndex
-                      ? "transform scale-125 -translate-y-10 z-20 rounded-lg"
-                      : "transform scale-90 rounded-t-lg"
-                  }`}
+                  className={`relative overflow-hidden shadow-lg transition-transform duration-500 ${index === activeIndex
+                    ? "transform scale-125 -translate-y-10 z-20 rounded-lg"
+                    : "transform scale-90 rounded-t-lg"
+                    }`}
                 >
                   <div className="group h-64">
                     <img
@@ -88,9 +86,8 @@ const CarouselSection = () => {
                       className="h-full min-w-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-50 rounded-t-lg"
                     />
                     <div
-                      className={`absolute inset-0 bg-black bg-opacity-10 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 ${
-                        activeIndex === index ? "translate-y-4" : ""
-                      }`}
+                      className={`absolute inset-0 bg-black bg-opacity-10 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 ${activeIndex === index ? "translate-y-4" : ""
+                        }`}
                     >
                       <p className="text-white text-xl font-bold text-center px-4">
                         {campus.name}

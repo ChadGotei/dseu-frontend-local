@@ -14,7 +14,7 @@ const Result = () => {
   const [isHindi, setIsHindi] = useState(false);
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   const { mutate } = useMutation({
     mutationFn: getStudentResult,

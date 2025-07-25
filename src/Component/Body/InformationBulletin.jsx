@@ -17,19 +17,33 @@ const sectionKeys = [
 ];
 
 const fetchSectionNotices = async () => {
-  const requests = sectionKeys.map((section) =>
-    axios.get(
-      `${baseUrl}notice?section=${encodeURIComponent(
-        section.key
-      )}&limit=50&page=1`
-    )
+  const results = await Promise.all(
+    sectionKeys.map(async (section) => {
+      try {
+        const res = await axios.get(
+          `${baseUrl}notice?section=${encodeURIComponent(
+            section.key
+          )}&limit=50&page=1`
+        );
+        return {
+          index: section.index,
+          content: res.data?.data?.notices || [],
+        };
+      } catch (error) {
+        console.error(
+          `Failed to fetch notices for section "${section.key}":`,
+          error.message || error
+        );
+        return {
+          index: section.index,
+          content: [], // Return empty fallback instead of crashing
+        };
+      }
+    })
   );
-  const responses = await Promise.all(requests);
-  return responses.map((res, i) => ({
-    index: sectionKeys[i].index,
-    content: res.data?.data?.notices || [],
-  }));
+  return results;
 };
+
 
 const InformationBulletin = () => {
   const [showModal, setShowModal] = useState(false);
@@ -48,6 +62,7 @@ const InformationBulletin = () => {
     queryKey: ["information-bulletin"],
     queryFn: fetchSectionNotices,
     staleTime: 5 * 60 * 1000,
+    retry: 2,
   });
 
   const cards = [
@@ -80,7 +95,7 @@ const InformationBulletin = () => {
     });
   }
 
-  if(isLoading) {
+  if (isLoading) {
     return <OrangeLoader />
   }
 
