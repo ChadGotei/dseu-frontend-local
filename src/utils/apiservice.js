@@ -313,7 +313,7 @@ export const archivePdf = async (id, archiveState) => {
   }
 };
 
-//? get result by student credentials
+//? get result by student credentials: diploma and Btech
 export const getStudentResult = async (formData) => {
   try {
     const response = await api.post(
@@ -330,6 +330,18 @@ export const getStudentResult = async (formData) => {
 
   } catch (error) {
     // console.error(error);
+    throw error;
+  }
+}
+
+//? Get result by student credentials: UG only
+export const getUGStudentResult = async (formData) => {
+  try {
+    const response = await api.post(
+      `/result/ug`  // expected
+    )
+  } catch (error) {
+    console.error(error);
     throw error;
   }
 }

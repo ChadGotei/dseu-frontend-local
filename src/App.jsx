@@ -92,6 +92,7 @@ const ViewPdfs = lazy(() => import("./Component/Admin/ViewPDFs/ViewPdfs"));
 // result
 const Result = lazy(() => import("./Component/Result/Result.jsx"));
 const ShowResult = lazy(() => import("./Component/Result/ShowResult.jsx"));
+const UGResult = lazy(() => import("./Component/Result/UgResult.jsx"));
 
 function App() {
   return (
@@ -190,6 +191,7 @@ function App() {
             {/* Result */}
             <Route path="/admission/result" element={<Result />} />
             <Route path="/admission/result/show" element={<ShowResult />} />
+            {/* <Route path="/admission/result/ug" element={<UGResult />} /> */}
 
             {/* Others */}
             <Route path="/Entrepreneurship" element={<Entrepreneurship />} />

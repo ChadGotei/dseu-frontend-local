@@ -92,7 +92,7 @@ const AnnouncementStrip = () => {
 const style = `
   @keyframes marquee {
     0% {
-      transform: translateX(70%);
+      transform: translateX(60%);
     }
     100% {
       transform: translateX(-100%);

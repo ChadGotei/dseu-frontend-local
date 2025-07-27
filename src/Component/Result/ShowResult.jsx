@@ -70,10 +70,14 @@ const ShowResult = () => {
         { label: "Program Allocated", value: student.program },
         { label: "Campus Allocated", value: student.campus },
         { label: "Registered Category", value: student.registered_category },
-        { label: "Admission Category", value: getCategoryFullname(student.category_allocated) },
+        student.category_allocated && {
+            label: "Admission Category",
+            value: getCategoryFullname(student.category_allocated),
+        },
         { label: "Program Preference", value: student.program_preference },
         { label: "Generated Rank", value: student.rank },
-    ];
+    ].filter(Boolean); 
+
 
     const handleConfirm = () => {
         const status = getStatusFromAction(modalInfo.action);

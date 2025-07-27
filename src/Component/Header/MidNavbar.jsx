@@ -85,8 +85,12 @@ const navItems = [
         name: "Information Bulletin",
         path: "/admission/information-bulletin",
       },
+      // {
+      //   name: "UG Seat Allocation",
+      //   path: "/admission/result/ug"
+      // },
       {
-        name: "Admission Seat Allocation",
+        name: "Diploma & Btech Seat Allocation",
         path: "/admission/result"
       },
       {

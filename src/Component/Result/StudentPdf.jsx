@@ -41,10 +41,11 @@ const StudentPdf = ({ student }) => {
                 ['Campus', student.campus],
                 ['Program Preference', student.program_preference],
                 ['Registered Category', student.registered_category],
-                ['Category Allocated', getCategoryFullname(student.category_allocated)],
+                student.category_allocated && ['Category Allocated', getCategoryFullname(student.category_allocated)],
                 ['Rank', student.rank],
-            ],
+            ].filter(Boolean),
         });
+
 
         const finalY = doc.lastAutoTable.finalY || 80;
 

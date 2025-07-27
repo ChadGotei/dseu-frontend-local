@@ -89,7 +89,7 @@ const Result = () => {
             >
               {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
             </button>
-          </div>
+          </div> 
 
           <button
             type="submit"
@@ -130,9 +130,17 @@ const Result = () => {
         href="/seat-confirmation-process.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-80"
+        className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-96"
       >
-        View Seat Confirmation Process (PDF)
+        Diploma - View Seat Confirmation Process (PDF)
+      </a>
+      <a
+        href="/seat-confirmation-btech.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-96"
+      >
+        Btech - View Seat Confirmation Process (PDF)
       </a>
     </div>
   );

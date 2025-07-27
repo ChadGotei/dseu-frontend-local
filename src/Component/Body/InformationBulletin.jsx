@@ -36,14 +36,13 @@ const fetchSectionNotices = async () => {
         );
         return {
           index: section.index,
-          content: [], // Return empty fallback instead of crashing
+          content: [],
         };
       }
     })
   );
   return results;
 };
-
 
 const InformationBulletin = () => {
   const [showModal, setShowModal] = useState(false);
@@ -72,7 +71,13 @@ const InformationBulletin = () => {
     { title: "Notices", content: [], buttonText: "View Notices" },
   ];
 
-  // Fill fetched content
+  // Manual document to inject
+  const manualDoc = {
+    name: "How to Pay Your Admission Fees Online (Step-by-Step Guide)",
+    link: "https://drive.google.com/file/d/1dV-ujr-aZGG4uNb20h229NpBM8McyC-F/view",
+  };
+
+  // Inject fetched data + manual doc into the cards
   if (data) {
     data.forEach((section) => {
       const notices = section.content.map((notice) => ({
@@ -80,15 +85,9 @@ const InformationBulletin = () => {
         link: notice.fileLink,
       }));
 
-      if (section.index === 0) {
-        cards[section.index].content = [
-          // {
-          //   name: "The Admission registration deadline for all programs - Diploma, Undergraduate (UG), and Postgraduate (PG) is hereby extended till July 7, 2025",
-          //   link: "https://dseu.ac.in/admission",
-          //   samePage: true,
-          // },
-          ...notices,
-        ];
+      if (section.index === 0 || section.index === 2) {
+        // Admission or Important Links section
+        cards[section.index].content = [manualDoc, ...notices];
       } else {
         cards[section.index].content = notices;
       }
@@ -96,7 +95,7 @@ const InformationBulletin = () => {
   }
 
   if (isLoading) {
-    return <OrangeLoader />
+    return <OrangeLoader />;
   }
 
   return (
@@ -172,24 +171,17 @@ const InformationBulletin = () => {
                         key={idx}
                         className="hover:bg-blue-100 rounded py-1 px-2 transition-colors duration-200"
                       >
-                        {item.link ? (
-                          <a
-                            href={item.link}
-                            target={item.samePage ? "_self" : "_blank"}
-                            rel={
-                              item.samePage ? undefined : "noopener noreferrer"
-                            }
-                            className="text-gray-700 hover:text-blue-900 flex items-center w-full"
-                          >
-                            {item.name}
-                            <span className="ml-2 animated-label">NEW</span>
-                          </a>
-                        ) : (
-                          <span className="text-gray-700 flex items-center w-full">
-                            {item.name}
-                            <span className="ml-2 animated-label">NEW</span>
-                          </span>
-                        )}
+                        <a
+                          href={item.link}
+                          target={item.samePage ? "_self" : "_blank"}
+                          rel={
+                            item.samePage ? undefined : "noopener noreferrer"
+                          }
+                          className="text-gray-700 hover:text-blue-900 flex items-center w-full"
+                        >
+                          {item.name}
+                          <span className="ml-2 animated-label">NEW</span>
+                        </a>
                       </li>
                     ))}
                   </ul>
