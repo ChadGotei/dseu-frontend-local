@@ -17,7 +17,7 @@ const ShowResult = () => {
     const data = JSON.parse(sessionStorage.getItem("studentResult"));
     const [modalInfo, setModalInfo] = useState({ open: false, action: "" });
 
-    const isBtech = data.btech;
+    const isBtech = data?.btech ?? false;
     const studentId = data.allStudentId;
 
     const statusMutation = useMutation({
@@ -76,7 +76,7 @@ const ShowResult = () => {
         },
         { label: "Program Preference", value: student.program_preference },
         { label: "Generated Rank", value: student.rank },
-    ].filter(Boolean); 
+    ].filter(Boolean);
 
 
     const handleConfirm = () => {

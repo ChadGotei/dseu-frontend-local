@@ -92,7 +92,8 @@ const ViewPdfs = lazy(() => import("./Component/Admin/ViewPDFs/ViewPdfs"));
 // result
 const Result = lazy(() => import("./Component/Result/Result.jsx"));
 const ShowResult = lazy(() => import("./Component/Result/ShowResult.jsx"));
-const UGResult = lazy(() => import("./Component/Result/UgResult.jsx"));
+const UGResult = lazy(() => import("./Component/Result/UG/UgResult.jsx"));
+const ShowUgResult = lazy(() => import("./Component/Result/UG/ShowUgResult.jsx"));
 
 function App() {
   return (
@@ -191,7 +192,8 @@ function App() {
             {/* Result */}
             <Route path="/admission/result" element={<Result />} />
             <Route path="/admission/result/show" element={<ShowResult />} />
-            {/* <Route path="/admission/result/ug" element={<UGResult />} /> */}
+            {/* <Route path="/admission/result/ug" element={<UGResult />} />
+            <Route path="/admission/result/ug/show" element={<ShowUgResult />} /> */}
 
             {/* Others */}
             <Route path="/Entrepreneurship" element={<Entrepreneurship />} />

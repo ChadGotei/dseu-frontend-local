@@ -334,19 +334,6 @@ export const getStudentResult = async (formData) => {
   }
 }
 
-//? Get result by student credentials: UG only
-export const getUGStudentResult = async (formData) => {
-  try {
-    const response = await api.post(
-      `/result/ug`  // expected
-    )
-  } catch (error) {
-    console.error(error);
-    throw error;
-  }
-}
-
-
 export const changeStudentStatus = async (id, status) => {
   try {
     const response = await api.put(
@@ -361,6 +348,19 @@ export const changeStudentStatus = async (id, status) => {
 
     return response.data;
 
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
+
+
+// TODO: Get UG student data and change status functions
+export const getUGStudentResult = async (formData) => {
+  try {
+    const response = await api.post(
+      `/result/ug`  // expected
+    )
   } catch (error) {
     console.error(error);
     throw error;

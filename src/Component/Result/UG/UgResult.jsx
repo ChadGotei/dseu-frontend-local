@@ -4,23 +4,28 @@ import { Eye, EyeOff, Info } from 'lucide-react';
 import { FaQuestionCircle } from 'react-icons/fa';
 import { useMutation } from '@tanstack/react-query';
 
-import { getStudentResult } from '../../utils/apiservice';
-import { showErrorToast, showSuccessToast } from '../../utils/toasts';
-import dseulogo from "../../assets/dseulogofullnew.svg";
+import useResultStore from '../../../store/resultStore';
+import { getStudentResult } from '../../../utils/apiservice';
+import { showErrorToast, showSuccessToast } from '../../../utils/toasts';
+import dseulogo from "../../../assets/dseulogofullnew.svg";
 
-import Tooltip from '../Reusable/Tooltip';
+import Tooltip from '../../Reusable/Tooltip';
 
 const UgResult = () => {
     const [formData, setFormData] = useState({ email: '', password: '' });
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
+    
+    // result store
+    const setResult = useResultStore((state) => state.setResult);
 
     const { mutate } = useMutation({
         mutationFn: getStudentResult,
         onSuccess: (data) => {
             showSuccessToast('Result fetched successfully');
-            sessionStorage.setItem("studentResult", JSON.stringify(data));
-            navigate('/admission/result/show');
+            // storing in result store instead of session storage to make it more secure
+            setResult(data);
+            navigate('/admission/result/ug/show');
         },
         onError: (error) => {
             showErrorToast(error.response?.data?.message || "Something went wrong");

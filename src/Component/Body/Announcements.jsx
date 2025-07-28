@@ -2,8 +2,12 @@ import { ExternalLink } from "lucide-react";
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 import { useEffect, useState } from "react";
 
-const toAdd =
-  "The last date for DSEU admission registration for the academic year 2025–2026 has been extended till 7th July. For the counselling schedule, please stay vigilant and visit the DSEU website and Admission portals regularly.";
+const toAdd = [
+  {
+    fileLink: "https://forms.gle/so3SpNstAwsr12F5A",
+    fileName: "Preference Grievance form for diploma and B.Tech"
+  }
+]
 
 const AnnouncementStrip = () => {
   const [announcements, setAnnouncements] = useState([]);
@@ -18,6 +22,7 @@ const AnnouncementStrip = () => {
     if (data) {
       if (data.data && Array.isArray(data.data.notices)) {
         const updated = [
+          ...toAdd,
           ...data.data.notices,
         ];
         setAnnouncements(updated);
