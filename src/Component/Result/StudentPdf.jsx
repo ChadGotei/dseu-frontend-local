@@ -35,7 +35,8 @@ const StudentPdf = ({ student }) => {
             styles: { fontSize: 10 },
             head: [['Field', 'Value']],
             body: [
-                ['Form Number', student.form_number],
+                student.form_number && ['Form Number', student.form_number],
+                student.form_no && ['Form Number', student.form_no],
                 ['Name', student.name],
                 ['Program', student.program],
                 ['Campus', student.campus],

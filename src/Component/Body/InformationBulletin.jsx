@@ -21,19 +21,14 @@ const fetchSectionNotices = async () => {
     sectionKeys.map(async (section) => {
       try {
         const res = await axios.get(
-          `${baseUrl}notice?section=${encodeURIComponent(
-            section.key
-          )}&limit=50&page=1`
+          `${baseUrl}notice?section=${encodeURIComponent(section.key)}&limit=50&page=1`
         );
         return {
           index: section.index,
           content: res.data?.data?.notices || [],
         };
       } catch (error) {
-        console.error(
-          `Failed to fetch notices for section "${section.key}":`,
-          error.message || error
-        );
+        console.error(`Failed to fetch notices for section "${section.key}":`, error.message || error);
         return {
           index: section.index,
           content: [],
@@ -71,13 +66,18 @@ const InformationBulletin = () => {
     { title: "Notices", content: [], buttonText: "View Notices" },
   ];
 
-  // Manual document to inject
-  const manualDoc = {
-    name: "How to Pay Your Admission Fees Online (Step-by-Step Guide)",
-    link: "https://drive.google.com/file/d/1dV-ujr-aZGG4uNb20h229NpBM8McyC-F/view",
-  };
+  // Documents to inject manually
+  const admissionManuals = [
+    {
+      name: "Undergraduate results are now available!",
+      link: "https://dseu.ac.in/admission/result/ug",
+    },
+    {
+      name: "How to Pay Your Admission Fees Online (Step-by-Step Guide)",
+      link: "https://drive.google.com/file/d/1dV-ujr-aZGG4uNb20h229NpBM8McyC-F/view",
+    }
+  ];
 
-  // Inject fetched data + manual doc into the cards
   if (data) {
     data.forEach((section) => {
       const notices = section.content.map((notice) => ({
@@ -85,9 +85,12 @@ const InformationBulletin = () => {
         link: notice.fileLink,
       }));
 
-      if (section.index === 0 || section.index === 2) {
-        // Admission or Important Links section
-        cards[section.index].content = [manualDoc, ...notices];
+      if (section.index === 0) {
+        // Admission section
+        cards[section.index].content = [...admissionManuals, ...notices];
+      } else if (section.index === 2) {
+        // Important Links section
+        cards[section.index].content = [admissionManuals[0], ...notices];
       } else {
         cards[section.index].content = notices;
       }
@@ -152,13 +155,9 @@ const InformationBulletin = () => {
 
             <div className="relative flex-grow overflow-hidden group p-4">
               {isLoading ? (
-                <div className="text-center text-gray-500 italic">
-                  Loading...
-                </div>
+                <div className="text-center text-gray-500 italic">Loading...</div>
               ) : error ? (
-                <div className="text-center text-red-500">
-                  Error loading notices
-                </div>
+                <div className="text-center text-red-500">Error loading notices</div>
               ) : card.content.length === 0 ? (
                 <div className="my-auto p-2 text-center text-gray-500 italic">
                   No Notices available for now.
@@ -174,9 +173,7 @@ const InformationBulletin = () => {
                         <a
                           href={item.link}
                           target={item.samePage ? "_self" : "_blank"}
-                          rel={
-                            item.samePage ? undefined : "noopener noreferrer"
-                          }
+                          rel={item.samePage ? undefined : "noopener noreferrer"}
                           className="text-gray-700 hover:text-blue-900 flex items-center w-full"
                         >
                           {item.name}

@@ -4,9 +4,13 @@ import { useEffect, useState } from "react";
 
 const toAdd = [
   {
+    fileLink: "https://dseu.ac.in/admission/result/ug",
+    fileName: "Undergraduate result is live now!"
+  },
+  {
     fileLink: "https://forms.gle/so3SpNstAwsr12F5A",
     fileName: "Preference Grievance form for diploma and B.Tech"
-  }
+  },
 ]
 
 const AnnouncementStrip = () => {

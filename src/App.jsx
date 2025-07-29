@@ -192,8 +192,8 @@ function App() {
             {/* Result */}
             <Route path="/admission/result" element={<Result />} />
             <Route path="/admission/result/show" element={<ShowResult />} />
-            {/* <Route path="/admission/result/ug" element={<UGResult />} />
-            <Route path="/admission/result/ug/show" element={<ShowUgResult />} /> */}
+            <Route path="/admission/result/ug" element={<UGResult />} />
+            <Route path="/admission/result/ug/show" element={<ShowUgResult />} />
 
             {/* Others */}
             <Route path="/Entrepreneurship" element={<Entrepreneurship />} />

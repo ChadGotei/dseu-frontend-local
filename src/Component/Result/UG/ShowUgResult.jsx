@@ -70,10 +70,11 @@ const ShowUgResult = () => {
 
   // TODO: Change if neededd sayad karna nhi hoga
   const resultInfo = [
-    { label: "Form Number", value: student.form_number },
+    { label: "Form Number", value: student.form_no },
     { label: "Name", value: student.name },
     { label: "Program Allocated", value: student.program },
     { label: "Campus Allocated", value: student.campus },
+  { label: "Program Preference", value: student.program_preference },
     { label: "Registered Category", value: student.registered_category },
     student.category_allocated && {
       label: "Admission Category",
