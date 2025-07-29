@@ -5,7 +5,7 @@ import { FaQuestionCircle } from 'react-icons/fa';
 import { useMutation } from '@tanstack/react-query';
 
 import useResultStore from '../../../store/resultStore';
-import { getStudentResult } from '../../../utils/apiservice';
+import { getUGStudentResult } from '../../../utils/apiservice';
 import { showErrorToast, showSuccessToast } from '../../../utils/toasts';
 import dseulogo from "../../../assets/dseulogofullnew.svg";
 
@@ -15,12 +15,12 @@ const UgResult = () => {
     const [formData, setFormData] = useState({ email: '', password: '' });
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
-    
+
     // result store
     const setResult = useResultStore((state) => state.setResult);
 
     const { mutate } = useMutation({
-        mutationFn: getStudentResult,
+        mutationFn: getUGStudentResult,
         onSuccess: (data) => {
             showSuccessToast('Result fetched successfully');
             // storing in result store instead of session storage to make it more secure

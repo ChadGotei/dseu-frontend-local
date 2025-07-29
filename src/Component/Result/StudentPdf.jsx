@@ -39,7 +39,7 @@ const StudentPdf = ({ student }) => {
                 ['Name', student.name],
                 ['Program', student.program],
                 ['Campus', student.campus],
-                ['Program Preference', student.program_preference],
+                student.program_preference && ['Program Preference', student.program_preference],
                 ['Registered Category', student.registered_category],
                 student.category_allocated && ['Category Allocated', getCategoryFullname(student.category_allocated)],
                 ['Rank', student.rank],

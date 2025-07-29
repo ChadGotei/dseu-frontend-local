@@ -4,14 +4,14 @@ import { useMutation } from '@tanstack/react-query';
 
 import Logo from "../../Reusable/Logo";
 import useResultStore from "../../../store/resultStore";
-import { changeStudentStatus } from "../../../utils/apiservice";
+import { changeStudentStatus, changeUGStudentStatus } from "../../../utils/apiservice";
 import { showErrorToast, showSuccessToast } from "../../../utils/toasts";
 import { getCategoryFullname, getStatusFromAction } from "../../../utils/helper";
 
 import StudentPdf from "../StudentPdf";
 import ConfirmationModal from "../../UI/ConfirmationModal";
 import StudentStatusMessage from "../StudentStatusMessage";
-import { NoSeatAllocationMessage, PwdMessage, PwdMessagebtech } from "../PwdMessage";
+import { NoSeatAllocationMessage, PwdMessagebtech } from "../PwdMessage";
 
 const ShowUgResult = () => {
   const result = useResultStore((state) => state.result);
@@ -33,18 +33,18 @@ const ShowUgResult = () => {
   const student = result?.data?.student ?? {};
 
   // TODO: Change according to the messages sent by backend
-  if (message === "You have not been allotted any seat, please try again in next round") {
+  if (message === "You have not alloted any seat please try again in next round") {
     return <NoSeatAllocationMessage />;
   }
 
   // TODO: Change their dates and stuff according to shivam sir
-  if (message === "PWD Student Found" || message === "Defence Student Found") {
-    return <PwdMessage />;
+  if (message === "PWD Student Found" || message === "defence Student Found") {
+    return <PwdMessagebtech isUg={true} />;
   }
 
   // TODO: Change this according to backend
   const statusMutation = useMutation({
-    mutationFn: ({ id, status }) => changeStudentStatus(id, status),
+    mutationFn: ({ id, status }) => changeUGStudentStatus(id, status),
     onSuccess: (updatedData) => {
       showSuccessToast(`${modalInfo.action} confirmed!`);
       setTimeout(() => {
@@ -79,7 +79,7 @@ const ShowUgResult = () => {
       label: "Admission Category",
       value: getCategoryFullname(student.category_allocated),
     },
-    { label: "Program Preference", value: student.program_preference },
+    // { label: "Program Preference", value: student.program_preference },
     { label: "Generated Rank", value: student.rank },
   ].filter(Boolean);
 
@@ -122,12 +122,12 @@ const ShowUgResult = () => {
             </tbody>
           </table>
         </div>
-          
-          {/* BUTTONs */}
+
+        {/* BUTTONs */}
         <div className="flex flex-col items-center gap-4 mt-10">
           {student.status === "pending" && (
             <>
-              {student.program_preference === 1 ? (
+              {student.campus_preference === true ? (
                 <div className="flex gap-6">
                   <button
                     onClick={() => setModalInfo({ open: true, action: "Freeze" })}
@@ -198,7 +198,7 @@ const ShowUgResult = () => {
           </div>
         )}
 
-        // TODO: Change this if new pdf given or comment this out
+        {/* // TODO: Change this if new pdf given or comment this out
         <div className="flex items-center justify-center w-full">
           <a
             href="/seat-confirmation-ug.pdf"
@@ -208,7 +208,7 @@ const ShowUgResult = () => {
           >
             View UG Seat Confirmation Process (PDF)
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -217,7 +217,7 @@ const ShowUgResult = () => {
 const ButtonsDescription = ({ student }) => {
   return (
     <div className="text-sm text-gray-800 mt-6 max-w-2xl p-4 rounded-lg border border-yellow-400 bg-yellow-100/60 backdrop-blur-md shadow-md">
-      {student.program_preference === 1 ? (
+      {student.campus_preference === true ? (
         <>
           <p><span className="font-semibold">🔒 Freeze Allocation:</span> Accept and lock the current allocated seat. No upgrades will be provided.</p>
           <div className="my-2" />

@@ -39,12 +39,12 @@ const NoSeatAllocationMessage = () => {
 }
 
 
-const PwdMessagebtech = () => {
+const PwdMessagebtech = ({ isUg = false }) => {
     return (
         <div className="py-12 px-4">
             <div className="max-w-3xl mx-auto p-8 text-center">
                 <Logo cn="h-20 mx-auto mb-6" />
-                <h2 className="text-2xl font-bold text-red-600 mb-4">Important Information for B.Tech PwD & Defense Candidates</h2>
+                <h2 className="text-2xl font-bold text-red-600 mb-4">Important Information for {isUg ? "Undergraduate" : "B.Tech"} PwD & Defense Candidates</h2>
 
                 <p className="text-gray-800 text-base leading-relaxed mb-4 text-left mt-4 font-semibold">
                     Dear Applicant,
@@ -56,8 +56,8 @@ const PwdMessagebtech = () => {
                 </p>
 
                 <div className="bg-gray-100 border border-gray-300 rounded-lg px-6 py-4 text-justify text-gray-800 mb-6 text-sm md:text-base flex flex-col gap-2">
-                    <p><span className="font-semibold">📍 Venue:</span> GB Pant Okhla Campus (Library Block, Ground Floor)</p>
-                    <p><span className="font-semibold">📅 Date & Time:</span> 31 July 2025, at 11:00 AM</p>
+                    <p><span className="font-semibold">📍 Venue:</span> {isUg ? "DSEU Pusa-2 Campus at Room 309" : "GB Pant Okhla Campus (Library Block, Ground Floor)"}</p>
+                    <p><span className="font-semibold">📅 Date & Time:</span> {isUg ? "1st August 2025 at 10:30 AM" : "31 July 2025, at 11:00 AM"}</p>
                 </div>
 
                 <p className="text-sm text-gray-700">

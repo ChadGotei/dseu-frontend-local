@@ -359,8 +359,38 @@ export const changeStudentStatus = async (id, status) => {
 export const getUGStudentResult = async (formData) => {
   try {
     const response = await api.post(
-      `/result/ug`  // expected
+      `/ug`,
+      formData,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        }
+      }
+    );
+
+    return response.data
+
+  } catch (error) {
+    // console.error(error);
+    throw error;
+  }
+}
+
+
+export const changeUGStudentStatus = async (id, status) => {
+  try {
+    const response = await api.put(
+      `/ug/${id}`,
+      { status },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        }
+      }
     )
+
+    return response.data;
+
   } catch (error) {
     console.error(error);
     throw error;
