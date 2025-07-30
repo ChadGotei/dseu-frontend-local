@@ -68,7 +68,7 @@ const Page = () => {
               </Link>
 
               <Link
-                to="/admission/result"
+                to="/admission/result?category=btech"
                 className="inline-block mt-2 bg-green-600 hover:bg-green-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
               >
                 View My B.Tech Result
@@ -87,7 +87,7 @@ const Page = () => {
             </p>
             <p>The result for <strong>PWD</strong> and <strong>Defence</strong> category students is also live.</p>
             <Link
-              to="/admission/result"
+              to="/admission/result?category=diploma"
               className="inline-block mt-1 bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
             >
               View My Diploma Result

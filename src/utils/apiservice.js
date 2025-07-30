@@ -315,10 +315,12 @@ export const archivePdf = async (id, archiveState) => {
 
 //? get result by student credentials: diploma and Btech
 export const getStudentResult = async (formData) => {
+  const { category, ...data } = formData;
+  // console.log(category)
   try {
     const response = await api.post(
-      `/result`,
-      formData,
+      `/result?category=${category}`,
+      data,
       {
         headers: {
           "Content-Type": "application/json",

@@ -9,27 +9,29 @@ import { showErrorToast, showSuccessToast } from '../../utils/toasts';
 import dseulogo from "../../assets/dseulogofullnew.svg";
 
 import Tooltip from '../Reusable/Tooltip';
-import AlertBox from './AlertBox';
 
 const Result = () => {
   const [isHindi, setIsHindi] = useState(false);
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [showPassword, setShowPassword] = useState(false);
-  const [showPopup, setShowPopup] = useState(true);
 
   const navigate = useNavigate();
 
-  //! Development only
-  // TODO: can use this to divide into either diploma/btech admission
-  // const [searchParams, setSearchParams] = useSearchParams();
-  // const allowedCategories = ['diploma', 'btech'];
-  // const category = searchParams.get('category');
+  //? Manage category from URL
+  const [searchParams, setSearchParams] = useSearchParams();
+  const allowedCategories = ['diploma', 'btech'];
+  const category = searchParams.get('category');
 
-  // useEffect(() => {
-  //   if (!category || !allowedCategories.includes(category)) {
-  //     setSearchParams({ category: 'diploma' });
-  //   }
-  // }, [category, allowedCategories, setSearchParams]);
+  useEffect(() => {
+    // Only reset if category is valid
+    if (category && allowedCategories.includes(category)) {
+      setFormData({ email: '', password: '' });
+    } else {
+      // Redirect to default category only if invalid
+      setSearchParams({ category: 'diploma' });
+    }
+  }, [category]);
+
 
 
   const { mutate } = useMutation({
@@ -41,7 +43,6 @@ const Result = () => {
     },
     onError: (error) => {
       showErrorToast(error.response?.data?.message || "Something went wrong");
-      // console.log(error);
     },
   });
 
@@ -55,118 +56,104 @@ const Result = () => {
       showErrorToast('Enter email and password');
       return;
     }
-    mutate(formData);
+
+    // ⬇ Add category before sending to the API
+    mutate({ ...formData, category });
   };
 
   return (
-    <>
-      <div className="py-20 flex items-center justify-center bg-gray-100 p-4 flex-col gap-10">
-        <div className='flex flex-col items-center justify-center gap-7'>
-          <img alt='dseu logo' className='h-15' src={dseulogo} />
-          <h2 className="text-4xl font-extrabold text-center text-blue-700 font-sans">
-            DSEU Seat Allocation
-            <div className="mt-2 mx-auto w-20 h-1 bg-blue-600 rounded"></div>
-          </h2>
-        </div>
-
-        <div className="bg-white shadow-xl rounded-2xl p-8 max-w-md w-full">
-          <form className="space-y-4" onSubmit={handleSubmit}>
-            <div>
-              <label className="block text-sm font-medium mb-1">Email</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                placeholder='Email of registration form'
-                onChange={handleChange}
-                className="w-full border rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-blue-400"
-                required
-              />
-            </div>
-
-            <div className="relative">
-              <label className="text-sm font-medium mb-1 flex flex-row items-center gap-1">
-                Password <Tooltip text={"Password is your date of birth in DD-MM-YYYY format"}>
-                  <FaQuestionCircle className='h-3 text-red-400 cursor-pointer' />
-                </Tooltip>
-              </label>
-              <input
-                type={showPassword ? 'text' : 'password'}
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                className="w-full border rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-blue-400 pr-10"
-                placeholder='Example: 30-05-2006'
-                required
-              />
-              <button
-                type="button"
-                onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-9 text-gray-500"
-              >
-                {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-              </button>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition-colors"
-            >
-              Login
-            </button>
-          </form>
-        </div >
-
-        <div className="flex flex-col items-center gap-4 max-w-xl w-full">
-          <div className="flex gap-2">
-            <button
-              onClick={() => setIsHindi(false)}
-              className={`px-4 py-1 rounded-md transition-colors ${!isHindi ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
-            >
-              English
-            </button>
-            <button
-              onClick={() => setIsHindi(true)}
-              className={`px-4 py-1 rounded-md transition-colors ${isHindi ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
-            >
-              Hindi
-            </button>
-          </div>
-
-          <div className="bg-yellow-100 border border-yellow-400 text-yellow-800 p-4 rounded-lg shadow flex items-start gap-2 w-full">
-            <Info className="w-5 h-5 mt-1 shrink-0" />
-            <p className="text-sm">
-              {isHindi
-                ? 'Email वही है जो आपने Form के समय दिया था। Password आपकी जन्मतिथि है, जैसे DD-MM-YYYY'
-                : 'Your email is the one you registered with. Password is your Date of Birth like DD-MM-YYYY.'}
-            </p>
-          </div>
-        </div>
-
-        <a
-          href="/seat-confirmation-process.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-96"
-        >
-          Diploma - View Seat Confirmation Process (PDF)
-        </a>
-        <a
-          href="/seat-confirmation-btech.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-96"
-        >
-          Btech - View Seat Confirmation Process (PDF)
-        </a>
-
+    <div className="py-20 flex items-center justify-center bg-gray-100 p-4 flex-col gap-10">
+      <div className='flex flex-col items-center justify-center gap-7'>
+        <img alt='dseu logo' className='h-15' src={dseulogo} />
+        <h2 className="text-4xl font-extrabold text-center text-blue-700 font-sans">
+          DSEU <span className='capitalize'>{category}</span> Seat Allocation
+          <div className="mt-2 mx-auto w-20 h-1 bg-blue-600 rounded"></div>
+        </h2>
       </div>
-      {/* <AlertBox
-        show={showPopup}
-        onClose={() => setShowPopup(false)}
-        title="Preference Grievance Form"
-      /> */}
-    </>
+
+      <div className="bg-white shadow-xl rounded-2xl p-8 max-w-md w-full">
+        <form className="space-y-4" onSubmit={handleSubmit}>
+          <div>
+            <label className="block text-sm font-medium mb-1">Email</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              placeholder='Email of registration form'
+              onChange={handleChange}
+              className="w-full border rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-blue-400"
+              required
+            />
+          </div>
+
+          <div className="relative">
+            <label className="text-sm font-medium mb-1 flex flex-row items-center gap-1">
+              Password <Tooltip text={"Password is your date of birth in DD-MM-YYYY format"}>
+                <FaQuestionCircle className='h-3 text-red-400 cursor-pointer' />
+              </Tooltip>
+            </label>
+            <input
+              type={showPassword ? 'text' : 'password'}
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              className="w-full border rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-blue-400 pr-10"
+              placeholder='Example: 30-05-2006'
+              required
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-3 top-9 text-gray-500"
+            >
+              {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+            </button>
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition-colors"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+
+      <div className="flex flex-col items-center gap-4 max-w-xl w-full">
+        <div className="flex gap-2">
+          <button
+            onClick={() => setIsHindi(false)}
+            className={`px-4 py-1 rounded-md transition-colors ${!isHindi ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+          >
+            English
+          </button>
+          <button
+            onClick={() => setIsHindi(true)}
+            className={`px-4 py-1 rounded-md transition-colors ${isHindi ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+          >
+            Hindi
+          </button>
+        </div>
+
+        <div className="bg-yellow-100 border border-yellow-400 text-yellow-800 p-4 rounded-lg shadow flex items-start gap-2 w-full">
+          <Info className="w-5 h-5 mt-1 shrink-0" />
+          <p className="text-sm">
+            {isHindi
+              ? 'Email वही है जो आपने Form के समय दिया था। Password आपकी जन्मतिथि है, जैसे DD-MM-YYYY'
+              : 'Your email is the one you registered with. Password is your Date of Birth like DD-MM-YYYY.'}
+          </p>
+        </div>
+      </div>
+
+      <a
+        href={`/seat-confirmation-${category}.pdf`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-96"
+      >
+        <span className='capitalize'>{category}</span> - View Seat Confirmation Process (PDF)
+      </a>
+    </div>
   );
 };
 
