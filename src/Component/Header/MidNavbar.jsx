@@ -82,16 +82,16 @@ const navItems = [
         path: "/admission",
       },
       {
-        name: "Information Bulletin",
-        path: "/admission/information-bulletin",
-      },
-      {
         name: "UG Seat Allocation",
         path: "/admission/result/ug"
       },
       {
         name: "Diploma & Btech Seat Allocation",
         path: "/admission/result"
+      },
+      {
+        name: "Information Bulletin",
+        path: "/admission/information-bulletin",
       },
       {
         name: "Programs after 10th  ",
@@ -285,8 +285,8 @@ const SidebarNav = ({ isOpen, onClose, navItems }) => {
                                 {subItem.dropdownItems && (
                                   <ChevronDown
                                     className={`w-4 h-4 ml-2 transition-transform duration-200 ${openNestedDropdown === subItem.name
-                                        ? "rotate-180"
-                                        : ""
+                                      ? "rotate-180"
+                                      : ""
                                       }`}
                                   />
                                 )}
@@ -642,8 +642,8 @@ const ResponsiveHeader = () => {
                                   {subItem.dropdownItems && (
                                     <ChevronDown
                                       className={`inline-block ml-2 h-4 w-4 transition-transform duration-300 ${openNestedDropdown === subItem.name
-                                          ? "rotate-180"
-                                          : "rotate-270"
+                                        ? "rotate-180"
+                                        : "rotate-270"
                                         }`}
                                     />
                                   )}

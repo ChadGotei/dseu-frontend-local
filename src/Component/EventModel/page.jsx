@@ -39,27 +39,43 @@ const Page = () => {
             <FiInfo className="text-xl" />
           </div>
           <h2 className="text-sm sm:text-xl font-semibold text-blue-700">
-            Admission Notifications – B.Tech & Diploma
+            Admission Notifications
           </h2>
         </div>
 
         <div className="text-gray-800 text-sm md:text-base leading-relaxed space-y-6">
 
           {/* B.Tech Section */}
+          {/* B.Tech + Undergraduate Section */}
           <div className="space-y-2">
             <p><strong>📢 Dear Applicant,</strong></p>
             <p>
               The <strong>seat allocation result</strong> for <strong>B.Tech Round 1</strong> is now live{" "}
               <strong>(except B.Tech 5 Years Integrated Program and B. Tech. Tool Engineering (Executive))</strong>.
             </p>
-            <p>Students can check their result by clicking the button below:</p>
-            <Link
-              to="/admission/result"
-              className="inline-block mt-1 bg-green-600 hover:bg-green-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
-            >
-              View My B.Tech Result
-            </Link>
+
+            {/* ✅ NEW: Undergraduate result info */}
+            <p>
+              The <strong>Undergraduate Round 1 seat allocation result</strong> is also live.
+            </p>
+
+            <div className="flex md:flex-row md:gap-5 flex-col gap-0z">
+              <Link
+                to="/admission/result"
+                className="inline-block mt-2 bg-purple-600 hover:bg-purple-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
+              >
+                View Undergraduate Result
+              </Link>
+
+              <Link
+                to="/admission/result"
+                className="inline-block mt-2 bg-green-600 hover:bg-green-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
+              >
+                View My B.Tech Result
+              </Link>
+            </div>
           </div>
+
 
           <hr className="my-4 border-gray-300" />
 
@@ -70,7 +86,6 @@ const Page = () => {
               <strong>(except Diploma in Pharmacy)</strong>.
             </p>
             <p>The result for <strong>PWD</strong> and <strong>Defence</strong> category students is also live.</p>
-            <p>Students can check their result by clicking the button below:</p>
             <Link
               to="/admission/result"
               className="inline-block mt-1 bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"

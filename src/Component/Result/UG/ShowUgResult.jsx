@@ -4,7 +4,7 @@ import { useMutation } from '@tanstack/react-query';
 
 import Logo from "../../Reusable/Logo";
 import useResultStore from "../../../store/resultStore";
-import { changeStudentStatus, changeUGStudentStatus } from "../../../utils/apiservice";
+import { changeUGStudentStatus } from "../../../utils/apiservice";
 import { showErrorToast, showSuccessToast } from "../../../utils/toasts";
 import { getCategoryFullname, getStatusFromAction } from "../../../utils/helper";
 
@@ -74,7 +74,7 @@ const ShowUgResult = () => {
     { label: "Name", value: student.name },
     { label: "Program Allocated", value: student.program },
     { label: "Campus Allocated", value: student.campus },
-  { label: "Program Preference", value: student.program_preference },
+    { label: "Program Preference", value: student.program_preference },
     { label: "Registered Category", value: student.registered_category },
     student.category_allocated && {
       label: "Admission Category",
@@ -199,7 +199,6 @@ const ShowUgResult = () => {
           </div>
         )}
 
-        {/* // TODO: Change this if new pdf given or comment this out
         <div className="flex items-center justify-center w-full">
           <a
             href="/seat-confirmation-ug.pdf"
@@ -207,9 +206,9 @@ const ShowUgResult = () => {
             rel="noopener noreferrer"
             className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-80 mt-10"
           >
-            View UG Seat Confirmation Process (PDF)
+            View Seat Confirmation Process (PDF)
           </a>
-        </div> */}
+        </div>
       </div>
     </div>
   );

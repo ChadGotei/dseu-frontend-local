@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Eye, EyeOff, Info } from 'lucide-react';
 import { FaQuestionCircle } from 'react-icons/fa';
 import { useMutation } from '@tanstack/react-query';
@@ -18,6 +18,19 @@ const Result = () => {
   const [showPopup, setShowPopup] = useState(true);
 
   const navigate = useNavigate();
+
+  //! Development only
+  // TODO: can use this to divide into either diploma/btech admission
+  // const [searchParams, setSearchParams] = useSearchParams();
+  // const allowedCategories = ['diploma', 'btech'];
+  // const category = searchParams.get('category');
+
+  // useEffect(() => {
+  //   if (!category || !allowedCategories.includes(category)) {
+  //     setSearchParams({ category: 'diploma' });
+  //   }
+  // }, [category, allowedCategories, setSearchParams]);
+
 
   const { mutate } = useMutation({
     mutationFn: getStudentResult,
@@ -148,11 +161,11 @@ const Result = () => {
         </a>
 
       </div>
-      <AlertBox
+      {/* <AlertBox
         show={showPopup}
         onClose={() => setShowPopup(false)}
         title="Preference Grievance Form"
-      />
+      /> */}
     </>
   );
 };

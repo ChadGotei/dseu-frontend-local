@@ -110,6 +110,14 @@ const UgResult = () => {
                 </p>
             </div>
 
+            <a
+                href="/seat-confirmation-ug.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-96"
+            >
+                View Seat Confirmation Process (PDF)
+            </a>
 
         </div>
     );
