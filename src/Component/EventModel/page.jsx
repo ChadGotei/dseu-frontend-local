@@ -49,8 +49,7 @@ const Page = () => {
           <div className="space-y-2">
             <p><strong>📢 Dear Applicant,</strong></p>
             <p>
-              The <strong>seat allocation result</strong> for <strong>B.Tech Round 1</strong> is now live{" "}
-              <strong>(except B.Tech 5 Years Integrated Program and B. Tech. Tool Engineering (Executive))</strong>.
+              The <strong>seat allocation result</strong> for <strong>B.Tech Round 1</strong> is now live.{" "}
             </p>
 
             {/* ✅ NEW: Undergraduate result info */}
