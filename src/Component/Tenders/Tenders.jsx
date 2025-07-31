@@ -64,28 +64,28 @@ const Tenders = () => {
             ) : (
               filteredTenders.map((item, index) => (
                 <tr key={item.id} className="border-b">
-                  <td className="px-6 py-4 text-sm text-gray-700">
+                  <td className="px-6 py-4 sm:text-sm text-xs text-gray-700">
                     {index + 1}
                   </td>
-                  <td className="px-6 py-4 text-sm text-blue-600 whitespace-nowrap">
+                  <td className="px-6 py-4 sm:text-sm text-xs text-blue-600 whitespace-nowrap">
                     {item.tenderNo || "__"}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-800 min-w-[300px] sm:min-w-[250px] md:min-w-[200px]">
+                  <td className="px-6 py-4 sm:text-sm text-xs text-gray-800 min-w-[300px] sm:min-w-[250px] md:min-w-[200px]">
                     {item.title || "__"}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-700">
+                  <td className="px-6 py-4 sm:text-sm text-xs text-gray-700">
                     {item.department || "__"}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-700">
+                  <td className="px-6 py-4 sm:text-sm text-xs text-gray-700">
                     {item.category || "__"}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-700 whitespace-nowrap">
+                  <td className="px-6 py-4 sm:text-sm text-xs text-gray-700 whitespace-nowrap">
                     {item.startDate || "__"}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-700">
+                  <td className="px-6 py-4 sm:text-sm text-xs text-gray-700">
                     {item.endDate || "__"}
                   </td>
-                  <td className="px-6 py-4 text-sm text-blue-600">
+                  <td className="px-6 py-4 sm:text-sm text-xs text-blue-600">
                     <a
                       href={item.document}
                       target="_blank"
@@ -95,7 +95,7 @@ const Tenders = () => {
                       View
                     </a>
                   </td>
-                  <td className="px-6 py-4 text-sm text-blue-600">
+                  <td className="px-6 py-4 sm:text-sm text-xs text-blue-600">
                     {item.preMinutes ? (
                       <a
                         href={item.preMinutes}
@@ -109,7 +109,7 @@ const Tenders = () => {
                       "-"
                     )}
                   </td>
-                  <td className="px-6 py-4 text-sm text-blue-600">
+                  <td className="px-6 py-4 sm:text-sm text-xs text-blue-600">
                     {item.corrigendum ? (
                       <a
                         href={item.corrigendum}
