@@ -1,45 +1,43 @@
-import { useEffect, useState } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Eye, EyeOff, Info } from 'lucide-react';
-import { FaQuestionCircle } from 'react-icons/fa';
-import { useMutation } from '@tanstack/react-query';
+import { useEffect, useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { Eye, EyeOff, Info } from "lucide-react";
+import { FaQuestionCircle } from "react-icons/fa";
+import { useMutation } from "@tanstack/react-query";
 
-import { getStudentResult } from '../../utils/apiservice';
-import { showErrorToast, showSuccessToast } from '../../utils/toasts';
+import { getStudentResult } from "../../utils/apiservice";
+import { showErrorToast, showSuccessToast } from "../../utils/toasts";
 import dseulogo from "../../assets/dseulogofullnew.svg";
 
-import Tooltip from '../Reusable/Tooltip';
+import Tooltip from "../Reusable/Tooltip";
 
 const Result = () => {
   const [isHindi, setIsHindi] = useState(false);
-  const [formData, setFormData] = useState({ email: '', password: '' });
+  const [formData, setFormData] = useState({ email: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
 
   //? Manage category from URL
   const [searchParams, setSearchParams] = useSearchParams();
-  const allowedCategories = ['diploma', 'btech'];
-  const category = searchParams.get('category');
+  const allowedCategories = ["diploma", "btech"];
+  const category = searchParams.get("category");
 
   useEffect(() => {
     // Only reset if category is valid
     if (category && allowedCategories.includes(category)) {
-      setFormData({ email: '', password: '' });
+      setFormData({ email: "", password: "" });
     } else {
       // Redirect to default category only if invalid
-      setSearchParams({ category: 'diploma' });
+      setSearchParams({ category: "diploma" });
     }
   }, [category]);
-
-
 
   const { mutate } = useMutation({
     mutationFn: getStudentResult,
     onSuccess: (data) => {
-      showSuccessToast('Result fetched successfully');
+      showSuccessToast("Result fetched successfully");
       sessionStorage.setItem("studentResult", JSON.stringify(data));
-      navigate('/admission/result/show');
+      navigate("/admission/result/show");
     },
     onError: (error) => {
       showErrorToast(error.response?.data?.message || "Something went wrong");
@@ -53,7 +51,7 @@ const Result = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.email || !formData.password) {
-      showErrorToast('Enter email and password');
+      showErrorToast("Enter email and password");
       return;
     }
 
@@ -63,11 +61,11 @@ const Result = () => {
 
   return (
     <div className="py-20 flex items-center justify-center bg-gray-100 p-4 flex-col gap-10">
-      <div className='flex flex-col items-center justify-center gap-7'>
-        <img alt='dseu logo' className='h-15' src={dseulogo} />
-        <h2 className="text-4xl font-extrabold text-center text-blue-700 font-sans">
-          DSEU <span className='capitalize'>{category}</span> Seat Allocation
-          <div className="mt-2 mx-auto w-20 h-1 bg-blue-600 rounded"></div>
+      <div className="flex flex-col items-center justify-center gap-7">
+        <img alt="dseu logo" className="h-15 mt-[-30px]" src={dseulogo} />
+        <h2 className="text-2xl sm:text-2xl md:text-3xl font-extrabold text-center text-blue-700 font-sans mt-5">
+          DSEU <span className="capitalize">{category}</span> Seat Allocation
+          <div className="mt-2 mx-auto w-[190px] h-1 bg-blue-600 rounded"></div>
         </h2>
       </div>
 
@@ -79,7 +77,7 @@ const Result = () => {
               type="email"
               name="email"
               value={formData.email}
-              placeholder='Email of registration form'
+              placeholder="Email of registration form"
               onChange={handleChange}
               className="w-full border rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-blue-400"
               required
@@ -88,17 +86,20 @@ const Result = () => {
 
           <div className="relative">
             <label className="text-sm font-medium mb-1 flex flex-row items-center gap-1">
-              Password <Tooltip text={"Password is your date of birth in DD-MM-YYYY format"}>
-                <FaQuestionCircle className='h-3 text-red-400 cursor-pointer' />
+              Password{" "}
+              <Tooltip
+                text={"Password is your date of birth in DD-MM-YYYY format"}
+              >
+                <FaQuestionCircle className="h-3 text-red-400 cursor-pointer" />
               </Tooltip>
             </label>
             <input
-              type={showPassword ? 'text' : 'password'}
+              type={showPassword ? "text" : "password"}
               name="password"
               value={formData.password}
               onChange={handleChange}
               className="w-full border rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-blue-400 pr-10"
-              placeholder='Example: 30-05-2006'
+              placeholder="Example: 30-05-2006"
               required
             />
             <button
@@ -106,7 +107,11 @@ const Result = () => {
               onClick={() => setShowPassword(!showPassword)}
               className="absolute right-3 top-9 text-gray-500"
             >
-              {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+              {showPassword ? (
+                <EyeOff className="w-5 h-5" />
+              ) : (
+                <Eye className="w-5 h-5" />
+              )}
             </button>
           </div>
 
@@ -123,13 +128,17 @@ const Result = () => {
         <div className="flex gap-2">
           <button
             onClick={() => setIsHindi(false)}
-            className={`px-4 py-1 rounded-md transition-colors ${!isHindi ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-1 rounded-md transition-colors ${
+              !isHindi ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
+            }`}
           >
             English
           </button>
           <button
             onClick={() => setIsHindi(true)}
-            className={`px-4 py-1 rounded-md transition-colors ${isHindi ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-1 rounded-md transition-colors ${
+              isHindi ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
+            }`}
           >
             Hindi
           </button>
@@ -139,8 +148,8 @@ const Result = () => {
           <Info className="w-5 h-5 mt-1 shrink-0" />
           <p className="text-sm">
             {isHindi
-              ? 'Email वही है जो आपने Form के समय दिया था। Password आपकी जन्मतिथि है, जैसे DD-MM-YYYY'
-              : 'Your email is the one you registered with. Password is your Date of Birth like DD-MM-YYYY.'}
+              ? "Email वही है जो आपने Form के समय दिया था। Password आपकी जन्मतिथि है, जैसे DD-MM-YYYY"
+              : "Your email is the one you registered with. Password is your Date of Birth like DD-MM-YYYY."}
           </p>
         </div>
       </div>
@@ -149,9 +158,9 @@ const Result = () => {
         href={`/seat-confirmation-${category}.pdf`}
         target="_blank"
         rel="noopener noreferrer"
-        className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-96"
+        className="inline-block text-center bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 transition-colors"
       >
-        <span className='capitalize'>{category}</span> - View Seat Confirmation Process (PDF)
+        View Seat Confirmation Process (PDF)
       </a>
     </div>
   );
