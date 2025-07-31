@@ -57,6 +57,11 @@ const Page = () => {
               The <strong>Undergraduate Round 1 seat allocation result</strong> is also live <strong>(including Diploma in Pharmacy)</strong>.
             </p>
 
+            <p>
+              The <strong>result</strong> for <strong>UG</strong> students in the <strong>PWD</strong> and <strong>Defence</strong> categories is also live.
+            </p>
+
+
             <div className="flex md:flex-row md:gap-5 flex-col gap-0z">
               <Link
                 to="/admission/result/ug"

@@ -19,6 +19,8 @@ const ShowResult = () => {
 
     const isBtech = data?.btech ?? false;
     const studentId = data.allStudentId;
+    // TODO: Add this according to the backend 
+    const isDefenceOrPwd = data?.isPwdDefenceStudent ?? false;
 
     const statusMutation = useMutation({
         mutationFn: ({ id, status }) => changeStudentStatus(id, status),
@@ -30,12 +32,12 @@ const ShowResult = () => {
             }, 2000);
 
             setModalInfo({ open: false, action: "" });
-            console.log(data);    //! remove after development
+            // console.log(data);    //! remove after development
             sessionStorage.setItem("studentResult", JSON.stringify(data));
         },
         onError: (err) => {
             showErrorToast(err.response?.data?.message || err.message || "Something went wrong");
-            console.error(err); //! for dev
+            // console.error(err); //! for dev
         },
     });
 
@@ -58,6 +60,7 @@ const ShowResult = () => {
         return <PwdMessage />
     }
 
+    // TODO: Remove this 
     if (data.message === "Defence BTech Student Found" || data.message === "PWD BTech Student Found") {
         return <PwdMessagebtech />
     }
@@ -131,7 +134,9 @@ const ShowResult = () => {
                             
                 {/* Action Buttons along with their descriptions */}
                 <div className="flex flex-col items-center gap-4 mt-10">
-                    {student.status === "pending" ? (
+
+                    {/* // TODO: ADD CHECK HERE THAT DEFENCE OR PWD CAN NOW CHECK THEIR RESULT */}
+                    {student.status === "pending" && !isDefenceOrPwd ? (
                         <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg text-center max-w-xl">
                             <p className="font-semibold text-lg mb-2">Seat Confirmation Closed</p>
                             <p className="text-justify">
