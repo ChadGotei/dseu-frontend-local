@@ -46,7 +46,6 @@ const Page = () => {
         <div className="text-gray-800 text-sm md:text-base leading-relaxed space-y-6">
 
           {/* B.Tech Section */}
-          {/* B.Tech + Undergraduate Section */}
           <div className="space-y-2">
             <p><strong>📢 Dear Applicant,</strong></p>
             <p>
@@ -56,12 +55,12 @@ const Page = () => {
 
             {/* ✅ NEW: Undergraduate result info */}
             <p>
-              The <strong>Undergraduate Round 1 seat allocation result</strong> is also live.
+              The <strong>Undergraduate Round 1 seat allocation result</strong> is also live <strong>(including Diploma in Pharmacy)</strong>.
             </p>
 
             <div className="flex md:flex-row md:gap-5 flex-col gap-0z">
               <Link
-                to="/admission/result"
+                to="/admission/result/ug"
                 className="inline-block mt-2 bg-purple-600 hover:bg-purple-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
               >
                 View Undergraduate Result

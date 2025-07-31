@@ -128,14 +128,14 @@ const ShowResult = () => {
                         </tbody>
                     </table>
                 </div>
-
+                            
                 {/* Action Buttons along with their descriptions */}
                 <div className="flex flex-col items-center gap-4 mt-10">
-                    {student.status === "pending" && !isBtech ? (
+                    {student.status === "pending" ? (
                         <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg text-center max-w-xl">
                             <p className="font-semibold text-lg mb-2">Seat Confirmation Closed</p>
-                            <p>
-                                The seat confirmation window for Diploma admissions is now closed.
+                            <p className="text-justify">
+                                The seat confirmation window for <span>{isBtech ? "Btech" : "Diploma"}</span> admissions is now closed.
                                 Please await further communication regarding upcoming rounds or official announcements.
                             </p>
                         </div>
