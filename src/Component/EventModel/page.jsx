@@ -52,7 +52,6 @@ const Page = () => {
               The <strong>seat allocation result</strong> for <strong>B.Tech Round 1</strong> is now live.{" "}
             </p>
 
-            {/* ✅ NEW: Undergraduate result info */}
             <p>
               The <strong>Undergraduate Round 1 seat allocation result</strong> is also live <strong>(including Diploma in Pharmacy)</strong>.
             </p>
@@ -61,6 +60,10 @@ const Page = () => {
               The <strong>result</strong> for <strong>B.tech</strong> students in the <strong>PWD</strong> and <strong>Defence</strong> categories is also live.
             </p>
 
+            {/* ✅ NEW message as per request */}
+            <p className="font-medium text-blue-700">
+              📩 The payment link for <strong>B.Tech</strong> and <strong>UG</strong> candidates will be sent today to their <strong>registered mobile number</strong> and <strong>email</strong>.
+            </p>
 
             <div className="flex md:flex-row md:gap-5 flex-col gap-0z">
               <Link
@@ -78,6 +81,7 @@ const Page = () => {
               </Link>
             </div>
           </div>
+
 
 
           <hr className="my-4 border-gray-300" />
