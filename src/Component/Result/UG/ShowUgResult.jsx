@@ -12,6 +12,7 @@ import StudentPdf from "../StudentPdf";
 import ConfirmationModal from "../../UI/ConfirmationModal";
 import StudentStatusMessage from "../StudentStatusMessage";
 import { NoSeatAllocationMessage, PwdMessagebtech } from "../PwdMessage";
+import { ButtonsDescription } from "./ButtonsDescription";
 
 const ShowUgResult = () => {
   const result = useResultStore((state) => state.result);
@@ -28,21 +29,21 @@ const ShowUgResult = () => {
 
   if (!result) return null;
 
-  const isUg = true;
   const message = result.message;
   const student = result?.data?.student ?? {};
+  const isPwdOrDefence = result?.isPwdOrDefenceStudent ?? false;
 
   // TODO: Change according to the messages sent by backend
   if (message === "You have not alloted any seat please try again in next round") {
     return <NoSeatAllocationMessage />;
   }
 
-  // TODO: Change their dates and stuff according to shivam sir
+  // If PWD or Defence student found
   if (message === "PWD Student Found" || message === "defence Student Found") {
     return <PwdMessagebtech isUg={true} />;
   }
 
-  // TODO: Change this according to backend
+  // Change status mutation
   const statusMutation = useMutation({
     mutationFn: ({ id, status }) => changeUGStudentStatus(id, status),
     onSuccess: (updatedData) => {
@@ -59,6 +60,7 @@ const ShowUgResult = () => {
     },
   });
 
+  // For modal
   const handleConfirm = () => {
     const status = getStatusFromAction(modalInfo.action);
     if (status) {
@@ -68,7 +70,6 @@ const ShowUgResult = () => {
     }
   };
 
-  // TODO: Change if neededd sayad karna nhi hoga
   const resultInfo = [
     { label: "Form Number", value: student.form_no },
     { label: "Name", value: student.name },
@@ -83,6 +84,7 @@ const ShowUgResult = () => {
     // { label: "Program Preference", value: student.program_preference },
     { label: "Generated Rank", value: student.rank },
   ].filter(Boolean);
+
 
   return (
     <div className="min-h-screen bg-white py-12 px-4">
@@ -126,53 +128,64 @@ const ShowUgResult = () => {
 
         {/* BUTTONs */}
         <div className="flex flex-col items-center gap-4 mt-10">
-          {student.status === "pending" && (
+          {(student.status === "pending" && !isPwdOrDefence) ? (
+            <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg text-center max-w-xl">
+              <p className="font-semibold text-lg mb-2">Seat Confirmation Closed</p>
+              <p className="text-justify">
+                The seat confirmation window for UG admissions is now closed.
+                Please await further communication regarding upcoming rounds or official announcements.
+              </p>
+            </div>
+          ) : (
             <>
-              {student.campus_preference === true ? (
-                <div className="flex gap-6">
-                  <button
-                    onClick={() => setModalInfo({ open: true, action: "Freeze" })}
-                    className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
-                  >
-                    Freeze
-                  </button>
-                  <button
-                    onClick={() => setModalInfo({ open: true, action: "Reject" })}
-                    className="bg-red-600 hover:bg-red-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
-                  >
-                    Reject
-                  </button>
-                </div>
-              ) : (
-                <div className="flex flex-wrap gap-4 justify-center">
-                  <button
-                    onClick={() => setModalInfo({ open: true, action: "Final Acceptance" })}
-                    className="bg-green-600 hover:bg-green-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
-                  >
-                    Final Acceptance
-                  </button>
-                  <button
-                    onClick={() => setModalInfo({ open: true, action: "Accept and Upgrade" })}
-                    className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
-                  >
-                    Accept and Upgrade
-                  </button>
-                  <button
-                    onClick={() => setModalInfo({ open: true, action: "Not Accepted and Upgrade" })}
-                    className="bg-yellow-500 hover:bg-yellow-600 text-white text-lg px-5 py-3 rounded-xl transition-colors"
-                  >
-                    Not Accepted and Upgrade
-                  </button>
-                  <button
-                    onClick={() => setModalInfo({ open: true, action: "Not Accepted" })}
-                    className="bg-red-600 hover:bg-red-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
-                  >
-                    Not Accepted
-                  </button>
-                </div>
+              {student.status === "pending" && (
+                <>
+                  {student.campus_preference === true ? (
+                    <div className="flex gap-6">
+                      <button
+                        onClick={() => setModalInfo({ open: true, action: "Freeze" })}
+                        className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
+                      >
+                        Freeze
+                      </button>
+                      <button
+                        onClick={() => setModalInfo({ open: true, action: "Reject" })}
+                        className="bg-red-600 hover:bg-red-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
+                      >
+                        Reject
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="flex flex-wrap gap-4 justify-center">
+                      <button
+                        onClick={() => setModalInfo({ open: true, action: "Final Acceptance" })}
+                        className="bg-green-600 hover:bg-green-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
+                      >
+                        Final Acceptance
+                      </button>
+                      <button
+                        onClick={() => setModalInfo({ open: true, action: "Accept and Upgrade" })}
+                        className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
+                      >
+                        Accept and Upgrade
+                      </button>
+                      <button
+                        onClick={() => setModalInfo({ open: true, action: "Not Accepted and Upgrade" })}
+                        className="bg-yellow-500 hover:bg-yellow-600 text-white text-lg px-5 py-3 rounded-xl transition-colors"
+                      >
+                        Not Accepted and Upgrade
+                      </button>
+                      <button
+                        onClick={() => setModalInfo({ open: true, action: "Not Accepted" })}
+                        className="bg-red-600 hover:bg-red-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
+                      >
+                        Not Accepted
+                      </button>
+                    </div>
+                  )}
+                  <ButtonsDescription student={student} />
+                </>
               )}
-
-              <ButtonsDescription student={student} />
             </>
           )}
 
@@ -214,25 +227,5 @@ const ShowUgResult = () => {
   );
 };
 
-const ButtonsDescription = ({ student }) => {
-  return (
-    <div className="text-sm text-gray-800 mt-6 max-w-2xl p-4 rounded-lg border border-yellow-400 bg-yellow-100/60 backdrop-blur-md shadow-md">
-      {student.campus_preference === true ? (
-        <>
-          <p><span className="font-semibold">🔒 Freeze Allocation:</span> Accept and lock the current allocated seat. No upgrades will be provided.</p>
-          <div className="my-2" />
-          <p><span className="font-semibold">❌ Reject:</span> You are declining the seat. You will not be considered in further rounds.</p>
-        </>
-      ) : (
-        <>
-          <p><span className="font-semibold">✅ Final Acceptance:</span> Accept current seat and opt out of future rounds.</p>
-          <p><span className="font-semibold">🔄 Accept and Upgrade:</span> Accept this seat and stay open for program upgrade (campus won't change).</p>
-          <p><span className="font-semibold">❔ Not Accepted and Upgrade:</span> Don’t accept this seat but want to try for better one in next round.</p>
-          <p><span className="font-semibold">❌ Not Accepted:</span> Fully reject the seat and don’t want to participate in further rounds.</p>
-        </>
-      )}
-    </div>
-  );
-};
 
 export default ShowUgResult;
