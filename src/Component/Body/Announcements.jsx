@@ -9,7 +9,7 @@ const toAdd = [
   },
   {
     fileLink: "https://dseu.ac.in/admission/result?category=btech",
-    fileName: "The result for UG students in the PWD and Defence categories is also live."
+    fileName: "The result for B.tech students in the PWD and Defence categories is also live."
   },
   {
     fileLink: "https://drive.google.com/file/d/1jyw7k5SHVq49ZUJGA7I9B05Hw1KnVGiN/view",

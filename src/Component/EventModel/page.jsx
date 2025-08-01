@@ -58,7 +58,7 @@ const Page = () => {
             </p>
 
             <p>
-              The <strong>result</strong> for <strong>UG</strong> students in the <strong>PWD</strong> and <strong>Defence</strong> categories is also live.
+              The <strong>result</strong> for <strong>B.tech</strong> students in the <strong>PWD</strong> and <strong>Defence</strong> categories is also live.
             </p>
 
 

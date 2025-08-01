@@ -131,10 +131,32 @@ const ShowResult = () => {
                         </tbody>
                     </table>
                 </div>
-                            
-                {/* Action Buttons along with their descriptions */}
-                <div className="flex flex-col items-center gap-4 mt-10">
 
+                <div className="flex flex-col items-center gap-4 mt-10">
+                    {/* ONLY SEE TWO BUTTONS IF DEFENCE OR PWD */}
+                    {student.status === "pending" && isDefenceOrPwd &&
+                        <>
+                            <div className="flex gap-6">
+                                <button
+                                    onClick={() => setModalInfo({ open: true, action: "Freeze" })}
+                                    className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
+                                >
+                                    Freeze
+                                </button>
+                                <button
+                                    onClick={() => setModalInfo({ open: true, action: "Reject" })}
+                                    className="bg-red-600 hover:bg-red-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
+                                >
+                                    Reject
+                                </button>
+                            </div>
+
+                            <ButtonsDescription student={student} onlyTwoButtons={true} />
+                        </>
+                    }
+
+
+                    {/* Action Buttons along with their descriptions */}
                     {/* // TODO: ADD CHECK HERE THAT DEFENCE OR PWD CAN NOW CHECK THEIR RESULT */}
                     {student.status === "pending" && !isDefenceOrPwd ? (
                         <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg text-center max-w-xl">
@@ -145,7 +167,7 @@ const ShowResult = () => {
                             </p>
                         </div>
                     ) : (
-                        student.status === "pending" && (
+                        student.status === "pending" && !isDefenceOrPwd && (
                             <>
                                 {student.program_preference === 1 ? (
                                     <div className="flex gap-6">
@@ -237,7 +259,17 @@ const ShowResult = () => {
     );
 };
 
-const ButtonsDescription = ({ student }) => {
+const ButtonsDescription = ({ student, onlyTwoButtons = false }) => {
+    if (onlyTwoButtons === true) {
+        return (
+            <div className="text-sm text-gray-800 mt-6 max-w-2xl p-4 rounded-lg border border-yellow-400 bg-yellow-100/60 backdrop-blur-md shadow-md">
+                <p><span className="font-semibold">🔒 Freeze Allocation:</span> Accept and lock the current allocated seat. No upgrades will be provided.</p>
+                <div className="my-2" />
+                <p><span className="font-semibold">❌ Reject:</span> You are declining the seat. You will not be considered in further rounds.</p>
+            </div>
+        )
+    }
+
     return (
         <div className="text-sm text-gray-800 mt-6 max-w-2xl p-4 rounded-lg border border-yellow-400 bg-yellow-100/60 backdrop-blur-md shadow-md">
             {student.program_preference === 1 ? (
