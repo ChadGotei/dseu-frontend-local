@@ -94,6 +94,8 @@ const Result = lazy(() => import("./Component/Result/Result.jsx"));
 const ShowResult = lazy(() => import("./Component/Result/ShowResult.jsx"));
 const UGResult = lazy(() => import("./Component/Result/UG/UgResult.jsx"));
 const ShowUgResult = lazy(() => import("./Component/Result/UG/ShowUgResult.jsx"));
+const PGResult = lazy(() => import("./Component/Result/PG/PgResult.jsx"));
+const ShowPgResult = lazy(() => import("./Component/Result/PG/ShowPgResult.jsx"));
 
 function App() {
   return (
@@ -194,6 +196,9 @@ function App() {
             <Route path="/admission/result/show" element={<ShowResult />} />
             <Route path="/admission/result/ug" element={<UGResult />} />
             <Route path="/admission/result/ug/show" element={<ShowUgResult />} />
+            
+            {/* <Route path="/admission/result/pg" element={<PGResult />} />
+            <Route path="/admission/result/pg/show" element={<ShowPgResult />} /> */}
 
             {/* Others */}
             <Route path="/Entrepreneurship" element={<Entrepreneurship />} />

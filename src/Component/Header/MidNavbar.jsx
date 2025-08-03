@@ -81,6 +81,10 @@ const navItems = [
         name: "Admission 2025-26",
         path: "/admission",
       },
+      // {
+      //   name: "PG Seat Allocation",
+      //   path: "/admission/result/pg"
+      // },
       {
         name: "UG Seat Allocation",
         path: "/admission/result/ug"

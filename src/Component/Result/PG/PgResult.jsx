@@ -4,14 +4,14 @@ import { Eye, EyeOff, Info } from "lucide-react";
 import { FaQuestionCircle } from "react-icons/fa";
 import { useMutation } from "@tanstack/react-query";
 
-import useResultStore from "../../../store/resultStore";
+import useResultStore from "../../../store/pgResultStore";
 import { getUGStudentResult } from "../../../utils/apiservice";
 import { showErrorToast, showSuccessToast } from "../../../utils/toasts";
 import dseulogo from "../../../assets/dseulogofullnew.svg";
 
 import Tooltip from "../../Reusable/Tooltip";
 
-const UgResult = () => {
+const PgResult = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
@@ -19,12 +19,13 @@ const UgResult = () => {
   // result store
   const setResult = useResultStore((state) => state.setResult);
 
+  // TODO: change mutation function according to api
   const { mutate } = useMutation({
     mutationFn: getUGStudentResult,
     onSuccess: (data) => {
       showSuccessToast("Result fetched successfully");
       setResult(data);
-      navigate("/admission/result/ug/show");
+      navigate("/admission/result/pg/show");
     },
     onError: (error) => {
       showErrorToast(error.response?.data?.message || "Something went wrong");
@@ -49,7 +50,7 @@ const UgResult = () => {
       <div className="flex flex-col items-center justify-center gap-6">
         <img alt="dseu logo" className="md:h-15 mt-[-30px]" src={dseulogo} />
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-blue-700 font-sans mt-5">
-          DSEU UG Seat Allocation
+          DSEU PG Seat Allocation
           <div className="mt-2 mx-auto w-[160px] h-1 bg-blue-600 rounded"></div>
         </h2>
       </div>
@@ -116,17 +117,18 @@ const UgResult = () => {
           Birth like DD-MM-YYYY.
         </p>
       </div>
-
-      <a
+      
+      {/* //TODO: CHANGE ACCORDING TO PDF */}
+      {/* <a
         href="/seat-confirmation-ug.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block text-center bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 transition-colors"
       >
         View Seat Confirmation Process (PDF)
-      </a>
+      </a> */}
     </div>
   );
 };
 
-export default UgResult;
+export default PgResult;

@@ -41,6 +41,7 @@ const ShowResult = () => {
         },
     });
 
+    // Protecting the route
     useEffect(() => {
         if (!data) {
             showErrorToast("Enter your details");
@@ -157,7 +158,6 @@ const ShowResult = () => {
 
 
                     {/* Action Buttons along with their descriptions */}
-                    {/* // TODO: ADD CHECK HERE THAT DEFENCE OR PWD CAN NOW CHECK THEIR RESULT */}
                     {student.status === "pending" && !isDefenceOrPwd ? (
                         <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg text-center max-w-xl">
                             <p className="font-semibold text-lg mb-2">Seat Confirmation Closed</p>

@@ -357,7 +357,7 @@ export const changeStudentStatus = async (id, status) => {
 }
 
 
-// TODO: Get UG student data and change status functions
+//? UG RESULT
 export const getUGStudentResult = async (formData) => {
   try {
     const response = await api.post(
@@ -398,3 +398,37 @@ export const changeUGStudentStatus = async (id, status) => {
     throw error;
   }
 }
+
+
+//? PG RESULT
+export const getPGStudentResult = async (formData) => {
+  try {
+    const response = await api.post(
+      `/pg`, 
+      formData,
+      {
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.error(error);  //! devlopment
+    throw error;
+  }
+};
+
+export const changePGStudentStatus = async (id, status) => {
+  try {
+    const response = await api.put(
+      `/pg/${id}`,
+      { status },
+      {
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.error(error);  //! development
+    throw error;
+  }
+};
