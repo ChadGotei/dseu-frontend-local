@@ -56,16 +56,27 @@ const Page = () => {
               The <strong>Undergraduate Round 1 seat allocation result</strong> is also live <strong>(including Diploma in Pharmacy)</strong>.
             </p>
 
-            <p>
-              The <strong>result</strong> for <strong>B.tech</strong> students in the <strong>PWD</strong> and <strong>Defence</strong> categories is also live.
+            <p className="mt-1">
+              The <strong>Postgraduate Round 1 seat allocation result</strong> has also been released.
             </p>
+
+            {/* <p>
+              The <strong>result</strong> for <strong>B.tech</strong> students in the <strong>PWD</strong> and <strong>Defence</strong> categories is also live.
+            </p> */}
 
             {/* ✅ NEW message as per request */}
-            <p className="font-medium text-blue-700">
+            {/* <p className="font-medium text-blue-700">
               📩 The payment link for <strong>B.Tech</strong> and <strong>UG</strong> candidates will be sent today to their <strong>registered mobile number</strong> and <strong>email</strong>.
-            </p>
+            </p> */}
 
             <div className="flex md:flex-row md:gap-5 flex-col gap-0z">
+              <Link
+                to="/admission/result/pg"
+                className="inline-block mt-2 bg-amber-500 hover:bg-amber-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
+              >
+                View PG Result
+              </Link>
+
               <Link
                 to="/admission/result/ug"
                 className="inline-block mt-2 bg-purple-600 hover:bg-purple-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
@@ -77,7 +88,7 @@ const Page = () => {
                 to="/admission/result?category=btech"
                 className="inline-block mt-2 bg-green-600 hover:bg-green-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
               >
-                View My B.Tech Result
+                View B.Tech Result
               </Link>
             </div>
           </div>
@@ -102,9 +113,9 @@ const Page = () => {
             <p className="font-medium text-blue-700">
               📩 A payment link has been sent to your <strong>registered mobile number</strong>.
             </p>
-            <p className="font-medium text-red-600">
+            {/* <p className="font-medium text-red-600">
               ⏳ Last date to complete payment: <strong>29th July, 11:59 PM</strong>.
-            </p>
+            </p> */}
           </div>
 
           <p className="mt-4 font-medium text-gray-600">– Admission Cell, DSEU</p>

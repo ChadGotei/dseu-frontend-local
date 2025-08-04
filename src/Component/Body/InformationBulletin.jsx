@@ -69,12 +69,24 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
-      name: "Undergraduate results are now available!",
-      link: "https://dseu.ac.in/admission/result/ug",
+      name: "Postgraduate results are now available!",
+      link: "https://dseu.ac.in/admission/result/pg",
+    },
+    {
+      name: "Refund form 2025 admissions",
+      link: "https://drive.google.com/file/d/1ogrH8FlZ3FG36b44UVghbET0pLw-dHWE/view"
+    },
+    {
+      name: "Diploma Cancelled seat data",
+      link: "https://drive.google.com/file/d/1ZMnYb-piIHJUkYRtmRMH0woE3UztIPAC/view"
     },
     {
       name: "How to Pay Your Admission Fees Online (Step-by-Step Guide)",
       link: "https://drive.google.com/file/d/1dV-ujr-aZGG4uNb20h229NpBM8McyC-F/view",
+    },
+    {
+      name: "Undergraduate results are now available!",
+      link: "https://dseu.ac.in/admission/result/ug",
     }
   ];
 

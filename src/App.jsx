@@ -197,8 +197,8 @@ function App() {
             <Route path="/admission/result/ug" element={<UGResult />} />
             <Route path="/admission/result/ug/show" element={<ShowUgResult />} />
             
-            {/* <Route path="/admission/result/pg" element={<PGResult />} />
-            <Route path="/admission/result/pg/show" element={<ShowPgResult />} /> */}
+            <Route path="/admission/result/pg" element={<PGResult />} />
+            <Route path="/admission/result/pg/show" element={<ShowPgResult />} />
 
             {/* Others */}
             <Route path="/Entrepreneurship" element={<Entrepreneurship />} />

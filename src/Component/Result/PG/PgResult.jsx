@@ -5,7 +5,7 @@ import { FaQuestionCircle } from "react-icons/fa";
 import { useMutation } from "@tanstack/react-query";
 
 import useResultStore from "../../../store/pgResultStore";
-import { getUGStudentResult } from "../../../utils/apiservice";
+import { getPGStudentResult, getUGStudentResult } from "../../../utils/apiservice";
 import { showErrorToast, showSuccessToast } from "../../../utils/toasts";
 import dseulogo from "../../../assets/dseulogofullnew.svg";
 
@@ -21,7 +21,7 @@ const PgResult = () => {
 
   // TODO: change mutation function according to api
   const { mutate } = useMutation({
-    mutationFn: getUGStudentResult,
+    mutationFn: getPGStudentResult,
     onSuccess: (data) => {
       showSuccessToast("Result fetched successfully");
       setResult(data);

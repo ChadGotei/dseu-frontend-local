@@ -4,14 +4,13 @@ import { useMutation } from '@tanstack/react-query';
 
 import Logo from "../../Reusable/Logo";
 import useResultStore from "../../../store/pgResultStore";
-import { changeUGStudentStatus } from "../../../utils/apiservice";
+import { changePGStudentStatus, changeUGStudentStatus } from "../../../utils/apiservice";
 import { showErrorToast, showSuccessToast } from "../../../utils/toasts";
-import { getCategoryFullname, getStatusFromAction } from "../../../utils/helper";
+import { getStatusFromAction } from "../../../utils/helper";
 
 import StudentPdf from "../StudentPdf";
 import ConfirmationModal from "../../UI/ConfirmationModal";
 import StudentStatusMessage from "../StudentStatusMessage";
-import { NoSeatAllocationMessage } from "../PwdMessage";
 import { ButtonsDescription } from "../UG/ButtonsDescription"
 
 const ShowPgResult = () => {
@@ -29,17 +28,11 @@ const ShowPgResult = () => {
 
   if (!result) return null;
 
-  const message = result.message;
   const student = result?.data?.student ?? {};
-
-  // TODO: Change according to the messages sent by backend
-  if (message === "You have not alloted any seat please try again in next round") {
-    return <NoSeatAllocationMessage />;
-  }
 
   // TODO: Change this function according to backend
   const statusMutation = useMutation({
-    mutationFn: ({ id, status }) => changeUGStudentStatus(id, status),  // add pg route here
+    mutationFn: ({ id, status }) => changePGStudentStatus(id, status),  // add pg route here
     onSuccess: (updatedData) => {
       showSuccessToast(`${modalInfo.action} confirmed!`);
       setTimeout(() => {
@@ -64,22 +57,13 @@ const ShowPgResult = () => {
     }
   };
 
-  // TODO: change this according to the fields
   const resultInfo = [
-    { label: "Form Number", value: student.form_no },
+    { label: "Form Number", value: student.form_number },
     { label: "Name", value: student.name },
     { label: "Program Allocated", value: student.program },
     { label: "Campus Allocated", value: student.campus },
-    { label: "Program Preference", value: student.program_preference },
     { label: "Registered Category", value: student.registered_category },
-    student.category_allocated && {
-      label: "Admission Category",
-      value: getCategoryFullname(student.category_allocated),
-    },
-    // { label: "Program Preference", value: student.program_preference },
-    { label: "Generated Rank", value: student.rank },
-  ].filter(Boolean);
-
+  ];
 
   return (
     <div className="min-h-screen bg-white py-12 px-4">
@@ -123,57 +107,36 @@ const ShowPgResult = () => {
 
         {/* BUTTONs */}
         <div className="flex flex-col items-center gap-4 mt-10">
-          {student.status === "pending" && (
+          {student.status === "pending" ?
             <>
-              {student.campus_preference === true ? (
-                <div className="flex gap-6">
-                  <button
-                    onClick={() => setModalInfo({ open: true, action: "Freeze" })}
-                    className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
-                  >
-                    Freeze
-                  </button>
-                  <button
-                    onClick={() => setModalInfo({ open: true, action: "Reject" })}
-                    className="bg-red-600 hover:bg-red-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
-                  >
-                    Reject
-                  </button>
-                </div>
-              ) : (
-                <div className="flex flex-wrap gap-4 justify-center">
-                  <button
-                    onClick={() => setModalInfo({ open: true, action: "Final Acceptance" })}
-                    className="bg-green-600 hover:bg-green-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
-                  >
-                    Final Acceptance
-                  </button>
-                  <button
-                    onClick={() => setModalInfo({ open: true, action: "Accept and Upgrade" })}
-                    className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
-                  >
-                    Accept and Upgrade
-                  </button>
-                  <button
-                    onClick={() => setModalInfo({ open: true, action: "Not Accepted and Upgrade" })}
-                    className="bg-yellow-500 hover:bg-yellow-600 text-white text-lg px-5 py-3 rounded-xl transition-colors"
-                  >
-                    Not Accepted and Upgrade
-                  </button>
-                  <button
-                    onClick={() => setModalInfo({ open: true, action: "Not Accepted" })}
-                    className="bg-red-600 hover:bg-red-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
-                  >
-                    Not Accepted
-                  </button>
-                </div>
-              )}
-              <ButtonsDescription student={student} />
-            </>
-          )}
+              <div className="flex gap-6">
+                <button
+                  onClick={() => setModalInfo({ open: true, action: "Freeze" })}
+                  className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
+                >
+                  Freeze
+                </button>
+                <button
+                  onClick={() => setModalInfo({ open: true, action: "Reject" })}
+                  className="bg-red-600 hover:bg-red-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
+                >
+                  Reject
+                </button>
+              </div>
+              
+              <div className="text-sm text-gray-800 mt-6 max-w-2xl p-4 rounded-lg border border-yellow-400 bg-yellow-100/60 backdrop-blur-md shadow-md">
+                <p><span className="font-semibold">🔒 Freeze Allocation:</span> Accept and lock the current allocated seat. No upgrades will be provided.</p>
+                <div className="my-2" />
+                <p><span className="font-semibold">❌ Reject:</span> You are declining the seat. You will not be considered in further rounds.</p>
+              </div>
 
-          <StudentStatusMessage status={student.status} />
+            </>
+            :
+
+            <StudentStatusMessage status={student.status} />
+          }
         </div>
+
 
         {(student.status === "freeze" || student.status === "float") && <StudentPdf student={student} />}
 
@@ -208,7 +171,7 @@ const ShowPgResult = () => {
           </a>
         </div> */}
       </div>
-    </div>
+    </div >
   );
 };
 

@@ -4,8 +4,20 @@ import { useEffect, useState } from "react";
 
 const toAdd = [
   {
+    fileLink: "https://dseu.ac.in/admission/result/pg",
+    fileName: "Postgraduate results are now live!"
+  },
+  {
+    fileName: "Refund form 2025 admissions",
+    fileLink: "https://drive.google.com/file/d/1ogrH8FlZ3FG36b44UVghbET0pLw-dHWE/view",
+  },
+  {
+    fileName: "Diploma Cancelled seat data",
+    fileLink: "https://drive.google.com/file/d/1ZMnYb-piIHJUkYRtmRMH0woE3UztIPAC/view",
+  },
+  {
     fileLink: "https://dseu.ac.in/admission/result/ug",
-    fileName: "Undergraduate result is live now!"
+    fileName: "Undergraduate results are now live!"
   },
   {
     fileLink: "https://drive.google.com/file/d/1jyw7k5SHVq49ZUJGA7I9B05Hw1KnVGiN/view",
@@ -101,7 +113,7 @@ const AnnouncementStrip = () => {
 const style = `
   @keyframes marquee {
     0% {
-      transform: translateX(45%);
+      transform: translateX(30%);
     }
     100% {
       transform: translateX(-100%);

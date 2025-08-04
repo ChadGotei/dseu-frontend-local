@@ -1,26 +1,20 @@
-//! DIPLOMA ONLY
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useMutation } from '@tanstack/react-query'
+import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
 
-import ShowBtechResult from "./ShowBtechResult";
 import Logo from "../Reusable/Logo";
 import StudentPdf from "./StudentPdf";
-import ConfirmationModal from '../UI/ConfirmationModal'
+import { ButtonsDescription } from "./ShowResult";
+import ConfirmationModal from "../UI/ConfirmationModal";
 import StudentStatusMessage from "./StudentStatusMessage";
-import { NoSeatAllocationMessage, PwdMessage, PwdMessagebtech } from "./PwdMessage";
+import { NoSeatAllocationMessage, PwdMessagebtech } from "./PwdMessage"
 
-import { showErrorToast, showSuccessToast } from "../../utils/toasts";
 import { changeStudentStatus } from "../../utils/apiservice";
+import { showErrorToast, showSuccessToast } from "../../utils/toasts";
 import { getCategoryFullname, getStatusFromAction } from "../../utils/helper";
 
-const ShowResult = () => {
-    const navigate = useNavigate();
+const ShowBtechResult = () => {
     const data = JSON.parse(sessionStorage.getItem("studentResult"));
     const [modalInfo, setModalInfo] = useState({ open: false, action: "" });
-
-    const isBtech = data?.btech ?? false;
-    const studentId = data.allStudentId;
 
     const statusMutation = useMutation({
         mutationFn: ({ id, status }) => changeStudentStatus(id, status),
@@ -32,40 +26,31 @@ const ShowResult = () => {
             }, 2000);
 
             setModalInfo({ open: false, action: "" });
-            // console.log(data);    //! remove after development
+            console.log(data);    //! remove after development
             sessionStorage.setItem("studentResult", JSON.stringify(data));
         },
         onError: (err) => {
             showErrorToast(err.response?.data?.message || err.message || "Something went wrong");
-            // console.error(err); //! for dev
+            console.error(err); //! for dev
         },
     });
 
-    // Protecting the route
-    useEffect(() => {
-        if (!data) {
-            showErrorToast("Enter your details");
-            navigate("/admission/result");
-        }
-    }, [data, navigate]);
+    const studentId = data.allStudentId;
+    const isDefenceOrPwd = data?.isPwdDefenceStudent ?? false;
 
-    if (!data) return null;
-
-    //? Handle btech students in isolation
-    if (isBtech === true) {
-        return <ShowBtechResult data={data} />
-    }
-
+    //? No seat allocation case
     if (data.message === "You have not been allotted any seat, please try again in next round") {
         return (
             <NoSeatAllocationMessage />
         )
     }
 
-    if (data.message === "PWD Student Found" || data.message === 'Defence Student Found') {
-        return <PwdMessage />
+    //? PWD/Defence case soon to be removed ig
+    if (data.message === "Defence BTech Student Found" || data.message === "PWD BTech Student Found") {
+        return <PwdMessagebtech />
     }
 
+    // data
     const student = data.data?.student;
 
     const resultInfo = [
@@ -82,7 +67,6 @@ const ShowResult = () => {
         { label: "Generated Rank", value: student.rank },
     ].filter(Boolean);
 
-
     const handleConfirm = () => {
         const status = getStatusFromAction(modalInfo.action);
         if (status) {
@@ -91,6 +75,7 @@ const ShowResult = () => {
             showErrorToast("Invalid action selected.");
         }
     };
+
 
     return (
         <div className="min-h-screen bg-white py-12 px-4">
@@ -134,17 +119,40 @@ const ShowResult = () => {
                 </div>
 
                 <div className="flex flex-col items-center gap-4 mt-10">
+                    {/* ONLY SEE TWO BUTTONS IF DEFENCE OR PWD */}
+                    {student.status === "pending" && isDefenceOrPwd &&
+                        <>
+                            <div className="flex gap-6">
+                                <button
+                                    onClick={() => setModalInfo({ open: true, action: "Freeze" })}
+                                    className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
+                                >
+                                    Freeze
+                                </button>
+                                <button
+                                    onClick={() => setModalInfo({ open: true, action: "Reject" })}
+                                    className="bg-red-600 hover:bg-red-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
+                                >
+                                    Reject
+                                </button>
+                            </div>
+
+                            <ButtonsDescription student={student} onlyTwoButtons={true} />
+                        </>
+                    }
+
+
                     {/* Action Buttons along with their descriptions */}
-                    {student.status === "pending" ? (
+                    {student.status === "pending" && !isDefenceOrPwd ? (
                         <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg text-center max-w-xl">
                             <p className="font-semibold text-lg mb-2">Seat Confirmation Closed</p>
                             <p className="text-justify">
-                                The seat confirmation window for Diploma admissions is now closed.
+                                The seat confirmation window for Btech admissions is now closed.
                                 Please await further communication regarding upcoming rounds or official announcements.
                             </p>
                         </div>
                     ) : (
-                        student.status === "pending" && (
+                        student.status === "pending" && !isDefenceOrPwd && (
                             <>
                                 {student.program_preference === 1 ? (
                                     <div className="flex gap-6">
@@ -223,7 +231,7 @@ const ShowResult = () => {
 
                 <div className="flex items-center justify-center w-full">
                     <a
-                        href={"/seat-confirmation-diploma.pdf"}
+                        href={"/seat-confirmation-btech.pdf"}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-80 mt-10"
@@ -234,38 +242,6 @@ const ShowResult = () => {
             </div>
         </div >
     );
-};
-
-export const ButtonsDescription = ({ student, onlyTwoButtons = false }) => {
-    if (onlyTwoButtons === true) {
-        return (
-            <div className="text-sm text-gray-800 mt-6 max-w-2xl p-4 rounded-lg border border-yellow-400 bg-yellow-100/60 backdrop-blur-md shadow-md">
-                <p><span className="font-semibold">🔒 Freeze Allocation:</span> Accept and lock the current allocated seat. No upgrades will be provided.</p>
-                <div className="my-2" />
-                <p><span className="font-semibold">❌ Reject:</span> You are declining the seat. You will not be considered in further rounds.</p>
-            </div>
-        )
-    }
-
-    return (
-        <div className="text-sm text-gray-800 mt-6 max-w-2xl p-4 rounded-lg border border-yellow-400 bg-yellow-100/60 backdrop-blur-md shadow-md">
-            {student.program_preference === 1 ? (
-                <>
-                    <p><span className="font-semibold">🔒 Freeze Allocation:</span> Accept and lock the current allocated seat. No upgrades will be provided.</p>
-                    <div className="my-2" />
-                    <p><span className="font-semibold">❌ Reject:</span> You are declining the seat. You will not be considered in further rounds.</p>
-                </>
-            ) : (
-                <>
-                    <p><span className="font-semibold">✅ Final Acceptance:</span> Accept current seat and opt out of future rounds.</p>
-                    <p><span className="font-semibold">🔄 Accept and Upgrade:</span> Accept this seat and stay open for program upgrade (campus won't change).</p>
-                    <p><span className="font-semibold">❔ Not Accepted and Upgrade:</span> Don’t accept this seat but want to try for better one in next round.</p>
-                    <p><span className="font-semibold">❌ Not Accepted:</span> Fully reject the seat and don’t want to participate in further rounds.</p>
-                </>
-            )}
-        </div>
-    )
 }
 
-
-export default ShowResult;
+export default ShowBtechResult
