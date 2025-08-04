@@ -66,6 +66,10 @@ const ShowResult = () => {
         return <PwdMessage />
     }
 
+    if (data.message === "Defence BTech Student Found" || data.message === "PWD BTech Student Found") {
+        return <PwdMessagebtech />
+    }
+
     const student = data.data?.student;
 
     const resultInfo = [
