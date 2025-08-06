@@ -96,15 +96,15 @@ const Page = () => {
           {/* Diploma Section */}
           <div className="space-y-2">
             <p>
-              The <strong>seat allocation result</strong> for <strong>Diploma Round 1</strong> of the current admission year is now live{" "}
+              The <strong>seat allocation result</strong> for <strong>Diploma Round 2</strong> of the current admission year is now live{" "}
               <strong>(except Diploma in Pharmacy)</strong>.
             </p>
             {/* <p>The result for <strong>PWD</strong> and <strong>Defence</strong> category students is also live.</p> */}
             <Link
-              to="/admission/result?category=diploma"
+              to="/admission/result/diploma/round2"
               className="inline-block mt-1 bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
             >
-              View My Diploma Result
+              Diploma round 2 Result
             </Link>
             <p className="font-medium text-blue-700">
               📩 A payment link has been sent to your <strong>registered mobile number</strong>.

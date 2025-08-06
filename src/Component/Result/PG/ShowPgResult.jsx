@@ -4,7 +4,7 @@ import { useMutation } from '@tanstack/react-query';
 
 import Logo from "../../Reusable/Logo";
 import useResultStore from "../../../store/pgResultStore";
-import { changePGStudentStatus, changeUGStudentStatus } from "../../../utils/apiservice";
+import { changePGStudentStatus } from "../../../utils/apiservice";
 import { showErrorToast, showSuccessToast } from "../../../utils/toasts";
 import { getStatusFromAction } from "../../../utils/helper";
 
@@ -121,7 +121,7 @@ const ShowPgResult = () => {
                   Reject
                 </button>
               </div>
-              
+
               <div className="text-sm text-gray-800 mt-6 max-w-2xl p-4 rounded-lg border border-yellow-400 bg-yellow-100/60 backdrop-blur-md shadow-md">
                 <p><span className="font-semibold">🔒 Freeze Allocation:</span> Accept and lock the current allocated seat. No upgrades will be provided.</p>
                 <div className="my-2" />

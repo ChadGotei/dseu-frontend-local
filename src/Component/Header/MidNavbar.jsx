@@ -91,7 +91,7 @@ const navItems = [
       },
       {
         name: "Diploma Seat Allocation",
-        path: "/admission/result?category=diploma"
+        path: "/admission/result/diploma/round2"
       },
       {
         name: "Btech seat Allocation",

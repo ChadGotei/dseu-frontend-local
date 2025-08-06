@@ -69,6 +69,10 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Diploma Round 2 results are now live",
+      link: "https://dseu.ac.in/admission/result/diploma/round2"
+    },
+    {
       name: "Seat freezing opportunity for applicants for UG/B.Tech Admission 2025",
       link: "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view"
     },

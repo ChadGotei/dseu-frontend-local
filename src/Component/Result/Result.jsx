@@ -14,6 +14,7 @@ const Result = () => {
   const [isHindi, setIsHindi] = useState(false);
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
+  // const [round, setRound] = useState(2);
 
   const navigate = useNavigate();
 
@@ -60,11 +61,26 @@ const Result = () => {
   };
 
   return (
-    <div className="py-20 flex items-center justify-center bg-gray-100 p-4 flex-col gap-10">
+    <div className="pt-10 flex items-center justify-center bg-gray-100 p-4 flex-col gap-10 pb-20">
+      {category === "diploma" &&
+        <div className="flex gap-6 mb-10">
+          <button
+            className={`px-6 py-3 rounded-full bg-blue-600 text-white font-semibold`}>
+            Round 1
+          </button>
+          <button
+            className={`px-6 py-3 rounded-full bg-gray-200`}
+            onClick={() => navigate("/admission/result/diploma/round2")}
+          >
+            Round 2
+          </button>
+        </div>
+      }
+
       <div className="flex flex-col items-center justify-center gap-7">
         <img alt="dseu logo" className="h-15 mt-[-30px]" src={dseulogo} />
         <h2 className="text-2xl sm:text-2xl md:text-3xl font-extrabold text-center text-blue-700 font-sans mt-5">
-          DSEU <span className="capitalize">{category}</span> Seat Allocation
+          DSEU <span className="capitalize">{category === "diploma" ? "Diploma round 1" : "Btech"}</span> Seat Allocation
           <div className="mt-2 mx-auto w-[190px] h-1 bg-blue-600 rounded"></div>
         </h2>
       </div>
@@ -128,17 +144,15 @@ const Result = () => {
         <div className="flex gap-2">
           <button
             onClick={() => setIsHindi(false)}
-            className={`px-4 py-1 rounded-md transition-colors ${
-              !isHindi ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
-            }`}
+            className={`px-4 py-1 rounded-md transition-colors ${!isHindi ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
+              }`}
           >
             English
           </button>
           <button
             onClick={() => setIsHindi(true)}
-            className={`px-4 py-1 rounded-md transition-colors ${
-              isHindi ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
-            }`}
+            className={`px-4 py-1 rounded-md transition-colors ${isHindi ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
+              }`}
           >
             Hindi
           </button>
