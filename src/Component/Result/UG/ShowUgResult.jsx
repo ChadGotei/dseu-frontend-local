@@ -126,102 +126,93 @@ const ShowUgResult = () => {
           </table>
         </div>
 
-        {/* BUTTONs */}
-        <div className="flex flex-col items-center gap-4 mt-10">
-          {(student.status === "pending" && !isPwdOrDefence) ? (
-            <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg text-center max-w-xl">
-              <p className="font-semibold text-lg mb-2">Seat Confirmation Closed</p>
-              <p className="text-justify">
-                The seat confirmation window for UG admissions is now closed.
-                Please await further communication regarding upcoming rounds or official announcements.
-              </p>
-            </div>
-          ) : (
+
+        <div className="flex items-center justify-center w-full flex-col mt-10">
+          {student.status === "pending" && (
             <>
-              {student.status === "pending" && (
-                <>
-                  {student.campus_preference === true ? (
-                    <div className="flex gap-6">
-                      <button
-                        onClick={() => setModalInfo({ open: true, action: "Freeze" })}
-                        className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
-                      >
-                        Freeze
-                      </button>
-                      <button
-                        onClick={() => setModalInfo({ open: true, action: "Reject" })}
-                        className="bg-red-600 hover:bg-red-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
-                      >
-                        Reject
-                      </button>
-                    </div>
-                  ) : (
-                    <div className="flex flex-wrap gap-4 justify-center">
-                      <button
-                        onClick={() => setModalInfo({ open: true, action: "Final Acceptance" })}
-                        className="bg-green-600 hover:bg-green-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
-                      >
-                        Final Acceptance
-                      </button>
-                      <button
-                        onClick={() => setModalInfo({ open: true, action: "Accept and Upgrade" })}
-                        className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
-                      >
-                        Accept and Upgrade
-                      </button>
-                      <button
-                        onClick={() => setModalInfo({ open: true, action: "Not Accepted and Upgrade" })}
-                        className="bg-yellow-500 hover:bg-yellow-600 text-white text-lg px-5 py-3 rounded-xl transition-colors"
-                      >
-                        Not Accepted and Upgrade
-                      </button>
-                      <button
-                        onClick={() => setModalInfo({ open: true, action: "Not Accepted" })}
-                        className="bg-red-600 hover:bg-red-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
-                      >
-                        Not Accepted
-                      </button>
-                    </div>
-                  )}
-                  <ButtonsDescription student={student} />
-                </>
+              {student.campus_preference === true ? (
+                <div className="flex gap-6">
+                  <button
+                    onClick={() => setModalInfo({ open: true, action: "Freeze" })}
+                    className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
+                  >
+                    Freeze
+                  </button>
+                  <button
+                    onClick={() => setModalInfo({ open: true, action: "Reject" })}
+                    className="bg-red-600 hover:bg-red-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
+                  >
+                    Reject
+                  </button>
+                </div>
+              ) : (
+                <div className="flex flex-wrap gap-4 justify-center">
+                  <button
+                    onClick={() => setModalInfo({ open: true, action: "Final Acceptance" })}
+                    className="bg-green-600 hover:bg-green-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
+                  >
+                    Final Acceptance
+                  </button>
+                  <button
+                    onClick={() => setModalInfo({ open: true, action: "Accept and Upgrade" })}
+                    className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
+                  >
+                    Accept and Upgrade
+                  </button>
+                  <button
+                    onClick={() => setModalInfo({ open: true, action: "Not Accepted and Upgrade" })}
+                    className="bg-yellow-500 hover:bg-yellow-600 text-white text-lg px-5 py-3 rounded-xl transition-colors"
+                  >
+                    Not Accepted and Upgrade
+                  </button>
+                  <button
+                    onClick={() => setModalInfo({ open: true, action: "Not Accepted" })}
+                    className="bg-red-600 hover:bg-red-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
+                  >
+                    Not Accepted
+                  </button>
+                </div>
               )}
+              <ButtonsDescription student={student} />
             </>
           )}
+        </div>
+
+        <div className="flex items-center justify-center w-full">
 
           <StudentStatusMessage status={student.status} />
         </div>
+      </div>
 
-        {(student.status === "freeze" || student.status === "float") && <StudentPdf student={student} />}
+      {(student.status === "freeze" || student.status === "float") && <StudentPdf student={student} />}
 
-        <ConfirmationModal
-          open={modalInfo.open}
-          actionType={modalInfo.action}
-          onClose={() => setModalInfo({ open: false, action: "" })}
-          onConfirm={handleConfirm}
-        />
+      <ConfirmationModal
+        open={modalInfo.open}
+        actionType={modalInfo.action}
+        onClose={() => setModalInfo({ open: false, action: "" })}
+        onConfirm={handleConfirm}
+      />
 
-        {student.status !== "pending" && (
-          <div className="mt-10 text-center text-sm text-gray-700">
-            <p>
-              📩 <span className="font-semibold">Didn’t receive an email?</span> Please reach out to us at
-              <a href="mailto:helpdesk-admission@dseu.ac.in" className="text-blue-600 hover:underline ml-1">
-                helpdesk-admission@dseu.ac.in
-              </a>
-            </p>
-          </div>
-        )}
-
-        <div className="flex items-center justify-center w-full">
-          <a
-            href="/seat-confirmation-ug.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-80 mt-10"
-          >
-            View Seat Confirmation Process (PDF)
-          </a>
+      {student.status !== "pending" && (
+        <div className="mt-10 text-center text-sm text-gray-700">
+          <p>
+            📩 <span className="font-semibold">Didn’t receive an email?</span> Please reach out to us at
+            <a href="mailto:helpdesk-admission@dseu.ac.in" className="text-blue-600 hover:underline ml-1">
+              helpdesk-admission@dseu.ac.in
+            </a>
+          </p>
         </div>
+      )}
+
+      <div className="flex items-center justify-center w-full">
+        <a
+          href="/seat-confirmation-ug.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-80 mt-10"
+        >
+          View Seat Confirmation Process (PDF)
+        </a>
       </div>
     </div>
   );

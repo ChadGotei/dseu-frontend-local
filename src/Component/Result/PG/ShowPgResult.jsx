@@ -10,8 +10,6 @@ import { getStatusFromAction } from "../../../utils/helper";
 
 import StudentPdf from "../StudentPdf";
 import ConfirmationModal from "../../UI/ConfirmationModal";
-import StudentStatusMessage from "../StudentStatusMessage";
-import { ButtonsDescription } from "../UG/ButtonsDescription"
 
 const ShowPgResult = () => {
   const result = useResultStore((state) => state.result);

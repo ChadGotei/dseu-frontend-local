@@ -253,7 +253,7 @@ export const ButtonsDescription = ({ student, onlyTwoButtons = false }) => {
 
     return (
         <div className="text-sm text-gray-800 mt-6 max-w-2xl p-4 rounded-lg border border-yellow-400 bg-yellow-100/60 backdrop-blur-md shadow-md">
-            {student.program_preference === 1 ? (
+            {student.campus_preference && student.campus_preference === true ? (
                 <>
                     <p><span className="font-semibold">🔒 Freeze Allocation:</span> Accept and lock the current allocated seat. No upgrades will be provided.</p>
                     <div className="my-2" />

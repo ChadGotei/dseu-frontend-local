@@ -119,89 +119,55 @@ const ShowBtechResult = () => {
                 </div>
 
                 <div className="flex flex-col items-center gap-4 mt-10">
-                    {/* ONLY SEE TWO BUTTONS IF DEFENCE OR PWD */}
-                    {student.status === "pending" && isDefenceOrPwd &&
-                        <>
-                            <div className="flex gap-6">
-                                <button
-                                    onClick={() => setModalInfo({ open: true, action: "Freeze" })}
-                                    className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
-                                >
-                                    Freeze
-                                </button>
-                                <button
-                                    onClick={() => setModalInfo({ open: true, action: "Reject" })}
-                                    className="bg-red-600 hover:bg-red-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
-                                >
-                                    Reject
-                                </button>
-                            </div>
 
-                            <ButtonsDescription student={student} onlyTwoButtons={true} />
+                    {student.status === "pending" &&
+                        <>
+                            {student.campus_preference === true ? (
+                                <div className="flex gap-6">
+                                    <button
+                                        onClick={() => setModalInfo({ open: true, action: "Freeze" })}
+                                        className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
+                                    >
+                                        Freeze
+                                    </button>
+                                    <button
+                                        onClick={() => setModalInfo({ open: true, action: "Reject" })}
+                                        className="bg-red-600 hover:bg-red-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
+                                    >
+                                        Reject
+                                    </button>
+                                </div>
+                            ) : (
+                                <div className="flex flex-wrap gap-4 justify-center">
+                                    <button
+                                        onClick={() => setModalInfo({ open: true, action: "Final Acceptance" })}
+                                        className="bg-green-600 hover:bg-green-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
+                                    >
+                                        Final Acceptance
+                                    </button>
+                                    <button
+                                        onClick={() => setModalInfo({ open: true, action: "Accept and Upgrade" })}
+                                        className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
+                                    >
+                                        Accept and Upgrade
+                                    </button>
+                                    <button
+                                        onClick={() => setModalInfo({ open: true, action: "Not Accepted and Upgrade" })}
+                                        className="bg-yellow-500 hover:bg-yellow-600 text-white text-lg px-5 py-3 rounded-xl transition-colors"
+                                    >
+                                        Not Accepted and Upgrade
+                                    </button>
+                                    <button
+                                        onClick={() => setModalInfo({ open: true, action: "Not Accepted" })}
+                                        className="bg-red-600 hover:bg-red-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
+                                    >
+                                        Not Accepted
+                                    </button>
+                                </div>
+                            )}
+                            <ButtonsDescription student={student} />
                         </>
                     }
-
-
-                    {/* Action Buttons along with their descriptions */}
-                    {student.status === "pending" && !isDefenceOrPwd ? (
-                        <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg text-center max-w-xl">
-                            <p className="font-semibold text-lg mb-2">Seat Confirmation Closed</p>
-                            <p className="text-justify">
-                                The seat confirmation window for Btech admissions is now closed.
-                                Please await further communication regarding upcoming rounds or official announcements.
-                            </p>
-                        </div>
-                    ) : (
-                        student.status === "pending" && !isDefenceOrPwd && (
-                            <>
-                                {student.program_preference === 1 ? (
-                                    <div className="flex gap-6">
-                                        <button
-                                            onClick={() => setModalInfo({ open: true, action: "Freeze" })}
-                                            className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
-                                        >
-                                            Freeze
-                                        </button>
-                                        <button
-                                            onClick={() => setModalInfo({ open: true, action: "Reject" })}
-                                            className="bg-red-600 hover:bg-red-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
-                                        >
-                                            Reject
-                                        </button>
-                                    </div>
-                                ) : (
-                                    <div className="flex flex-wrap gap-4 justify-center">
-                                        <button
-                                            onClick={() => setModalInfo({ open: true, action: "Final Acceptance" })}
-                                            className="bg-green-600 hover:bg-green-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
-                                        >
-                                            Final Acceptance
-                                        </button>
-                                        <button
-                                            onClick={() => setModalInfo({ open: true, action: "Accept and Upgrade" })}
-                                            className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
-                                        >
-                                            Accept and Upgrade
-                                        </button>
-                                        <button
-                                            onClick={() => setModalInfo({ open: true, action: "Not Accepted and Upgrade" })}
-                                            className="bg-yellow-500 hover:bg-yellow-600 text-white text-lg px-5 py-3 rounded-xl transition-colors"
-                                        >
-                                            Not Accepted and Upgrade
-                                        </button>
-                                        <button
-                                            onClick={() => setModalInfo({ open: true, action: "Not Accepted" })}
-                                            className="bg-red-600 hover:bg-red-700 text-white text-lg px-5 py-3 rounded-xl transition-colors"
-                                        >
-                                            Not Accepted
-                                        </button>
-                                    </div>
-                                )}
-                                <ButtonsDescription student={student} />
-                            </>
-                        )
-                    )}
-
 
                     {/* change later according to backend */}
                     <StudentStatusMessage status={student.status} />
