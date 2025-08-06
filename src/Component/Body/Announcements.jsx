@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 
 const toAdd = [
   {
+    fileName: "Seat freezing opportunity for applicants for UG/B.Tech Admission 2025",
+    fileLink: "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view"
+  },
+  {
     fileName: "Document verification dates for UG have been extended till Friday",
     fileLink: "https://dseu.ac.in/admission/result/ug"
   },

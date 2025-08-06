@@ -69,6 +69,10 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Seat freezing opportunity for applicants for UG/B.Tech Admission 2025",
+      link: "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view"
+    },
+    {
       name: "Document verification dates for UG have been extended till Friday",
       link: "https://dseu.ac.in/admission/result/ug"
     },

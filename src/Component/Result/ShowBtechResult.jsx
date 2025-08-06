@@ -54,7 +54,7 @@ const ShowBtechResult = () => {
     const student = data.data?.student;
 
     const resultInfo = [
-        { label: "Form Number", value: student.form_number },
+        { label: "Form Number", value: student.form_number },   
         { label: "Name", value: student.name },
         { label: "Program Allocated", value: student.program },
         { label: "Campus Allocated", value: student.campus },

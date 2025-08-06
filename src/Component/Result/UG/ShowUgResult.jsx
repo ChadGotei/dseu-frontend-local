@@ -179,7 +179,6 @@ const ShowUgResult = () => {
         </div>
 
         <div className="flex items-center justify-center w-full">
-
           <StudentStatusMessage status={student.status} />
         </div>
       </div>
