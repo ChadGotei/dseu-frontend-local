@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 
 const toAdd = [
   {
+    fileName: "Document verification dates for UG have been extended till Friday",
+    fileLink: "https://dseu.ac.in/admission/result/ug"
+  },
+  {
     fileLink: "https://dseu.ac.in/admission/result/pg",
     fileName: "Postgraduate results are now live!"
   },

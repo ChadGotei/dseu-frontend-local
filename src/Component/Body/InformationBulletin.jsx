@@ -69,6 +69,10 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Document verification dates for UG have been extended till Friday",
+      link: "https://dseu.ac.in/admission/result/ug"
+    },
+    {
       name: "Postgraduate results are now available!",
       link: "https://dseu.ac.in/admission/result/pg",
     },

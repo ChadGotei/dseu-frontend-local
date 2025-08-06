@@ -56,18 +56,14 @@ const Page = () => {
               The <strong>Undergraduate Round 1 seat allocation result</strong> is also live <strong>(including Diploma in Pharmacy)</strong>.
             </p>
 
+            <p>
+              Document verification dates for <strong>UG</strong> have been extended till <strong>Friday</strong>.
+            </p>
+
+
             <p className="mt-1">
               The <strong>Postgraduate Round 1 seat allocation result</strong> has also been released.
             </p>
-
-            {/* <p>
-              The <strong>result</strong> for <strong>B.tech</strong> students in the <strong>PWD</strong> and <strong>Defence</strong> categories is also live.
-            </p> */}
-
-            {/* ✅ NEW message as per request */}
-            {/* <p className="font-medium text-blue-700">
-              📩 The payment link for <strong>B.Tech</strong> and <strong>UG</strong> candidates will be sent today to their <strong>registered mobile number</strong> and <strong>email</strong>.
-            </p> */}
 
             <div className="flex md:flex-row md:gap-5 flex-col gap-0z">
               <Link
@@ -103,7 +99,7 @@ const Page = () => {
               The <strong>seat allocation result</strong> for <strong>Diploma Round 1</strong> of the current admission year is now live{" "}
               <strong>(except Diploma in Pharmacy)</strong>.
             </p>
-            <p>The result for <strong>PWD</strong> and <strong>Defence</strong> category students is also live.</p>
+            {/* <p>The result for <strong>PWD</strong> and <strong>Defence</strong> category students is also live.</p> */}
             <Link
               to="/admission/result?category=diploma"
               className="inline-block mt-1 bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
