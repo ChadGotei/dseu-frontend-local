@@ -8,12 +8,16 @@ import Image6 from "../../assets/DSEULogo/BANNER-DESIGN-1.jpg";
 import Banner3 from "../../assets/DSEULogo/BANNER-DESIGN-3.jpg";
 import Banner4 from "../../assets/DSEULogo/BANNER-DESIGN-4.jpg";
 import Banner5 from "../../assets/DSEULogo/BANNER-DESIGN-5.jpg";
+import Banner6 from "../../assets/DSEULogo/BANNER-DESIGN-9.jpg";
+import TirangaImage from '../../assets/DSEULogo/BANNER-DESIGN-8.png'
 import Image7 from "../../assets/7.png";
 
 const HomeBody = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
+    { image: TirangaImage },
+    { image: Banner6 },
     { image: admissionbanner },
     { image: dseuPic1 },
     { image: banner },
@@ -45,9 +49,8 @@ const HomeBody = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute w-full h-full transition-transform duration-500 ease-in-out ${
-              index === currentIndex ? "translate-x-0" : "translate-x-full"
-            }`}
+            className={`absolute w-full h-full transition-transform duration-500 ease-in-out ${index === currentIndex ? "translate-x-0" : "translate-x-full"
+              }`}
             style={{
               transform: `translateX(${100 * (index - currentIndex)}%)`,
             }}
@@ -55,10 +58,10 @@ const HomeBody = () => {
             <img
               src={slide.image}
               alt={`Slide ${index + 1}`}
-              className={`w-full h-full brightness-110 contrast-105 ${
-                slide.image === admissionbanner ? "object-contain" : "object-cover"
-              }`}
-              loading={index === 0 ? "eager" : "lazy"}
+              className={`w-full h-full brightness-110 contrast-105 ${slide.image === admissionbanner || slide.image === TirangaImage || slide.image === Banner6
+                ? "object-contain"
+                : "object-cover"
+                }`}
             />
           </div>
         ))}
@@ -83,9 +86,8 @@ const HomeBody = () => {
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${
-                currentIndex === index ? "bg-white" : "bg-white/50"
-              }`}
+              className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${currentIndex === index ? "bg-white" : "bg-white/50"
+                }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
