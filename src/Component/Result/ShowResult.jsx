@@ -140,12 +140,24 @@ const ShowResult = () => {
                 <div className="flex flex-col items-center gap-4 mt-10">
                     {/* Action Buttons along with their descriptions */}
                     {student.status === "pending" ? (
-                        <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg text-center max-w-xl">
-                            <p className="font-semibold text-lg mb-2">Seat Confirmation Closed</p>
-                            <p className="text-justify">
-                                The seat confirmation window for Diploma admissions is now closed.
-                                Please await further communication regarding upcoming rounds or official announcements.
-                            </p>
+                        <div className="flex flex-col gap-7 items-center justify-center">
+                            <a
+                                href="https://forms.gle/x6sViUSBkHHF74uM7"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:from-yellow-600 hover:to-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 transition-all duration-200 ease-in-out"
+                            >
+                                📝 Grievance Form
+                            </a>
+
+
+                            <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg text-center max-w-xl">
+                                <p className="font-semibold text-lg mb-2">Seat Confirmation Closed</p>
+                                <p className="text-justify">
+                                    The seat confirmation window for Diploma admissions is now closed.
+                                    Please await further communication regarding upcoming rounds or official announcements.
+                                </p>
+                            </div>
                         </div>
                     ) : (
                         student.status === "pending" && (
