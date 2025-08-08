@@ -274,7 +274,7 @@ export const ButtonsDescription = ({ student, onlyTwoButtons = false }) => {
             ) : (
                 <>
                     <p><span className="font-semibold">✅ Final Acceptance:</span> Accept current seat and opt out of future rounds.</p>
-                    <p><span className="font-semibold">🔄 Accept and Upgrade:</span> Accept this seat and stay open for program upgrade (campus won't change).</p>
+                    <p><span className="font-semibold">🔄 Accept and Upgrade:</span> Accept this seat and stay open for program and campus upgrade.</p>
                     <p><span className="font-semibold">❔ Not Accepted and Upgrade:</span> Don’t accept this seat but want to try for better one in next round.</p>
                     <p><span className="font-semibold">❌ Not Accepted:</span> Fully reject the seat and don’t want to participate in further rounds.</p>
                 </>

@@ -13,8 +13,8 @@ const statusMessages = {
         bgColor: "bg-blue-100",
         borderColor: "border-blue-400",
         description: [
-            "You have accepted the allotted seat and chosen to upgrade your program.",
-            "Your seat is secured, and you may be upgraded to a better program (campus will remain the same)."
+            "You have accepted the allotted seat and chosen to upgrade your program and campus.",
+            "Your seat is secured, and you may be upgraded to a better program."
         ],
     },
     upgrade: {
