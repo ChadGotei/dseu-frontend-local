@@ -70,7 +70,7 @@ const InformationBulletin = () => {
   const admissionManuals = [
     {
       name: "Diploma Round 2 - Seat Confirmation process",
-      link: "https://drive.google.com/file/d/1Gt8EYcjvW9ILq8sK9ymz3lKIUuNhiGcB/view"
+      link: "https://drive.google.com/file/d/1r2WB--buL2oQykhmEMccuS5axL27gqMd/view"
     },
     {
       name: "Diploma Round 2 results are now live",
