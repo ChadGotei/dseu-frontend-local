@@ -69,6 +69,10 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Commencement of Classes for New Batch - Academic Session 2025-26",
+      link: "https://drive.google.com/file/d/1vc-p-RJUSlpxtyCs5d-QglEr6nxwoXsN/view"
+    },
+    {
       name: "All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation."
     },
     {
