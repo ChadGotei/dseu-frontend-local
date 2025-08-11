@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 
 const toAdd = [
   {
+    fileName: "All Candidates who have already paid the fees in Round 1 do not need to pay again"
+  },
+  {
     fileName: "Seat freezing opportunity for applicants for UG/B.Tech Admission 2025",
     fileLink: "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view"
   },
@@ -121,7 +124,7 @@ const AnnouncementStrip = () => {
 const style = `
   @keyframes marquee {
     0% {
-      transform: translateX(30%);
+      transform: translateX(20%);
     }
     100% {
       transform: translateX(-100%);
@@ -131,7 +134,7 @@ const style = `
   @media (max-width: 640px) {
     @keyframes marquee {
       0% {
-        transform: translateX(15%);
+        transform: translateX(10%);
       }
       100% {
         transform: translateX(-100%);
