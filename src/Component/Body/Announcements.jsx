@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const toAdd = [
   {
-    fileName: "All Candidates who have already paid the fees in Round 1 do not need to pay again"
+    fileName: "All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation"
   },
   {
     fileName: "Seat freezing opportunity for applicants for UG/B.Tech Admission 2025",
@@ -134,7 +134,7 @@ const style = `
   @media (max-width: 640px) {
     @keyframes marquee {
       0% {
-        transform: translateX(10%);
+        transform: translateX(10 %);
       }
       100% {
         transform: translateX(-100%);

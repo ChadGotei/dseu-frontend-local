@@ -69,6 +69,9 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation."
+    },
+    {
       name: "Diploma Round 2 - Seat Confirmation process",
       link: "https://drive.google.com/file/d/1r2WB--buL2oQykhmEMccuS5axL27gqMd/view"
     },

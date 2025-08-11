@@ -64,6 +64,9 @@ const Page = () => {
             <p className="mt-1">
               The <strong>Postgraduate Round 1 seat allocation result</strong> has also been released.
             </p>
+            <p className="font-medium text-green-700">
+              ✅ All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation.
+            </p>
 
             <div className="flex md:flex-row md:gap-5 flex-col gap-0z">
               <Link
@@ -110,8 +113,8 @@ const Page = () => {
               📩 A payment link has been sent to your <strong>registered mobile number</strong>.
             </p>
             {/* <p className="font-medium text-red-600">
-              ⏳ Last date to complete payment: <strong>29th July, 11:59 PM</strong>.
-            </p> */}
+                ⏳ Last date to complete payment: <strong>29th July, 11:59 PM</strong>.
+              </p> */}
           </div>
 
           <p className="mt-4 font-medium text-gray-600">– Admission Cell, DSEU</p>
