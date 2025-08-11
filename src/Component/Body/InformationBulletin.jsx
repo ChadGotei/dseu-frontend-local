@@ -69,6 +69,10 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Seat Confirmation Process - PG",
+      link: "/seat-confirmation-pg.pdf"
+    },
+    {
       name: "Commencement of Classes for New Batch - Academic Session 2025-26",
       link: "https://drive.google.com/file/d/1vc-p-RJUSlpxtyCs5d-QglEr6nxwoXsN/view"
     },

@@ -119,14 +119,14 @@ const PgResult = () => {
       </div>
       
       {/* //TODO: CHANGE ACCORDING TO PDF */}
-      {/* <a
-        href="/seat-confirmation-ug.pdf"
+      <a
+        href="/seat-confirmation-pg.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block text-center bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 transition-colors"
       >
         View Seat Confirmation Process (PDF)
-      </a> */}
+      </a>
     </div>
   );
 };
