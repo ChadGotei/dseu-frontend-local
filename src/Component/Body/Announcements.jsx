@@ -4,37 +4,45 @@ import { useEffect, useState } from "react";
 
 const toAdd = [
   {
-    fileName: "All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation"
+    fileName:
+      "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September.",
   },
   {
-    fileName: "Seat freezing opportunity for applicants for UG/B.Tech Admission 2025",
-    fileLink: "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view"
+    fileName:
+      "All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation",
   },
   {
-    fileName: "Document verification dates for UG have been extended till Friday",
-    fileLink: "https://dseu.ac.in/admission/result/ug"
+    fileName:
+      "Seat freezing opportunity for applicants for UG/B.Tech Admission 2025",
+    fileLink:
+      "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view",
+  },
+  {
+    fileName:
+      "Document verification dates for UG have been extended till Friday",
+    fileLink: "https://dseu.ac.in/admission/result/ug",
   },
   {
     fileLink: "https://dseu.ac.in/admission/result/pg",
-    fileName: "Postgraduate results are now live!"
+    fileName: "Postgraduate results are now live!",
   },
   {
     fileName: "Refund form 2025 admissions",
-    fileLink: "https://drive.google.com/file/d/1ogrH8FlZ3FG36b44UVghbET0pLw-dHWE/view",
+    fileLink:
+      "https://drive.google.com/file/d/1ogrH8FlZ3FG36b44UVghbET0pLw-dHWE/view",
   },
   {
     fileName: "Diploma Cancelled seat data",
-    fileLink: "https://drive.google.com/file/d/1ZMnYb-piIHJUkYRtmRMH0woE3UztIPAC/view",
+    fileLink:
+      "https://drive.google.com/file/d/1ZMnYb-piIHJUkYRtmRMH0woE3UztIPAC/view",
   },
   {
-    fileLink: "https://dseu.ac.in/admission/result/ug",
-    fileName: "Undergraduate results are now live!"
+    fileLink:
+      "https://drive.google.com/file/d/1jyw7k5SHVq49ZUJGA7I9B05Hw1KnVGiN/view",
+    fileName:
+      "Syllabus and Exam Pattern for Deputy Registrar & Assistant Registrar",
   },
-  {
-    fileLink: "https://drive.google.com/file/d/1jyw7k5SHVq49ZUJGA7I9B05Hw1KnVGiN/view",
-    fileName: "Syllabus and Exam Pattern for Deputy Registrar & Assistant Registrar"
-  }
-]
+];
 
 const AnnouncementStrip = () => {
   const [announcements, setAnnouncements] = useState([]);
@@ -48,10 +56,7 @@ const AnnouncementStrip = () => {
   useEffect(() => {
     if (data) {
       if (data.data && Array.isArray(data.data.notices)) {
-        const updated = [
-          ...toAdd,
-          ...data.data.notices,
-        ];
+        const updated = [...toAdd, ...data.data.notices];
         setAnnouncements(updated);
       } else {
         setAnnouncements([{ fileName: toAdd, fileLink: "" }]);
@@ -74,10 +79,10 @@ const AnnouncementStrip = () => {
   if (!announcements || announcements.length === 0) {
     return (
       <div className="flex items-center justify-center h-12 bg-white border-y border-gray-200 w-full text-sm sm:text-base text-gray-500 italic text-center">
-        No announcements at the moment. Please check back soon or Check your internet!
+        No announcements at the moment. Please check back soon or Check your
+        internet!
       </div>
     );
-
   }
 
   return (

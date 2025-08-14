@@ -21,14 +21,19 @@ const fetchSectionNotices = async () => {
     sectionKeys.map(async (section) => {
       try {
         const res = await axios.get(
-          `${baseUrl}notice?section=${encodeURIComponent(section.key)}&limit=50&page=1`
+          `${baseUrl}notice?section=${encodeURIComponent(
+            section.key
+          )}&limit=50&page=1`
         );
         return {
           index: section.index,
           content: res.data?.data?.notices || [],
         };
       } catch (error) {
-        console.error(`Failed to fetch notices for section "${section.key}":`, error.message || error);
+        console.error(
+          `Failed to fetch notices for section "${section.key}":`,
+          error.message || error
+        );
         return {
           index: section.index,
           content: [],
@@ -69,31 +74,34 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September.",
+    },
+    {
       name: "Seat Confirmation Process - PG",
-      link: "/seat-confirmation-pg.pdf"
+      link: "/seat-confirmation-pg.pdf",
     },
     {
       name: "Commencement of Classes for New Batch - Academic Session 2025-26",
-      link: "https://drive.google.com/file/d/1vc-p-RJUSlpxtyCs5d-QglEr6nxwoXsN/view"
+      link: "https://drive.google.com/file/d/1vc-p-RJUSlpxtyCs5d-QglEr6nxwoXsN/view",
     },
     {
-      name: "All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation."
+      name: "All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation.",
     },
     {
       name: "Diploma Round 2 - Seat Confirmation process",
-      link: "https://drive.google.com/file/d/1r2WB--buL2oQykhmEMccuS5axL27gqMd/view"
+      link: "https://drive.google.com/file/d/1r2WB--buL2oQykhmEMccuS5axL27gqMd/view",
     },
     {
       name: "Diploma Round 2 results are now live",
-      link: "https://dseu.ac.in/admission/result/diploma/round2"
+      link: "https://dseu.ac.in/admission/result/diploma/round2",
     },
     {
       name: "Seat freezing opportunity for applicants for UG/B.Tech Admission 2025",
-      link: "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view"
+      link: "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view",
     },
     {
       name: "Document verification dates for UG have been extended till Friday",
-      link: "https://dseu.ac.in/admission/result/ug"
+      link: "https://dseu.ac.in/admission/result/ug",
     },
     {
       name: "Postgraduate results are now available!",
@@ -101,11 +109,11 @@ const InformationBulletin = () => {
     },
     {
       name: "Refund form 2025 admissions",
-      link: "https://drive.google.com/file/d/1ogrH8FlZ3FG36b44UVghbET0pLw-dHWE/view"
+      link: "https://drive.google.com/file/d/1ogrH8FlZ3FG36b44UVghbET0pLw-dHWE/view",
     },
     {
       name: "Diploma Cancelled seat data",
-      link: "https://drive.google.com/file/d/1ZMnYb-piIHJUkYRtmRMH0woE3UztIPAC/view"
+      link: "https://drive.google.com/file/d/1ZMnYb-piIHJUkYRtmRMH0woE3UztIPAC/view",
     },
     {
       name: "How to Pay Your Admission Fees Online (Step-by-Step Guide)",
@@ -114,7 +122,7 @@ const InformationBulletin = () => {
     {
       name: "Undergraduate results are now available!",
       link: "https://dseu.ac.in/admission/result/ug",
-    }
+    },
   ];
 
   if (data) {
@@ -194,9 +202,13 @@ const InformationBulletin = () => {
 
             <div className="relative flex-grow overflow-hidden group p-4">
               {isLoading ? (
-                <div className="text-center text-gray-500 italic">Loading...</div>
+                <div className="text-center text-gray-500 italic">
+                  Loading...
+                </div>
               ) : error ? (
-                <div className="text-center text-red-500">Error loading notices</div>
+                <div className="text-center text-red-500">
+                  Error loading notices
+                </div>
               ) : card.content.length === 0 ? (
                 <div className="my-auto p-2 text-center text-gray-500 italic">
                   No Notices available for now.
@@ -212,7 +224,9 @@ const InformationBulletin = () => {
                         <a
                           href={item.link}
                           target={item.samePage ? "_self" : "_blank"}
-                          rel={item.samePage ? undefined : "noopener noreferrer"}
+                          rel={
+                            item.samePage ? undefined : "noopener noreferrer"
+                          }
                           className="text-gray-700 hover:text-blue-900 flex items-center w-full"
                         >
                           {item.name}

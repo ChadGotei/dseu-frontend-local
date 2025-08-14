@@ -44,28 +44,24 @@ const Page = () => {
         </div>
 
         <div className="text-gray-800 text-sm md:text-base leading-relaxed space-y-6">
-
           {/* B.Tech Section */}
           <div className="space-y-2">
-            <p><strong>📢 Dear Applicant,</strong></p>
             <p>
-              The <strong>seat allocation result</strong> for <strong>B.Tech Round 1</strong> is now live.{" "}
+              <strong>📢 Dear Applicant,</strong>
             </p>
-
-            <p>
-              The <strong>Undergraduate Round 1 seat allocation result</strong> is also live <strong>(including Diploma in Pharmacy)</strong>.
-            </p>
-
-            <p>
-              Document verification dates for <strong>UG</strong> have been extended till <strong>Friday</strong>.
-            </p>
-
 
             <p className="mt-1">
-              The <strong>Postgraduate Round 1 seat allocation result</strong> has also been released.
+              The <strong>Postgraduate Round 1 seat allocation result</strong>{" "}
+              has also been released.
+            </p>
+            <p className="mt-1">
+              Registrations are now open for <strong>B.S. Optometry</strong> and{" "}
+              <strong>B.Des Jewellery Design</strong> programs until{" "}
+              <strong>3rd September</strong>.
             </p>
             <p className="font-medium text-green-700">
-              ✅ All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation.
+              ✅ All candidates who have already paid the fees in Round 1 do not
+              need to pay again, even after upgradation.
             </p>
 
             <div className="flex md:flex-row md:gap-5 flex-col gap-0z">
@@ -92,15 +88,14 @@ const Page = () => {
             </div>
           </div>
 
-
-
           <hr className="my-4 border-gray-300" />
 
           {/* Diploma Section */}
           <div className="space-y-2">
             <p>
-              The <strong>seat allocation result</strong> for <strong>Diploma Round 2</strong> of the current admission year is now live{" "}
-              <strong>(except Diploma in Pharmacy)</strong>.
+              The <strong>seat allocation result</strong> for{" "}
+              <strong>Diploma Round 2</strong> of the current admission year is
+              now live <strong>(except Diploma in Pharmacy)</strong>.
             </p>
             {/* <p>The result for <strong>PWD</strong> and <strong>Defence</strong> category students is also live.</p> */}
             <Link
@@ -110,14 +105,17 @@ const Page = () => {
               Diploma round 2 Result
             </Link>
             <p className="font-medium text-blue-700">
-              📩 A payment link has been sent to your <strong>registered mobile number</strong>.
+              📩 A payment link has been sent to your{" "}
+              <strong>registered mobile number</strong>.
             </p>
             {/* <p className="font-medium text-red-600">
                 ⏳ Last date to complete payment: <strong>29th July, 11:59 PM</strong>.
               </p> */}
           </div>
 
-          <p className="mt-4 font-medium text-gray-600">– Admission Cell, DSEU</p>
+          <p className="mt-4 font-medium text-gray-600">
+            – Admission Cell, DSEU
+          </p>
         </div>
       </div>
     </div>
