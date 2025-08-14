@@ -46,6 +46,19 @@ const UgResult = () => {
 
   return (
     <div className="py-20 flex items-center justify-center bg-gray-100 p-4 flex-col gap-10">
+      {/* <div className="flex gap-6 mb-10">
+        <button
+          className={`px-6 py-3 rounded-full bg-blue-600 text-white font-semibold `}>
+          Round 1
+        </button>
+        <button
+          className={`px-6 py-3 rounded-full bg-gray-200`}
+          onClick={() => navigate("/admission/result/ug/round2")}
+        >
+          Round 2
+        </button>
+      </div> */}
+
       <div className="flex flex-col items-center justify-center gap-6">
         <img alt="dseu logo" className="md:h-15 mt-[-30px]" src={dseulogo} />
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-blue-700 font-sans mt-5">

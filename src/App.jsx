@@ -8,6 +8,7 @@ import NotFound from './Component/NotFound/page.jsx';
 import UserLayout from './Component/Layouts/UserLayout.jsx';
 import UnderConstruction from "./Component/Reusable/UnderConstruction";
 import Home from './Component/Home/page.jsx';
+import UgRound2Result from "./Component/Result/Ug_round2/UgRound2Result.jsx";
 
 // Home page components
 const ChancellorMessage = lazy(() => import("./Component/Body/ChancellorMessage"));
@@ -102,6 +103,9 @@ const ShowDiplomaRound2 = lazy(() => import("./Component/Result/Diploma_round2/S
 
 const BtechRound2Result = lazy(() => import("./Component/Result/Btech_round2/BtechRound2Result.jsx"));
 const ShowBtechRound2 = lazy(() => import("./Component/Result/Btech_round2/ShowBtechRound2.jsx"));
+
+const UGRound2Result = lazy(() => import("./Component/Result/Ug_round2/UgRound2Result.jsx"));
+// const ShowBtechRound2 = lazy(() => import("./Component/Result/Btech_round2/ShowBtechRound2.jsx"));
 
 function App() {
   return (
@@ -211,6 +215,9 @@ function App() {
 
             {/* <Route path="/admission/result/btech/round2" element={<BtechRound2Result />} />
             <Route path="/admission/result/btech2/show" element={<ShowBtechRound2 />} /> */}
+
+             {/* <Route path="/admission/result/ug/round2" element={<UgRound2Result />} />
+            <Route path="/admission/result/ug2/show" element={<ShowDiplomaRound2 />} /> */}
  
             {/* Others */}
             <Route path="/Entrepreneurship" element={<Entrepreneurship />} />

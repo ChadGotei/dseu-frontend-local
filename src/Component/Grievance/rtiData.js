@@ -154,6 +154,11 @@ export const rtiData = {
   ],
   organization: [
     {
+      title: "FAA Order",
+      document: "Link",
+      path: "https://drive.google.com/file/d/1wR6h7U66eAxB5jKoPVuwxICBN38WSahH/view"
+    },
+    {
       title: "Office Order RTI",
       // date: "Mon, 19/08/2024 - 12:00",
       document: "Link",

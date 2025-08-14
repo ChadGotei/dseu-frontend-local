@@ -72,3 +72,24 @@ export const changeBtechRound2Status = async (id, status) => {
     throw error;
   }
 };
+
+
+export const getUgRound2Result = async (formData) => {
+  try {
+    const response = await api.post(
+      `/ug`,          // TODO: Change url
+      formData,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        }
+      }
+    );
+
+    return response.data;
+
+  } catch (error) {
+    // console.error(error);
+    throw error;
+  }
+}
