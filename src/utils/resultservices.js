@@ -31,3 +31,44 @@ export const changeDiplomaRound2Status = async (id, status) => {
     throw error;
   }
 };
+
+
+// TODO: change these two accordingly
+
+//? Diploma round 2 result
+export const getBtechRound2Result = async (formData) => {
+  try {
+    const response = await api.post(
+      `/ug`,         
+      formData,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        }
+      }
+    );
+
+    return response.data;
+
+  } catch (error) {
+    // console.error(error);
+    throw error;
+  }
+}
+
+
+export const changeBtechRound2Status = async (id, status) => {
+  try {
+    const response = await api.put(
+      `/result/second/${id}`,
+      { status },
+      {
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.error(error);  //! development
+    throw error;
+  }
+};

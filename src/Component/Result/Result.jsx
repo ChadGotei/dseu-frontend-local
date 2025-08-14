@@ -14,7 +14,6 @@ const Result = () => {
   const [isHindi, setIsHindi] = useState(false);
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
-  // const [round, setRound] = useState(2);
 
   const navigate = useNavigate();
 
@@ -77,8 +76,23 @@ const Result = () => {
         </div>
       }
 
+      {/* {category === "btech" &&
+        <div className="flex gap-6 mb-10">
+          <button
+            className={`px-6 py-3 rounded-full bg-blue-600 text-white font-semibold`}>
+            Round 1
+          </button>
+          <button
+            className={`px-6 py-3 rounded-full bg-gray-200`}
+            onClick={() => navigate("/admission/result/btech/round2")}
+          >
+            Round 2
+          </button>
+        </div>
+      } */}
+
       <div className="flex flex-col items-center justify-center gap-7">
-        <img alt="dseu logo" className="h-15 mt-[-30px]" src={dseulogo} />
+        <img alt="dseu logo" className="h-15" src={dseulogo} />
         <h2 className="text-2xl sm:text-2xl md:text-3xl font-extrabold text-center text-blue-700 font-sans mt-5">
           DSEU <span className="capitalize">{category === "diploma" ? "Diploma round 1" : "Btech"}</span> Seat Allocation
           <div className="mt-2 mx-auto w-[190px] h-1 bg-blue-600 rounded"></div>

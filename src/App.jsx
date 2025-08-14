@@ -100,6 +100,9 @@ const ShowPgResult = lazy(() => import("./Component/Result/PG/ShowPgResult.jsx")
 const DiplomaRound2Result = lazy(() => import("./Component/Result/Diploma_round2/DiplomaRound2Result.jsx"));
 const ShowDiplomaRound2 = lazy(() => import("./Component/Result/Diploma_round2/ShowDiplomaRound2.jsx"));
 
+const BtechRound2Result = lazy(() => import("./Component/Result/Btech_round2/BtechRound2Result.jsx"));
+const ShowBtechRound2 = lazy(() => import("./Component/Result/Btech_round2/ShowBtechRound2.jsx"));
+
 function App() {
   return (
     <BrowserRouter>
@@ -205,6 +208,9 @@ function App() {
 
             <Route path="/admission/result/diploma/round2" element={<DiplomaRound2Result />} />
             <Route path="/admission/result/diploma2/show" element={<ShowDiplomaRound2 />} />
+
+            {/* <Route path="/admission/result/btech/round2" element={<BtechRound2Result />} />
+            <Route path="/admission/result/btech2/show" element={<ShowBtechRound2 />} /> */}
  
             {/* Others */}
             <Route path="/Entrepreneurship" element={<Entrepreneurship />} />
