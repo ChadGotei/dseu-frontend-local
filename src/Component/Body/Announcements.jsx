@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 
 const toAdd = [
   {
+    fileName: "Schedule of Scrutiny Committee Interaction for the post of Deputy Registrar",
+    fileLink: "https://drive.google.com/file/d/12O1hcTr5EHooo-9O10a5spuoC8fD1wTs/view"
+  },
+  {
     fileName:
       "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September.",
   },
@@ -17,11 +21,11 @@ const toAdd = [
     fileLink:
       "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view",
   },
-  {
-    fileName:
-      "Document verification dates for UG have been extended till Friday",
-    fileLink: "https://dseu.ac.in/admission/result/ug",
-  },
+  // {
+  //   fileName:
+  //     "Document verification dates for UG have been extended till Friday",
+  //   fileLink: "https://dseu.ac.in/admission/result/ug",
+  // },
   {
     fileLink: "https://dseu.ac.in/admission/result/pg",
     fileName: "Postgraduate results are now live!",
