@@ -73,11 +73,11 @@ export const changeBtechRound2Status = async (id, status) => {
   }
 };
 
-
+//? DONE :)
 export const getUgRound2Result = async (formData) => {
   try {
     const response = await api.post(
-      `/ug`,          // TODO: Change url
+      `/ug?round=second`,         
       formData,
       {
         headers: {
@@ -93,3 +93,19 @@ export const getUgRound2Result = async (formData) => {
     throw error;
   }
 }
+
+export const changeUgRound2Status = async (id, status) => {
+  try {
+    const response = await api.put(
+      `/ug/${id}?round=second`,
+      { status },
+      {
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.error(error);  //! development
+    throw error;
+  }
+};
