@@ -54,12 +54,19 @@ const Page = () => {
               The <strong>Postgraduate Round 1 seat allocation result</strong>{" "}
               has also been released.
             </p>
+
+            {/* Added New Announcements */}
+            <p className="mt-1">
+              The <strong>Undergraduate Round 2</strong> and <strong>B.Tech Round 2</strong> seat allocation results are now live.
+            </p>
+
+
             <p className="font-medium text-green-700">
               ✅ All candidates who have already paid the fees in Round 1 do not
               need to pay again, even after upgradation.
             </p>
 
-            <div className="flex md:flex-row md:gap-5 flex-col gap-0z">
+            <div className="flex md:flex-row md:gap-5 flex-col gap-0">
               <Link
                 to="/admission/result/pg"
                 className="inline-block mt-2 bg-amber-500 hover:bg-amber-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
@@ -68,20 +75,22 @@ const Page = () => {
               </Link>
 
               <Link
-                to="/admission/result/ug"
+                to="/admission/result/ug/round2"
                 className="inline-block mt-2 bg-purple-600 hover:bg-purple-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
               >
-                View Undergraduate Result
+                View UG Round 2 Result
               </Link>
 
               <Link
-                to="/admission/result?category=btech"
-                className="inline-block mt-2 bg-green-600 hover:bg-green-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
+                to="/admission/result/btech/round2"
+                className="inline-block mt-2 bg-teal-600 hover:bg-teal-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
               >
-                View B.Tech Result
+                View B.Tech Round 2
               </Link>
             </div>
           </div>
+
+
 
           <hr className="my-4 border-gray-300" />
 
