@@ -76,7 +76,7 @@ const Result = () => {
         </div>
       }
 
-      {category === "btech" &&
+      {/* {category === "btech" &&
         <div className="flex gap-6 mb-10">
           <button
             className={`px-6 py-3 rounded-full bg-blue-600 text-white font-semibold`}>
@@ -89,7 +89,7 @@ const Result = () => {
             Round 2
           </button>
         </div>
-      }
+      } */}
 
       <div className="flex flex-col items-center justify-center gap-7">
         <img alt="dseu logo" className="h-15" src={dseulogo} />

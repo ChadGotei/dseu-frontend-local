@@ -7,10 +7,10 @@ const toAdd = [
     fileName: "Undergraduate round 2 results are now live!",
     fileLink: "https://dseu.ac.in/admission/result/ug/round2"
   },
-  {
-    fileName: "Btech round 2 results are now live!",
-    fileLink: "https://dseu.ac.in/admission/result/btech/round2"
-  },
+  // {
+  //   fileName: "Btech round 2 results are now live!",
+  //   fileLink: "https://dseu.ac.in/admission/result/btech/round2"
+  // },
   {
     fileName: "Schedule of Scrutiny Committee Interaction for the post of Deputy Registrar",
     fileLink: "https://drive.google.com/file/d/12O1hcTr5EHooo-9O10a5spuoC8fD1wTs/view"

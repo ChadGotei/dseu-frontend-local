@@ -81,11 +81,17 @@ const Page = () => {
                 View UG Round 2 Result
               </Link>
 
-              <Link
+              {/* <Link
                 to="/admission/result/btech/round2"
                 className="inline-block mt-2 bg-teal-600 hover:bg-teal-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
               >
                 View B.Tech Round 2
+              </Link> */}
+              <Link
+                to="/admission/result?category=btech"
+                className="inline-block mt-2 bg-teal-600 hover:bg-teal-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
+              >
+                View B.Tech Result
               </Link>
             </div>
           </div>

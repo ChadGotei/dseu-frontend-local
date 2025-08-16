@@ -212,8 +212,8 @@ function App() {
             <Route path="/admission/result/diploma/round2" element={<DiplomaRound2Result />} />
             <Route path="/admission/result/diploma2/show" element={<ShowDiplomaRound2 />} />
 
-            <Route path="/admission/result/btech/round2" element={<BtechRound2Result />} />
-            <Route path="/admission/result/btech2/show" element={<ShowBtechRound2 />} />
+            {/* <Route path="/admission/result/btech/round2" element={<BtechRound2Result />} />
+            <Route path="/admission/result/btech2/show" element={<ShowBtechRound2 />} /> */}
 
             <Route path="/admission/result/ug/round2" element={<UGRound2Result />} />
             <Route path="/admission/result/ug2/show" element={<ShowUgRound2 />} />

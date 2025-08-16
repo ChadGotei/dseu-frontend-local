@@ -77,10 +77,10 @@ const InformationBulletin = () => {
       name: "Undergraduate round 2 results are now live",
       link: "https://dseu.ac.in/admission/result/ug/round2"
     },
-    {
-      name: "Btech round 2 results are now live",
-      link: "https://dseu.ac.in/admission/result/btech/round2"
-    },
+    // {
+    //   name: "Btech round 2 results are now live",
+    //   link: "https://dseu.ac.in/admission/result/btech/round2"
+    // },
     {
       name: "Seat Confirmation Process - PG",
       link: "/seat-confirmation-pg.pdf",
