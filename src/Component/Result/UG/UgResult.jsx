@@ -46,7 +46,7 @@ const UgResult = () => {
 
   return (
     <div className="py-20 flex items-center justify-center bg-gray-100 p-4 flex-col gap-10">
-      {/* <div className="flex gap-6 mb-10">
+      <div className="flex gap-6 mb-10">
         <button
           className={`px-6 py-3 rounded-full bg-blue-600 text-white font-semibold `}>
           Round 1
@@ -57,7 +57,7 @@ const UgResult = () => {
         >
           Round 2
         </button>
-      </div> */}
+      </div>
 
       <div className="flex flex-col items-center justify-center gap-6">
         <img alt="dseu logo" className="md:h-15 mt-[-30px]" src={dseulogo} />

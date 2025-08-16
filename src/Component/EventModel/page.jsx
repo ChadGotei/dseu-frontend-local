@@ -54,11 +54,6 @@ const Page = () => {
               The <strong>Postgraduate Round 1 seat allocation result</strong>{" "}
               has also been released.
             </p>
-            <p className="mt-1">
-              Registrations are now open for <strong>B.S. Optometry</strong> and{" "}
-              <strong>B.Des Jewellery Design</strong> programs until{" "}
-              <strong>3rd September</strong>.
-            </p>
             <p className="font-medium text-green-700">
               ✅ All candidates who have already paid the fees in Round 1 do not
               need to pay again, even after upgradation.

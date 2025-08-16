@@ -74,9 +74,6 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
-      name: "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September.",
-    },
-    {
       name: "Seat Confirmation Process - PG",
       link: "/seat-confirmation-pg.pdf",
     },

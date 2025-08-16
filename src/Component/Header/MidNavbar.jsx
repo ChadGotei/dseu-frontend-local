@@ -87,7 +87,7 @@ const navItems = [
       },
       {
         name: "UG Seat Allocation",
-        path: "/admission/result/ug"
+        path: "/admission/result/ug/round2"
       },
       {
         name: "Diploma Seat Allocation",
@@ -95,7 +95,7 @@ const navItems = [
       },
       {
         name: "Btech seat Allocation",
-        path: "/admission/result?category=btech"
+        path: "/admission/result/btech/round2"
       },
       {
         name: "Information Bulletin",

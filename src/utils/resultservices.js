@@ -33,13 +33,11 @@ export const changeDiplomaRound2Status = async (id, status) => {
 };
 
 
-// TODO: change these two accordingly
-
-//? Diploma round 2 result
+//? Btech round 2 result
 export const getBtechRound2Result = async (formData) => {
   try {
     const response = await api.post(
-      `/ug`,         
+      `/btech/second`,         
       formData,
       {
         headers: {
@@ -60,7 +58,7 @@ export const getBtechRound2Result = async (formData) => {
 export const changeBtechRound2Status = async (id, status) => {
   try {
     const response = await api.put(
-      `/result/second/${id}`,
+      `/btech/second/${id}`,
       { status },
       {
         headers: { "Content-Type": "application/json" },
