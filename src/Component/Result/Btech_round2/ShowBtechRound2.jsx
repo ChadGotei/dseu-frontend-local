@@ -171,6 +171,9 @@ const ShowBtechRound2 = () => {
                                 </div>
                             )}
                             <ButtonsDescription student={student} />
+
+                            {/* <ButtonsDescription student={student} onlyTwoButtons={true} /> */}
+                            {/* //! agar vo sirf 2 buttons dikhane ki bole toh ye prop de diyo */}
                         </>
                     )}
 
