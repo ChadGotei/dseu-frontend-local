@@ -50,16 +50,17 @@ const Page = () => {
               <strong>📢 Dear Applicant,</strong>
             </p>
 
-            <p className="mt-1">
+            {/* <p className="mt-1">
               The <strong>Postgraduate Round 1 seat allocation result</strong>{" "}
               has also been released.
-            </p>
+            </p> */}
 
             {/* Added New Announcements */}
             <p className="mt-1">
-              The <strong>Undergraduate Round 2</strong> and <strong>B.Tech Round 2</strong> seat allocation results are now live.
+              The <strong>Undergraduate Round 2</strong> and{" "}
+              <strong>B.Tech Round 2</strong> seat allocation results are now
+              live.
             </p>
-
 
             <p className="font-medium text-green-700">
               ✅ All candidates who have already paid the fees in Round 1 do not
@@ -81,39 +82,38 @@ const Page = () => {
                 View UG Round 2 Result
               </Link>
 
-              {/* <Link
+              <Link
                 to="/admission/result/btech/round2"
                 className="inline-block mt-2 bg-teal-600 hover:bg-teal-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
               >
                 View B.Tech Round 2
-              </Link> */}
-              <Link
+              </Link>
+              {/* <Link
                 to="/admission/result?category=btech"
                 className="inline-block mt-2 bg-teal-600 hover:bg-teal-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
               >
                 View B.Tech Result
-              </Link>
+              </Link> */}
             </div>
           </div>
-
-
 
           <hr className="my-4 border-gray-300" />
 
           {/* Diploma Section */}
           <div className="space-y-2">
-            <p>
+            {/* <p>
               The <strong>seat allocation result</strong> for{" "}
               <strong>Diploma Round 2</strong> of the current admission year is
               now live <strong>(except Diploma in Pharmacy)</strong>.
-            </p>
+            </p>*/}
             {/* <p>The result for <strong>PWD</strong> and <strong>Defence</strong> category students is also live.</p> */}
-            <Link
+            {/*<Link
               to="/admission/result/diploma/round2"
               className="inline-block mt-1 bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
             >
               Diploma round 2 Result
-            </Link>
+            </Link>}
+            */}
             <p className="font-medium text-blue-700">
               📩 A payment link has been sent to your{" "}
               <strong>registered mobile number</strong>.
