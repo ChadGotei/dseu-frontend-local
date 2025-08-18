@@ -24,10 +24,11 @@ const Footer = () => {
   };
 
   return (
-    <footer
-      className="bg-blue-50 text-black py-12 border-t-2 border-blue-300 shadow-lg"
-      style={{ fontFamily: "'Inter', sans-serif" }}
-    >
+    <>
+      <footer
+        className="bg-blue-50 text-black py-12 border-t-2 border-blue-300 shadow-lg"
+        style={{ fontFamily: "'Inter', sans-serif" }}
+      >
       <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-between items-start">
         <div className="w-full md:w-1/3 text-center md:text-left mb-8 md:mb-0">
           <img
@@ -45,11 +46,11 @@ const Footer = () => {
               className="mr-3"
               style={{ color: "#F97316", fontSize: "1.25rem" }}
             />
-            <span className="text-black">
-              Delhi Skill and Entrepreneurship University,
-              <br />
-              Sector-9, Dwarka, New Delhi- 110077
-            </span>
+                         <span className="text-black">
+               Delhi Skill and Entrepreneurship University,
+               <br />
+               Sector-9, Dwarka, New Delhi- 110077
+             </span>
           </p>
           <p className="mt-6 text-base">
             <FontAwesomeIcon
@@ -147,9 +148,19 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-      </div>
-    </footer>
-  );
-};
+             </div>
+     </footer>
+     
+     {/* Copyright Section - Positioned at very bottom */}
+     <div className="bg-blue-900 text-white py-3">
+       <div className="max-w-7xl mx-auto px-6 text-center">
+         <p className="text-[10px] sm:text-xs md:text-sm text-gray-300">
+           © 2025 DELHI SKILL AND ENTREPRENEURSHIP UNIVERSITY, DELHI 110077. All Rights Reserved.
+         </p>
+       </div>
+     </div>
+     </>
+   );
+ };
 
 export default Footer;
