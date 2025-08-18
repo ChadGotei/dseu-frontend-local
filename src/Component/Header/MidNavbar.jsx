@@ -98,6 +98,10 @@ const navItems = [
         path: "/admission/result/btech/round2"
       },
       {
+        name: "Fee Refund Policy",
+        path: "https://drive.google.com/file/d/1ogrH8FlZ3FG36b44UVghbET0pLw-dHWE/view",
+      },
+      {
         name: "Information Bulletin",
         path: "/admission/information-bulletin",
       },
@@ -116,11 +120,7 @@ const navItems = [
       {
         name: "Process and guidelines",
         path: "/admission/process-and-guidelines",
-      },
-      {
-        name: "Fee Refund Policy",
-        path: "/admission/refund-policy",
-      },
+      }
     ],
   },
   {
