@@ -6,7 +6,7 @@ const PopUpModal = ({ title, onClose, links }) => {
         onClick={onClose}
       />
 
-      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white shadow-2xl rounded-xl z-50 p-6 w-[90%] max-w-md border border-gray-200">
+      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white shadosp-6 w-[90%] max-w-md border border-gray-200">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-semibold text-gray-800">{title}</h1>
           <button

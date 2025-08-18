@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 
 const toAdd = [
   {
+    fileName: "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September"
+  },
+  {
     fileName: "Undergraduate round 2 results are now live!",
     fileLink: "https://dseu.ac.in/admission/result/ug/round2",
   },
@@ -27,11 +30,6 @@ const toAdd = [
     fileLink:
       "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view",
   },
-  // {
-  //   fileName:
-  //     "Document verification dates for UG have been extended till Friday",
-  //   fileLink: "https://dseu.ac.in/admission/result/ug",
-  // },
   {
     fileLink: "https://dseu.ac.in/admission/result/pg",
     fileName: "Postgraduate results are now live!",

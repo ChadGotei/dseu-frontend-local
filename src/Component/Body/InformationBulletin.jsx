@@ -74,6 +74,9 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September"
+    },
+    {
       name: "Undergraduate round 2 results are now live",
       link: "https://dseu.ac.in/admission/result/ug/round2",
     },
@@ -96,10 +99,10 @@ const InformationBulletin = () => {
       name: "Diploma Round 2 - Seat Confirmation process",
       link: "https://drive.google.com/file/d/1r2WB--buL2oQykhmEMccuS5axL27gqMd/view",
     },
-    {
-      name: "Diploma Round 2 results are now live",
-      link: "https://dseu.ac.in/admission/result/diploma/round2",
-    },
+    // {
+    //   name: "Diploma Round 2 results are now live",
+    //   link: "https://dseu.ac.in/admission/result/diploma/round2",
+    // },
     {
       name: "Seat freezing opportunity for applicants for UG/B.Tech Admission 2025",
       link: "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view",

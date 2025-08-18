@@ -69,6 +69,7 @@ const Page = () => {
               <strong>B.Tech Round 2</strong> seat allocation results are now live.
             </p>
 
+
             <p className="font-medium text-green-700">
               ✅ All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation.
             </p>
@@ -106,6 +107,12 @@ const Page = () => {
           </div>
 
           <hr className="my-3 border-gray-200" />
+
+
+          <p className="font-medium ">
+            🎓 Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until <strong>3rd September</strong>.
+          </p>
+ 
 
           {/* Payment info */}
           <div>
