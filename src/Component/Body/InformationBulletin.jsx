@@ -74,7 +74,8 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
-      name: "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September"
+      name: "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September",
+      link: "https://dseuadm.samarth.edu.in/ug/"
     },
     {
       name: "Undergraduate round 2 results are now live",

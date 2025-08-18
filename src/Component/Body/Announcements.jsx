@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 
 const toAdd = [
   {
-    fileName: "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September"
+    fileName: "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September",
+    fileLink: "https://dseuadm.samarth.edu.in/ug/"
   },
   {
     fileName: "Undergraduate round 2 results are now live!",

@@ -108,11 +108,16 @@ const Page = () => {
 
           <hr className="my-3 border-gray-200" />
 
+          <a
+            href="https://dseuadm.samarth.edu.in/ug/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p className="font-medium mt-4 hover:text-gray-600">
+              🎓 Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until <strong>3rd September</strong>.
+            </p>
+          </a>
 
-          <p className="font-medium ">
-            🎓 Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until <strong>3rd September</strong>.
-          </p>
- 
 
           {/* Payment info */}
           <div>
