@@ -77,6 +77,10 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Student grievances for Btech round 2",
+      link: "https://forms.gle/C9keB1hnPjHFjx6q8"
+    },
+    {
       name: "Information Bulletin 2025",
       link: "https://drive.google.com/file/d/16mO1wuwK40lwRe4uAz5_iDT5aqtqBFsY/view"
     },

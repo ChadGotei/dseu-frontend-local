@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 
 const toAdd = [
   {
+    fileName: "Student grievances for Btech round 2",
+    fileLink: "https://forms.gle/C9keB1hnPjHFjx6q8"
+  },
+  {
     fileName: "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September",
     fileLink: "https://dseuadm.samarth.edu.in/ug/"
   },
