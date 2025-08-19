@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "react-router-dom";
 import { getInformationBulletinOptions } from "../Admin/adminConstant";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileCirclePlus, faPlus } from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +9,8 @@ import UploadModal from "../Admin/UploadModal";
 import OrangeLoader from "../PageLoader/OrangeLoader";
 
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
+const apiBase =
+  baseUrl && baseUrl.endsWith("/") ? baseUrl : `${baseUrl || ""}/`;
 
 const sectionKeys = [
   { key: "admission", index: 0 },
@@ -21,7 +24,7 @@ const fetchSectionNotices = async () => {
     sectionKeys.map(async (section) => {
       try {
         const res = await axios.get(
-          `${baseUrl}notice?section=${encodeURIComponent(
+          `${apiBase}notice?section=${encodeURIComponent(
             section.key
           )}&limit=50&page=1`
         );
@@ -75,7 +78,7 @@ const InformationBulletin = () => {
   const admissionManuals = [
     {
       name: "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September",
-      link: "https://dseuadm.samarth.edu.in/ug/"
+      link: "https://dseuadm.samarth.edu.in/ug/",
     },
     {
       name: "Undergraduate round 2 results are now live",
@@ -206,7 +209,14 @@ const InformationBulletin = () => {
             style={{ height: "400px" }}
           >
             <h3 className="text-xl font-semibold px-3 py-2 text-blue-800 border-b border-blue-200 text-center">
-              {card.title}
+              <Link
+                to={`/informationbulletin?section=${encodeURIComponent(
+                  sectionKeys[index]?.key || ""
+                )}`}
+                className="hover:underline focus:underline outline-none"
+              >
+                {card.title}
+              </Link>
             </h3>
 
             <div className="relative flex-grow overflow-hidden group p-4">

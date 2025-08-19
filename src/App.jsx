@@ -8,6 +8,7 @@ import NotFound from "./Component/NotFound/page.jsx";
 import UserLayout from "./Component/Layouts/UserLayout.jsx";
 import UnderConstruction from "./Component/Reusable/UnderConstruction";
 import Home from "./Component/Home/page.jsx";
+const ExtendedBulletin = lazy(() => import("./Component/Information Bulletin/ExtendedBulletin.jsx"));
 
 // Home page components
 const ChancellorMessage = lazy(() =>
@@ -274,6 +275,7 @@ function App() {
               element={<ProcessAndGuidelines />}
             />
             <Route path="/admission/information-bulletin" element={<IB />} />
+            <Route path="/informationbulletin" element={<ExtendedBulletin />} />
 
             {/* Misc */}
             <Route path="/holiday-calendar" element={<HolidayCalendar />} />
