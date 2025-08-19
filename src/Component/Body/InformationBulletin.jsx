@@ -74,6 +74,10 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Information Bulletin 2025",
+      link: "https://drive.google.com/file/d/16mO1wuwK40lwRe4uAz5_iDT5aqtqBFsY/view"
+    },
+    {
       name: "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September",
       link: "https://dseuadm.samarth.edu.in/ug/"
     },
@@ -127,11 +131,7 @@ const InformationBulletin = () => {
     {
       name: "How to Pay Your Admission Fees Online (Step-by-Step Guide)",
       link: "https://drive.google.com/file/d/1dV-ujr-aZGG4uNb20h229NpBM8McyC-F/view",
-    },
-    {
-      name: "Undergraduate results are now available!",
-      link: "https://dseu.ac.in/admission/result/ug",
-    },
+    }
   ];
 
   if (data) {
