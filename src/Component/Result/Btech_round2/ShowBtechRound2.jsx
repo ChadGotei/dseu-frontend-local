@@ -190,7 +190,7 @@ const ShowBtechRound2 = () => {
                     >
                         View Seat Confirmation Process (PDF)
                     </a>
-                </div> */}
+          </div> */}
       </div>
     </div>
   );

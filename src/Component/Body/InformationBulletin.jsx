@@ -77,8 +77,14 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
-      name: "Student grievances for Btech round 2",
+      name: "Sliding form is active for B.Tech students till 20th August, 11:59 PM"
+    },
+    {
+      name: "Btech sliding form",
       link: "https://forms.gle/C9keB1hnPjHFjx6q8"
+    },
+    {
+      name: "B.Tech and UG Round 2 admissions are now closed"
     },
     {
       name: "Information Bulletin 2025",
@@ -87,14 +93,6 @@ const InformationBulletin = () => {
     {
       name: "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September",
       link: "https://dseuadm.samarth.edu.in/ug/",
-    },
-    {
-      name: "Undergraduate round 2 results are now live",
-      link: "https://dseu.ac.in/admission/result/ug/round2",
-    },
-    {
-      name: "Btech round 2 results are now live",
-      link: "https://dseu.ac.in/admission/result/btech/round2",
     },
     {
       name: "Seat Confirmation Process - PG",
@@ -107,18 +105,14 @@ const InformationBulletin = () => {
     {
       name: "All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation.",
     },
-    {
-      name: "Diploma Round 2 - Seat Confirmation process",
-      link: "https://drive.google.com/file/d/1r2WB--buL2oQykhmEMccuS5axL27gqMd/view",
-    },
     // {
-    //   name: "Diploma Round 2 results are now live",
-    //   link: "https://dseu.ac.in/admission/result/diploma/round2",
+    //   name: "Diploma Round 2 - Seat Confirmation process",
+    //   link: "https://drive.google.com/file/d/1r2WB--buL2oQykhmEMccuS5axL27gqMd/view",
     // },
-    {
-      name: "Seat freezing opportunity for applicants for UG/B.Tech Admission 2025",
-      link: "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view",
-    },
+    // {
+    //   name: "Seat freezing opportunity for applicants for UG/B.Tech Admission 2025",
+    //   link: "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view",
+    // },
     {
       name: "Document verification dates for UG have been extended till Friday",
       link: "https://dseu.ac.in/admission/result/ug",

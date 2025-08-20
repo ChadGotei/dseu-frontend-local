@@ -65,10 +65,8 @@ const Page = () => {
             </p>
 
             <p>
-              The <strong>Undergraduate Round 2</strong> and{" "}
-              <strong>B.Tech Round 2</strong> seat allocation results are now live.
+              The <strong>Postgraduate</strong> Results are now live.
             </p>
-
 
             <p className="font-medium text-green-700">
               ✅ All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation.
@@ -83,6 +81,21 @@ const Page = () => {
               </span>
             </p>
 
+            <a
+              href="https://forms.gle/C9keB1hnPjHFjx6q8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block mt-2"
+            >
+              <div className="inline-flex items-start gap-2 text-red-600 font-medium hover:text-red-500">
+                <span aria-hidden>🔄</span>
+                <span>
+                  Sliding form is active for <strong>B.Tech students</strong> till{" "}
+                  <strong>20th August, 11:59 PM.</strong>
+                </span>
+              </div>
+            </a>
+
             {/* CTAs */}
             <div className="flex md:flex-row md:gap-4 flex-col gap-2 pt-1">
               <Link
@@ -91,7 +104,7 @@ const Page = () => {
               >
                 View PG Result
               </Link>
-              <Link
+              {/* <Link
                 to="/admission/result/ug/round2"
                 className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium px-4 py-2 rounded-lg transition-colors text-center"
               >
@@ -102,7 +115,7 @@ const Page = () => {
                 className="inline-block bg-teal-600 hover:bg-teal-700 text-white font-medium px-4 py-2 rounded-lg transition-colors text-center"
               >
                 View B.Tech Round 2
-              </Link>
+              </Link> */}
             </div>
           </div>
 

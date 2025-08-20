@@ -4,20 +4,19 @@ import { useEffect, useState } from "react";
 
 const toAdd = [
   {
-    fileName: "Student grievances for Btech round 2",
+    fileName: "Sliding form is active for B.Tech students till 20th August, 11:59 PM",
     fileLink: "https://forms.gle/C9keB1hnPjHFjx6q8"
+  },
+  {
+    fileName: "Btech sliding form",
+    fileLink: "https://forms.gle/C9keB1hnPjHFjx6q8"
+  },
+  {
+    fileName: "B.Tech and UG Round 2 admissions are now closed"
   },
   {
     fileName: "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September",
     fileLink: "https://dseuadm.samarth.edu.in/ug/"
-  },
-  {
-    fileName: "Undergraduate round 2 results are now live!",
-    fileLink: "https://dseu.ac.in/admission/result/ug/round2",
-  },
-  {
-    fileName: "Btech round 2 results are now live!",
-    fileLink: "https://dseu.ac.in/admission/result/btech/round2",
   },
   {
     fileName:
@@ -152,7 +151,7 @@ const style = `
   @media (max-width: 640px) {
     @keyframes marquee {
       0% {
-        transform: translateX(10 %);
+        transform: translateX(10%);
       }
       100% {
         transform: translateX(-100%);
