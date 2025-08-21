@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { FiInfo, FiCalendar } from "react-icons/fi";
+import { FiInfo, FiExternalLink } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 const Page = () => {
@@ -28,6 +28,9 @@ const Page = () => {
 
   if (!showModal) return null;
 
+  const spotPdf =
+    "https://drive.google.com/file/d/1Hlan617cy5zftPo_aUK0tOL0mgTc6zdp/view";
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 overflow-y-auto"
@@ -43,6 +46,7 @@ const Page = () => {
           onClick={() => setShowModal(false)}
           className="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-2xl font-bold leading-none"
           aria-label="Close"
+          type="button"
         >
           &times;
         </button>
@@ -50,96 +54,67 @@ const Page = () => {
         {/* Header */}
         <div className="flex items-center gap-3 mb-5">
           <div className="bg-blue-100 text-blue-700 p-2.5 rounded-full">
-            <FiInfo className="text-xl" />
+            <FiInfo className="text-xl" aria-hidden="true" />
           </div>
-          <h2 id="admission-modal-title" className="text-base sm:text-xl font-semibold text-blue-800">
+          <h2
+            id="admission-modal-title"
+            className="text-xl sm:text-2xl font-semibold text-blue-800"
+          >
             Admission Notifications
           </h2>
         </div>
 
-        <div className="text-gray-800 text-sm md:text-base leading-relaxed space-y-4">
+        {/* Body */}
+        <div className="text-gray-800 text-base sm:text-base leading-relaxed space-y-5">
           {/* Greeting + Key notices */}
-          <div className="space-y-3">
-            <p>
-              <strong>📢 Dear Applicant,</strong>
-            </p>
+          <div className="space-y-4">
+            <p className="text-lg font-medium">📢 Dear Applicant,</p>
 
-            <p>
-              The <strong>Postgraduate</strong> Results are now live.
-            </p>
-
-            <p className="font-medium text-green-700">
-              ✅ All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation.
-            </p>
-
-            {/* Uniform line for document verification (no card/box) */}
-            <p className="flex items-start gap-2">
-              <FiCalendar className="mt-0.5 shrink-0 text-gray-600" />
-              <span>
-                <span className="font-medium">Document verification at campus:</span>{" "}
-                <strong>18th, 19th and 20th Aug, 2025</strong>.
-              </span>
-            </p>
-
-            <a
-              href="https://forms.gle/C9keB1hnPjHFjx6q8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block mt-2"
-            >
-              <div className="inline-flex items-start gap-2 text-red-600 font-medium hover:text-red-500">
-                <span aria-hidden>🔄</span>
+            {/* SPOT round for BTech: partial bold + dates + view PDF */}
+            <div className="space-y-2">
+              <a
+                href={spotPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium"
+              >
+                <FiExternalLink className="shrink-0" aria-hidden="true" />
                 <span>
-                  Sliding form is active for <strong>B.Tech students</strong> till{" "}
-                  <strong>20th August, 11:59 PM.</strong>
+                  Guidelines for <strong>SPOT round for Btech</strong>
                 </span>
-              </div>
-            </a>
+              </a>
 
-            {/* CTAs */}
-            <div className="flex md:flex-row md:gap-4 flex-col gap-2 pt-1">
-              <Link
-                to="/admission/result/pg"
-                className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-medium px-4 py-2 rounded-lg transition-colors text-center"
+              <p className="text-gray-800">
+                Dates: <strong>25 August 2025</strong> &amp;{" "}
+                <strong>26 August 2025</strong>
+              </p>
+
+              <p className="text-gray-600">View PDF for more details.</p>
+
+              <a
+                href={spotPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
               >
-                View PG Result
-              </Link>
-              {/* <Link
-                to="/admission/result/ug/round2"
-                className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium px-4 py-2 rounded-lg transition-colors text-center"
-              >
-                View UG Round 2 Result
-              </Link>
-              <Link
-                to="/admission/result/btech/round2"
-                className="inline-block bg-teal-600 hover:bg-teal-700 text-white font-medium px-4 py-2 rounded-lg transition-colors text-center"
-              >
-                View B.Tech Round 2
-              </Link> */}
+                View PDF
+              </a>
             </div>
           </div>
 
-          <hr className="my-3 border-gray-200" />
-
+          {/* Registrations notice */}
           <a
             href="https://dseuadm.samarth.edu.in/ug/"
             target="_blank"
             rel="noopener noreferrer"
+            className="font-medium hover:text-gray-700 block"
           >
-            <p className="font-medium mt-4 hover:text-gray-600">
-              🎓 Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until <strong>3rd September</strong>.
-            </p>
+            🎓 Registrations are now open for B.S. Optometry and B.Des Jewellery
+            Design programs until <strong>3rd September</strong>.
           </a>
 
-
-          {/* Payment info */}
-          <div>
-            <p className="font-medium text-blue-700">
-              📩 A payment link has been sent to your <strong>registered mobile number</strong>.
-            </p>
-          </div>
-
-          <p className="pt-1 font-medium text-gray-600">– Admission Cell, DSEU</p>
+          {/* Signature */}
+          <p className="font-medium text-gray-700">– Admission Cell, DSEU</p>
         </div>
       </div>
     </div>

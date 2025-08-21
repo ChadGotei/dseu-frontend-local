@@ -77,7 +77,8 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
-      name: "Sliding form is active for B.Tech students till 20th August, 11:59 PM"
+      name: "Guidelines for SPOT round for Btech",
+      link: "https://drive.google.com/file/d/1Hlan617cy5zftPo_aUK0tOL0mgTc6zdp/view"
     },
     {
       name: "Btech sliding form",

@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 
 const toAdd = [
   {
-    fileName: "Sliding form is active for B.Tech students till 20th August, 11:59 PM",
-    fileLink: "https://forms.gle/C9keB1hnPjHFjx6q8"
+    fileName: "Guidelines for SPOT round for Btech",
+    fileLink: "https://drive.google.com/file/d/1Hlan617cy5zftPo_aUK0tOL0mgTc6zdp/view"
   },
   {
     fileName: "Btech sliding form",
@@ -116,7 +116,11 @@ const AnnouncementStrip = () => {
                 rel={announcement.samePage ? undefined : "noopener noreferrer"}
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
-                <span>{announcement.fileName}</span>
+                {announcement.fileName.includes("SPOT round for Btech") ? (
+                  <strong>{announcement.fileName}</strong>
+                ) : (
+                  <span>{announcement.fileName}</span>
+                )}
                 <span className="new-badge ml-2">New</span>
                 {index !== announcements.length - 1 && (
                   <span className="mx-4 text-gray-400">|</span>
