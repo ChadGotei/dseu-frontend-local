@@ -77,19 +77,19 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Btech Internal Sliding Allocation result",
+      link: "/BTECH_SLIDING_ALLOCATION.pdf",
+    },
+    {
       name: "Guidelines for SPOT round for Btech",
-      link: "https://drive.google.com/file/d/1Hlan617cy5zftPo_aUK0tOL0mgTc6zdp/view"
+      link: "https://drive.google.com/file/d/1Hlan617cy5zftPo_aUK0tOL0mgTc6zdp/view",
     },
     {
-      name: "Btech sliding form",
-      link: "https://forms.gle/C9keB1hnPjHFjx6q8"
-    },
-    {
-      name: "B.Tech and UG Round 2 admissions are now closed"
+      name: "B.Tech and UG Round 2 admissions are now closed",
     },
     {
       name: "Information Bulletin 2025",
-      link: "https://drive.google.com/file/d/16mO1wuwK40lwRe4uAz5_iDT5aqtqBFsY/view"
+      link: "https://drive.google.com/file/d/16mO1wuwK40lwRe4uAz5_iDT5aqtqBFsY/view",
     },
     {
       name: "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September",
@@ -133,7 +133,7 @@ const InformationBulletin = () => {
     {
       name: "How to Pay Your Admission Fees Online (Step-by-Step Guide)",
       link: "https://drive.google.com/file/d/1dV-ujr-aZGG4uNb20h229NpBM8McyC-F/view",
-    }
+    },
   ];
 
   if (data) {

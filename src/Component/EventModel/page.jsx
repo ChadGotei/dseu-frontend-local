@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { FiInfo, FiExternalLink } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
+const slidingPdf = "/BTECH_SLIDING_ALLOCATION.pdf";
+
 const Page = () => {
   const [showModal, setShowModal] = useState(true);
   const modalRef = useRef(null);
@@ -67,11 +69,13 @@ const Page = () => {
         {/* Body */}
         <div className="text-gray-800 text-base sm:text-base leading-relaxed space-y-5">
           {/* Greeting + Key notices */}
-          <div className="space-y-4">
-            <p className="md:text-lg text-base font-medium">📢 Dear Applicant,</p>
+          <div className="space-y-6">
+            <p className="md:text-lg text-base font-medium">
+              📢 Dear Applicant,
+            </p>
 
-            {/* SPOT round for BTech: partial bold + dates + view PDF */}
-            <div className="space-y-2">
+            {/* SPOT round for BTech */}
+            <div className="flex flex-col gap-2">
               <a
                 href={spotPdf}
                 target="_blank"
@@ -95,7 +99,34 @@ const Page = () => {
                 href={spotPdf}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition-colors"
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition-colors w-fit"
+              >
+                View PDF
+              </a>
+            </div>
+
+            {/* 🔹 Divider line */}
+            <hr className="my-4 border-gray-300" />
+
+            {/* 🔹 Sliding Allocation for BTech */}
+            <div className="flex flex-col gap-2">
+              <a
+                href={slidingPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium"
+              >
+                <FiExternalLink className="shrink-0" aria-hidden="true" />
+                <span>
+                  <strong>Btech Internal Sliding Allocation Result</strong>
+                </span>
+              </a>
+
+              <a
+                href={slidingPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-green-600 hover:bg-green-700 text-white font-medium px-4 py-2 rounded-lg transition-colors w-fit"
               >
                 View PDF
               </a>

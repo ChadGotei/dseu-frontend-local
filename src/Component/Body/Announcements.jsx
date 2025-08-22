@@ -4,19 +4,21 @@ import { useEffect, useState } from "react";
 
 const toAdd = [
   {
+    fileName: "Btech Internal Sliding Allocation result",
+    fileLink: "/BTECH_SLIDING_ALLOCATION.pdf",
+  },
+  {
     fileName: "Guidelines for SPOT round for Btech",
-    fileLink: "https://drive.google.com/file/d/1Hlan617cy5zftPo_aUK0tOL0mgTc6zdp/view"
+    fileLink:
+      "https://drive.google.com/file/d/1Hlan617cy5zftPo_aUK0tOL0mgTc6zdp/view",
   },
   {
-    fileName: "Btech sliding form",
-    fileLink: "https://forms.gle/C9keB1hnPjHFjx6q8"
+    fileName: "B.Tech and UG Round 2 admissions are now closed",
   },
   {
-    fileName: "B.Tech and UG Round 2 admissions are now closed"
-  },
-  {
-    fileName: "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September",
-    fileLink: "https://dseuadm.samarth.edu.in/ug/"
+    fileName:
+      "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September",
+    fileLink: "https://dseuadm.samarth.edu.in/ug/",
   },
   {
     fileName:
