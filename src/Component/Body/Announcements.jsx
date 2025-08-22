@@ -5,7 +5,12 @@ import { useEffect, useState } from "react";
 const toAdd = [
   {
     fileName: "Diploma round 3 results are now live!",
-    fileLink: "http://dseu.ac.in/admission/result/diploma/round3"
+    fileLink: "http://dseu.ac.in/admission/result/diploma/round3",
+  },
+  {
+    fileName: "Guideline for Spot Round of Counselling for UG",
+    fileLink:
+      "https://drive.google.com/file/d/1f9dcVegIzesWC0LA0UHlh_JIHikM69k7/view",
   },
   {
     fileName: "Btech Internal Sliding Allocation result",

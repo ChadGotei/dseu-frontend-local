@@ -78,7 +78,11 @@ const InformationBulletin = () => {
   const admissionManuals = [
     {
       name: "Diploma round 3 results are now live!",
-      link: "http://dseu.ac.in/admission/result/diploma/round3"
+      link: "http://dseu.ac.in/admission/result/diploma/round3",
+    },
+    {
+      name: "Guidelines for Spot Round of Counselling for UG",
+      link: "https://drive.google.com/file/d/1f9dcVegIzesWC0LA0UHlh_JIHikM69k7/view",
     },
     {
       name: "Btech Internal Sliding Allocation result",

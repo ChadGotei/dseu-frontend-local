@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 
 const slidingPdf = "/BTECH_SLIDING_ALLOCATION.pdf";
 
+// New Spot Round UG PDF
+const spotUgPdf = {
+  fileName: "Guidelines for Spot Round of Counselling for UG",
+  fileLink:
+    "https://drive.google.com/file/d/1f9dcVegIzesWC0LA0UHlh_JIHikM69k7/view",
+};
+
 const Page = () => {
   const [showModal, setShowModal] = useState(true);
   const modalRef = useRef(null);
@@ -58,23 +65,29 @@ const Page = () => {
         {/* Header */}
         <div className="flex items-center gap-3 mb-5">
           <div className="bg-blue-100 text-blue-700 p-2.5 rounded-full">
-            <FiInfo className="text-xl" aria-hidden="true" />
+            <FiInfo className="text-lg sm:text-xl" aria-hidden="true" />
           </div>
           <h2
             id="admission-modal-title"
-            className="text-xl sm:text-2xl font-semibold text-blue-800"
+            className="text-lg sm:text-2xl font-semibold text-blue-800"
           >
             Admission Notifications
           </h2>
         </div>
 
         {/* Body */}
-        <div className="text-gray-800 text-base sm:text-base leading-relaxed space-y-5">
+        <div className="text-gray-800 text-sm sm:text-base leading-relaxed space-y-5">
           <div className="space-y-6">
-            <p className="md:text-lg text-base font-medium">📢 Dear Applicant,</p>
+            <p className="text-base sm:text-lg font-medium">
+              📢 Dear Applicant,
+            </p>
+
             {/* Diploma Round 3 (new) */}
             <div className="flex flex-col gap-2">
-              <p>The <strong>Diploma Round 3</strong> seat allocation results are now live.</p>
+              <p>
+                The <strong>Diploma Round 3</strong> seat allocation results are
+                now live.
+              </p>
 
               <a
                 href={diplomaRound3}
@@ -82,27 +95,31 @@ const Page = () => {
                 rel="noopener noreferrer"
                 className="
                   inline-flex items-center justify-center gap-2
-                  px-4 py-2 rounded-lg font-medium text-white
+                  px-3 sm:px-4 py-2 rounded-lg font-medium text-white
                   bg-purple-600 hover:bg-purple-700
                   focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2
-                  shadow-sm transition-colors w-fit
+                  shadow-sm transition-colors w-fit text-sm sm:text-base
                 "
               >
                 View Diploma Round 3
-                <FiExternalLink aria-hidden="true" className="text-base" />
+                <FiExternalLink
+                  aria-hidden="true"
+                  className="text-sm sm:text-base"
+                />
               </a>
             </div>
 
             {/* Divider */}
             <hr className="my-4 border-gray-300" />
 
-            {/* SPOT round for BTech */}
-            <div className="flex flex-col gap-2">
+            {/* SPOT round for BTech + UG */}
+            <div className="flex flex-col gap-3">
+              {/* BTech Spot Round */}
               <a
                 href={spotPdf}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium"
+                className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium text-sm sm:text-base"
               >
                 <FiExternalLink className="shrink-0" aria-hidden="true" />
                 <span>
@@ -110,21 +127,52 @@ const Page = () => {
                 </span>
               </a>
 
-              <p className="text-gray-800 text-sm sm:text-base">
-                Dates: <strong>25 August 2025</strong> &amp;{" "}
-                <strong>26 August 2025</strong>
-              </p>
-
-              <p className="text-gray-600 text-sm md:text-base">View PDF for more details.</p>
-
+              {/* UG Spot Round */}
               <a
-                href={spotPdf}
+                href={spotUgPdf.fileLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition-colors w-fit"
+                className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium text-sm sm:text-base"
               >
-                View PDF
+                <FiExternalLink className="shrink-0" aria-hidden="true" />
+                <span>
+                  <strong>{spotUgPdf.fileName}</strong>
+                </span>
               </a>
+
+              <p className="text-gray-800 text-xs sm:text-sm md:text-base">
+                Dates for Btech: <strong>25 August 2025</strong> &amp;{" "}
+                <strong>26 August 2025</strong>
+              </p>
+              <p className="text-gray-800 text-xs sm:text-sm md:text-base">
+                Dates for UG: <strong>26 August 2025</strong> &amp;{" "}
+                <strong>27 August 2025</strong>
+              </p>
+
+              <p className="text-gray-600 text-xs sm:text-sm md:text-base">
+                View PDFs for more details.
+              </p>
+
+              {/* Buttons */}
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={spotPdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-3 sm:px-4 py-2 rounded-lg transition-colors w-fit text-sm sm:text-base"
+                >
+                  View BTech PDF
+                </a>
+
+                <a
+                  href={spotUgPdf.fileLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-green-600 hover:bg-green-700 text-white font-medium px-3 sm:px-4 py-2 rounded-lg transition-colors w-fit text-sm sm:text-base"
+                >
+                  View UG PDF
+                </a>
+              </div>
             </div>
 
             {/* Divider */}
@@ -136,7 +184,7 @@ const Page = () => {
                 href={slidingPdf}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium"
+                className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium text-sm sm:text-base"
               >
                 <FiExternalLink className="shrink-0" aria-hidden="true" />
                 <span>
@@ -151,14 +199,16 @@ const Page = () => {
             href="https://dseuadm.samarth.edu.in/ug/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium hover:text-gray-700 block text-sm sm:text-base"
+            className="font-medium hover:text-gray-700 block text-xs sm:text-base"
           >
             🎓 Registrations are now open for B.S. Optometry and B.Des Jewellery
             Design programs until <strong>3rd September</strong>.
           </a>
 
           {/* Signature */}
-          <p className="font-medium text-gray-700">– Admission Cell, DSEU</p>
+          <p className="font-medium text-gray-700 text-sm sm:text-base">
+            – Admission Cell, DSEU
+          </p>
         </div>
       </div>
     </div>
