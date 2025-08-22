@@ -33,6 +33,8 @@ const Page = () => {
   const spotPdf =
     "https://drive.google.com/file/d/1Hlan617cy5zftPo_aUK0tOL0mgTc6zdp/view";
 
+  const diplomaRound3 = "http://dseu.ac.in/admission/result/diploma/round3";
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 overflow-y-auto"
@@ -68,11 +70,31 @@ const Page = () => {
 
         {/* Body */}
         <div className="text-gray-800 text-base sm:text-base leading-relaxed space-y-5">
-          {/* Greeting + Key notices */}
           <div className="space-y-6">
-            <p className="md:text-lg text-base font-medium">
-              📢 Dear Applicant,
-            </p>
+            <p className="md:text-lg text-base font-medium">📢 Dear Applicant,</p>
+            {/* Diploma Round 3 (new) */}
+            <div className="flex flex-col gap-2">
+              <p>The <strong>Diploma Round 3</strong> seat allocation results are now live.</p>
+
+              <a
+                href={diplomaRound3}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  inline-flex items-center justify-center gap-2
+                  px-4 py-2 rounded-lg font-medium text-white
+                  bg-purple-600 hover:bg-purple-700
+                  focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2
+                  shadow-sm transition-colors w-fit
+                "
+              >
+                View Diploma Round 3
+                <FiExternalLink aria-hidden="true" className="text-base" />
+              </a>
+            </div>
+
+            {/* Divider */}
+            <hr className="my-4 border-gray-300" />
 
             {/* SPOT round for BTech */}
             <div className="flex flex-col gap-2">
@@ -93,7 +115,7 @@ const Page = () => {
                 <strong>26 August 2025</strong>
               </p>
 
-              <p className="text-gray-600">View PDF for more details.</p>
+              <p className="text-gray-600 text-sm md:text-base">View PDF for more details.</p>
 
               <a
                 href={spotPdf}
@@ -105,10 +127,10 @@ const Page = () => {
               </a>
             </div>
 
-            {/* 🔹 Divider line */}
+            {/* Divider */}
             <hr className="my-4 border-gray-300" />
 
-            {/* 🔹 Sliding Allocation for BTech */}
+            {/* Sliding Allocation for BTech */}
             <div className="flex flex-col gap-2">
               <a
                 href={slidingPdf}
@@ -118,17 +140,8 @@ const Page = () => {
               >
                 <FiExternalLink className="shrink-0" aria-hidden="true" />
                 <span>
-                  <strong>Btech Internal Sliding Allocation Result</strong>
+                  <strong>Btech Internal Sliding Allocation&nbsp;Result</strong>
                 </span>
-              </a>
-
-              <a
-                href={slidingPdf}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-green-600 hover:bg-green-700 text-white font-medium px-4 py-2 rounded-lg transition-colors w-fit"
-              >
-                View PDF
               </a>
             </div>
           </div>

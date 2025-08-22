@@ -107,3 +107,38 @@ export const changeUgRound2Status = async (id, status) => {
     throw error;
   }
 };
+
+
+//? Diploma round 3 result
+
+export const getDiplomaRound3Result = async (formData) => {
+  try {
+    const response = await api.post(
+      `/result/third`,   //? change
+      formData,
+      {
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.error(error);  //! devlopment
+    throw error;
+  }
+};
+
+export const changeDiplomaRound3Status = async (id, status) => {
+  try {
+    const response = await api.put(
+      `/result/third/${id}`,   //? change
+      { status },
+      {
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.error(error);  //! development
+    throw error;
+  }
+};

@@ -82,16 +82,16 @@ const navItems = [
         path: "/admission",
       },
       {
+        name: "Diploma Seat Allocation",
+        path: "/admission/result/diploma/round3"
+      },
+      {
         name: "PG Seat Allocation",
         path: "/admission/result/pg"
       },
       {
         name: "UG Seat Allocation",
         path: "/admission/result/ug/round2"
-      },
-      {
-        name: "Diploma Seat Allocation",
-        path: "/admission/result/diploma/round2"
       },
       {
         name: "Btech seat Allocation",

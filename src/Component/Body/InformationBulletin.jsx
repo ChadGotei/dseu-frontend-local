@@ -77,6 +77,10 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Diploma round 3 results are now live!",
+      link: "http://dseu.ac.in/admission/result/diploma/round3"
+    },
+    {
       name: "Btech Internal Sliding Allocation result",
       link: "/BTECH_SLIDING_ALLOCATION.pdf",
     },
@@ -106,14 +110,6 @@ const InformationBulletin = () => {
     {
       name: "All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation.",
     },
-    // {
-    //   name: "Diploma Round 2 - Seat Confirmation process",
-    //   link: "https://drive.google.com/file/d/1r2WB--buL2oQykhmEMccuS5axL27gqMd/view",
-    // },
-    // {
-    //   name: "Seat freezing opportunity for applicants for UG/B.Tech Admission 2025",
-    //   link: "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view",
-    // },
     {
       name: "Document verification dates for UG have been extended till Friday",
       link: "https://dseu.ac.in/admission/result/ug",

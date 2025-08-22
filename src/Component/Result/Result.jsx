@@ -73,6 +73,14 @@ const Result = () => {
           >
             Round 2
           </button>
+
+          <button
+            className={`px-6 py-3 rounded-full bg-gray-200`}
+            onClick={() => navigate("/admission/result/diploma/round3")}
+          >
+
+            Round 3
+          </button>
         </div>
       }
 

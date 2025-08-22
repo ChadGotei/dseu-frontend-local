@@ -169,6 +169,9 @@ const ShowUgRound2 = lazy(() =>
   import("./Component/Result/Ug_round2/ShowUgRound2.jsx")
 );
 
+const DiplomaRound3Result = lazy(() => import("./Component/Result/Diploma_round3/DiplomaRound3Result.jsx"));
+const ShowDiplomaRound3 = lazy(() => import("./Component/Result/Diploma_round3/ShowDiplomaRound3.jsx"));
+
 function App() {
   return (
     <BrowserRouter>
@@ -350,6 +353,12 @@ function App() {
             <Route
               path="/admission/result/ug2/show"
               element={<ShowUgRound2 />}
+            />
+
+            <Route path="/admission/result/diploma/round3" element={<DiplomaRound3Result />} />
+            <Route
+              path="/admission/result/diploma3/show"
+              element={<ShowDiplomaRound3 />}
             />
 
             {/* Others */}

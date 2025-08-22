@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 
 const toAdd = [
   {
+    fileName: "Diploma round 3 results are now live!",
+    fileLink: "http://dseu.ac.in/admission/result/diploma/round3"
+  },
+  {
     fileName: "Btech Internal Sliding Allocation result",
     fileLink: "/BTECH_SLIDING_ALLOCATION.pdf",
   },
@@ -30,12 +34,12 @@ const toAdd = [
     fileName:
       "All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation",
   },
-  {
-    fileName:
-      "Seat freezing opportunity for applicants for UG/B.Tech Admission 2025",
-    fileLink:
-      "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view",
-  },
+  // {
+  //   fileName:
+  //     "Seat freezing opportunity for applicants for UG/B.Tech Admission 2025",
+  //   fileLink:
+  //     "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view",
+  // },
   {
     fileLink: "https://dseu.ac.in/admission/result/pg",
     fileName: "Postgraduate results are now live!",
