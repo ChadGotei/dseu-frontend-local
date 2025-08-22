@@ -137,6 +137,15 @@ const DiplomaRound2Result = () => {
                     </p>
                 </div>
             </div>
+
+            <a
+                href={`/seat-confirmation-diploma-round3.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-center bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 transition-colors"
+            >
+                View Seat Confirmation Process (PDF)
+            </a>
         </div>
     );
 };

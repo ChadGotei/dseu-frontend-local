@@ -172,6 +172,18 @@ const ShowDiplomaRound3 = () => {
                     </p>
                 </div>}
 
+
+                <div className="flex items-center justify-center w-full">
+                    <a
+                        href={"/seat-confirmation-diploma-round3.pdf"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block text-center bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors w-80 mt-10"
+                    >
+                        View Seat Confirmation Process (PDF)
+                    </a>
+                </div>
+
             </div>
         </div >
     );

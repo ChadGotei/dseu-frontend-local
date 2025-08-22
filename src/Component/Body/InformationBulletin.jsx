@@ -77,6 +77,10 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Seat Confirmation Process - Diploma Round 3",
+      link: "/seat-confirmation-diploma-round3.pdf"
+    },
+    {
       name: "Diploma round 3 results are now live!",
       link: "http://dseu.ac.in/admission/result/diploma/round3",
     },
