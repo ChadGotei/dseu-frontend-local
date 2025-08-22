@@ -68,7 +68,7 @@ const Page = () => {
         <div className="text-gray-800 text-base sm:text-base leading-relaxed space-y-5">
           {/* Greeting + Key notices */}
           <div className="space-y-4">
-            <p className="text-lg font-medium">📢 Dear Applicant,</p>
+            <p className="md:text-lg text-base font-medium">📢 Dear Applicant,</p>
 
             {/* SPOT round for BTech: partial bold + dates + view PDF */}
             <div className="space-y-2">
@@ -84,7 +84,7 @@ const Page = () => {
                 </span>
               </a>
 
-              <p className="text-gray-800">
+              <p className="text-gray-800 text-sm sm:text-base">
                 Dates: <strong>25 August 2025</strong> &amp;{" "}
                 <strong>26 August 2025</strong>
               </p>
@@ -107,7 +107,7 @@ const Page = () => {
             href="https://dseuadm.samarth.edu.in/ug/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium hover:text-gray-700 block"
+            className="font-medium hover:text-gray-700 block text-sm sm:text-base"
           >
             🎓 Registrations are now open for B.S. Optometry and B.Des Jewellery
             Design programs until <strong>3rd September</strong>.
