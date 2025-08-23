@@ -89,12 +89,12 @@ const InformationBulletin = () => {
       link: "https://drive.google.com/file/d/1f9dcVegIzesWC0LA0UHlh_JIHikM69k7/view",
     },
     {
-      name: "Btech Internal Sliding Allocation result",
-      link: "/BTECH_SLIDING_ALLOCATION.pdf",
+      name: "Guidelines for SPOT round for Btech",
+      link: "https://drive.google.com/file/d/1vUDsxNlKox8Zrf2-VeW59vho2EqrNWRa/view",
     },
     {
-      name: "Guidelines for SPOT round for Btech",
-      link: "https://drive.google.com/file/d/1Hlan617cy5zftPo_aUK0tOL0mgTc6zdp/view",
+      name: "Btech Internal Sliding Allocation result",
+      link: "/BTECH_SLIDING_ALLOCATION.pdf",
     },
     {
       name: "B.Tech and UG Round 2 admissions are now closed",

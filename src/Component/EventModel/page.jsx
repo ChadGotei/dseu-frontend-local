@@ -38,7 +38,7 @@ const Page = () => {
   if (!showModal) return null;
 
   const spotPdf =
-    "https://drive.google.com/file/d/1Hlan617cy5zftPo_aUK0tOL0mgTc6zdp/view";
+    "https://drive.google.com/file/d/1vUDsxNlKox8Zrf2-VeW59vho2EqrNWRa/view";
 
   const diplomaRound3 = "http://dseu.ac.in/admission/result/diploma/round3";
 

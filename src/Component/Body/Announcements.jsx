@@ -13,13 +13,13 @@ const toAdd = [
       "https://drive.google.com/file/d/1f9dcVegIzesWC0LA0UHlh_JIHikM69k7/view",
   },
   {
-    fileName: "Btech Internal Sliding Allocation result",
-    fileLink: "/BTECH_SLIDING_ALLOCATION.pdf",
-  },
-  {
     fileName: "Guidelines for SPOT round for Btech",
     fileLink:
-      "https://drive.google.com/file/d/1Hlan617cy5zftPo_aUK0tOL0mgTc6zdp/view",
+      "https://drive.google.com/file/d/1vUDsxNlKox8Zrf2-VeW59vho2EqrNWRa/view",
+  },
+  {
+    fileName: "Btech Internal Sliding Allocation result",
+    fileLink: "/BTECH_SLIDING_ALLOCATION.pdf",
   },
   {
     fileName: "B.Tech and UG Round 2 admissions are now closed",
@@ -39,12 +39,6 @@ const toAdd = [
     fileName:
       "All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation",
   },
-  // {
-  //   fileName:
-  //     "Seat freezing opportunity for applicants for UG/B.Tech Admission 2025",
-  //   fileLink:
-  //     "https://drive.google.com/file/d/17SMUuPbgCgYMA18KeiAeZ8eAJBoiOygw/view",
-  // },
   {
     fileLink: "https://dseu.ac.in/admission/result/pg",
     fileName: "Postgraduate results are now live!",
