@@ -77,6 +77,9 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Three year diploma technical pass out are eligible to take admission in first year during B.Tech SPOT round. Preference will be given to the pass-out of DSEU."
+    },
+    {
       name: "Seat Confirmation Process - Diploma Round 3",
       link: "/seat-confirmation-diploma-round3.pdf"
     },

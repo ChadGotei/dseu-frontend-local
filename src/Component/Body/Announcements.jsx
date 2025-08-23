@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 
 const toAdd = [
   {
+    fileName: "Three year diploma technical pass out are eligible to take admission in first year during B.Tech SPOT round. Preference will be given to the pass-out of DSEU."
+  },
+  {
     fileName: "Diploma round 3 results are now live!",
     fileLink: "http://dseu.ac.in/admission/result/diploma/round3",
   },
@@ -21,9 +24,9 @@ const toAdd = [
     fileName: "Btech Internal Sliding Allocation result",
     fileLink: "/BTECH_SLIDING_ALLOCATION.pdf",
   },
-  {
-    fileName: "B.Tech and UG Round 2 admissions are now closed",
-  },
+  // {
+  //   fileName: "B.Tech and UG Round 2 admissions are now closed",
+  // },
   {
     fileName:
       "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September",
@@ -169,7 +172,7 @@ const style = `
   }
 
   .animate-marquee {
-    animation: marquee 45s linear infinite;
+    animation: marquee 60s linear infinite;
   }
 
   .animate-marquee:hover {
