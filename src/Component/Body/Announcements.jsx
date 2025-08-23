@@ -1,8 +1,12 @@
-import { ExternalLink } from "lucide-react";
-import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ExternalLink } from "lucide-react";
 
-const toAdd = [
+import Tooltip from "../Reusable/Tooltip";
+
+import { useNoticesBySection } from "../../hooks/useNoticesBySection";
+
+export const toAdd = [
   {
     fileName: "Three year diploma technical pass out are eligible to take admission in first year during B.Tech SPOT round. Preference will be given to the pass-out of DSEU."
   },
@@ -66,6 +70,8 @@ const toAdd = [
 
 const AnnouncementStrip = () => {
   const [announcements, setAnnouncements] = useState([]);
+  const navigate = useNavigate();
+
   const { data, isLoading } = useNoticesBySection(
     "announcements",
     false,
@@ -108,9 +114,13 @@ const AnnouncementStrip = () => {
   return (
     <div className="flex bg-white border-y border-gray-200 mt-4">
       <div className="bg-blue-600 text-white flex w-28 lg:w-auto items-center px-5">
-        <span className="text-[12px] ml-[-10px] sm:text-[10px] lg:text-[14px] font-bold">
+        <Tooltip text="Click to see all" bg="blue-900" textColor="whitesmoke">
+        <span className="text-[12px] ml-[-10px] sm:text-[10px] lg:text-[14px] font-bold hover:cursor-pointer"
+        onClick={() => navigate('/announcements')}
+        >
           Announcements
         </span>
+        </Tooltip>
       </div>
       <div className="h-10 flex items-center overflow-hidden relative w-full text-xs sm:text-sm md:text-base">
         <div className="animate-marquee inline-flex items-center absolute whitespace-nowrap">

@@ -29,7 +29,7 @@ export const getCategoryFullname = (category) => {
     case "OD_DEL_UR":
       fullform = "Outside Delhi General";
       break;
-    case "OD_DEL_SC":``
+    case "OD_DEL_SC": ``
       fullform = "Outside Delhi SC";
       break;
     case "OD_DEL_ST":
@@ -59,18 +59,36 @@ export const getCategoryFullname = (category) => {
 
 
 export const getStatusFromAction = (action) => {
-    switch (action) {
-        case "Freeze":
-        case "Final Acceptance":
-            return "freeze";
-        case "Reject":
-        case "Not Accepted":
-            return "reject";
-        case "Accept and Upgrade":
-            return "float";
-        case "Not Accepted and Upgrade":
-            return "upgrade";
-        default:
-            return null; // or throw an error if needed
-    }
+  switch (action) {
+    case "Freeze":
+    case "Final Acceptance":
+      return "freeze";
+    case "Reject":
+    case "Not Accepted":
+      return "reject";
+    case "Accept and Upgrade":
+      return "float";
+    case "Not Accepted and Upgrade":
+      return "upgrade";
+    default:
+      return null; // or throw an error if needed
+  }
 };
+
+// normalize data coming from api
+export const normalize = (n) => {
+    const name =
+      n?.fileName ??
+      n?.title ??
+      n?.name ??
+      n?.headline ??
+      n?.text ??
+      "";
+    const link =
+      n?.fileLink ??
+      n?.url ??
+      n?.link ??
+      n?.href ??
+      "";
+    return { fileName: name, fileLink: link };
+  };
