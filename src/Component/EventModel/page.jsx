@@ -3,6 +3,7 @@ import { FiInfo, FiExternalLink } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 const slidingPdf = "/BTECH_SLIDING_ALLOCATION.pdf";
+const UGslidingPdf = "/UG_SLIDING_ALLOCATION.pdf";
 
 // New Spot Round UG PDF
 const spotUgPdf = {
@@ -178,8 +179,8 @@ const Page = () => {
             {/* Divider */}
             <hr className="my-4 border-gray-300" />
 
-            {/* Sliding Allocation for BTech */}
-            <div className="flex flex-col gap-2">
+            {/* Sliding Allocation*/}
+            <div className="flex flex-col gap-1">
               <a
                 href={slidingPdf}
                 target="_blank"
@@ -189,6 +190,19 @@ const Page = () => {
                 <FiExternalLink className="shrink-0" aria-hidden="true" />
                 <span>
                   <strong>Btech Internal Sliding Allocation&nbsp;Result</strong>
+                </span>
+              </a>
+            </div>
+            <div className="flex flex-col gap-2">
+              <a
+                href={UGslidingPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium text-sm sm:text-base"
+              >
+                <FiExternalLink className="shrink-0" aria-hidden="true" />
+                <span>
+                  <strong>UG Internal Sliding Allocation&nbsp;Result</strong>
                 </span>
               </a>
             </div>

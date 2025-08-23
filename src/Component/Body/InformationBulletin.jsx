@@ -77,11 +77,15 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
-      name: "Three year diploma technical pass out are eligible to take admission in first year during B.Tech SPOT round. Preference will be given to the pass-out of DSEU."
+      name: "UG Sliding Allocation result is now live.",
+      link: "/UG_SLIDING_ALLOCATION.pdf",
+    },
+    {
+      name: "Three year diploma technical pass out are eligible to take admission in first year during B.Tech SPOT round. Preference will be given to the pass-out of DSEU.",
     },
     {
       name: "Seat Confirmation Process - Diploma Round 3",
-      link: "/seat-confirmation-diploma-round3.pdf"
+      link: "/seat-confirmation-diploma-round3.pdf",
     },
     {
       name: "Diploma round 3 results are now live!",
