@@ -1,4 +1,4 @@
-import activity1 from "/src/assets/Activities/Activities1.jpeg";
+import activity1 from "/src/assets/Activities/Activities1.jpg";
 import activity2 from "/src/assets/Activities/Activities2.jpeg";
 import activity3 from "/src/assets/Activities/Activities3.jpeg";
 import activity4 from "/src/assets/Activities/Activities4.jpeg";
@@ -9,7 +9,6 @@ import activity8 from "/src/assets/Activities/Activities8.jpeg";
 import activity9 from "/src/assets/Activities/Activities9.jpg";
 import activity10 from "/src/assets/Activities/Activities10.jpg";
 import activity11 from "/src/assets/Activities/Activities11.jpg";
-import activity12 from "/src/assets/Activities/Activities12.jpg";
 import activity13 from "/src/assets/Activities/Activities13.jpg";
 import activity14 from "/src/assets/Activities/Activities14.jpg";
 import activity15 from "/src/assets/Activities/Activities15.jpg";
@@ -39,7 +38,6 @@ export const allImages = [
   activity9,
   activity10,
   activity11,
-  activity12,
   activity13,
   activity14,
   activity15,
