@@ -5,7 +5,7 @@ import achievement5 from "../assets/achievements/Achievements5.jpg";
 import achievement4 from "../assets/achievements/Achievements4.jpg";
 import achievement6 from "../assets/achievements/Achievements6.jpg";
 import achievement7 from "../assets/achievements/Achievements7.jpg";
-import achievement8 from "../assets/achievements/Achievements8.jpg";
+import achievement8 from "../assets/achievements/Achievements8.jpg"
 
 const programs = {
     DIPLOMA: [
