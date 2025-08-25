@@ -77,8 +77,8 @@ const Page = () => {
 
         {/* Body */}
         <div className="text-gray-800 text-sm sm:text-base leading-relaxed space-y-5">
-          <div className="space-y-6">
-            <p className="text-base sm:text-lg font-medium">
+          <div className="space-y-5">
+            <p className="text-base font-medium">
               📢 Dear Applicant,
             </p>
 

@@ -1,10 +1,11 @@
 import { useEffect, useState, useMemo } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { getProgramsByLevel } from "../../utils/apiservice";
-import study from "/src/assets/achievements/study.jpg";
+
 import { carouselItems } from "../../constants/STUDENTPROGRAM";
+
 import { QUERY_KEYS } from "../../utils/queryKeys";
+import { getProgramsByLevel } from "../../utils/apiservice";
 
 const getRandomPrograms = (programs, count = 6) => {
   const shuffled = [...programs].sort(() => 0.5 - Math.random());
