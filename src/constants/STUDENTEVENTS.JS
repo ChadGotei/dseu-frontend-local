@@ -27,22 +27,14 @@ import admissionthumb from '../assets/thumbnail/admission.png'
 
 export const allImages = [
   activity1,
-  activity2,
-  activity3,
-  activity4,
-  activity5,
   activity19,
-  activity6,
   activity7,
-  activity8,
   activity9,
   activity10,
   activity11,
-  activity13,
   activity14,
   activity15,
   activity16,
-  activity17,
   activity18,
 ];
 

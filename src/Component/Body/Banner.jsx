@@ -17,7 +17,7 @@ const HomeBody = () => {
 
   const slides = [
     { image: TirangaImage },
-    { image: Banner6 },
+    // { image: Banner6 },
     { image: admissionbanner },
     { image: dseuPic1 },
     { image: banner },
