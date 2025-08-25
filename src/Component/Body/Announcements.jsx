@@ -8,7 +8,12 @@ import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 export const toAdd = [
   {
-    fileName: "Three year diploma technical pass out are eligible to take admission in first year during B.Tech SPOT round. Preference will be given to the pass-out of DSEU."
+    fileName: "UG Sliding Allocation result is now live.",
+    fileLink: "/UG_SLIDING_ALLOCATION.pdf",
+  },
+  {
+    fileName:
+      "Three year diploma technical pass out are eligible to take admission in first year during B.Tech SPOT round. Preference will be given to the pass-out of DSEU.",
   },
   {
     fileName: "Diploma round 3 results are now live!",
@@ -115,11 +120,12 @@ const AnnouncementStrip = () => {
     <div className="flex bg-white border-y border-gray-200 mt-4">
       <div className="bg-blue-600 text-white flex w-28 lg:w-auto items-center px-5">
         <Tooltip text="Click to see all" bg="blue-900" textColor="whitesmoke">
-        <span className="text-[12px] ml-[-10px] sm:text-[10px] lg:text-[14px] font-bold hover:cursor-pointer"
-        onClick={() => navigate('/announcements')}
-        >
-          Announcements
-        </span>
+          <span
+            className="text-[12px] ml-[-10px] sm:text-[10px] lg:text-[14px] font-bold hover:cursor-pointer"
+            onClick={() => navigate("/announcements")}
+          >
+            Announcements
+          </span>
         </Tooltip>
       </div>
       <div className="h-10 flex items-center overflow-hidden relative w-full text-xs sm:text-sm md:text-base">
