@@ -2,7 +2,7 @@ import { useEffect, useState, useMemo } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 
-import { carouselItems } from "../../constants/STUDENTPROGRAM";
+import { carouselItems, study } from "../../constants/STUDENTPROGRAM";
 
 import { QUERY_KEYS } from "../../utils/queryKeys";
 import { getProgramsByLevel } from "../../utils/apiservice";
