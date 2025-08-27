@@ -8,16 +8,16 @@ import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 export const toAdd = [
   {
+    fileName: "The Diploma Round 3 seat allocation is now closed",
+    fileLink: "http://dseu.ac.in/admission/result/diploma/round3",
+  },
+  {
     fileName: "UG Sliding Allocation result is now live.",
     fileLink: "/UG_SLIDING_ALLOCATION.pdf",
   },
   {
     fileName:
       "Three year diploma technical pass out are eligible to take admission in first year during B.Tech SPOT round. Preference will be given to the pass-out of DSEU.",
-  },
-  {
-    fileName: "Diploma round 3 results are now live!",
-    fileLink: "http://dseu.ac.in/admission/result/diploma/round3",
   },
   {
     fileName: "Guideline for Spot Round of Counselling for UG",

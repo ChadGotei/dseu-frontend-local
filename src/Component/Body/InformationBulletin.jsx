@@ -77,6 +77,10 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "The Diploma Round 3 seat allocation is now closed",
+      link: "http://dseu.ac.in/admission/result/diploma/round3",
+    },
+    {
       name: "UG Sliding Allocation result is now live.",
       link: "/UG_SLIDING_ALLOCATION.pdf",
     },
@@ -86,10 +90,6 @@ const InformationBulletin = () => {
     {
       name: "Seat Confirmation Process - Diploma Round 3",
       link: "/seat-confirmation-diploma-round3.pdf",
-    },
-    {
-      name: "Diploma round 3 results are now live!",
-      link: "http://dseu.ac.in/admission/result/diploma/round3",
     },
     {
       name: "Guidelines for Spot Round of Counselling for UG",

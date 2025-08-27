@@ -86,11 +86,10 @@ const Page = () => {
             {/* Diploma Round 3 (new) */}
             <div className="flex flex-col gap-2">
               <p>
-                The <strong>Diploma Round 3</strong> seat allocation results are
-                now live.
+                The <strong>Diploma Round 3</strong> seat allocation has been <strong>closed</strong>.
               </p>
 
-              <a
+              {/* <a
                 href={diplomaRound3}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -103,11 +102,8 @@ const Page = () => {
                 "
               >
                 View Diploma Round 3
-                <FiExternalLink
-                  aria-hidden="true"
-                  className="text-sm sm:text-base"
-                />
-              </a>
+                <FiExternalLink aria-hidden="true" className="text-sm sm:text-base" />
+              </a> */}
             </div>
 
             {/* Divider */}
@@ -150,9 +146,9 @@ const Page = () => {
                 <strong>27 August 2025</strong>
               </p>
 
-              <p className="text-gray-600 text-xs sm:text-sm md:text-base">
+              {/* <p className="text-gray-600 text-xs sm:text-sm md:text-base">
                 View PDFs for more details.
-              </p>
+              </p> */}
 
               {/* Buttons */}
               <div className="flex flex-wrap gap-3">
