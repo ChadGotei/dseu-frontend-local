@@ -77,7 +77,7 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
-      name: "The Diploma Round 3 seat allocation is now closed",
+      name: "The Diploma Round 3 admissions are now closed",
       link: "http://dseu.ac.in/admission/result/diploma/round3",
     },
     {

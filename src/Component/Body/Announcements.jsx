@@ -8,7 +8,7 @@ import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 export const toAdd = [
   {
-    fileName: "The Diploma Round 3 seat allocation is now closed",
+    fileName: "The Diploma Round 3 admissions are now closed",
     fileLink: "http://dseu.ac.in/admission/result/diploma/round3",
   },
   {
