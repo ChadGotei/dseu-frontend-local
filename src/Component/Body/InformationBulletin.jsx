@@ -84,20 +84,12 @@ const InformationBulletin = () => {
       name: "UG Sliding Allocation result is now live.",
       link: "/UG_SLIDING_ALLOCATION.pdf",
     },
-    {
-      name: "Three year diploma technical pass out are eligible to take admission in first year during B.Tech SPOT round. Preference will be given to the pass-out of DSEU.",
-    },
+    // {
+    //   name: "Three year diploma technical pass out are eligible to take admission in first year during B.Tech SPOT round. Preference will be given to the pass-out of DSEU.",
+    // },
     {
       name: "Seat Confirmation Process - Diploma Round 3",
       link: "/seat-confirmation-diploma-round3.pdf",
-    },
-    {
-      name: "Guidelines for Spot Round of Counselling for UG",
-      link: "https://drive.google.com/file/d/1f9dcVegIzesWC0LA0UHlh_JIHikM69k7/view",
-    },
-    {
-      name: "Guidelines for SPOT round for Btech",
-      link: "https://drive.google.com/file/d/1vUDsxNlKox8Zrf2-VeW59vho2EqrNWRa/view",
     },
     {
       name: "Btech Internal Sliding Allocation result",

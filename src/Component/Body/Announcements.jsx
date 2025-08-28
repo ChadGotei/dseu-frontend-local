@@ -15,27 +15,14 @@ export const toAdd = [
     fileName: "UG Sliding Allocation result is now live.",
     fileLink: "/UG_SLIDING_ALLOCATION.pdf",
   },
-  {
-    fileName:
-      "Three year diploma technical pass out are eligible to take admission in first year during B.Tech SPOT round. Preference will be given to the pass-out of DSEU.",
-  },
-  {
-    fileName: "Guideline for Spot Round of Counselling for UG",
-    fileLink:
-      "https://drive.google.com/file/d/1f9dcVegIzesWC0LA0UHlh_JIHikM69k7/view",
-  },
-  {
-    fileName: "Guidelines for SPOT round for Btech",
-    fileLink:
-      "https://drive.google.com/file/d/1vUDsxNlKox8Zrf2-VeW59vho2EqrNWRa/view",
-  },
+  // {
+  //   fileName:
+  //     "Three year diploma technical pass out are eligible to take admission in first year during B.Tech SPOT round. Preference will be given to the pass-out of DSEU.",
+  // },
   {
     fileName: "Btech Internal Sliding Allocation result",
     fileLink: "/BTECH_SLIDING_ALLOCATION.pdf",
   },
-  // {
-  //   fileName: "B.Tech and UG Round 2 admissions are now closed",
-  // },
   {
     fileName:
       "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September",
@@ -140,11 +127,7 @@ const AnnouncementStrip = () => {
                 rel={announcement.samePage ? undefined : "noopener noreferrer"}
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
-                {announcement.fileName.includes("SPOT round for Btech") ? (
-                  <strong>{announcement.fileName}</strong>
-                ) : (
-                  <span>{announcement.fileName}</span>
-                )}
+                <span>{announcement.fileName}</span>
                 <span className="new-badge ml-2">New</span>
                 {index !== announcements.length - 1 && (
                   <span className="mx-4 text-gray-400">|</span>
