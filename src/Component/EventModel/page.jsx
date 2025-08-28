@@ -91,34 +91,6 @@ const Page = () => {
 
             {/* Divider */}
             <hr className="my-4 border-gray-300" />
-
-            {/* Sliding Allocation*/}
-            <div className="flex flex-col gap-1">
-              <a
-                href={slidingPdf}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium text-sm sm:text-base"
-              >
-                <FiExternalLink className="shrink-0" aria-hidden="true" />
-                <span>
-                  <strong>Btech Internal Sliding Allocation&nbsp;Result</strong>
-                </span>
-              </a>
-            </div>
-            <div className="flex flex-col gap-2">
-              <a
-                href={UGslidingPdf}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium text-sm sm:text-base"
-              >
-                <FiExternalLink className="shrink-0" aria-hidden="true" />
-                <span>
-                  <strong>UG Internal Sliding Allocation&nbsp;Result</strong>
-                </span>
-              </a>
-            </div>
           </div>
 
           {/* Registrations notice */}

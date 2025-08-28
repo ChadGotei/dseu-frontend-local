@@ -87,10 +87,10 @@ const InformationBulletin = () => {
     // {
     //   name: "Three year diploma technical pass out are eligible to take admission in first year during B.Tech SPOT round. Preference will be given to the pass-out of DSEU.",
     // },
-    {
-      name: "Seat Confirmation Process - Diploma Round 3",
-      link: "/seat-confirmation-diploma-round3.pdf",
-    },
+    // {
+    //   name: "Seat Confirmation Process - Diploma Round 3",
+    //   link: "/seat-confirmation-diploma-round3.pdf",
+    // },
     {
       name: "Btech Internal Sliding Allocation result",
       link: "/BTECH_SLIDING_ALLOCATION.pdf",

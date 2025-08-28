@@ -11,18 +11,18 @@ export const toAdd = [
     fileName: "The Diploma Round 3 admissions are now closed",
     fileLink: "http://dseu.ac.in/admission/result/diploma/round3",
   },
-  {
-    fileName: "UG Sliding Allocation result is now live.",
-    fileLink: "/UG_SLIDING_ALLOCATION.pdf",
-  },
+  // {
+  //   fileName: "UG Sliding Allocation result is now live.",
+  //   fileLink: "/UG_SLIDING_ALLOCATION.pdf",
+  // },
   // {
   //   fileName:
   //     "Three year diploma technical pass out are eligible to take admission in first year during B.Tech SPOT round. Preference will be given to the pass-out of DSEU.",
   // },
-  {
-    fileName: "Btech Internal Sliding Allocation result",
-    fileLink: "/BTECH_SLIDING_ALLOCATION.pdf",
-  },
+  // {
+  //   fileName: "Btech Internal Sliding Allocation result",
+  //   fileLink: "/BTECH_SLIDING_ALLOCATION.pdf",
+  // },
   {
     fileName:
       "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September",
