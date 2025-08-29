@@ -9,7 +9,7 @@ import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 export const toAdd = [
   {
     fileName: "List of Shortlisted Candidates for the post of Registrar",
-    fileLink: "https://drive.google.com/file/d/19AMEe7jM2aBIsqbWg3yExavfe33FAzh5/view"
+    fileLink: "https://drive.google.com/file/d/1gi0iMYrUbDGdO9rR2q0tnIsWtK8mQN-y/view"
   },
   {
     fileName: "The Diploma Round 3 admissions are now closed",
