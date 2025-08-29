@@ -77,6 +77,10 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Guidelines for Spot Round of Counselling for PG",
+      link: "https://drive.google.com/file/d/198p0Bx9ymTbhWNy0uj6X4q7N2JpEOJG2/view",
+    },
+    {
       name: "The Diploma Round 3 admissions are now closed",
       link: "http://dseu.ac.in/admission/result/diploma/round3",
     },
@@ -84,13 +88,6 @@ const InformationBulletin = () => {
       name: "UG Sliding Allocation result is now live.",
       link: "/UG_SLIDING_ALLOCATION.pdf",
     },
-    // {
-    //   name: "Three year diploma technical pass out are eligible to take admission in first year during B.Tech SPOT round. Preference will be given to the pass-out of DSEU.",
-    // },
-    // {
-    //   name: "Seat Confirmation Process - Diploma Round 3",
-    //   link: "/seat-confirmation-diploma-round3.pdf",
-    // },
     {
       name: "Btech Internal Sliding Allocation result",
       link: "/BTECH_SLIDING_ALLOCATION.pdf",

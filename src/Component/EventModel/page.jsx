@@ -89,6 +89,39 @@ const Page = () => {
               </p>
             </div>
 
+            <a
+              href={"https://drive.google.com/file/d/198p0Bx9ymTbhWNy0uj6X4q7N2JpEOJG2/view"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium text-sm sm:text-base"
+            >
+              <FiExternalLink className="shrink-0" aria-hidden="true" />
+              <span>
+                Guidelines for <strong>SPOT round for PG</strong> (Postgraduate)
+              </span>
+            </a>
+
+
+            <div className="text-gray-600 text-sm sm:text-base">
+              <p>📅 Dates:
+                <span>
+                  <strong> 01.09.2025 - 03.09.2025</strong>
+                </span>
+              </p>
+            </div>
+
+            <div className="mt-2">
+              <a
+                href={"https://drive.google.com/file/d/198p0Bx9ymTbhWNy0uj6X4q7N2JpEOJG2/view"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
+              >
+                View PG PDF
+              </a>
+            </div>
+
+
             {/* Divider */}
             <hr className="my-4 border-gray-300" />
           </div>
