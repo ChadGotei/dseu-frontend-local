@@ -1,37 +1,46 @@
-import React, { useState } from "react";
-import toast from "react-hot-toast";
+import { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import toast from "react-hot-toast";
 
-import { deletePdf, getAllPdfs } from "../../../utils/apiservice";
 import { QUERY_KEYS } from "../../../utils/queryKeys";
+import { deletePdf, getAllPdfs } from "../../../utils/apiservice";
+import { useArchivedParams } from "../../../hooks/useArchivedParams";
 
 import withAuthProtection from "../withAuthProtection";
 import DeleteConfirmModal from "../DeleteConfirmModal";
 import { Pagination } from "../../Reusable/Pagination";
 import FilterSection from "./FilterSection";
 import PdfTable from "./PdfTable";
+import { useSearchParams } from "react-router-dom";
 
 const ViewPdfs = () => {
-  const [selectedTab, setSelectedTab] = useState("non-archived");
-  const [currentPage, setCurrentPage] = useState(1);
+  const limit = 10;
+  const [searchParams, setSearchParams] = useSearchParams();
+  const section = searchParams.get("section");
+  const sectionParam = new URLSearchParams(searchParams);
 
+  const [currentPage, setCurrentPage] = useState(1);
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
-  const [section, setSection] = useState("");
 
   const [filters, setFilters] = useState({
     searchInput: "",
     startDate: "",
     endDate: "",
-    section: "",
+    // section: "",
   });
 
   const [showModal, setShowModal] = useState(false);
   const [deleteId, setDeleteId] = useState(null);
 
-  const limit = 10;
-  const isArchived = selectedTab === "archived";
+  const { isArchived, selectedTab, setArchived } = useArchivedParams();
+
+  const setSection = (sec) => {
+    if (sec) sectionParam.set("section", sec);
+    setSearchParams(sectionParam, { replace: true });
+  }
+
   const queryClient = useQueryClient();
 
   const { data, isLoading, isError } = useQuery({
@@ -42,7 +51,7 @@ const ViewPdfs = () => {
       filters.searchInput,
       filters.startDate,
       filters.endDate,
-      filters.section,
+      section
     ],
     queryFn: () =>
       getAllPdfs(
@@ -52,7 +61,8 @@ const ViewPdfs = () => {
         filters.searchInput,
         filters.startDate,
         filters.endDate,
-        filters.section
+        // filters.section
+        section
       ),
     staleTime: 5 * 60 * 1000,
     keepPreviousData: true,
@@ -68,11 +78,6 @@ const ViewPdfs = () => {
     },
   });
 
-  const handleTabChange = (tab) => {
-    setSelectedTab(tab);
-    setCurrentPage(1);
-  };
-
   const handlePageClick = (e) => {
     setCurrentPage(e.selected + 1);
   };
@@ -86,7 +91,8 @@ const ViewPdfs = () => {
     setStartDate("");
     setEndDate("");
     setSection("");
-    setFilters({ searchInput: "", startDate: "", endDate: "", section: "" });
+    setSearchParams()
+    setFilters({ searchInput: "", startDate: "", endDate: "" });
     setCurrentPage(1);
   };
 
@@ -102,22 +108,26 @@ const ViewPdfs = () => {
     <div className="bg-white min-h-screen py-6 px-4 sm:px-8 lg:px-20">
       <div className="flex justify-center gap-4 mb-8">
         <button
-          onClick={() => handleTabChange("non-archived")}
-          className={`px-6 py-3 rounded-2xl font-semibold transition-colors duration-300 shadow ${
-            selectedTab === "non-archived"
-              ? "bg-blue-500 text-white"
-              : "bg-gray-200 hover:bg-blue-100"
-          }`}
+          onClick={() => {
+            setArchived(false)
+            setCurrentPage(1)
+          }}
+          className={`px-6 py-3 rounded-2xl font-semibold transition-colors duration-300 shadow ${selectedTab === "non-archived"
+            ? "bg-blue-500 text-white"
+            : "bg-gray-200 hover:bg-blue-100"
+            }`}
         >
           Non-Archived
         </button>
         <button
-          onClick={() => handleTabChange("archived")}
-          className={`px-6 py-3 rounded-2xl font-semibold transition-colors duration-300 shadow ${
-            selectedTab === "archived"
-              ? "bg-blue-500 text-white"
-              : "bg-gray-200 hover:bg-blue-100"
-          }`}
+          onClick={() => {
+            setArchived(true)
+            setCurrentPage(1)
+          }}
+          className={`px-6 py-3 rounded-2xl font-semibold transition-colors duration-300 shadow ${selectedTab === "archived"
+            ? "bg-blue-500 text-white"
+            : "bg-gray-200 hover:bg-blue-100"
+            }`}
         >
           Archived
         </button>

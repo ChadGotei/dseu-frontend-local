@@ -60,17 +60,17 @@ const PdfTable = ({
                 <td className="py-3 px-4">
                   {(currentPage - 1) * limit + index + 1}
                 </td>
-                <td className="py-3 px-4">{notice.fileName}</td>
-                <td className="py-3 px-4 capitalize">
+                <td className="py-3 px-4 text-xs md:text-sm">{notice.fileName}</td>
+                <td className="py-3 px-4 capitalize text-xs md:text-sm">
                   {getSectionName(notice.section)}
                 </td>
-                <td className="text-blue-500 hover:text-blue-600 hover:underline">
+                <td className="text-blue-500 hover:text-blue-600 hover:underline text-xs md:text-sm">
                   {notice.uploadedBy}
                 </td>
-                <td className="py-3 px-4">
+                <td className="py-3 px-4 text-xs md:text-sm">
                   {new Date(notice.uploadedAt).toLocaleDateString("en-GB")}
                 </td>
-                <td className="py-3 px-4 flex items-center gap-4">
+                <td className="py-3 px-4 flex items-center gap-4 text-xs md:text-sm">
                   <a
                     href={notice.fileLink}
                     target="_blank"
@@ -82,7 +82,7 @@ const PdfTable = ({
                   </a>
 
                   {/* Buttons: edit,delete and archive */}
-                  <div className="flex flex-row gap-2">
+                  <div className="flex flex-row gap-2 text-xs md:text-sm">
                     {notice.driveFileId && (
                       <button
                         onClick={(e) => {

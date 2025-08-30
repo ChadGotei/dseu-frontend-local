@@ -19,9 +19,13 @@ const FilterSection = ({
     <input
       type="text"
       value={searchInput}
+      autoFocus={true}
       onChange={(e) => {
         setSearchInput(e.target.value);
         setCurrentPage(1);
+      }}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") onSearch();
       }}
       placeholder="Search by file name..."
       className="flex-1 px-4 py-2 rounded-xl border-2 border-blue-300 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-200 transition duration-300 shadow-sm w-full"
@@ -81,14 +85,14 @@ const FilterSection = ({
       </div>
 
       <select
-        value={section}
+        value={section ?? ""}
         onChange={(e) => {
           setSection(e.target.value);
           setCurrentPage(1);
         }}
-        className="px-4 py-2 rounded-md border border-gray-300 shadow-sm"
+        className="px-4 py-2 rounded-md border border-gray-300 shadow-sm hover:cursor-pointer"
       >
-        <option value="">Select Section</option>
+        <option value={""} >Select Section</option>
         {getSectionOptions().map(({ value, label }) => (
           <option key={value} value={value}>
             {label}
