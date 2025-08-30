@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
 import { FaFilePdf } from "react-icons/fa";
+
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
+import { useArchivedParams } from "../../hooks/useArchivedParams";
+
 import HeadingText from "../Reusable/HeadingText";
 import ArchiveButton from "../Reusable/ArchiveButton";
 import UploadModal from "../Admin/UploadModal";
 import SearchAndUpload from "../Reusable/SearchAndUpload";
 
 const RecruitmentRules = () => {
-  const [archived, setArchived] = useState(false);
+  const { isArchived: archived, setArchived } = useArchivedParams();
+
+  // const [archived, setArchived] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [inputField, setInputField] = useState("");
@@ -39,7 +44,7 @@ const RecruitmentRules = () => {
 
   const handleArchivedButton = (e) => {
     e.preventDefault();
-    setArchived((prev) => !prev);
+    setArchived(!Boolean(archived))
   };
 
   const handleSearch = () => {
