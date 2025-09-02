@@ -7,10 +7,14 @@ import Tooltip from "../Reusable/Tooltip";
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 export const toAdd = [
-   {
-      fileName: "Guidelines for Spot Round of Counselling for PG",
-      fileLink: "https://drive.google.com/file/d/198p0Bx9ymTbhWNy0uj6X4q7N2JpEOJG2/view",
-    },
+  {
+    fileName: "Guidelines for Walk-in Admission to UG, B.Tech, and PG Programs for AY 2025–26, starting from 3rd September 2025",
+    fileLink: "https://drive.google.com/file/d/1lJrvGXRGLu-PIfz3tubGkjsMjmLNPK-b/view"
+  },
+  {
+    fileName: "Guidelines for Spot Round of Counselling for PG",
+    fileLink: "https://drive.google.com/file/d/198p0Bx9ymTbhWNy0uj6X4q7N2JpEOJG2/view",
+  },
   {
     fileName: "List of Shortlisted Candidates for the post of Registrar",
     fileLink: "https://drive.google.com/file/d/1gi0iMYrUbDGdO9rR2q0tnIsWtK8mQN-y/view"

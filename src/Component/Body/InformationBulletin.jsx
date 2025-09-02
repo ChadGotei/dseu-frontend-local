@@ -77,6 +77,10 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Guidelines for Walk-in Admission to UG, B.Tech, and PG Programs for AY 2025–26, starting from 3rd September 2025",
+      link: "https://drive.google.com/file/d/1lJrvGXRGLu-PIfz3tubGkjsMjmLNPK-b/view"
+    },
+    {
       name: "Guidelines for Spot Round of Counselling for PG",
       link: "https://drive.google.com/file/d/198p0Bx9ymTbhWNy0uj6X4q7N2JpEOJG2/view",
     },

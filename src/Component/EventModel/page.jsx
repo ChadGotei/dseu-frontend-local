@@ -37,6 +37,7 @@ const Page = () => {
 
   if (!showModal) return null;
 
+  // existing (unused) vars kept as-is
   const spotPdf =
     "https://drive.google.com/file/d/1vUDsxNlKox8Zrf2-VeW59vho2EqrNWRa/view";
 
@@ -77,20 +78,57 @@ const Page = () => {
 
         {/* Body */}
         <div className="text-gray-800 text-sm sm:text-base leading-relaxed space-y-5">
-          <div className="space-y-4">
-            <p className="text-base font-medium">
-              📢 Dear Applicant,
-            </p>
+          <div className="space-y-3">
+            <p className="text-base font-medium">📢 Dear Applicant,</p>
 
             {/* Diploma Round 3 (new) */}
-            <div className="flex flex-col gap-2">
+            {/* <div className="flex flex-col gap-2">
               <p>
-                The <strong>Diploma Round 3</strong> seat allocation has been <strong>closed</strong>.
+                The <strong>Diploma Round 3</strong> seat allocation has been{" "}
+                <strong>closed</strong>.
+              </p>
+            </div> */}
+
+            <a
+              href={
+                "https://drive.google.com/file/d/1lJrvGXRGLu-PIfz3tubGkjsMjmLNPK-b/view"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium text-sm sm:text-base mt-4"
+            >
+              <FiExternalLink className="shrink-0" aria-hidden="true" />
+              <span>
+                Guidelines for Walk-in Admission to <strong>UG, B.Tech, and PG Programs</strong> for AY 2025–26
+              </span>
+            </a>
+
+            <div className="text-gray-600 text-sm sm:text-base">
+              <p>
+                📅 Dates:
+                <span>
+                  <strong> Starting from 03.09.2025</strong>
+                </span>
               </p>
             </div>
 
+            <div className="mt-2">
+              <a
+                href={
+                  "https://drive.google.com/file/d/1lJrvGXRGLu-PIfz3tubGkjsMjmLNPK-b/view"
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
+              >
+                View Walk-in Guidelines PDF
+              </a>
+            </div>
+
             <a
-              href={"https://drive.google.com/file/d/198p0Bx9ymTbhWNy0uj6X4q7N2JpEOJG2/view"}
+              href={
+                "https://drive.google.com/file/d/198p0Bx9ymTbhWNy0uj6X4q7N2JpEOJG2/view"
+              }
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium text-sm sm:text-base"
@@ -101,9 +139,9 @@ const Page = () => {
               </span>
             </a>
 
-
             <div className="text-gray-600 text-sm sm:text-base">
-              <p>📅 Dates:
+              <p>
+                📅 Dates:
                 <span>
                   <strong> 01.09.2025 - 03.09.2025</strong>
                 </span>
@@ -112,7 +150,9 @@ const Page = () => {
 
             <div className="mt-2">
               <a
-                href={"https://drive.google.com/file/d/198p0Bx9ymTbhWNy0uj6X4q7N2JpEOJG2/view"}
+                href={
+                  "https://drive.google.com/file/d/198p0Bx9ymTbhWNy0uj6X4q7N2JpEOJG2/view"
+                }
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
@@ -120,7 +160,6 @@ const Page = () => {
                 View PG PDF
               </a>
             </div>
-
 
             {/* Divider */}
             <hr className="my-4 border-gray-300" />
