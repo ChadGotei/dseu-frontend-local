@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, Menu, ChevronDown, X } from "lucide-react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import TopBar from "./TopBar";
-import DSEULOGOTHICK from "../../assets/DSEULogo/DSEULOGOTHICK.svg";
+
 import DSEUTEXTFINAL from "../../assets/DSEULogo/DSEUTEXTFINAL.svg";
 import Group24 from "../../assets/DSEULogo/Group24.svg";
 import Orange from "../../assets/DSEULogo/Orange.svg";
@@ -563,14 +563,14 @@ const ResponsiveHeader = () => {
 
       {/* Enhanced Desktop Navigation Bar */}
 
-      <div className="hidden md:block bg-gradient-to-r from-blue-50 to-blue-100 shadow-lg shadow-blue-500/30 rounded-3xl w-[96%] mx-auto my-4 sticky top-0 z-50">
-        <nav className="max-w-7xl  mx-auto">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-5">
+      <div className="hidden md:block bg-gradient-to-r from-blue-50 to-blue-100 shadow-lg shadow-blue-500/30 rounded-3xl mx-auto my-4 sticky top-0 z-50 md:w-[97%] lg:w-[96%] xl:w-[95%]">
+        <nav className="max-w-7xl mx-auto">
+          <div className="flex justify-between items-center md:h-24 xl:h-16 ml-10">
+            <div className="flex items-center space-x-5 md:flex-wrap xl:flex-nowrap md:ml-5 lg:ml-0">
               {navItems.map((item) => (
                 <div
                   key={item.name}
-                  className="relative group"
+                  className="relative group flex-wrap"
                   onMouseEnter={() => handleItemHover(item.name)}
                   onMouseLeave={() => handleItemHover(null)}
                 >
@@ -580,7 +580,7 @@ const ResponsiveHeader = () => {
                   >
                     <Link
                       to={item.path || "#"}
-                      className="group inline-flex items-center text-base font-medium text-[#005CB9] hover:text-blue-800 whitespace-nowrap relative lg:px-1 py-1"
+                      className="group inline-flex items-center md:text-sm lg:text-base font-medium text-[#005CB9] hover:text-blue-800 whitespace-nowrap relative lg:px-1 py-1"
                     >
                       {item.name}
                       {item.dropdownItems && (
@@ -732,7 +732,7 @@ const ResponsiveHeader = () => {
               onClick={() => setIsSearchOpen(true)}
               className="text-[#005CB9] hover:text-blue-900 rounded-full hover:bg-blue-100 transition-colors duration-300 lg:pl-10"
             >
-              <Search className="h-5 w-5" />
+              <Search className="mr-10 h-5 w-5" />
             </motion.button>
           </div>
         </nav>

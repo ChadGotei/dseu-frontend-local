@@ -2,11 +2,11 @@ const PopUpModal = ({ title, onClose, links }) => {
   return (
     <>
       <div
-        className="fixed inset-0 bg-black bg-opacity-60 z-40 backdrop-blur-sm"
+        className="fixed z-50"
         onClick={onClose}
       />
 
-      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white shadosp-6 w-[90%] max-w-md border border-gray-200">
+      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white shadosp-6 w-[90%] max-w-md border border-gray-200 md:p-5 p-2 rounded-lg shadow-sm ">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-semibold text-gray-800">{title}</h1>
           <button

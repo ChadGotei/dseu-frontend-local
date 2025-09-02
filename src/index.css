@@ -35,11 +35,14 @@
 
 /* DSEU color themed loading animation */
 @keyframes colorCycle {
-  0%, 100% {
-    color: #3b82f6; 
+
+  0%,
+  100% {
+    color: #3b82f6;
   }
+
   50% {
-    color: #f97316; 
+    color: #f97316;
   }
 }
 
@@ -54,7 +57,7 @@
 }
 
 .slick-list {
-  max-height: 220px; 
+  max-height: 220px;
   overflow: hidden;
 }
 
@@ -84,34 +87,83 @@
 }
 
 @keyframes fade-in {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {
   animation: fade-in 0.8s ease-out forwards;
 }
+
 .custom-scrollbar {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
 }
 
 
 /* Hide scrollbar for modals */
 .hide-scrollbar {
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
 .blue-heading::selection {
   color: blue;
   background-color: '#1d4ed8';
+}
+
+
+/* tiny scrollbar just for the nav area */
+.nav-scroll {
+  overflow-x: auto;
+  /* ensure horizontal scroll if needed */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  /* Firefox */
+  scrollbar-color: rgba(59, 130, 246, .55) transparent;
+  /* thumb | track */
+}
+
+/* Chrome / Edge / Safari */
+.nav-scroll::-webkit-scrollbar {
+  height: 1px;
+  /* horizontal */
+  width: 1px;
+  /* vertical (if it appears) */
+}
+
+.nav-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.nav-scroll::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.45);
+  /* tailwind blue-500-ish */
+  border-radius: 9999px;
+}
+
+.nav-scroll:hover::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.75);
+}
+
+.nav-scroll::-webkit-scrollbar-corner {
+  background: transparent;
 }

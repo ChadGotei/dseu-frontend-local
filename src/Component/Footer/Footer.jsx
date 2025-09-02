@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <>
       <footer
-        className="bg-blue-50 text-black py-12 border-t-2 border-blue-300 shadow-lg"
+        className={`bg-blue-50 text-black py-12 border-t-2 border-blue-300 shadow-lg ${showModal && 'scrollbar-hide'}`}
         style={{ fontFamily: "'Inter', sans-serif" }}
       >
         <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-between items-start">
