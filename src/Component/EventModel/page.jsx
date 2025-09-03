@@ -64,7 +64,8 @@ const Page = () => {
         </button>
 
         {/* Header */}
-        <div className="flex items-center gap-3 mb-5">
+
+        <div className="flex items-center gap-3 mb-2">
           <div className="bg-blue-100 text-blue-700 p-2.5 rounded-full">
             <FiInfo className="text-lg sm:text-xl" aria-hidden="true" />
           </div>
@@ -76,18 +77,33 @@ const Page = () => {
           </h2>
         </div>
 
+
+        <p className="text-base font-medium mb-4">📢 Dear Applicant,</p>
+
+
         {/* Body */}
         <div className="text-gray-800 text-sm sm:text-base leading-relaxed space-y-5">
-          <div className="space-y-3">
-            <p className="text-base font-medium">📢 Dear Applicant,</p>
 
-            {/* Diploma Round 3 (new) */}
-            {/* <div className="flex flex-col gap-2">
-              <p>
-                The <strong>Diploma Round 3</strong> seat allocation has been{" "}
-                <strong>closed</strong>.
-              </p>
-            </div> */}
+          {/* Diploma Round 4 Results */}
+          <div className="space-y-3">
+            <p className="text-base font-medium">
+              🎉 Diploma Round 4 Results are now LIVE!
+            </p>
+            <div className="mt-2">
+              <a
+                href="http://dseu.ac.in/admission/result/diploma/round4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
+              >
+                View Diploma Round 4 Result
+              </a>
+            </div>
+            <hr className="my-4 border-gray-300" />
+          </div>
+
+          {/* Existing content */}
+          <div className="space-y-3">
 
             <a
               href={
@@ -95,11 +111,12 @@ const Page = () => {
               }
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium text-sm sm:text-base mt-4"
+              className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium text-sm sm:text-base"
             >
               <FiExternalLink className="shrink-0" aria-hidden="true" />
               <span>
-                Guidelines for Walk-in Admission to <strong>UG, B.Tech, and PG Programs</strong> for AY 2025–26
+                Guidelines for Walk-in Admission to{" "}
+                <strong>UG, B.Tech, and PG Programs</strong> for AY 2025–26
               </span>
             </a>
 
@@ -125,48 +142,12 @@ const Page = () => {
               </a>
             </div>
 
-            <a
-              href={
-                "https://drive.google.com/file/d/198p0Bx9ymTbhWNy0uj6X4q7N2JpEOJG2/view"
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium text-sm sm:text-base"
-            >
-              <FiExternalLink className="shrink-0" aria-hidden="true" />
-              <span>
-                Guidelines for <strong>SPOT round for PG</strong> (Postgraduate)
-              </span>
-            </a>
-
-            <div className="text-gray-600 text-sm sm:text-base">
-              <p>
-                📅 Dates:
-                <span>
-                  <strong> 01.09.2025 - 03.09.2025</strong>
-                </span>
-              </p>
-            </div>
-
-            <div className="mt-2">
-              <a
-                href={
-                  "https://drive.google.com/file/d/198p0Bx9ymTbhWNy0uj6X4q7N2JpEOJG2/view"
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
-              >
-                View PG PDF
-              </a>
-            </div>
-
             {/* Divider */}
             <hr className="my-4 border-gray-300" />
           </div>
 
           {/* Registrations notice */}
-          <a
+          {/* <a
             href="https://dseuadm.samarth.edu.in/ug/"
             target="_blank"
             rel="noopener noreferrer"
@@ -174,7 +155,7 @@ const Page = () => {
           >
             🎓 Registrations are now open for B.S. Optometry and B.Des Jewellery
             Design programs until <strong>3rd September</strong>.
-          </a>
+          </a> */}
 
           {/* Signature */}
           <p className="font-medium text-gray-700 text-sm sm:text-base">
@@ -184,6 +165,8 @@ const Page = () => {
       </div>
     </div>
   );
+
+
 };
 
 export default Page;

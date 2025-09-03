@@ -37,7 +37,7 @@ export const changeDiplomaRound2Status = async (id, status) => {
 export const getBtechRound2Result = async (formData) => {
   try {
     const response = await api.post(
-      `/btech/second`,         
+      `/btech/second`,
       formData,
       {
         headers: {
@@ -75,7 +75,7 @@ export const changeBtechRound2Status = async (id, status) => {
 export const getUgRound2Result = async (formData) => {
   try {
     const response = await api.post(
-      `/ug?round=second`,         
+      `/ug?round=second`,
       formData,
       {
         headers: {
@@ -114,7 +114,7 @@ export const changeUgRound2Status = async (id, status) => {
 export const getDiplomaRound3Result = async (formData) => {
   try {
     const response = await api.post(
-      `/result/third`,   //? change
+      `/result/third`,   
       formData,
       {
         headers: { "Content-Type": "application/json" },
@@ -130,7 +130,42 @@ export const getDiplomaRound3Result = async (formData) => {
 export const changeDiplomaRound3Status = async (id, status) => {
   try {
     const response = await api.put(
-      `/result/third/${id}`,   //? change
+      `/result/third/${id}`,   
+      { status },
+      {
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.error(error);  //! development
+    throw error;
+  }
+};
+
+
+//? Diploma round 4 result
+export const getDiplomaRound4Result = async (formData) => {
+  try {
+    const response = await api.post(
+      `/result/fourth`,   //? change
+      formData,
+      {
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.error(error);  //! devlopment
+    throw error;
+  }
+};
+
+
+export const changeDiplomaRound4Status = async (id, status) => {
+  try {
+    const response = await api.put(
+      `/result/fourth/${id}`,   //? change
       { status },
       {
         headers: { "Content-Type": "application/json" },

@@ -4,14 +4,14 @@ import { Eye, EyeOff, Info } from "lucide-react";
 import { FaQuestionCircle } from "react-icons/fa";
 import { useMutation } from "@tanstack/react-query";
 
-import useResultStore from "../../../store/diplomaRound2Store";
-import { getDiplomaRound2Result } from "../../../utils/resultservices";
+import useResultStore from "../../../store/diplomaRound4Store";
+import { getDiplomaRound4Result } from "../../../utils/resultservices";
 import { showErrorToast, showSuccessToast } from "../../../utils/toasts";
 import dseulogo from "../../../assets/dseulogofullnew.svg";
 
 import Tooltip from "../../Reusable/Tooltip";
 
-const DiplomaRound2Result = () => {
+const DiplomaRound4Result = () => {
     const [formData, setFormData] = useState({ email: "", password: "" });
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
@@ -20,11 +20,11 @@ const DiplomaRound2Result = () => {
     const setResult = useResultStore((state) => state.setResult);
 
     const { mutate } = useMutation({
-        mutationFn: getDiplomaRound2Result,
+        mutationFn: getDiplomaRound4Result,
         onSuccess: (data) => {
             showSuccessToast("Result fetched successfully");
             setResult(data);
-            navigate("/admission/result/diploma2/show");
+            navigate("/admission/result/diploma4/show");
         },
         onError: (error) => {
             showErrorToast(error.response?.data?.message || "Something went wrong");
@@ -45,8 +45,9 @@ const DiplomaRound2Result = () => {
     };
 
     return (
-        <div className="pt-10 flex items-center justify-center bg-gray-100 p-4 flex-col gap-10 pb-20 flex-wrap">
-            <div className="flex gap-6 mb-10">
+        <div className="pt-10 flex items-center justify-center bg-gray-100 p-4 flex-col gap-10 pb-20">
+
+            <div className="flex md:gap-6 gap-3 mb-10 flex-wrap items-center justify-center">
                 <button
                     className={`px-6 py-3 rounded-full bg-gray-200`}
                     onClick={() => navigate("/admission/result?category=diploma")}
@@ -54,21 +55,17 @@ const DiplomaRound2Result = () => {
                     Round 1
                 </button>
                 <button
-                    className={`px-6 py-3 rounded-full bg-blue-600 text-white font-semibold`}
+                    className={`px-6 py-3 rounded-full bg-gray-200 `}
+                    onClick={() => navigate("/admission/result/diploma/round2")}
                 >
                     Round 2
                 </button>
-                <button
-                    className={`px-6 py-3 rounded-full bg-gray-200`}
+                <button className={`px-6 py-3 rounded-full bg-gray-200`}
                     onClick={() => navigate("/admission/result/diploma/round3")}
                 >
-
                     Round 3
                 </button>
-                <button
-                    className={`px-6 py-3 rounded-full bg-gray-200 `}
-                    onClick={() => navigate("/admission/result/diploma/round4")}
-                >
+                <button className={`px-6 py-3 rounded-full bg-blue-600 text-white font-semibold`}>
                     Round 4
                 </button>
             </div>
@@ -77,7 +74,7 @@ const DiplomaRound2Result = () => {
             <div className="flex flex-col items-center justify-center gap-7">
                 <img alt="dseu logo" className="h-15 mt-[-30px]" src={dseulogo} />
                 <h2 className="text-2xl sm:text-2xl md:text-3xl font-extrabold text-center text-blue-700 font-sans mt-5">
-                    DSEU <span className="capitalize">Diploma Round 2</span> Seat Allocation
+                    DSEU <span className="capitalize">Diploma Round 4</span> Seat Allocation
                     <div className="mt-2 mx-auto w-[190px] h-1 bg-blue-600 rounded"></div>
                 </h2>
             </div>
@@ -146,16 +143,16 @@ const DiplomaRound2Result = () => {
                 </div>
             </div>
 
-            <a
-                href={`/seat-confirmation-diploma-round2.pdf`}
+            {/* <a
+                href={`/seat-confirmation-diploma-round3.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block text-center bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 transition-colors"
             >
                 View Seat Confirmation Process (PDF)
-            </a>
+            </a> */}
         </div>
     );
 };
 
-export default DiplomaRound2Result;
+export default DiplomaRound4Result;

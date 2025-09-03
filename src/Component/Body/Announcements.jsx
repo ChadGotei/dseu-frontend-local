@@ -8,6 +8,10 @@ import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 export const toAdd = [
   {
+    fileName: "The Diploma Round 4 admissions are now live!",
+    fileLink: "http://dseu.ac.in/admission/result/diploma/round4",
+  },
+  {
     fileName: "Guidelines for Walk-in Admission to UG, B.Tech, and PG Programs for AY 2025–26, starting from 3rd September 2025",
     fileLink: "https://drive.google.com/file/d/1lJrvGXRGLu-PIfz3tubGkjsMjmLNPK-b/view"
   },
@@ -23,11 +27,11 @@ export const toAdd = [
     fileName: "The Diploma Round 3 admissions are now closed",
     fileLink: "http://dseu.ac.in/admission/result/diploma/round3",
   },
-  {
-    fileName:
-      "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September",
-    fileLink: "https://dseuadm.samarth.edu.in/ug/",
-  },
+  // {
+  //   fileName:
+  //     "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September",
+  //   fileLink: "https://dseuadm.samarth.edu.in/ug/",
+  // },
   {
     fileName:
       "Schedule of Scrutiny Committee Interaction for the post of Deputy Registrar",

@@ -173,6 +173,9 @@ const ShowUgRound2 = lazy(() =>
 const DiplomaRound3Result = lazy(() => import("./Component/Result/Diploma_round3/DiplomaRound3Result.jsx"));
 const ShowDiplomaRound3 = lazy(() => import("./Component/Result/Diploma_round3/ShowDiplomaRound3.jsx"));
 
+const DiplomaRound4Result = lazy(() => import("./Component/Result/Diploma_round4/DiplomaRound4Result.jsx"));
+const ShowDiplomaRound4 = lazy(() => import("./Component/Result/Diploma_round4/ShowDiplomaRound4.jsx"));
+
 function App() {
   return (
     <BrowserRouter>
@@ -361,6 +364,12 @@ function App() {
             <Route
               path="/admission/result/diploma3/show"
               element={<ShowDiplomaRound3 />}
+            />
+
+            <Route path="/admission/result/diploma/round4" element={<DiplomaRound4Result />} />
+            <Route
+              path="/admission/result/diploma4/show"
+              element={<ShowDiplomaRound4 />}
             />
 
             {/* Others */}
