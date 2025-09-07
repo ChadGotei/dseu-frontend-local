@@ -8,6 +8,10 @@ import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 export const toAdd = [
   {
+    fileName: "Seat confirmation process - Diploma Round 4",
+    fileLink: "/seat-confirmation-diploma-round4.pdf"
+  },
+  {
     fileName: "The Diploma Round 4 admissions are now live!",
     fileLink: "http://dseu.ac.in/admission/result/diploma/round4",
   },
