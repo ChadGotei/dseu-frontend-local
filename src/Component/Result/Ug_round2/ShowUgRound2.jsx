@@ -43,7 +43,7 @@ const ShowBtechRound2 = () => {
             }, 2000);
 
             setModalInfo({ open: false, action: "" });
-            console.log(data);    //! remove after development
+            // console.log(data);    //! remove after development
             setResult(data);
         },
         onError: (err) => {

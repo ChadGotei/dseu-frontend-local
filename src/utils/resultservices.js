@@ -11,7 +11,7 @@ export const getDiplomaRound2Result = async (formData) => {
     );
     return response.data;
   } catch (error) {
-    console.error(error);  //! devlopment
+    // console.error(error);  //! devlopment
     throw error;
   }
 };
@@ -27,7 +27,7 @@ export const changeDiplomaRound2Status = async (id, status) => {
     );
     return response.data;
   } catch (error) {
-    console.error(error);  //! development
+    // console.error(error);  //! development
     throw error;
   }
 };
@@ -66,7 +66,7 @@ export const changeBtechRound2Status = async (id, status) => {
     );
     return response.data;
   } catch (error) {
-    console.error(error);  //! development
+    // console.error(error);  //! development
     throw error;
   }
 };
@@ -103,7 +103,7 @@ export const changeUgRound2Status = async (id, status) => {
     );
     return response.data;
   } catch (error) {
-    console.error(error);  //! development
+    // console.error(error);  //! development
     throw error;
   }
 };
@@ -114,7 +114,7 @@ export const changeUgRound2Status = async (id, status) => {
 export const getDiplomaRound3Result = async (formData) => {
   try {
     const response = await api.post(
-      `/result/third`,   
+      `/result/third`,
       formData,
       {
         headers: { "Content-Type": "application/json" },
@@ -122,7 +122,7 @@ export const getDiplomaRound3Result = async (formData) => {
     );
     return response.data;
   } catch (error) {
-    console.error(error);  //! devlopment
+    // console.error(error);  //! devlopment
     throw error;
   }
 };
@@ -130,7 +130,7 @@ export const getDiplomaRound3Result = async (formData) => {
 export const changeDiplomaRound3Status = async (id, status) => {
   try {
     const response = await api.put(
-      `/result/third/${id}`,   
+      `/result/third/${id}`,
       { status },
       {
         headers: { "Content-Type": "application/json" },
@@ -138,7 +138,7 @@ export const changeDiplomaRound3Status = async (id, status) => {
     );
     return response.data;
   } catch (error) {
-    console.error(error);  //! development
+    // console.error(error);  //! development
     throw error;
   }
 };
@@ -156,7 +156,7 @@ export const getDiplomaRound4Result = async (formData) => {
     );
     return response.data;
   } catch (error) {
-    console.error(error);  //! devlopment
+    // console.error(error);  //! devlopment
     throw error;
   }
 };
@@ -173,7 +173,29 @@ export const changeDiplomaRound4Status = async (id, status) => {
     );
     return response.data;
   } catch (error) {
-    console.error(error);  //! development
+    // console.error(error);  //! development
     throw error;
   }
 };
+
+
+// get result options
+export const getProgramAndCourseDetails = async (program) => {
+  const token = sessionStorage.getItem("token");
+
+  try {
+    const response = await api.get(
+      `result/admin?program=${program}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}

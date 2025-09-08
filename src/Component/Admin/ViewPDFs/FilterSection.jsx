@@ -90,7 +90,7 @@ const FilterSection = ({
           setSection(e.target.value);
           setCurrentPage(1);
         }}
-        className="px-4 py-2 rounded-md border border-gray-300 shadow-sm hover:cursor-pointer"
+        className="px-4 py-2 rounded-md border border-gray-300 shadow-sm hover:cursor-pointer w-full"
       >
         <option value={""} >Select Section</option>
         {getSectionOptions().map(({ value, label }) => (

@@ -1,3 +1,5 @@
+// TODO: Add all keys
+
 export const QUERY_KEYS = Object.freeze({
     GET_DEPARTMENTS: "getDepartments",
     GET_DEPARTMENT_BY_ID: "getDepartmentById",
@@ -16,5 +18,8 @@ export const QUERY_KEYS = Object.freeze({
     GET_PDFS_BY_CATEGORY: "getPdfsByCategory",
     GET_CAMPUS_BY_ZONE: "getCampusByZone",
     GET_NOTICES: "notices",
+
+    // result
+    GET_PROGRAM_AND_CAMPUS_DETAILS_BY_DEGREE: "programAndCampusDetailsByDegree"
 });
 

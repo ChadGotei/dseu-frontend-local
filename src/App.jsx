@@ -8,6 +8,7 @@ import NotFound from "./Component/NotFound/page.jsx";
 import UserLayout from "./Component/Layouts/UserLayout.jsx";
 import UnderConstruction from "./Component/Reusable/UnderConstruction";
 import Home from "./Component/Home/page.jsx";
+import { resultRoutes } from "./routes/ResultRoutes.jsx";
 
 // Home page components
 const ChancellorMessage = lazy(() =>
@@ -136,6 +137,7 @@ const Dashboard = lazy(() => import("./Component/Admin/Dashboard"));
 const TestPage = lazy(() => import("./Component/Admin/TestPage"));
 const ArchiveUploads = lazy(() => import("./Component/Admin/ArchiveUploads"));
 const ViewPdfs = lazy(() => import("./Component/Admin/ViewPDFs/ViewPdfs"));
+const AddStudent = lazy(() => import("./Component/Admin/result/AddStudent.jsx"));
 
 // result
 const Result = lazy(() => import("./Component/Result/Result.jsx"));
@@ -317,60 +319,10 @@ function App() {
             <Route path="/admin/view-pdfs" element={<ViewPdfs />} />
             <Route path="/admin/dashboard" element={<Dashboard />} />
             <Route path="/admin/archive-uploads" element={<ArchiveUploads />} />
+            <Route path="/admin/result/add-student" element={<AddStudent />} />
 
             {/* Result */}
-            <Route path="/admission/result" element={<Result />} />
-            <Route path="/admission/result/show" element={<ShowResult />} />
-            <Route path="/admission/result/ug" element={<UGResult />} />
-            <Route
-              path="/admission/result/ug/show"
-              element={<ShowUgResult />}
-            />
-
-            <Route path="/admission/result/pg" element={<PGResult />} />
-            <Route
-              path="/admission/result/pg/show"
-              element={<ShowPgResult />}
-            />
-
-            <Route
-              path="/admission/result/diploma/round2"
-              element={<DiplomaRound2Result />}
-            />
-            <Route
-              path="/admission/result/diploma2/show"
-              element={<ShowDiplomaRound2 />}
-            />
-
-            <Route
-              path="/admission/result/btech/round2"
-              element={<BtechRound2Result />}
-            />
-            <Route
-              path="/admission/result/btech2/show"
-              element={<ShowBtechRound2 />}
-            />
-
-            <Route
-              path="/admission/result/ug/round2"
-              element={<UGRound2Result />}
-            />
-            <Route
-              path="/admission/result/ug2/show"
-              element={<ShowUgRound2 />}
-            />
-
-            <Route path="/admission/result/diploma/round3" element={<DiplomaRound3Result />} />
-            <Route
-              path="/admission/result/diploma3/show"
-              element={<ShowDiplomaRound3 />}
-            />
-
-            <Route path="/admission/result/diploma/round4" element={<DiplomaRound4Result />} />
-            <Route
-              path="/admission/result/diploma4/show"
-              element={<ShowDiplomaRound4 />}
-            />
+            {resultRoutes}
 
             {/* Others */}
             <Route path="/Entrepreneurship" element={<Entrepreneurship />} />
