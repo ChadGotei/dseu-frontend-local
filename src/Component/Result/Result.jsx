@@ -62,7 +62,7 @@ const Result = () => {
   return (
     <div className="pt-10 flex items-center justify-center bg-gray-100 p-4 flex-col gap-10 pb-20">
       {category === "diploma" &&
-        <div className="flex gap-6 mb-10 flex-wrap">
+        <div className="flex md:gap-6 gap-3 mb-10 flex-wrap items-center justify-center">
           <button
             className={`px-6 py-3 rounded-full bg-blue-600 text-white font-semibold`}>
             Round 1
