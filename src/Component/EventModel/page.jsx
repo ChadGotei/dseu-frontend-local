@@ -83,7 +83,7 @@ const Page = () => {
 
           {/* NEW: Admission Offer for Waitlisted Candidates - Diploma */}
           <div className="space-y-3">
-            <a href="https://drive.google.com/file/d/1q6X20rgAh-6Z7dfPepUUrHyMlnylBK7w/view"
+            <a href="http://drive.google.com/file/d/1TGS1pSfVIO5AoXnOi6gFvmjMvFe7bu5b/view"
               target="_blank"
               rel="noopener noreferrer"
             >

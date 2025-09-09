@@ -78,7 +78,7 @@ const InformationBulletin = () => {
   const admissionManuals = [
     {
       name: "Admission Offer for Waitlisted Candidates - Diploma Programs (FY 2025-26)",
-      link: "https://drive.google.com/file/d/1q6X20rgAh-6Z7dfPepUUrHyMlnylBK7w/view"
+      link: "http://drive.google.com/file/d/1TGS1pSfVIO5AoXnOi6gFvmjMvFe7bu5b/view"
     },
     {
       name: "Seat confirmation process - Diploma Round 4",
