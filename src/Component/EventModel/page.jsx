@@ -64,7 +64,6 @@ const Page = () => {
         </button>
 
         {/* Header */}
-
         <div className="flex items-center gap-3 mb-2">
           <div className="bg-blue-100 text-blue-700 p-2.5 rounded-full">
             <FiInfo className="text-lg sm:text-xl" aria-hidden="true" />
@@ -77,13 +76,39 @@ const Page = () => {
           </h2>
         </div>
 
-
         <p className="text-base font-medium mb-4">📢 Dear Applicant,</p>
-
 
         {/* Body */}
         <div className="text-gray-800 text-sm sm:text-base leading-relaxed space-y-5">
 
+          {/* NEW: Admission Offer for Waitlisted Candidates - Diploma */}
+          <div className="space-y-3">
+            <a href="https://drive.google.com/file/d/1q6X20rgAh-6Z7dfPepUUrHyMlnylBK7w/view"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <div className="inline-flex items-center gap-2 text-blue-700 font-medium text-sm sm:text-base">
+                <FiExternalLink className="shrink-0" aria-hidden="true" />
+                <span>
+                  Admission Offer for Waitlisted Candidates –{" "}
+                  <strong>Diploma Programs (FY 2025–26)</strong>
+                </span>
+              </div>
+            </a>
+            <div className="text-gray-600 text-sm sm:text-base">
+              <p>
+                📅 Dates:{" "}
+                <strong>10 September 2025</strong> &{" "}
+                <strong>11 September 2025</strong>
+              </p>
+              <p>
+                📍 Location: <strong>DSEU Dwarka Campus</strong>
+              </p>
+            </div>
+            {/* Divider */}
+            <hr className="my-4 border-gray-300" />
+          </div>
           {/* Diploma Round 4 Results */}
           <div className="space-y-3">
             <p className="text-base font-medium">
@@ -102,9 +127,9 @@ const Page = () => {
             <hr className="my-4 border-gray-300" />
           </div>
 
+
           {/* Existing content */}
           <div className="space-y-3">
-
             <a
               href={
                 "https://drive.google.com/file/d/1lJrvGXRGLu-PIfz3tubGkjsMjmLNPK-b/view"
@@ -122,8 +147,7 @@ const Page = () => {
 
             <div className="text-gray-600 text-sm sm:text-base">
               <p>
-                📅 Dates:
-                <span>
+                📅 Dates: <span>
                   <strong> Starting from 03.09.2025</strong>
                 </span>
               </p>
@@ -143,19 +167,7 @@ const Page = () => {
             </div>
 
             {/* Divider */}
-            <hr className="my-4 border-gray-300" />
           </div>
-
-          {/* Registrations notice */}
-          {/* <a
-            href="https://dseuadm.samarth.edu.in/ug/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium hover:text-gray-700 block text-xs sm:text-base"
-          >
-            🎓 Registrations are now open for B.S. Optometry and B.Des Jewellery
-            Design programs until <strong>3rd September</strong>.
-          </a> */}
 
           {/* Signature */}
           <p className="font-medium text-gray-700 text-sm sm:text-base">
@@ -165,8 +177,6 @@ const Page = () => {
       </div>
     </div>
   );
-
-
 };
 
 export default Page;

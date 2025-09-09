@@ -330,7 +330,7 @@ const members = [
   },
   {
     id: 39,
-    name: "Ms. Niharika Pandey",
+    name: "Ms. Niharika",
     src: niharikaPandey,
     category: "Training and Placement Officers",
   },

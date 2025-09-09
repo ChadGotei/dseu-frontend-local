@@ -7,6 +7,10 @@ import Tooltip from "../Reusable/Tooltip";
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 export const toAdd = [
+  { 
+    fileName: "Admission Offer for Waitlisted Candidates - Diploma Programs (FY 2025-26)",
+    fileLink: "https://drive.google.com/file/d/1q6X20rgAh-6Z7dfPepUUrHyMlnylBK7w/view"
+  },
   {
     fileName: "Seat confirmation process - Diploma Round 4",
     fileLink: "/seat-confirmation-diploma-round4.pdf"

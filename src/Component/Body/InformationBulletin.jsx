@@ -77,6 +77,10 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Admission Offer for Waitlisted Candidates - Diploma Programs (FY 2025-26)",
+      link: "https://drive.google.com/file/d/1q6X20rgAh-6Z7dfPepUUrHyMlnylBK7w/view"
+    },
+    {
       name: "Seat confirmation process - Diploma Round 4",
       link: "/seat-confirmation-diploma-round4.pdf"
     },
