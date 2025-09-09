@@ -126,24 +126,13 @@ const ShowDiplomaRound4 = () => {
                 <div className="flex flex-col items-center gap-4 mt-10">
 
                     {student.status === "pending" &&
-                        <>
-                            <div className="flex gap-6">
-                                <button
-                                    onClick={() => setModalInfo({ open: true, action: "Freeze" })}
-                                    className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
-                                >
-                                    Freeze
-                                </button>
-                                <button
-                                    onClick={() => setModalInfo({ open: true, action: "Reject" })}
-                                    className="bg-red-600 hover:bg-red-700 text-white text-lg px-6 py-3 rounded-xl transition-colors"
-                                >
-                                    Reject
-                                </button>
-                            </div>
-
-                            <ButtonsDescription onlyTwoButtons={true} />
-                        </>
+                        <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg text-center max-w-xl">
+                            <p className="font-semibold text-lg mb-2">Seat Confirmation Closed</p>
+                            <p className="text-justify">
+                                The seat confirmation window for Diploma round 4 admissions is now closed.
+                                Please await further communication regarding upcoming rounds or official announcements.
+                            </p>
+                        </div>
                     }
 
                     {/* change later according to backend */}
