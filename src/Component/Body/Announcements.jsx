@@ -8,7 +8,11 @@ import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 export const toAdd = [
   {
-    fileName: "Diploma waiting list",
+    fileName: "Diploma waiting list for 11th September",
+    fileLink: "https://drive.google.com/file/d/1h5mQvEipR-HBodFLbLJe_-BvFD1SQTz6/view"
+  },
+  {
+    fileName: "Diploma waiting list - 10th September",
     fileLink: "https://drive.google.com/file/d/13m6pq9CL2VoiaPX6Wk0gsFQRstxaAAps/view"
   },
   {

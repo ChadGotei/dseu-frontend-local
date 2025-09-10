@@ -1,16 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { FiInfo, FiExternalLink } from "react-icons/fi";
 
-const slidingPdf = "/BTECH_SLIDING_ALLOCATION.pdf";
-const UGslidingPdf = "/UG_SLIDING_ALLOCATION.pdf";
-
-// New Spot Round UG PDF
-const spotUgPdf = {
-  fileName: "Guidelines for Spot Round of Counselling for UG",
-  fileLink:
-    "https://drive.google.com/file/d/1f9dcVegIzesWC0LA0UHlh_JIHikM69k7/view",
-};
-
 const Page = () => {
   const [showModal, setShowModal] = useState(true);
   const modalRef = useRef(null);
@@ -110,6 +100,19 @@ const Page = () => {
           {/* NEW: Diploma Waiting List */}
           <div className="space-y-3 mt-5">
             <a
+              href="https://drive.google.com/file/d/1h5mQvEipR-HBodFLbLJe_-BvFD1SQTz6/view"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="inline-flex items-center gap-2 text-blue-700 font-medium text-sm sm:text-base">
+                <FiExternalLink className="shrink-0" aria-hidden="true" />
+                <span>
+                  Diploma <strong>Waiting List</strong> (FY 2025–26) - 11th September
+                </span>
+              </div>
+            </a>
+
+            {/* <a
               href="https://drive.google.com/file/d/13m6pq9CL2VoiaPX6Wk0gsFQRstxaAAps/view"
               target="_blank"
               rel="noopener noreferrer"
@@ -117,22 +120,36 @@ const Page = () => {
               <div className="inline-flex items-center gap-2 text-blue-700 font-medium text-sm sm:text-base">
                 <FiExternalLink className="shrink-0" aria-hidden="true" />
                 <span>
-                  Diploma <strong>Waiting List</strong> (FY 2025–26)
+                  Diploma <strong>Waiting List</strong> (FY 2025–26) - 10th September
                 </span>
               </div>
-            </a>
+            </a> */}
 
-            <div className="mt-2">
-              <a
-                href={
-                  "https://drive.google.com/file/d/13m6pq9CL2VoiaPX6Wk0gsFQRstxaAAps/view"
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
-              >
-                View waiting list
-              </a>
+            <div className="flex flex-col lg:flex-row lg:gap-5 gap-1">
+              <div className="mt-2">
+                <a
+                  href={
+                    "https://drive.google.com/file/d/1h5mQvEipR-HBodFLbLJe_-BvFD1SQTz6/view"
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
+                >
+                  View waiting list - 11th September
+                </a>
+              </div>
+              <div className="mt-2">
+                <a
+                  href={
+                    "https://drive.google.com/file/d/13m6pq9CL2VoiaPX6Wk0gsFQRstxaAAps/view"
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
+                >
+                  View waiting list - 10th September
+                </a>
+              </div>
             </div>
             {/* Divider */}
             <hr className="my-4 border-gray-300" />

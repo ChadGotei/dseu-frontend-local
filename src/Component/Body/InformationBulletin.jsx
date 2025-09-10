@@ -77,7 +77,11 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
-      name: "Diploma waiting list",
+      name: "Diploma waiting list for 11th September",
+      link: "https://drive.google.com/file/d/1h5mQvEipR-HBodFLbLJe_-BvFD1SQTz6/view"
+    },
+    {
+      name: "Diploma waiting list - 10th September",
       link: "https://drive.google.com/file/d/13m6pq9CL2VoiaPX6Wk0gsFQRstxaAAps/view"
     },
     {
