@@ -77,17 +77,21 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Diploma waiting list",
+      link: "https://drive.google.com/file/d/13m6pq9CL2VoiaPX6Wk0gsFQRstxaAAps/view"
+    },
+    {
       name: "Admission Offer for Waitlisted Candidates - Diploma Programs (FY 2025-26)",
       link: "http://drive.google.com/file/d/1TGS1pSfVIO5AoXnOi6gFvmjMvFe7bu5b/view"
     },
-    {
-      name: "Seat confirmation process - Diploma Round 4",
-      link: "/seat-confirmation-diploma-round4.pdf"
-    },
-    {
-      name: "The Diploma Round 4 admissions are now live!",
-      link: "http://dseu.ac.in/admission/result/diploma/round4",
-    },
+    // {
+    //   name: "Seat confirmation process - Diploma Round 4",
+    //   link: "/seat-confirmation-diploma-round4.pdf"
+    // },
+    // {
+    //   name: "The Diploma Round 4 admissions are now live!",
+    //   link: "http://dseu.ac.in/admission/result/diploma/round4",
+    // },
     {
       name: "Guidelines for Walk-in Admission to UG, B.Tech, and PG Programs for AY 2025–26, starting from 3rd September 2025",
       link: "https://drive.google.com/file/d/1lJrvGXRGLu-PIfz3tubGkjsMjmLNPK-b/view"

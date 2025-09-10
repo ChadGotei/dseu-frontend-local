@@ -83,11 +83,11 @@ const Page = () => {
 
           {/* NEW: Admission Offer for Waitlisted Candidates - Diploma */}
           <div className="space-y-3">
-            <a href="http://drive.google.com/file/d/1TGS1pSfVIO5AoXnOi6gFvmjMvFe7bu5b/view"
+            <a
+              href="http://drive.google.com/file/d/1TGS1pSfVIO5AoXnOi6gFvmjMvFe7bu5b/view"
               target="_blank"
               rel="noopener noreferrer"
             >
-
               <div className="inline-flex items-center gap-2 text-blue-700 font-medium text-sm sm:text-base">
                 <FiExternalLink className="shrink-0" aria-hidden="true" />
                 <span>
@@ -98,33 +98,46 @@ const Page = () => {
             </a>
             <div className="text-gray-600 text-sm sm:text-base">
               <p>
-                📅 Dates:{" "}
-                <strong>10 September 2025</strong> &{" "}
+                📅 Dates: <strong>10 September 2025</strong> &{" "}
                 <strong>11 September 2025</strong>
               </p>
               <p>
                 📍 Location: <strong>DSEU Dwarka Campus</strong>
               </p>
             </div>
-            {/* Divider */}
-            <hr className="my-4 border-gray-300" />
           </div>
-          {/* Diploma Round 4 Results */}
-          <div className="space-y-3">
-            <p className="text-base font-medium">
-              🎉 Diploma Round 4 Results are now LIVE!
-            </p>
+
+          {/* NEW: Diploma Waiting List */}
+          <div className="space-y-3 mt-5">
+            <a
+              href="https://drive.google.com/file/d/13m6pq9CL2VoiaPX6Wk0gsFQRstxaAAps/view"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="inline-flex items-center gap-2 text-blue-700 font-medium text-sm sm:text-base">
+                <FiExternalLink className="shrink-0" aria-hidden="true" />
+                <span>
+                  Diploma <strong>Waiting List</strong> (FY 2025–26)
+                </span>
+              </div>
+            </a>
+
             <div className="mt-2">
               <a
-                href="http://dseu.ac.in/admission/result/diploma/round4"
+                href={
+                  "https://drive.google.com/file/d/13m6pq9CL2VoiaPX6Wk0gsFQRstxaAAps/view"
+                }
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
               >
-                View Diploma Round 4 Result
+                View waiting list
               </a>
             </div>
+            {/* Divider */}
             <hr className="my-4 border-gray-300" />
+
+
           </div>
 
 

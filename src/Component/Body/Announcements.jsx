@@ -7,18 +7,22 @@ import Tooltip from "../Reusable/Tooltip";
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 export const toAdd = [
-  { 
+  {
+    fileName: "Diploma waiting list",
+    fileLink: "https://drive.google.com/file/d/13m6pq9CL2VoiaPX6Wk0gsFQRstxaAAps/view"
+  },
+  {
     fileName: "Admission Offer for Waitlisted Candidates - Diploma Programs (FY 2025-26)",
     fileLink: "http://drive.google.com/file/d/1TGS1pSfVIO5AoXnOi6gFvmjMvFe7bu5b/view"
   },
-  {
-    fileName: "Seat confirmation process - Diploma Round 4",
-    fileLink: "/seat-confirmation-diploma-round4.pdf"
-  },
-  {
-    fileName: "The Diploma Round 4 admissions are now live!",
-    fileLink: "http://dseu.ac.in/admission/result/diploma/round4",
-  },
+  // {
+  //   fileName: "Seat confirmation process - Diploma Round 4",
+  //   fileLink: "/seat-confirmation-diploma-round4.pdf"
+  // },
+  // {
+  //   fileName: "The Diploma Round 4 admissions are now live!",
+  //   fileLink: "http://dseu.ac.in/admission/result/diploma/round4",
+  // },
   {
     fileName: "Guidelines for Walk-in Admission to UG, B.Tech, and PG Programs for AY 2025–26, starting from 3rd September 2025",
     fileLink: "https://drive.google.com/file/d/1lJrvGXRGLu-PIfz3tubGkjsMjmLNPK-b/view"
