@@ -78,27 +78,19 @@ const InformationBulletin = () => {
   const admissionManuals = [
     {
       name: "Diploma waiting list for 11th September",
-      link: "https://drive.google.com/file/d/1h5mQvEipR-HBodFLbLJe_-BvFD1SQTz6/view"
+      link: "https://drive.google.com/file/d/1KTudgnNbT7ju78RXZPyCWRrA0gbQks1p/view"
     },
     {
       name: "Diploma waiting list - 10th September",
-      link: "https://drive.google.com/file/d/13m6pq9CL2VoiaPX6Wk0gsFQRstxaAAps/view"
+      link: "https://drive.google.com/file/d/1Wt_McSdHA4YMt4ldFkCtsGTfxTcKB_mS/view"
     },
     {
       name: "Admission Offer for Waitlisted Candidates - Diploma Programs (FY 2025-26)",
-      link: "http://drive.google.com/file/d/1TGS1pSfVIO5AoXnOi6gFvmjMvFe7bu5b/view"
+      link: "https://drive.google.com/file/d/1bBQ4aLtFtTM3Nc7Uq6GjkYObb3UB14FX/view"
     },
-    // {
-    //   name: "Seat confirmation process - Diploma Round 4",
-    //   link: "/seat-confirmation-diploma-round4.pdf"
-    // },
-    // {
-    //   name: "The Diploma Round 4 admissions are now live!",
-    //   link: "http://dseu.ac.in/admission/result/diploma/round4",
-    // },
     {
       name: "Guidelines for Walk-in Admission to UG, B.Tech, and PG Programs for AY 2025–26, starting from 3rd September 2025",
-      link: "https://drive.google.com/file/d/1lJrvGXRGLu-PIfz3tubGkjsMjmLNPK-b/view"
+      link: "https://drive.google.com/file/d/1l-UjchABcACRkIlUeBPUBjFzfU1DlMI1/view"
     },
     {
       name: "Guidelines for Spot Round of Counselling for PG",
