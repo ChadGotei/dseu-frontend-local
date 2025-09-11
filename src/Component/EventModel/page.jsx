@@ -100,7 +100,7 @@ const Page = () => {
           {/* NEW: Diploma Waiting List */}
           <div className="space-y-3 mt-5">
             <a
-              href="https://drive.google.com/file/d/1h5mQvEipR-HBodFLbLJe_-BvFD1SQTz6/view"
+              href="https://drive.google.com/file/d/1KTudgnNbT7ju78RXZPyCWRrA0gbQks1p/view"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -112,24 +112,11 @@ const Page = () => {
               </div>
             </a>
 
-            {/* <a
-              href="https://drive.google.com/file/d/13m6pq9CL2VoiaPX6Wk0gsFQRstxaAAps/view"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="inline-flex items-center gap-2 text-blue-700 font-medium text-sm sm:text-base">
-                <FiExternalLink className="shrink-0" aria-hidden="true" />
-                <span>
-                  Diploma <strong>Waiting List</strong> (FY 2025–26) - 10th September
-                </span>
-              </div>
-            </a> */}
-
             <div className="flex flex-col lg:flex-row lg:gap-5 gap-1">
               <div className="mt-2">
                 <a
                   href={
-                    "https://drive.google.com/file/d/1h5mQvEipR-HBodFLbLJe_-BvFD1SQTz6/view"
+                    "https://drive.google.com/file/d/1KTudgnNbT7ju78RXZPyCWRrA0gbQks1p/view"
                   }
                   target="_blank"
                   rel="noopener noreferrer"
@@ -141,7 +128,7 @@ const Page = () => {
               <div className="mt-2">
                 <a
                   href={
-                    "https://drive.google.com/file/d/13m6pq9CL2VoiaPX6Wk0gsFQRstxaAAps/view"
+                    "https://drive.google.com/file/d/1Wt_McSdHA4YMt4ldFkCtsGTfxTcKB_mS/view"
                   }
                   target="_blank"
                   rel="noopener noreferrer"
@@ -162,7 +149,7 @@ const Page = () => {
           <div className="space-y-3">
             <a
               href={
-                "https://drive.google.com/file/d/1lJrvGXRGLu-PIfz3tubGkjsMjmLNPK-b/view"
+                "https://drive.google.com/file/d/1l-UjchABcACRkIlUeBPUBjFzfU1DlMI1/view"
               }
               target="_blank"
               rel="noopener noreferrer"
@@ -186,7 +173,7 @@ const Page = () => {
             <div className="mt-2">
               <a
                 href={
-                  "https://drive.google.com/file/d/1lJrvGXRGLu-PIfz3tubGkjsMjmLNPK-b/view"
+                  "https://drive.google.com/file/d/1l-UjchABcACRkIlUeBPUBjFzfU1DlMI1/view"
                 }
                 target="_blank"
                 rel="noopener noreferrer"
