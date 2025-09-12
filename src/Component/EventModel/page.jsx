@@ -27,11 +27,9 @@ const Page = () => {
 
   if (!showModal) return null;
 
-  // existing (unused) vars kept as-is
-  const spotPdf =
-    "https://drive.google.com/file/d/1vUDsxNlKox8Zrf2-VeW59vho2EqrNWRa/view";
-
-  const diplomaRound3 = "http://dseu.ac.in/admission/result/diploma/round3";
+  // demo link (replace later with official diploma waiting list link)
+  const diplomaWaitingListDemo =
+    "https://drive.google.com/file/d/1aq8iR0kMsgmGVOj3h_O8fcsFct-1A10p/view";
 
   return (
     <div
@@ -69,9 +67,54 @@ const Page = () => {
         <p className="text-base font-medium mb-4">📢 Dear Applicant,</p>
 
         {/* Body */}
-        <div className="text-gray-800 text-sm sm:text-base leading-relaxed space-y-5">
+        <div className="text-gray-800 text-sm sm:text-base leading-relaxed space-y-8">
 
-          {/* Existing content */}
+          {/* Diploma Waiting List Section */}
+          <div className="space-y-3 border-b border-gray-200 pb-4">
+
+            <p>
+              Diploma <strong>waiting list students</strong> may get admission
+              opportunity as per availability of seats.
+            </p>
+
+            <ul className="list-disc list-inside text-gray-700 text-sm sm:text-base">
+              <li className="text-left">
+                📍 <strong>Location:</strong> DSEU Wazirpur Campus (near Shalimar
+                Bagh Metro Station)
+              </li>
+              <li>
+                📅 <strong>Date:</strong> 15th September 2025
+              </li>
+              <li>
+                ⏰ <strong>Reporting Time:</strong> 9:00 AM – 11:00 AM
+              </li>
+            </ul>
+
+            <div>
+              <a
+                href={diplomaWaitingListDemo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium text-sm sm:text-base"
+              >
+                <FiExternalLink className="shrink-0" aria-hidden="true" />
+                <span>Diploma Waiting List for 15th September</span>
+              </a>
+            </div>
+
+            <a
+              href={
+                "https://drive.google.com/file/d/1aq8iR0kMsgmGVOj3h_O8fcsFct-1A10p/view"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
+            >
+              View Waiting list
+            </a>
+          </div>
+
+          {/* UG/PG Walk-in Guidelines */}
           <div className="space-y-3">
             <a
               href={
@@ -90,8 +133,9 @@ const Page = () => {
 
             <div className="text-gray-600 text-sm sm:text-base">
               <p>
-                📅 Dates: <span>
-                  <strong> Starting from 03.09.2025</strong>
+                📅 Dates:{" "}
+                <span>
+                  <strong>Starting from 03.09.2025</strong>
                 </span>
               </p>
             </div>
@@ -108,8 +152,6 @@ const Page = () => {
                 View Walk-in Guidelines PDF
               </a>
             </div>
-
-            {/* Divider */}
           </div>
 
           {/* Signature */}

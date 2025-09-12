@@ -77,6 +77,14 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Diploma waiting list for 15th September",
+      link: "https://drive.google.com/file/d/1aq8iR0kMsgmGVOj3h_O8fcsFct-1A10p/view"
+    },
+    {
+      name: "Admission Offer for Waitlisted Candidates - Diploma Programs (FY 2025-26)",
+      link: "https://drive.google.com/file/d/1bBQ4aLtFtTM3Nc7Uq6GjkYObb3UB14FX/view"
+    },
+    {
       name: "Diploma waiting list for 11th September",
       link: "https://drive.google.com/file/d/1KTudgnNbT7ju78RXZPyCWRrA0gbQks1p/view"
     },
@@ -84,22 +92,11 @@ const InformationBulletin = () => {
       name: "Diploma waiting list - 10th September",
       link: "https://drive.google.com/file/d/1Wt_McSdHA4YMt4ldFkCtsGTfxTcKB_mS/view"
     },
-    {
-      name: "Admission Offer for Waitlisted Candidates - Diploma Programs (FY 2025-26)",
-      link: "https://drive.google.com/file/d/1bBQ4aLtFtTM3Nc7Uq6GjkYObb3UB14FX/view"
-    },
+
     {
       name: "Guidelines for Walk-in Admission to UG, B.Tech, and PG Programs for AY 2025–26, starting from 3rd September 2025",
       link: "https://drive.google.com/file/d/1l-UjchABcACRkIlUeBPUBjFzfU1DlMI1/view"
     },
-    // {
-    //   name: "Guidelines for Spot Round of Counselling for PG",
-    //   link: "https://drive.google.com/file/d/198p0Bx9ymTbhWNy0uj6X4q7N2JpEOJG2/view",
-    // },
-    // {
-    //   name: "The Diploma Round 3 admissions are now closed",
-    //   link: "http://dseu.ac.in/admission/result/diploma/round3",
-    // },
     {
       name: "UG Sliding Allocation result is now live.",
       link: "/UG_SLIDING_ALLOCATION.pdf",

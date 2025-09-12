@@ -7,64 +7,9 @@ import Tooltip from "../Reusable/Tooltip";
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 export const toAdd = [
-  // {
-  //   fileName: "Diploma waiting list for 11th September",
-  //   fileLink: "https://drive.google.com/file/d/1h5mQvEipR-HBodFLbLJe_-BvFD1SQTz6/view"
-  // },
-  // {
-  //   fileName: "Diploma waiting list - 10th September",
-  //   fileLink: "https://drive.google.com/file/d/13m6pq9CL2VoiaPX6Wk0gsFQRstxaAAps/view"
-  // },
-  // {
-  //   fileName: "Admission Offer for Waitlisted Candidates - Diploma Programs (FY 2025-26)",
-  //   fileLink: "http://drive.google.com/file/d/1TGS1pSfVIO5AoXnOi6gFvmjMvFe7bu5b/view"
-  // },
-  // {
-  //   fileName: "Guidelines for Walk-in Admission to UG, B.Tech, and PG Programs for AY 2025–26, starting from 3rd September 2025",
-  //   fileLink: "https://drive.google.com/file/d/1lJrvGXRGLu-PIfz3tubGkjsMjmLNPK-b/view"
-  // },
-  // {
-  //   fileName: "Guidelines for Spot Round of Counselling for PG",
-  //   fileLink: "https://drive.google.com/file/d/198p0Bx9ymTbhWNy0uj6X4q7N2JpEOJG2/view",
-  // },
-  // {
-  //   fileName: "List of Shortlisted Candidates for the post of Registrar",
-  //   fileLink: "https://drive.google.com/file/d/1gi0iMYrUbDGdO9rR2q0tnIsWtK8mQN-y/view"
-  // },
-  // {
-  //   fileName: "The Diploma Round 3 admissions are now closed",
-  //   fileLink: "http://dseu.ac.in/admission/result/diploma/round3",
-  // },
-  // {
-  //   fileName:
-  //     "Schedule of Scrutiny Committee Interaction for the post of Deputy Registrar",
-  //   fileLink:
-  //     "https://drive.google.com/file/d/12O1hcTr5EHooo-9O10a5spuoC8fD1wTs/view",
-  // },
-  // {
-  //   fileName:
-  //     "All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation",
-  // },
-  // {
-  //   fileLink: "https://dseu.ac.in/admission/result/pg",
-  //   fileName: "Postgraduate results are now live!",
-  // },
-  // {
-  //   fileName: "Refund form 2025 admissions",
-  //   fileLink:
-  //     "https://drive.google.com/file/d/1ogrH8FlZ3FG36b44UVghbET0pLw-dHWE/view",
-  // },
-  // {
-  //   fileName: "Diploma Cancelled seat data",
-  //   fileLink:
-  //     "https://drive.google.com/file/d/1ZMnYb-piIHJUkYRtmRMH0woE3UztIPAC/view",
-  // },
-  // {
-  //   fileLink:
-  //     "https://drive.google.com/file/d/1jyw7k5SHVq49ZUJGA7I9B05Hw1KnVGiN/view",
-  //   fileName:
-  //     "Syllabus and Exam Pattern for Deputy Registrar & Assistant Registrar",
-  // },
+ {
+  fileName: "Diploma waiting list students may get admission opportunity as per availability of seats."
+ }
 ];
 
 const AnnouncementStrip = () => {
