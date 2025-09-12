@@ -131,14 +131,17 @@ const Page = () => {
               </span>
             </a>
 
-            <div className="text-gray-600 text-sm sm:text-base">
-              <p>
+            <ul className="list-disc list-inside text-gray-700 text-sm sm:text-base">
+              <li className="text-left">
+                📍 <strong>Location:</strong> DSEU HQ
+              </li>
+              <li>
                 📅 Dates:{" "}
                 <span>
                   <strong>Starting from 03.09.2025</strong>
                 </span>
-              </p>
-            </div>
+              </li>
+            </ul>
 
             <div className="mt-2">
               <a
