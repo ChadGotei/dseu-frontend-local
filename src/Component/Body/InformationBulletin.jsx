@@ -92,14 +92,14 @@ const InformationBulletin = () => {
       name: "Guidelines for Walk-in Admission to UG, B.Tech, and PG Programs for AY 2025–26, starting from 3rd September 2025",
       link: "https://drive.google.com/file/d/1l-UjchABcACRkIlUeBPUBjFzfU1DlMI1/view"
     },
-    {
-      name: "Guidelines for Spot Round of Counselling for PG",
-      link: "https://drive.google.com/file/d/198p0Bx9ymTbhWNy0uj6X4q7N2JpEOJG2/view",
-    },
-    {
-      name: "The Diploma Round 3 admissions are now closed",
-      link: "http://dseu.ac.in/admission/result/diploma/round3",
-    },
+    // {
+    //   name: "Guidelines for Spot Round of Counselling for PG",
+    //   link: "https://drive.google.com/file/d/198p0Bx9ymTbhWNy0uj6X4q7N2JpEOJG2/view",
+    // },
+    // {
+    //   name: "The Diploma Round 3 admissions are now closed",
+    //   link: "http://dseu.ac.in/admission/result/diploma/round3",
+    // },
     {
       name: "UG Sliding Allocation result is now live.",
       link: "/UG_SLIDING_ALLOCATION.pdf",
@@ -108,9 +108,9 @@ const InformationBulletin = () => {
       name: "Btech Internal Sliding Allocation result",
       link: "/BTECH_SLIDING_ALLOCATION.pdf",
     },
-    {
-      name: "B.Tech and UG Round 2 admissions are now closed",
-    },
+    // {
+    //   name: "B.Tech and UG Round 2 admissions are now closed",
+    // },
     {
       name: "Information Bulletin 2025",
       link: "https://drive.google.com/file/d/16mO1wuwK40lwRe4uAz5_iDT5aqtqBFsY/view",
@@ -130,10 +130,10 @@ const InformationBulletin = () => {
     {
       name: "All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation.",
     },
-    {
-      name: "Document verification dates for UG have been extended till Friday",
-      link: "https://dseu.ac.in/admission/result/ug",
-    },
+    // {
+    //   name: "Document verification dates for UG have been extended till Friday",
+    //   link: "https://dseu.ac.in/admission/result/ug",
+    // },
     {
       name: "Postgraduate results are now available!",
       link: "https://dseu.ac.in/admission/result/pg",
