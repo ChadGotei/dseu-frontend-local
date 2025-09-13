@@ -118,7 +118,7 @@ const Page = () => {
           <div className="space-y-3">
             <a
               href={
-                "https://drive.google.com/file/d/1l-UjchABcACRkIlUeBPUBjFzfU1DlMI1/view"
+                "https://drive.google.com/file/d/1Zvh62-LBf9XaLOw0-844tvTHgeQGrOA8/view"
               }
               target="_blank"
               rel="noopener noreferrer"
@@ -136,17 +136,14 @@ const Page = () => {
                 📍 <strong>Location:</strong> DSEU HQ
               </li>
               <li>
-                📅 Dates:{" "}
-                <span>
-                  <strong>Starting from 03.09.2025</strong>
-                </span>
+                📅 <strong>Dates:</strong> 15 - 30 September 2025
               </li>
             </ul>
 
             <div className="mt-2">
               <a
                 href={
-                  "https://drive.google.com/file/d/1l-UjchABcACRkIlUeBPUBjFzfU1DlMI1/view"
+                  "https://drive.google.com/file/d/1Zvh62-LBf9XaLOw0-844tvTHgeQGrOA8/view"
                 }
                 target="_blank"
                 rel="noopener noreferrer"

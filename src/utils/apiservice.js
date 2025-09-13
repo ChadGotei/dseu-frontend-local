@@ -214,11 +214,6 @@ export const login = async ({ email, password }) => {
       { email, password }
     );
 
-    sessionStorage.setItem("token", response.data.token);
-    sessionStorage.setItem("currentRole", response.data.role);
-    sessionStorage.setItem("email", email);
-
-
     return response.data;
   } catch (error) {
     console.error("Error while logging:", error);

@@ -7,9 +7,9 @@ import Tooltip from "../Reusable/Tooltip";
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 export const toAdd = [
- {
-  fileName: "Diploma waiting list students may get admission opportunity as per availability of seats."
- }
+//  {
+//   fileName: "Diploma waiting list students may get admission opportunity as per availability of seats."
+//  }
 ];
 
 const AnnouncementStrip = () => {

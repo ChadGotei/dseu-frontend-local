@@ -12,6 +12,7 @@ const withAuthProtection = (WrappedComponent) => {
       const role = sessionStorage.getItem("currentRole");
 
       if (!token) {
+        showErrorToast("Please login to access admin features")
         navigate("/admin-login");
       } else if (role !== "Admin") {
         showErrorToast("You are not an admin.");

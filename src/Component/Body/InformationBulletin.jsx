@@ -77,8 +77,15 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Guidelines for Walk-In Admissions – UG, PG & B.Tech programs (15–30 September)",
+      link: "https://drive.google.com/file/d/1Zvh62-LBf9XaLOw0-844tvTHgeQGrOA8/view"
+    },
+    {
       name: "Diploma waiting list for 15th September",
       link: "https://drive.google.com/file/d/1aq8iR0kMsgmGVOj3h_O8fcsFct-1A10p/view"
+    },
+    {
+      name: "Diploma waiting list students may get admission opportunity as per availability of seats."
     },
     {
       name: "Admission Offer for Waitlisted Candidates - Diploma Programs (FY 2025-26)",
@@ -92,11 +99,10 @@ const InformationBulletin = () => {
       name: "Diploma waiting list - 10th September",
       link: "https://drive.google.com/file/d/1Wt_McSdHA4YMt4ldFkCtsGTfxTcKB_mS/view"
     },
-
-    {
-      name: "Guidelines for Walk-in Admission to UG, B.Tech, and PG Programs for AY 2025–26, starting from 3rd September 2025",
-      link: "https://drive.google.com/file/d/1l-UjchABcACRkIlUeBPUBjFzfU1DlMI1/view"
-    },
+    // {
+    //   name: "Guidelines for Walk-in Admission to UG, B.Tech, and PG Programs for AY 2025–26, starting from 3rd September 2025",
+    //   link: "https://drive.google.com/file/d/1l-UjchABcACRkIlUeBPUBjFzfU1DlMI1/view"
+    // },
     {
       name: "UG Sliding Allocation result is now live.",
       link: "/UG_SLIDING_ALLOCATION.pdf",

@@ -1,7 +1,10 @@
-import { Plus, FileSearch, PersonStanding } from "lucide-react";
-import withAuthProtection from "./withAuthProtection";
+import { Plus, FileSearch, PersonStanding, LogOut } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+
+import withAuthProtection from "./withAuthProtection";
 import HeadingText from "../Reusable/HeadingText";
+
+import { showSuccessToast } from "../../utils/toasts";
 
 const dashboardItems = [
   {
@@ -27,8 +30,28 @@ const dashboardItems = [
 const Dashboard = () => {
   const navigate = useNavigate();
 
+  const handleLogout = () => {
+    sessionStorage.clear();
+    showSuccessToast("User logged our successfuly!")
+    navigate("/admin-login");
+  };
+
   return (
-    <div className="flex flex-col min-h-[92vh] md:min-h-[70vh] items-center justify-center px-4 bg-gray-50">
+    <div className="flex flex-col min-h-[92vh] md:min-h-[70vh] items-center justify-center px-4 bg-gray-50 relative">
+      <button
+        onClick={handleLogout}
+        className="
+          absolute top-4 right-4 flex items-center gap-2
+          px-4 py-2 rounded-lg bg-red-500 text-white
+          font-semibold shadow-md hover:bg-red-600
+          focus:outline-none focus:ring-2 focus:ring-red-400
+          transition
+        "
+      >
+        <LogOut className="w-5 h-5" />
+        Logout
+      </button>
+
       <HeadingText
         heading="Dashboard"
         headingCN="text-4xl md:text-5xl font-bold mb-2 text-center"

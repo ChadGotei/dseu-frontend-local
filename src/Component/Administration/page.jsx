@@ -40,6 +40,7 @@ const AdministrationTemp = () => {
           <Route path="office-orders" element={<OfficeOrders />} />
           <Route path="circulars" element={<Circulars />} />
           <Route path="statutes" element={<Statutes />} />
+          <Route path="*" element={<BoardOfManagement />} />
         </Routes>
       </div>
     </div>

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { login } from "../../utils/apiservice";
 import { useNavigate } from "react-router-dom";
-import { showErrorToast, showSuccessToast } from "../../utils/toasts";
-import logo from "../../assets/DSEULogo/DSEULOGOTHICK.svg";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+
+import { login } from "../../utils/apiservice";
+import { showErrorToast, showSuccessToast } from "../../utils/toasts";
+
 import Logo from "../Reusable/Logo";
 
 const LoginForm = () => {
@@ -43,6 +44,14 @@ const LoginForm = () => {
     },
   });
 
+  const handleShowPassword = () => {
+    if (!password) return;
+
+    setShowPassword(prev => {
+      return !prev;
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     mutation.mutate({ email, password });
@@ -69,6 +78,7 @@ const LoginForm = () => {
           <input
             type="email"
             placeholder="Enter your email"
+            autoFocus
             className="w-full px-4 py-2 rounded-lg border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-600"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -90,7 +100,7 @@ const LoginForm = () => {
           />
           <button
             type="button"
-            onClick={() => setShowPassword((prev) => !prev)}
+            onClick={handleShowPassword}
             className="absolute top-9 right-3 text-gray-500 hover:text-blue-600 focus:outline-none"
           >
             {showPassword ? <FaEyeSlash /> : <FaEye />}
@@ -100,11 +110,12 @@ const LoginForm = () => {
         <button
           type="submit"
           disabled={mutation.isPending}
-          className={`w-full py-2 rounded-lg text-white font-semibold transition-colors duration-300 ${
-            mutation.isPending
+          className={`w-full py-2 rounded-lg text-white font-semibold transition-colors duration-300
+            disabled:cursor-not-allowed
+            ${mutation.isPending
               ? "bg-blue-400 cursor-not-allowed opacity-70"
               : "bg-blue-600 hover:bg-orange-400"
-          }`}
+            }`}
         >
           {mutation.isPending ? "Logging in..." : "Login"}
         </button>
