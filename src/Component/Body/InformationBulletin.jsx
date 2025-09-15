@@ -78,7 +78,7 @@ const InformationBulletin = () => {
   const admissionManuals = [
     {
       name: "Guidelines for Spot Admissions on 16th September - Diploma programs 2025-26",
-      link: "https://drive.google.com/file/d/109KIT2ehbLApFVGGTY06GUtlbXfDKyJK/view"
+      link: "https://drive.google.com/file/d/1uwKQm9D6AKpIKgbJoQBChuEelwduV3-w/view"
     },
     {
       name: "Guidelines for Walk-In Admissions – UG, PG & B.Tech programs (15–30 September)",
@@ -147,7 +147,7 @@ const InformationBulletin = () => {
     },
     {
       name: "Refund form 2025 admissions",
-      link: "https://drive.google.com/file/d/1ogrH8FlZ3FG36b44UVghbET0pLw-dHWE/view",
+      link: "https://drive.google.com/file/d/11y1sud8KmqrkvpmdA1gRGUjp5W4JN6-R/view",
     },
     {
       name: "Diploma Cancelled seat data",

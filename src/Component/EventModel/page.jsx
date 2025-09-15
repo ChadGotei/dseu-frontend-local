@@ -61,7 +61,7 @@ const Page = () => {
 
                 >
                   <h3 className="text-blue-900 font-semibold text-sm sm:text-lg hover:cursor-pointer"
-                    onClick={() => window.location.href = "https://drive.google.com/file/d/109KIT2ehbLApFVGGTY06GUtlbXfDKyJK/view"}
+                    onClick={() => window.location.href = "https://drive.google.com/file/d/1uwKQm9D6AKpIKgbJoQBChuEelwduV3-w/view"}
                   >
                     Diploma Spot Admissions - 16 September 2025 (Selected Programs)
                   </h3>
@@ -101,7 +101,7 @@ const Page = () => {
 
               <div className="mt-2">
                 <a
-                  href={"https://drive.google.com/file/d/109KIT2ehbLApFVGGTY06GUtlbXfDKyJK/view"}
+                  href={"https://drive.google.com/file/d/1uwKQm9D6AKpIKgbJoQBChuEelwduV3-w/view"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"

@@ -99,7 +99,7 @@ const navItems = [
       },
       {
         name: "Fee Refund Policy",
-        path: "https://drive.google.com/file/d/1ogrH8FlZ3FG36b44UVghbET0pLw-dHWE/view",
+        path: "https://drive.google.com/file/d/11y1sud8KmqrkvpmdA1gRGUjp5W4JN6-R/view",
       },
       {
         name: "Information Bulletin",
