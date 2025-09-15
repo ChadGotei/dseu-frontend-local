@@ -77,6 +77,10 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Guidelines for Spot Admissions on 16th September - Diploma programs 2025-26",
+      link: "https://drive.google.com/file/d/109KIT2ehbLApFVGGTY06GUtlbXfDKyJK/view"
+    },
+    {
       name: "Guidelines for Walk-In Admissions – UG, PG & B.Tech programs (15–30 September)",
       link: "https://drive.google.com/file/d/1Zvh62-LBf9XaLOw0-844tvTHgeQGrOA8/view"
     },

@@ -1,163 +1,179 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { FiInfo, FiExternalLink } from "react-icons/fi";
 
 const Page = () => {
-  const [showModal, setShowModal] = useState(true);
-  const modalRef = useRef(null);
+  const [showDiploma, setShowDiploma] = useState(true);
+  const [showWalkin, setShowWalkin] = useState(true);
 
-  // Close on outside click
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (modalRef.current && !modalRef.current.contains(event.target)) {
-        setShowModal(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  // Close on ESC
   useEffect(() => {
     const onKey = (e) => {
-      if (e.key === "Escape") setShowModal(false);
+      if (e.key === "Escape") {
+        setShowDiploma(false);
+        setShowWalkin(false);
+      }
     };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
   }, []);
 
-  if (!showModal) return null;
+  if (!showDiploma && !showWalkin) return null;
 
-  // demo link (replace later with official diploma waiting list link)
-  const diplomaWaitingListDemo =
-    "https://drive.google.com/file/d/1aq8iR0kMsgmGVOj3h_O8fcsFct-1A10p/view";
+
+  const wazirpurMapsUrl = "https://maps.app.goo.gl/qEhaAs5Nd1VZqS4e7";
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 overflow-y-auto"
-      aria-labelledby="admission-modal-title"
+      className="fixed inset-0 z-50 bg-black/50 p-3 sm:p-4 overflow-y-auto md:flex md:items-center md:justify-center md:h-[100vh]"
+      aria-label="Admissions Modals"
       role="dialog"
       aria-modal="true"
     >
-      <div
-        ref={modalRef}
-        className="relative bg-white rounded-xl shadow-2xl p-6 sm:p-7 w-full max-w-2xl max-h-[90vh] overflow-y-auto scrollbar-hide border border-gray-200"
-      >
-        <button
-          onClick={() => setShowModal(false)}
-          className="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-2xl font-bold leading-none"
-          aria-label="Close"
-          type="button"
-        >
-          &times;
-        </button>
+      <div className="mx-auto w-full max-w-6xl pb-8">
+        {/* Grid fixes mobile → stack, desktop → side-by-side */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:items-start">
 
-        {/* Header */}
-        <div className="flex items-center gap-3 mb-2">
-          <div className="bg-blue-100 text-blue-700 p-2.5 rounded-full">
-            <FiInfo className="text-lg sm:text-xl" aria-hidden="true" />
-          </div>
-          <h2
-            id="admission-modal-title"
-            className="text-lg sm:text-2xl font-semibold text-blue-800"
-          >
-            Admission Notifications
-          </h2>
-        </div>
-
-        <p className="text-base font-medium mb-4">📢 Dear Applicant,</p>
-
-        {/* Body */}
-        <div className="text-gray-800 text-sm sm:text-base leading-relaxed space-y-8">
-
-          {/* Diploma Waiting List Section */}
-          <div className="space-y-3 border-b border-gray-200 pb-4">
-
-            <p>
-              Diploma <strong>waiting list students</strong> may get admission
-              opportunity as per availability of seats.
-            </p>
-
-            <ul className="list-disc list-inside text-gray-700 text-sm sm:text-base">
-              <li className="text-left">
-                📍 <strong>Location:</strong> DSEU Wazirpur Campus (near Shalimar
-                Bagh Metro Station)
-              </li>
-              <li>
-                📅 <strong>Date:</strong> 15th September 2025
-              </li>
-              <li>
-                ⏰ <strong>Reporting Time:</strong> 9:00 AM – 11:00 AM
-              </li>
-            </ul>
-
-            <div>
-              <a
-                href={diplomaWaitingListDemo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium text-sm sm:text-base"
+          {/* Diploma Spot Admissions (blue theme) */}
+          {showDiploma && (
+            <div className="relative bg-white rounded-xl shadow-2xl p-6 sm:p-7 w-full border border-blue-200 max-h-[82vh] sm:max-h-[86vh] overflow-y-auto">
+              <button
+                onClick={() => setShowDiploma(false)}
+                className="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-2xl font-bold leading-none"
+                aria-label="Close Diploma Modal"
+                type="button"
               >
-                <FiExternalLink className="shrink-0" aria-hidden="true" />
-                <span>Diploma Waiting List for 15th September</span>
-              </a>
+                &times;
+              </button>
+
+              {/* Header */}
+              <div className="flex items-center gap-3 mb-2">
+                <div className="bg-blue-100 text-blue-700 p-2.5 rounded-full">
+                  <FiInfo className="text-lg sm:text-xl" aria-hidden="true" />
+                </div>
+                <h2 className="text-lg sm:text-2xl font-semibold text-blue-800">
+                  Admission Notifications
+                </h2>
+              </div>
+
+              <p className="text-base font-medium mb-4">📢 Dear Applicant,</p>
+
+              <div className="text-gray-800 text-sm sm:text-base leading-relaxed space-y-6">
+                <div className="space-y-4"
+
+                >
+                  <h3 className="text-blue-900 font-semibold text-sm sm:text-lg hover:cursor-pointer"
+                    onClick={() => window.location.href = "https://drive.google.com/file/d/109KIT2ehbLApFVGGTY06GUtlbXfDKyJK/view"}
+                  >
+                    Diploma Spot Admissions - 16 September 2025 (Selected Programs)
+                  </h3>
+
+                  <ul className="list-disc list-inside text-gray-700 space-y-1">
+                    <li>📍 <strong>Venue:</strong> DSEU Wazirpur-I Campus (near Shalimar Bagh Metro)</li>
+                    <li>📅 <strong>Date:</strong> 16th September 2025</li>
+                    <li>⏰ <strong>Reporting Time:</strong> 9:00 AM - 11:00 AM</li>
+                  </ul>
+
+                  <a
+                    href={wazirpurMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium"
+                  >
+                    <FiExternalLink className="shrink-0" aria-hidden="true" />
+                    Open Campus Location (Maps)
+                  </a>
+
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mt-2">Programs (Campus)</h4>
+                    <ul className="list-disc list-inside text-gray-700 mt-1 space-y-1 md:text-sm text-xs">
+                      <li>Four-Year UG Diploma in Tool &amp; Die Making — DSEU Wazirpur Campus</li>
+                      <li>Diploma in Precision Engineering — DSEU Wazirpur Campus</li>
+                      <li>Diploma in Petrochemical Engineering — Guru Nanak Dev DSEU Campus</li>
+                      <li>Diploma in Polymer Technology — Guru Nanak Dev DSEU Campus</li>
+                      <li>Diploma in Chemical Engineering — Guru Nanak Dev DSEU Campus</li>
+                      <li>Diploma in Printing Technology — DSEU Pusa Campus-I</li>
+                      <li>Diploma in Electronics Engineering — Kasturba DSEU Campus (Only Girls)</li>
+                      <li>Diploma in Electronics Engineering — Meerabai DSEU Campus (Only Girls)</li>
+                      <li>Diploma in Architecture — Meerabai DSEU Campus (Only Girls)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-2">
+                <a
+                  href={"https://drive.google.com/file/d/109KIT2ehbLApFVGGTY06GUtlbXfDKyJK/view"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
+                >
+                  View Spot round Guidelines
+                </a>
+              </div>
             </div>
+          )}
 
-            <a
-              href={
-                "https://drive.google.com/file/d/1aq8iR0kMsgmGVOj3h_O8fcsFct-1A10p/view"
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
-            >
-              View Waiting list
-            </a>
-          </div>
-
-          {/* UG/PG Walk-in Guidelines */}
-          <div className="space-y-3">
-            <a
-              href={
-                "https://drive.google.com/file/d/1Zvh62-LBf9XaLOw0-844tvTHgeQGrOA8/view"
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium text-sm sm:text-base"
-            >
-              <FiExternalLink className="shrink-0" aria-hidden="true" />
-              <span>
-                Guidelines for Walk-in Admission to{" "}
-                <strong>UG, B.Tech, and PG Programs</strong> for AY 2025–26
-              </span>
-            </a>
-
-            <ul className="list-disc list-inside text-gray-700 text-sm sm:text-base">
-              <li className="text-left">
-                📍 <strong>Location:</strong> DSEU HQ
-              </li>
-              <li>
-                📅 <strong>Dates:</strong> 15 - 30 September 2025
-              </li>
-            </ul>
-
-            <div className="mt-2">
-              <a
-                href={
-                  "https://drive.google.com/file/d/1Zvh62-LBf9XaLOw0-844tvTHgeQGrOA8/view"
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
+          {/* Walk-in Guidelines (orange theme) */}
+          {showWalkin && (
+            <div className="relative bg-white rounded-xl shadow-2xl p-6 sm:p-7 w-full border border-orange-200 max-h-[82vh] sm:max-h-[86vh] overflow-y-auto">
+              <button
+                onClick={() => setShowWalkin(false)}
+                className="absolute top-3 right-4 text-gray-500 hover:text-orange-500 text-2xl font-bold leading-none"
+                aria-label="Close Walk-in Modal"
+                type="button"
               >
-                View Walk-in Guidelines PDF
-              </a>
-            </div>
-          </div>
+                &times;
+              </button>
 
-          {/* Signature */}
-          <p className="font-medium text-gray-700 text-sm sm:text-base">
-            – Admission Cell, DSEU
-          </p>
+              {/* Header */}
+              <div className="flex items-center gap-3 mb-2">
+                <div className="bg-orange-100 text-orange-700 p-2.5 rounded-full">
+                  <FiInfo className="text-lg sm:text-xl" aria-hidden="true" />
+                </div>
+                <h2 className="text-lg sm:text-2xl font-semibold text-orange-800">
+                  Admission Notifications
+                </h2>
+              </div>
+
+              <p className="text-base font-medium mb-4">📢 Dear Applicant,</p>
+
+              <div className="text-gray-800 text-sm sm:text-base leading-relaxed space-y-6">
+                <div className="space-y-3">
+                  <a
+                    href={"https://drive.google.com/file/d/1Zvh62-LBf9XaLOw0-844tvTHgeQGrOA8/view"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-orange-700 hover:text-orange-800 font-medium text-sm sm:text-base"
+                  >
+                    <FiExternalLink className="shrink-0" aria-hidden="true" />
+                    <span>
+                      Guidelines for Walk-in Admission to <strong>UG, B.Tech, and PG Programs</strong> for AY 2025–26
+                    </span>
+                  </a>
+
+                  <ul className="list-disc list-inside text-gray-700 text-sm sm:text-base">
+                    <li className="text-left">📍 <strong>Location:</strong> DSEU HQ</li>
+                    <li>📅 <strong>Dates:</strong> 15 - 30 September 2025</li>
+                  </ul>
+
+                  <div className="mt-2">
+                    <a
+                      href={"https://drive.google.com/file/d/1Zvh62-LBf9XaLOw0-844tvTHgeQGrOA8/view"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-orange-600 hover:bg-orange-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
+                    >
+                      View Walk-in Guidelines PDF
+                    </a>
+                  </div>
+                </div>
+
+                <p className="font-medium text-gray-700 text-sm sm:text-base">
+                  – Admission Cell, DSEU
+                </p>
+              </div>
+            </div>
+          )}
+
         </div>
       </div>
     </div>
