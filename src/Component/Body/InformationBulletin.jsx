@@ -77,6 +77,9 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      link: "Walk-in Admissions for Diploma programs are open till 30th September 2025 (AY 2025-26)"
+    },
+    {
       name: "Guidelines for Spot Admissions on 16th September - Diploma programs 2025-26",
       link: "https://drive.google.com/file/d/1uwKQm9D6AKpIKgbJoQBChuEelwduV3-w/view"
     },

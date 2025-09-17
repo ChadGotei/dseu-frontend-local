@@ -7,6 +7,9 @@ import Tooltip from "../Reusable/Tooltip";
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 export const toAdd = [
+  {
+    fileName: "Walk-in Admissions for Diploma programs are open till 30th September 2025 (AY 2025-26)"
+  }
 //  {
 //   fileName: "Diploma waiting list students may get admission opportunity as per availability of seats."
 //  }

@@ -60,46 +60,36 @@ const Page = () => {
                 <div className="space-y-4"
 
                 >
-                  <h3 className="text-blue-900 font-semibold text-sm sm:text-lg hover:cursor-pointer"
-                    onClick={() => window.location.href = "https://drive.google.com/file/d/1uwKQm9D6AKpIKgbJoQBChuEelwduV3-w/view"}
+                  <h3 className="text-blue-900 font-semibold text-sm sm:text-lg"
+                    // onClick={() => window.location.href = "https://drive.google.com/file/d/1uwKQm9D6AKpIKgbJoQBChuEelwduV3-w/view"}
                   >
-                    Diploma Spot Admissions - 16 September 2025 (Selected Programs)
+                    Walk-in Admissions for Diploma programs are open for AY 2025-26
                   </h3>
 
                   <ul className="list-disc list-inside text-gray-700 space-y-1">
-                    <li>📍 <strong>Venue:</strong> DSEU Wazirpur-I Campus (near Shalimar Bagh Metro)</li>
-                    <li>📅 <strong>Date:</strong> 16th September 2025</li>
-                    <li>⏰ <strong>Reporting Time:</strong> 9:00 AM - 11:00 AM</li>
+                    <li>📍 <strong>Venue:</strong> DSEU Dwarka Campus (Room no. 125) </li>
+                    <li>📅 <strong>Date:</strong> till 30th September 2025</li>
+                    <li>⏰ <strong>Reporting Time:</strong> 10:00 AM - 04:00 PM</li>
                   </ul>
 
-                  <a
-                    href={wazirpurMapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-medium"
-                  >
-                    <FiExternalLink className="shrink-0" aria-hidden="true" />
-                    Open Campus Location (Maps)
-                  </a>
-
                   <div>
-                    <h4 className="font-semibold text-gray-900 mt-2">Programs (Campus)</h4>
+                    <h4 className="font-semibold text-gray-900 mt-2">Only for these programs (Campus)</h4>
                     <ul className="list-disc list-inside text-gray-700 mt-1 space-y-1 md:text-sm text-xs">
                       <li>Four-Year UG Diploma in Tool &amp; Die Making — DSEU Wazirpur Campus</li>
                       <li>Diploma in Precision Engineering — DSEU Wazirpur Campus</li>
                       <li>Diploma in Petrochemical Engineering — Guru Nanak Dev DSEU Campus</li>
                       <li>Diploma in Polymer Technology — Guru Nanak Dev DSEU Campus</li>
-                      <li>Diploma in Chemical Engineering — Guru Nanak Dev DSEU Campus</li>
                       <li>Diploma in Printing Technology — DSEU Pusa Campus-I</li>
+                      <li>Diploma in Civil Engineering - Kasturba DSEU Campus (Only Girls)</li>
+                      <li>Diploma in Architecture — Meerabai DSEU Campus (Only Girls)</li>
                       <li>Diploma in Electronics Engineering — Kasturba DSEU Campus (Only Girls)</li>
                       <li>Diploma in Electronics Engineering — Meerabai DSEU Campus (Only Girls)</li>
-                      <li>Diploma in Architecture — Meerabai DSEU Campus (Only Girls)</li>
                     </ul>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-2">
+              {/* <div className="mt-2">
                 <a
                   href={"https://drive.google.com/file/d/1uwKQm9D6AKpIKgbJoQBChuEelwduV3-w/view"}
                   target="_blank"
@@ -108,7 +98,7 @@ const Page = () => {
                 >
                   View Spot round Guidelines
                 </a>
-              </div>
+              </div> */}
             </div>
           )}
 
