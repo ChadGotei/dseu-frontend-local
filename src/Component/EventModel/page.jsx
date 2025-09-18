@@ -67,7 +67,7 @@ const Page = () => {
                   </h3>
 
                   <ul className="list-disc list-inside text-gray-700 space-y-1">
-                    <li>📍 <strong>Venue:</strong> DSEU Dwarka Campus (Room no. 125) </li>
+                    <li>📍 <strong>Venue:</strong> DSEU Dwarka Campus (Room no. 222) </li>
                     <li>📅 <strong>Date:</strong> till 30th September 2025</li>
                     <li>⏰ <strong>Reporting Time:</strong> 10:00 AM - 04:00 PM</li>
                   </ul>
