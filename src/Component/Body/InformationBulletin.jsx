@@ -77,6 +77,10 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "B.Tech Spot Admissions 2025-26: Multi-Entry Route for Diploma Passed Students",
+      link: "https://drive.google.com/file/d/1hnO-QUNHQDuttY6EOMDaMP13eIW47Vuz/view"
+    },
+    {
       link: "Walk-in Admissions for Diploma programs are open till 30th September 2025 (AY 2025-26)"
     },
     {

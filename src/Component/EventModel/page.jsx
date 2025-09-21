@@ -61,13 +61,13 @@ const Page = () => {
 
                 >
                   <h3 className="text-blue-900 font-semibold text-sm sm:text-lg"
-                    // onClick={() => window.location.href = "https://drive.google.com/file/d/1uwKQm9D6AKpIKgbJoQBChuEelwduV3-w/view"}
+                  // onClick={() => window.location.href = "https://drive.google.com/file/d/1uwKQm9D6AKpIKgbJoQBChuEelwduV3-w/view"}
                   >
                     Walk-in Admissions for Diploma programs are open for AY 2025-26
                   </h3>
 
                   <ul className="list-disc list-inside text-gray-700 space-y-1">
-                    <li>📍 <strong>Venue:</strong> DSEU Dwarka Campus (Room no. 222) </li>
+                    <li>📍 <strong>Venue:</strong> DSEU Wazirpur Campus </li>
                     <li>📅 <strong>Date:</strong> till 30th September 2025</li>
                     <li>⏰ <strong>Reporting Time:</strong> 10:00 AM - 04:00 PM</li>
                   </ul>
@@ -103,6 +103,7 @@ const Page = () => {
           )}
 
           {/* Walk-in Guidelines (orange theme) */}
+          {/* Walk-in Guidelines (orange theme) */}
           {showWalkin && (
             <div className="relative bg-white rounded-xl shadow-2xl p-6 sm:p-7 w-full border border-orange-200 max-h-[82vh] sm:max-h-[86vh] overflow-y-auto">
               <button
@@ -127,27 +128,29 @@ const Page = () => {
               <p className="text-base font-medium mb-4">📢 Dear Applicant,</p>
 
               <div className="text-gray-800 text-sm sm:text-base leading-relaxed space-y-6">
-                <div className="space-y-3">
-                  <a
-                    href={"https://drive.google.com/file/d/1Zvh62-LBf9XaLOw0-844tvTHgeQGrOA8/view"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-orange-700 hover:text-orange-800 font-medium text-sm sm:text-base"
-                  >
-                    <FiExternalLink className="shrink-0" aria-hidden="true" />
-                    <span>
-                      Guidelines for Walk-in Admission to <strong>UG, B.Tech, and PG Programs</strong> for AY 2025–26
-                    </span>
-                  </a>
-
-                  <ul className="list-disc list-inside text-gray-700 text-sm sm:text-base">
-                    <li className="text-left">📍 <strong>Location:</strong> DSEU HQ</li>
-                    <li>📅 <strong>Dates:</strong> 15 - 30 September 2025</li>
-                  </ul>
-
-                  <div className="mt-2">
+                <div className="space-y-5">
+                  {/* UG, PG, B.Tech Guidelines */}
+                  <div className="space-y-2">
                     <a
-                      href={"https://drive.google.com/file/d/1Zvh62-LBf9XaLOw0-844tvTHgeQGrOA8/view"}
+                      href="https://drive.google.com/file/d/1Zvh62-LBf9XaLOw0-844tvTHgeQGrOA8/view"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-orange-700 hover:text-orange-800 font-medium text-sm sm:text-base"
+                    >
+                      <FiExternalLink className="shrink-0" aria-hidden="true" />
+                      <span>
+                        Guidelines for Walk-in Admission to{" "}
+                        <strong>UG, B.Tech, and PG Programs</strong> for AY 2025–26
+                      </span>
+                    </a>
+
+                    <ul className="list-disc list-inside text-gray-700 text-sm sm:text-base">
+                      <li>📍 <strong>Location:</strong> DSEU Dwarka HQ</li>
+                      <li>📅 <strong>Dates:</strong> 15 – 30 September 2025</li>
+                    </ul>
+
+                    <a
+                      href="https://drive.google.com/file/d/1Zvh62-LBf9XaLOw0-844tvTHgeQGrOA8/view"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block bg-orange-600 hover:bg-orange-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
@@ -155,14 +158,40 @@ const Page = () => {
                       View Walk-in Guidelines PDF
                     </a>
                   </div>
-                </div>
 
-                <p className="font-medium text-gray-700 text-sm sm:text-base">
-                  – Admission Cell, DSEU
-                </p>
+                  {/* B.Tech Multi-Entry Spot Admissions */}
+                  <div className="space-y-2">
+                    <a
+                      href="https://drive.google.com/file/d/1hnO-QUNHQDuttY6EOMDaMP13eIW47Vuz/view"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-orange-700 hover:text-orange-800 font-medium text-sm sm:text-base"
+                    >
+                      <FiExternalLink className="shrink-0" aria-hidden="true" />
+                      <span>
+                        B.Tech Spot Admissions 2025-26:{" "}
+                        <strong>Multi-Entry Route for Diploma Passed Students</strong>
+                      </span>
+                    </a>
+
+                    <ul className="list-disc list-inside text-gray-700 text-sm sm:text-base">
+                      <li>📍 <strong>Venue:</strong> Bhai Parmanand DSEU Campus</li>
+                    </ul>
+
+                    <a
+                      href="https://drive.google.com/file/d/1hnO-QUNHQDuttY6EOMDaMP13eIW47Vuz/view"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-orange-600 hover:bg-orange-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
+                    >
+                      View B.Tech Multi-Entry PDF
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           )}
+
 
         </div>
       </div>
