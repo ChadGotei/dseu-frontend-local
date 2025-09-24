@@ -28,9 +28,9 @@ const Page = () => {
       <div className="mx-auto w-full max-w-6xl pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:items-start">
 
-          {/* Blue Card — B.Tech Multi-Entry */}
+          {/* Blue Card — Diploma Multi-Entry (Programs without seats) */}
           {showDiploma && (
-            <div className="relative bg-white rounded-xl shadow-2xl p-6 sm:p-7 w-full border border-blue-200 max-h-[82vh] sm:max-h-[86vh] overflow-y-auto">
+            <div className="relative bg-white rounded-xl shadow-2xl p-6 sm:p-7 w-full border border-blue-200 max-h-[90vh] md:max-h-[88vh] md:overflow-y-hidden">
               <button
                 onClick={() => setShowDiploma(false)}
                 className="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-2xl font-bold leading-none"
@@ -45,60 +45,58 @@ const Page = () => {
                 <div className="bg-blue-100 text-blue-700 p-2.5 rounded-full">
                   <FiInfo className="text-lg sm:text-xl" aria-hidden="true" />
                 </div>
-                <h2 className="text-lg sm:text-xl font-semibold text-blue-800">
-                  Admission Notifications
+                <h2 className="text-md md:text-lg font-semibold text-blue-800">
+                  Diploma Multi-Entry Admissions — AY 2025-26
                 </h2>
               </div>
 
-              <p className="text-base font-medium mb-4">📢 Dear Applicant,</p>
+              <div className="space-y-4 text-gray-800 text-sm sm:text-base leading-relaxed">
+                <p>
+                  DSEU is opening <strong>SPOT Admission</strong> for students to take admission directly in the <strong>Second Year of Diploma programs</strong>.
+                </p>
 
-              {/* B.Tech Multi-Entry */}
-              <div className="space-y-4">
-                <h3
-                  className="text-blue-900 font-semibold text-base sm:text-lg cursor-pointer"
-                  onClick={() =>
-                  (window.location.href =
-                    "https://drive.google.com/file/d/1hnO-QUNHQDuttY6EOMDaMP13eIW47Vuz/view")
-                  }
-                >
-                  B.Tech Spot Admissions 2025-26: Multi-Entry Route for Diploma Passed Students
-                </h3>
-
-                <ul className="list-disc list-inside text-gray-700 space-y-1 text-sm md:text-base">
-                  <li>📍 <strong>Venue:</strong> Bhai Parmanand DSEU Campus</li>
-                  <li>📅 <strong>Date:</strong> 24th September 2025</li>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>📍 <strong>Venue:</strong> DSEU Wazirpur-I Campus</li>
+                  <li>📅 <strong>Date:</strong> 26th September 2025</li>
                 </ul>
 
-                <p className="text-gray-700 text-sm sm:text-base font-semibold mt-2">
+                <p className="text-gray-700 font-semibold mt-2">
                   Only for these programs (Campus)
                 </p>
 
                 <ul className="list-disc list-inside text-gray-700 space-y-1 text-xs md:text-sm">
-                  <li>B.Tech Artificial Intelligence — Bhai Parmanand DSEU Campus</li>
-                  <li>B.Tech Mechanical Engineering — GB Pant DSEU Campus</li>
-                  <li>B.Tech Data Science — Bhai Parmanand DSEU Campus</li>
-                  <li>B.Tech Computer Science Engineering — Guru Nanak Dev DSEU Campus & GB Pant DSEU Campus</li>
-                  <li>B.Tech Electronics & Communication Engineering — Ambedkar DSEU Campus & GB Pant DSEU Campus</li>
-                  <li>B.Tech Network Engineering and Security — DSEU Dwarka Campus & DSEU Okhla Campus</li>
+                  <li>Diploma in Chemical Engineering</li>
+                  <li>Diploma in Civil Engineering</li>
+                  <li>Diploma in Computer Engineering</li>
+                  <li>Diploma in Electrical Engineering</li>
+                  <li>Diploma in Electronics Engineering</li>
+                  <li>Diploma in Mechanical Engineering</li>
+                  <li>Diploma in Petrochemicals</li>
+                  <li>Diploma in Polymer Technology</li>
+                  <li>Diploma in Precision Engineering</li>
+                  <li>Diploma in Printing Technology</li>
+                  <li>Diploma in Robotic & Process Automation</li>
+                  <li>Four Year UG Diploma in Tool & Die Making</li>
                 </ul>
 
                 <p className="text-gray-700 text-sm md:text-base font-semibold">
-                  Candidates are requested to check the available seats given in the guidelines before applying.
+                  Seats will be allotted strictly against vacant seats on the basis of merit and eligibility.
                 </p>
 
                 <a
-                  href="https://drive.google.com/file/d/1hnO-QUNHQDuttY6EOMDaMP13eIW47Vuz/view"
+                  href="/diploma_lateral_entry.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
+                  className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-md transition"
                 >
-                  View B.Tech Multi-Entry PDF
+                  <FiExternalLink className="w-4 h-4" aria-hidden="true" />
+                  View Diploma Multi-Entry Guidelines (PDF)
                 </a>
               </div>
             </div>
           )}
 
-          {/* Orange Card — UG/PG + Diploma Walk-in Admissions (merged) */}
+          {/* Orange Card — UG/PG + Diploma Walk-in Admissions */}
           {showWalkin && (
             <div className="relative bg-white rounded-xl shadow-2xl p-6 sm:p-7 w-full border border-orange-200 max-h-[82vh] sm:max-h-[86vh] overflow-y-auto">
               <button

@@ -1,17 +1,17 @@
-import { useState } from "react";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import toast from "react-hot-toast";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 
 import { QUERY_KEYS } from "../../../utils/queryKeys";
-import { deletePdf, getAllPdfs } from "../../../utils/apiservice";
+import { getAllPdfs } from "../../../utils/apiservice";
 import { useArchivedParams } from "../../../hooks/useArchivedParams";
+import { useDeletePdfOptimistic } from "../../../react-query/hooks/useDeletePdfOptimistic";
 
 import withAuthProtection from "../withAuthProtection";
 import DeleteConfirmModal from "../DeleteConfirmModal";
 import { Pagination } from "../../Reusable/Pagination";
 import FilterSection from "./FilterSection";
 import PdfTable from "./PdfTable";
-import { useSearchParams } from "react-router-dom";
 
 const ViewPdfs = () => {
   const limit = 10;
@@ -23,6 +23,7 @@ const ViewPdfs = () => {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
+  const [notices, setNotices] = useState([]);
 
   const [filters, setFilters] = useState({
     searchInput: "",
@@ -68,14 +69,21 @@ const ViewPdfs = () => {
     keepPreviousData: true,
   });
 
-  const deleteMutation = useMutation({
-    mutationFn: deletePdf,
-    onSuccess: () => {
-      queryClient.invalidateQueries({
-        queryKey: [QUERY_KEYS.GET_NOTICES, isArchived, currentPage],
-      });
-      toast.success("PDF deleted successfully!");
-    },
+  // const deleteMutation = useMutation({
+  //   mutationFn: deletePdf,
+  //   onSuccess: () => {
+  //     queryClient.invalidateQueries({
+  //       queryKey: [QUERY_KEYS.GET_NOTICES, isArchived, currentPage],
+  //     });
+  //     toast.success("PDF deleted successfully!");
+  //   },
+  // });
+
+  const deleteMutation = useDeletePdfOptimistic({
+    isArchived,
+    currentPage,
+    filters,
+    section,
   });
 
   const handlePageClick = (e) => {
@@ -101,7 +109,12 @@ const ViewPdfs = () => {
     setCurrentPage(1);
   };
 
-  const notices = data?.data?.notices || [];
+  useEffect(() => {
+    if (data?.data?.notices) {
+      setNotices(data.data.notices);
+    }
+  }, [data]);
+
   const totalPages = data?.metadata?.totalPages || 1;
 
   return (
