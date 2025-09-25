@@ -57,7 +57,7 @@ const Page = () => {
 
                 <ul className="list-disc list-inside space-y-1">
                   <li>📍 <strong>Venue:</strong> DSEU Wazirpur-I Campus</li>
-                  <li>📅 <strong>Date:</strong> 26th September 2025</li>
+                  <li>📅 <strong>Date:</strong> 29th September 2025</li>
                 </ul>
 
                 <p className="text-gray-700 font-semibold mt-2">
