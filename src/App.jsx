@@ -19,6 +19,7 @@ import { workWithUsRoutes } from "./routes/WorkWithUsRoutes.jsx";
 import { amenitiesRoutes } from "./routes/AmenitiesRoutes.jsx";
 import { adminPanelRoutes } from "./routes/AdminPanelRoutes.jsx";
 import { otherRoutes } from "./routes/OtherRoutes.jsx";
+import { researchRoutes } from "./features/research/ResearchRoutes.jsx";
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
             {courseRoutes}
             {academicRoutes}
             {administrationRoutes}
-            {aboutRoutes}
+            {aboutRoutes} 
             {admissionRoutes}
             {miscRoutes}
             {workWithUsRoutes}
@@ -41,6 +42,7 @@ function App() {
             {adminPanelRoutes}
             {resultRoutes}
             {otherRoutes}
+            {researchRoutes}
           </Route>
 
           <Route path="*" element={<NotFound />} />

@@ -135,6 +135,7 @@ export const navItems = [
     },
     {
         name: "Research",
+        path: '/research',
         dropdownItems: [
             { name: "Office Bearers", path: "/research/office-bearers" },
             { name: "Supervisors", path: "/research/supervisors" },

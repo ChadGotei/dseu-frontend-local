@@ -5,15 +5,11 @@ import { Search, Menu, ChevronDown, X } from "lucide-react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import TopBar from "./TopBar";
 
-
 import SearchModal from "./SearchModal";
 import { searchItems } from "./SearchItems";
 import Logo from "../Reusable/Logo";
 
 import { navItems, carouselImages } from "../../constants/NAV-DATA.JS";
-
-
-
 
 
 //? for mobile view
