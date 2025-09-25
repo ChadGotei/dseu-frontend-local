@@ -139,44 +139,6 @@ const ArchiveUploads = lazy(() => import("./Component/Admin/ArchiveUploads"));
 const ViewPdfs = lazy(() => import("./Component/Admin/ViewPDFs/ViewPdfs"));
 const AddStudent = lazy(() => import("./Component/Admin/result/AddStudent.jsx"));
 
-// result
-const Result = lazy(() => import("./Component/Result/Result.jsx"));
-const ShowResult = lazy(() => import("./Component/Result/ShowResult.jsx"));
-const UGResult = lazy(() => import("./Component/Result/UG/UgResult.jsx"));
-const ShowUgResult = lazy(() =>
-  import("./Component/Result/UG/ShowUgResult.jsx")
-);
-const PGResult = lazy(() => import("./Component/Result/PG/PgResult.jsx"));
-const ShowPgResult = lazy(() =>
-  import("./Component/Result/PG/ShowPgResult.jsx")
-);
-
-const DiplomaRound2Result = lazy(() =>
-  import("./Component/Result/Diploma_round2/DiplomaRound2Result.jsx")
-);
-const ShowDiplomaRound2 = lazy(() =>
-  import("./Component/Result/Diploma_round2/ShowDiplomaRound2.jsx")
-);
-
-const BtechRound2Result = lazy(() =>
-  import("./Component/Result/Btech_round2/BtechRound2Result.jsx")
-);
-const ShowBtechRound2 = lazy(() =>
-  import("./Component/Result/Btech_round2/ShowBtechRound2.jsx")
-);
-
-const UGRound2Result = lazy(() =>
-  import("./Component/Result/Ug_round2/UgRound2Result.jsx")
-);
-const ShowUgRound2 = lazy(() =>
-  import("./Component/Result/Ug_round2/ShowUgRound2.jsx")
-);
-
-const DiplomaRound3Result = lazy(() => import("./Component/Result/Diploma_round3/DiplomaRound3Result.jsx"));
-const ShowDiplomaRound3 = lazy(() => import("./Component/Result/Diploma_round3/ShowDiplomaRound3.jsx"));
-
-const DiplomaRound4Result = lazy(() => import("./Component/Result/Diploma_round4/DiplomaRound4Result.jsx"));
-const ShowDiplomaRound4 = lazy(() => import("./Component/Result/Diploma_round4/ShowDiplomaRound4.jsx"));
 
 function App() {
   return (
