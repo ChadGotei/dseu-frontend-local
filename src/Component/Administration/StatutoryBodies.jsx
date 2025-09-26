@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Plus } from "lucide-react";
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 import StatutoryBodiesLoading from "../ShimmerUI/StatutoryBodiesLoading";
-import UploadModal from "../Admin/UploadModal";
+import UploadModal from "../../features/admin/UploadModal";;
 
 const StatutoryBodiesComponent = () => {
   const [activeMainTab, setActiveMainTab] = useState("university court");

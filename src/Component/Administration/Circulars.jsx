@@ -3,7 +3,7 @@ import { DownloadIcon } from "lucide-react";
 
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
-import UploadModal from "../Admin/UploadModal";
+import UploadModal from "../../features/admin/UploadModal";;
 import ToggleButton from "../Reusable/ArchiveButton";
 import SearchAndUpload from "../Reusable/SearchAndUpload";
 

@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { FileText, FilterX, Search } from "lucide-react";
 
 import Tooltip from "../Reusable/Tooltip";
-import UploadModal from "../Admin/UploadModal";
+import UploadModal from "../../features/admin/UploadModal";
 import { Pagination } from "../Reusable/Pagination";
 
 import ArchiveBanner from "../../assets/ArchiveBanner.jpg";

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FileText } from "lucide-react";
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 import { jobPortalTabs as tabs } from "../../constants/JOBPORTAL.JS";
-import UploadModal from "../Admin/UploadModal";
+import UploadModal from "../../features/admin/UploadModal";;
 import { Link } from "react-router-dom";
 
 const JobListings = () => {

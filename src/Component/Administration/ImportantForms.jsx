@@ -4,7 +4,7 @@ import { FileText } from "lucide-react";
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 import ArchiveButton from "../Reusable/ArchiveButton";
-import UploadModal from "../Admin/UploadModal";
+import UploadModal from "../../features/admin/UploadModal";;
 
 const ImportantForms = () => {
   const [archived, setArchived] = useState(false);

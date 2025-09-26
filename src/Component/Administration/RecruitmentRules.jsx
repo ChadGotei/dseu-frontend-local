@@ -6,7 +6,7 @@ import { useArchivedParams } from "../../hooks/useArchivedParams";
 
 import HeadingText from "../Reusable/HeadingText";
 import ArchiveButton from "../Reusable/ArchiveButton";
-import UploadModal from "../Admin/UploadModal";
+import UploadModal from "../../features/admin/UploadModal";;
 import SearchAndUpload from "../Reusable/SearchAndUpload";
 
 const RecruitmentRules = () => {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaDownload } from "react-icons/fa";
 
-import UploadModal from "../Admin/UploadModal";
+import UploadModal from "../../features/admin/UploadModal";;
 import ToggleButton from "../Reusable/ArchiveButton";
 import SearchAndUpload from "../Reusable/SearchAndUpload";
 
