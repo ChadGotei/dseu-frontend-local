@@ -2,7 +2,7 @@ import { Plus, FileSearch, PersonStanding, LogOut } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import withAuthProtection from "./withAuthProtection";
-import HeadingText from "../Reusable/HeadingText";
+import HeadingText from "../../Component/Reusable/HeadingText";
 
 import { showSuccessToast } from "../../utils/toasts";
 

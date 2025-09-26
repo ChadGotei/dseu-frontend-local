@@ -1,5 +1,5 @@
 import { FilterX, Search, X } from "lucide-react";
-import Tooltip from "../../Reusable/Tooltip";
+import Tooltip from "../../../Component/Reusable/Tooltip";
 import { getSectionOptions } from "../adminConstant";
 
 const FilterSection = ({

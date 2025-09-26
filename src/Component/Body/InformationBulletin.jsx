@@ -2,10 +2,10 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
-import { getInformationBulletinOptions } from "../Admin/adminConstant";
+import { getInformationBulletinOptions } from "../../features/admin/adminConstant";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileCirclePlus, faPlus } from "@fortawesome/free-solid-svg-icons";
-import UploadModal from "../Admin/UploadModal";
+import UploadModal from "../../features/admin/UploadModal";
 import OrangeLoader from "../PageLoader/OrangeLoader";
 
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
@@ -114,10 +114,6 @@ const InformationBulletin = () => {
       name: "Diploma waiting list - 10th September",
       link: "https://drive.google.com/file/d/1Wt_McSdHA4YMt4ldFkCtsGTfxTcKB_mS/view"
     },
-    // {
-    //   name: "Guidelines for Walk-in Admission to UG, B.Tech, and PG Programs for AY 2025–26, starting from 3rd September 2025",
-    //   link: "https://drive.google.com/file/d/1l-UjchABcACRkIlUeBPUBjFzfU1DlMI1/view"
-    // },
     {
       name: "UG Sliding Allocation result is now live.",
       link: "/UG_SLIDING_ALLOCATION.pdf",
@@ -126,9 +122,6 @@ const InformationBulletin = () => {
       name: "Btech Internal Sliding Allocation result",
       link: "/BTECH_SLIDING_ALLOCATION.pdf",
     },
-    // {
-    //   name: "B.Tech and UG Round 2 admissions are now closed",
-    // },
     {
       name: "Information Bulletin 2025",
       link: "https://drive.google.com/file/d/16mO1wuwK40lwRe4uAz5_iDT5aqtqBFsY/view",
@@ -148,10 +141,6 @@ const InformationBulletin = () => {
     {
       name: "All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation.",
     },
-    // {
-    //   name: "Document verification dates for UG have been extended till Friday",
-    //   link: "https://dseu.ac.in/admission/result/ug",
-    // },
     {
       name: "Postgraduate results are now available!",
       link: "https://dseu.ac.in/admission/result/pg",
@@ -159,10 +148,6 @@ const InformationBulletin = () => {
     {
       name: "Refund form 2025 admissions",
       link: "https://drive.google.com/file/d/11y1sud8KmqrkvpmdA1gRGUjp5W4JN6-R/view",
-    },
-    {
-      name: "Diploma Cancelled seat data",
-      link: "https://drive.google.com/file/d/1ZMnYb-piIHJUkYRtmRMH0woE3UztIPAC/view",
     },
     {
       name: "How to Pay Your Admission Fees Online (Step-by-Step Guide)",

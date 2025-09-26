@@ -1,12 +1,12 @@
 import { lazy } from "react";
 import { Route } from "react-router-dom";
 
-const AdminLogin = lazy(() => import("../Component/Admin/LoginForm"));
-const Dashboard = lazy(() => import("../Component/Admin/Dashboard"));
-const TestPage = lazy(() => import("../Component/Admin/TestPage"));
-const ArchiveUploads = lazy(() => import("../Component/Admin/ArchiveUploads"));
-const ViewPdfs = lazy(() => import("../Component/Admin/ViewPDFs/ViewPdfs"));
-const AddStudent = lazy(() => import("../Component/Admin/result/AddStudent.jsx"));
+const AdminLogin = lazy(() => import("./LoginForm.jsx"));
+const Dashboard = lazy(() => import("./Dashboard.jsx"));
+const TestPage = lazy(() => import("./TestPage.jsx"));
+const ArchiveUploads = lazy(() => import("./ArchiveUploads.jsx"));
+const ViewPdfs = lazy(() => import("./ViewPDFs/ViewPdfs.jsx"));
+const AddStudent = lazy(() => import("./result/AddStudent.jsx"));
 
 export const adminPanelRoutes = (
   <>

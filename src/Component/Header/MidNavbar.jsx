@@ -410,7 +410,7 @@ const ResponsiveHeader = () => {
       {/* Enhanced Desktop Navigation Bar */}
 
       <div className="hidden md:block bg-gradient-to-r from-blue-50 to-blue-100 shadow-lg shadow-blue-500/30 rounded-3xl mx-auto my-4 sticky top-0 z-50 md:w-[97%] lg:w-[96%] xl:w-[95%]">
-        <nav className="max-w-7xl mx-auto"> {/* ml-7 2xl:mx-auto: to be added */}
+        <nav className="max-w-7xl mx-auto"> { /* // TODO: ml-7 2xl:mx-auto: to be added */}
           <div className="flex justify-between items-center md:h-24 xl:h-16">
             <div className="flex items-center space-x-5 md:flex-wrap xl:flex-nowrap md:ml-5 lg:ml-0">
               {navItems.map((item) => (

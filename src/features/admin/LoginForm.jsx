@@ -6,7 +6,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { login } from "../../utils/apiservice";
 import { showErrorToast, showSuccessToast } from "../../utils/toasts";
 
-import Logo from "../Reusable/Logo";
+import Logo from "../../Component/Reusable/Logo";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");

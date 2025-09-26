@@ -133,20 +133,20 @@ export const navItems = [
             { name: "Recruitment Rules", path: "/recruitment-rules" },
         ],
     },
-    {
-        name: "Research",
-        path: '/research',
-        dropdownItems: [
-            { name: "Office Bearers", path: "/research/office-bearers" },
-            { name: "Supervisors", path: "/research/supervisors" },
-            { name: "PhD Students", path: "/research/phd-students" },
-            { name: "Ordinance", path: "/research/ordinance" },
-            { name: "Doctoral Research Committee", path: "/research/doctoral-research-committee" },
-            { name: "Information Brochure", path: "/research/information-brochure" },
-            { name: "Notices/Orders", path: "/research/notices" },
-            { name: "Admission Portal", path: "/research/admission-portal" }
-        ]
-    },
+    // {
+    //     name: "Research",
+    //     path: '/research',
+    //     dropdownItems: [
+    //         { name: "Office Bearers", path: "/research/office-bearers" },
+    //         { name: "Supervisors", path: "/research/supervisors" },
+    //         { name: "PhD Students", path: "/research/phd-students" },
+    //         { name: "Ordinance", path: "/research/ordinance" },
+    //         { name: "Doctoral Research Committee", path: "/research/doctoral-research-committee" },
+    //         { name: "Information Brochure", path: "/research/information-brochure" },
+    //         { name: "Notices/Orders", path: "/research/notices" },
+    //         { name: "Admission Portal", path: "/research/admission-portal" }
+    //     ]
+    // },
     {
         name: "Entrepreneurship",
         path: "/Entrepreneurship",

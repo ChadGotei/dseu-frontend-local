@@ -9,7 +9,7 @@ import { useDeletePdfOptimistic } from "../../../react-query/hooks/useDeletePdfO
 
 import withAuthProtection from "../withAuthProtection";
 import DeleteConfirmModal from "../DeleteConfirmModal";
-import { Pagination } from "../../Reusable/Pagination";
+import { Pagination } from "../../../Component/Reusable/Pagination";
 import FilterSection from "./FilterSection";
 import PdfTable from "./PdfTable";
 
