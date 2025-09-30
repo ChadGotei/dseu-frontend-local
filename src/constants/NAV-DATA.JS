@@ -73,7 +73,7 @@ export const navItems = [
             },
             {
                 name: "Fee Refund Policy",
-                path: "https://drive.google.com/file/d/11y1sud8KmqrkvpmdA1gRGUjp5W4JN6-R/view",
+                path: "https://drive.google.com/file/d/1AQC5LFPX3j4B0hX7Ut1avU6n1qughj3z/view",
             },
             {
                 name: "Information Bulletin",

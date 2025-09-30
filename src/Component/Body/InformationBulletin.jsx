@@ -77,6 +77,10 @@ const InformationBulletin = () => {
   // Documents to inject manually
   const admissionManuals = [
     {
+      name: "Refund form 2025 admissions",
+      link: "https://drive.google.com/file/d/1AQC5LFPX3j4B0hX7Ut1avU6n1qughj3z/view",
+    },
+    {
       name: "Guidelines of Diploma Admission through Multiple Entry Multiple Exit (Against Vacant Seats)",
       link: "/diploma_lateral_entry.pdf"
     },
@@ -87,10 +91,10 @@ const InformationBulletin = () => {
     {
       link: "Walk-in Admissions for Diploma programs are open till 30th September 2025 (AY 2025-26)"
     },
-    {
-      name: "Guidelines for Spot Admissions on 16th September - Diploma programs 2025-26",
-      link: "https://drive.google.com/file/d/1uwKQm9D6AKpIKgbJoQBChuEelwduV3-w/view"
-    },
+    // {
+    //   name: "Guidelines for Spot Admissions on 16th September - Diploma programs 2025-26",
+    //   link: "https://drive.google.com/file/d/1uwKQm9D6AKpIKgbJoQBChuEelwduV3-w/view"
+    // },
     {
       name: "Guidelines for Walk-In Admissions – UG, PG & B.Tech programs (15–30 September)",
       link: "https://drive.google.com/file/d/1Zvh62-LBf9XaLOw0-844tvTHgeQGrOA8/view"
@@ -106,14 +110,14 @@ const InformationBulletin = () => {
       name: "Admission Offer for Waitlisted Candidates - Diploma Programs (FY 2025-26)",
       link: "https://drive.google.com/file/d/1bBQ4aLtFtTM3Nc7Uq6GjkYObb3UB14FX/view"
     },
-    {
-      name: "Diploma waiting list for 11th September",
-      link: "https://drive.google.com/file/d/1KTudgnNbT7ju78RXZPyCWRrA0gbQks1p/view"
-    },
-    {
-      name: "Diploma waiting list - 10th September",
-      link: "https://drive.google.com/file/d/1Wt_McSdHA4YMt4ldFkCtsGTfxTcKB_mS/view"
-    },
+    // {
+    //   name: "Diploma waiting list for 11th September",
+    //   link: "https://drive.google.com/file/d/1KTudgnNbT7ju78RXZPyCWRrA0gbQks1p/view"
+    // },
+    // {
+    //   name: "Diploma waiting list - 10th September",
+    //   link: "https://drive.google.com/file/d/1Wt_McSdHA4YMt4ldFkCtsGTfxTcKB_mS/view"
+    // },
     {
       name: "UG Sliding Allocation result is now live.",
       link: "/UG_SLIDING_ALLOCATION.pdf",
@@ -144,10 +148,6 @@ const InformationBulletin = () => {
     {
       name: "Postgraduate results are now available!",
       link: "https://dseu.ac.in/admission/result/pg",
-    },
-    {
-      name: "Refund form 2025 admissions",
-      link: "https://drive.google.com/file/d/11y1sud8KmqrkvpmdA1gRGUjp5W4JN6-R/view",
     },
     {
       name: "How to Pay Your Admission Fees Online (Step-by-Step Guide)",
