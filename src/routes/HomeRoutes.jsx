@@ -2,9 +2,15 @@ import { lazy } from "react";
 import { Route } from "react-router-dom";
 
 const Home = lazy(() => import("../Component/Home/page.jsx"));
-const ChancellorMessage = lazy(() => import("../Component/Body/ChancellorMessage"));
-const ViceChancellorMessage = lazy(() => import("../Component/Body/ViceChancellorMessage"));
-const SeperateScrollbar = lazy(() => import("../Component/Home/ScrollBarpage.jsx"));
+const ChancellorMessage = lazy(() =>
+  import("../Component/Body/ChancellorMessage")
+);
+const ViceChancellorMessage = lazy(() =>
+  import("../Component/Body/ViceChancellorMessage")
+);
+const SeperateScrollbar = lazy(() =>
+  import("../Component/Home/ScrollBarpage.jsx")
+);
 
 export const homeRoutes = (
   <>
@@ -21,5 +27,3 @@ export const homeRoutes = (
     <Route path="/vice-chancellor" element={<ViceChancellorMessage />} />
   </>
 );
-
-
