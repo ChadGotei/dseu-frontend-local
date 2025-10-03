@@ -7,9 +7,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileCirclePlus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import UploadModal from "../../features/admin/UploadModal";
 import OrangeLoader from "../PageLoader/OrangeLoader";
+import NoticeScroller from "../Reusable/NoticeScrollbar";
+import { fetchSectionNotices } from "../../utils/apiservice";
 
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
-const apiBase =
+export const apiBase =
   baseUrl && baseUrl.endsWith("/") ? baseUrl : `${baseUrl || ""}/`;
 
 const sectionKeys = [
@@ -19,33 +21,6 @@ const sectionKeys = [
   { key: "alerts and circulars", index: 3 },
 ];
 
-const fetchSectionNotices = async () => {
-  const results = await Promise.all(
-    sectionKeys.map(async (section) => {
-      try {
-        const res = await axios.get(
-          `${apiBase}notice?section=${encodeURIComponent(
-            section.key
-          )}&limit=50&page=1`
-        );
-        return {
-          index: section.index,
-          content: res.data?.data?.notices || [],
-        };
-      } catch (error) {
-        console.error(
-          `Failed to fetch notices for section "${section.key}":`,
-          error.message || error
-        );
-        return {
-          index: section.index,
-          content: [],
-        };
-      }
-    })
-  );
-  return results;
-};
 
 const InformationBulletin = () => {
   const [showModal, setShowModal] = useState(false);
@@ -62,7 +37,7 @@ const InformationBulletin = () => {
 
   const { data, isLoading, error } = useQuery({
     queryKey: ["information-bulletin"],
-    queryFn: fetchSectionNotices,
+    queryFn: () => fetchSectionNotices(sectionKeys, apiBase),
     staleTime: 5 * 60 * 1000,
     retry: 2,
   });
@@ -74,7 +49,7 @@ const InformationBulletin = () => {
     { title: "Notices", content: [], buttonText: "View Notices" },
   ];
 
-  // Documents to inject manually
+  // Documents to inject manually (Admission section extras)
   const admissionManuals = [
     {
       name: "Refund form 2025 admissions",
@@ -82,48 +57,36 @@ const InformationBulletin = () => {
     },
     {
       name: "Guidelines of Diploma Admission through Multiple Entry Multiple Exit (Against Vacant Seats)",
-      link: "/diploma_lateral_entry.pdf"
+      link: "/diploma_lateral_entry.pdf",
     },
     {
       name: "B.Tech Spot Admissions 2025-26: Multi-Entry Route for Diploma Passed Students",
-      link: "https://drive.google.com/file/d/1hnO-QUNHQDuttY6EOMDaMP13eIW47Vuz/view"
+      link: "https://drive.google.com/file/d/1hnO-QUNHQDuttY6EOMDaMP13eIW47Vuz/view",
     },
     {
-      link: "Walk-in Admissions for Diploma programs are open till 30th September 2025 (AY 2025-26)"
+      link: "Walk-in Admissions for Diploma programs are open till 30th September 2025 (AY 2025-26)",
     },
-    // {
-    //   name: "Guidelines for Spot Admissions on 16th September - Diploma programs 2025-26",
-    //   link: "https://drive.google.com/file/d/1uwKQm9D6AKpIKgbJoQBChuEelwduV3-w/view"
-    // },
     {
       name: "Guidelines for Walk-In Admissions – UG, PG & B.Tech programs (15–30 September)",
-      link: "https://drive.google.com/file/d/1Zvh62-LBf9XaLOw0-844tvTHgeQGrOA8/view"
+      link: "https://drive.google.com/file/d/1Zvh62-LBf9XaLOw0-844tvTHgeQGrOA8/view",
     },
     {
       name: "Diploma waiting list for 15th September",
-      link: "https://drive.google.com/file/d/1aq8iR0kMsgmGVOj3h_O8fcsFct-1A10p/view"
+      link: "https://drive.google.com/file/d/1aq8iR0kMsgmGVOj3h_O8fcsFct-1A10p/view",
     },
     {
-      name: "Diploma waiting list students may get admission opportunity as per availability of seats."
+      name: "Diploma waiting list students may get admission opportunity as per availability of seats.",
     },
     {
       name: "Admission Offer for Waitlisted Candidates - Diploma Programs (FY 2025-26)",
-      link: "https://drive.google.com/file/d/1bBQ4aLtFtTM3Nc7Uq6GjkYObb3UB14FX/view"
+      link: "https://drive.google.com/file/d/1bBQ4aLtFtTM3Nc7Uq6GjkYObb3UB14FX/view",
     },
-    // {
-    //   name: "Diploma waiting list for 11th September",
-    //   link: "https://drive.google.com/file/d/1KTudgnNbT7ju78RXZPyCWRrA0gbQks1p/view"
-    // },
-    // {
-    //   name: "Diploma waiting list - 10th September",
-    //   link: "https://drive.google.com/file/d/1Wt_McSdHA4YMt4ldFkCtsGTfxTcKB_mS/view"
-    // },
     {
       name: "UG Sliding Allocation result is now live.",
       link: "/UG_SLIDING_ALLOCATION.pdf",
     },
     {
-      name: "Btech Internal Sliding Allocation result",
+      name: "Btech Internal Sliding Allocation result",
       link: "/BTECH_SLIDING_ALLOCATION.pdf",
     },
     {
@@ -163,11 +126,8 @@ const InformationBulletin = () => {
       }));
 
       if (section.index === 0) {
-        // Admission section
+        // Admission section = manuals + fetched notices
         cards[section.index].content = [...admissionManuals, ...notices];
-      } else if (section.index === 2) {
-        // Important Links section
-        cards[section.index].content = [admissionManuals[0], ...notices];
       } else {
         cards[section.index].content = notices;
       }
@@ -238,42 +198,11 @@ const InformationBulletin = () => {
             </h3>
 
             <div className="relative flex-grow overflow-hidden group p-4">
-              {isLoading ? (
-                <div className="text-center text-gray-500 italic">
-                  Loading...
-                </div>
-              ) : error ? (
-                <div className="text-center text-red-500">
-                  Error loading notices
-                </div>
-              ) : card.content.length === 0 ? (
-                <div className="my-auto p-2 text-center text-gray-500 italic">
-                  No Notices available for now.
-                </div>
-              ) : (
-                <div className="animate-scroll group-hover:paused-scroll">
-                  <ul className="space-y-2">
-                    {card.content.map((item, idx) => (
-                      <li
-                        key={idx}
-                        className="hover:bg-blue-100 rounded py-1 px-2 transition-colors duration-200"
-                      >
-                        <a
-                          href={item.link}
-                          target={item.samePage ? "_self" : "_blank"}
-                          rel={
-                            item.samePage ? undefined : "noopener noreferrer"
-                          }
-                          className="text-gray-700 hover:text-blue-900 flex items-center w-full"
-                        >
-                          {item.name}
-                          <span className="ml-2 animated-label">NEW</span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              <NoticeScroller
+                items={card.content}
+                isLoading={isLoading}
+                error={error}
+              />
             </div>
           </div>
         ))}
@@ -289,6 +218,7 @@ const InformationBulletin = () => {
         />
       )}
 
+      {/* Scroll + Gradient Label Styles */}
       <style>{`
         @keyframes scroll {
           0% { transform: translateY(20%); }
@@ -296,7 +226,7 @@ const InformationBulletin = () => {
         }
 
         .animate-scroll {
-          animation: scroll linear 30s infinite;
+          animation: scroll linear infinite;
           will-change: transform;
           display: inline-block;
         }

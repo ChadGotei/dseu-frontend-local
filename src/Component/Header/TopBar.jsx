@@ -5,6 +5,21 @@ import { Link, useNavigate } from "react-router-dom";
 const facultyLoginSamarth = "https://dseu.samarth.ac.in/index.php/site/login";
 const studentLoginSamarth = "https://dseu.samarth.edu.in/index.php/site/login";
 
+const menuItems = [
+  { label: "Examination", type: "link", to: "/examination" },
+  { label: "Tenders", type: "link", to: "/tenders" },
+  { label: "Admin Login", type: "link", to: "/admin-login" },
+  { label: "Faculty Login", type: "modal" }, // special modal
+  { label: "Student Login", type: "external", href: studentLoginSamarth },
+  {
+    label: "Grievance form",
+    type: "link",
+    to: "/grievance-form",
+    extra: <span className="hidden md:inline">&nbsp;& RTI</span>,
+  },
+  { label: "Alumni", type: "link", to: "/alumni" },
+];
+
 const TopBar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
@@ -21,60 +36,57 @@ const TopBar = () => {
 
   return (
     <>
-      <div className="flex flex-row justify-center md:justify-end md:mr-16 items-center text-[0.55rem] md:text-md space-x-0.5 md:space-x-1 px-2 md:px-0 bg-white rounded-b-xl ">
-        <Link
-          to="/tenders"
-          className="relative px-0.5 md:px-1 py-1 text-[0.55rem] md:text-[1rem] text-[#005CB9] font-normal transition-transform duration-300 group whitespace-nowrap"
-        >
-          <span className="bg-[#E4F7F5] px-1 md:px-3 py-1.5 rounded-b-xl group-hover:bg-blue-500 group-hover:text-white group-hover:shadow-md transition-all duration-300">Tenders</span>
-         
-        </Link>
+      {/* Top bar menu */}
+      <div className="flex flex-row justify-center md:justify-end md:mr-16 items-center text-[0.55rem] md:text-md space-x-0.5 md:space-x-1 px-2 md:px-0 bg-white rounded-b-xl flex-wrap gap-y-2 mt-1 md:mt-0">
+        {menuItems.map((item, idx) => {
+          const commonClasses =
+            "relative px-0.5 md:px-1 py-1 text-[0.55rem] md:text-[0.8rem] text-[#005CB9] font-normal transition-transform duration-300 group whitespace-nowrap";
 
-        <Link
-          to="/admin-login"
-          className="relative px-0.5 md:px-1 py-1 text-[0.55rem] md:text-[1rem] text-[#005CB9] font-normal transition-transform duration-300 group whitespace-nowrap"
-        >
-          <span className="bg-[#E4F7F5] px-1 md:px-3 py-1.5 rounded-b-xl group-hover:bg-blue-500 group-hover:text-white group-hover:shadow-md transition-all duration-300">Admin Login</span>
-         
-        </Link>
+          const spanClasses =
+            "bg-[#E4F7F5] px-1 md:px-3 py-1.5 rounded-b-xl group-hover:bg-blue-500 group-hover:text-white group-hover:shadow-md transition-all duration-300";
 
-        <div
-          onClick={openModal}
-          className="relative px-0.5 md:px-1 py-1 text-[0.55rem] md:text-[1rem] text-[#005CB9] font-normal transition-transform duration-300 group cursor-pointer whitespace-nowrap"
-        >
-          <span className="bg-[#E4F7F5] px-1 md:px-3 py-1.5 rounded-b-xl group-hover:bg-blue-500 group-hover:text-white group-hover:shadow-md transition-all duration-300">Faculty Login</span>
-          
-        </div>
+          if (item.type === "link") {
+            return (
+              <Link key={idx} to={item.to} className={commonClasses}>
+                <span className={spanClasses}>
+                  {item.label} {item.extra}
+                </span>
+              </Link>
+            );
+          }
 
-        <a
-          href={studentLoginSamarth}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative px-0.5 md:px-1 py-1 text-[0.55rem] md:text-[1rem] text-[#005CB9] font-normal transition-transform duration-300 group whitespace-nowrap"
-        >
-          <span className="bg-[#E4F7F5] px-1 md:px-3 py-1.5 rounded-b-xl group-hover:bg-blue-500 group-hover:text-white group-hover:shadow-md transition-all duration-300">Student Login</span>
-          
-        </a>
+          if (item.type === "external") {
+            return (
+              <a
+                key={idx}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={commonClasses}
+              >
+                <span className={spanClasses}>{item.label}</span>
+              </a>
+            );
+          }
 
-        <Link
-          to="/grievance-form"
-          className="relative px-0.5 md:px-1 py-1 text-[0.55rem] md:text-[1rem] text-[#005CB9] font-normal transition-transform duration-300 group whitespace-nowrap"
-        >
-          <span className="bg-[#E4F7F5] px-1 md:px-3 py-1.5 rounded-b-xl group-hover:bg-blue-500 group-hover:text-white group-hover:shadow-md transition-all duration-300">
-            Grievance form <span className="hidden md:inline">& RTI</span>
-          </span>
-         
-        </Link>
+          if (item.type === "modal") {
+            return (
+              <div
+                key={idx}
+                onClick={openModal}
+                className={`${commonClasses} cursor-pointer`}
+              >
+                <span className={spanClasses}>{item.label}</span>
+              </div>
+            );
+          }
 
-        <Link
-          to="/alumni"
-          className="relative px-0.5 md:px-1 py-1 text-[0.55rem] md:text-[1rem] text-[#005CB9] font-normal transition-transform duration-300 group whitespace-nowrap"
-        >
-          <span className="bg-[#E4F7F5] px-1 md:px-3 py-1.5 rounded-b-xl group-hover:bg-blue-500 group-hover:text-white group-hover:shadow-md transition-all duration-300">Alumni</span>
-          
-        </Link>
+          return null;
+        })}
       </div>
-
+      
+      {/* ------------------- */}
+      {/* Faculty Login Modal */}
       {isModalOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999] transition-opacity duration-300"

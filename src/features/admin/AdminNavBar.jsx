@@ -1,4 +1,4 @@
-import { FileText, Megaphone, Users, Briefcase, Shield } from "lucide-react";
+import { FileText, Megaphone, Users, Briefcase, Shield, File } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export const navTabs = [
@@ -27,6 +27,11 @@ export const navTabs = [
     label: "Administration",
     icon: Shield,
   },
+  {
+    key: "examination",
+    label: "Examination",
+    icon: File
+  }
 ];
 
 export const DesktopNav = ({ activeTab, handleTabChange }) => {

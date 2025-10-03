@@ -20,6 +20,7 @@ import { amenitiesRoutes } from "./routes/AmenitiesRoutes.jsx";
 import { otherRoutes } from "./routes/OtherRoutes.jsx";
 import { researchRoutes } from "./features/research/ResearchRoutes.jsx";
 import { adminPanelRoutes } from "./features/admin/AdminRoutes.jsx";
+import { examinationRoutes } from "./Component/Examination/examinationRoutes.jsx";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
             {adminPanelRoutes}
             {resultRoutes}
             {otherRoutes}
+            {examinationRoutes}
             {/* {researchRoutes} */}
           </Route>
 

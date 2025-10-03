@@ -399,7 +399,7 @@ export const changeUGStudentStatus = async (id, status) => {
 export const getPGStudentResult = async (formData) => {
   try {
     const response = await api.post(
-      `/pg`, 
+      `/pg`,
       formData,
       {
         headers: { "Content-Type": "application/json" },
@@ -423,7 +423,36 @@ export const changePGStudentStatus = async (id, status) => {
     );
     return response.data;
   } catch (error) {
-    console.error(error);  //! development
+    // console.error(error);  //! development
     throw error;
   }
+};
+
+
+export const fetchSectionNotices = async (sectionKeys, apiBase) => {
+  const results = await Promise.all(
+    sectionKeys.map(async (section) => {
+      try {
+        const res = await axios.get(
+          `${apiBase}notice?section=${encodeURIComponent(
+            section.key
+          )}&limit=50&page=1`
+        );
+        return {
+          index: section.index,
+          content: res.data?.data?.notices || [],
+        };
+      } catch (error) {
+        console.error(
+          `Failed to fetch notices for section "${section.key}":`,
+          error.message || error
+        );
+        return {
+          index: section.index,
+          content: [],
+        };
+      }
+    })
+  );
+  return results;
 };

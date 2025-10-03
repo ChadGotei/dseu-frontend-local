@@ -84,6 +84,13 @@ const AdminDashboard = () => {
           { value: "ad circulars", label: "Circulars" },
           { value: "ad important forms", label: "Important Forms" },
         ];
+      case "examination":
+        return [
+          { value: "exam datesheet", label: "Datesheet" },
+          { value: "exam results", label: "Results" },
+          { value: "exam fee", label: "Fee Links" },
+          { value: "exam notices", label: "Notices" },
+        ];
       default:
         return [];
     }
