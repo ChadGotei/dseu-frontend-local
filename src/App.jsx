@@ -34,7 +34,7 @@ function App() {
             {courseRoutes}
             {academicRoutes}
             {administrationRoutes}
-            {aboutRoutes} 
+            {aboutRoutes}
             {admissionRoutes}
             {miscRoutes}
             {workWithUsRoutes}
@@ -42,7 +42,7 @@ function App() {
             {adminPanelRoutes}
             {resultRoutes}
             {otherRoutes}
-            {/* {researchRoutes} */}
+            {researchRoutes}
           </Route>
 
           <Route path="*" element={<NotFound />} />
