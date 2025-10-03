@@ -42,7 +42,7 @@ function App() {
             {adminPanelRoutes}
             {resultRoutes}
             {otherRoutes}
-            {researchRoutes}
+            {/* {researchRoutes} */}
           </Route>
 
           <Route path="*" element={<NotFound />} />
