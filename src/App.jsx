@@ -43,8 +43,8 @@ function App() {
             {adminPanelRoutes}
             {resultRoutes}
             {otherRoutes}
-            {examinationRoutes}
-            {/* {researchRoutes} */}
+            {/* {examinationRoutes} */}
+            {researchRoutes}
           </Route>
 
           <Route path="*" element={<NotFound />} />

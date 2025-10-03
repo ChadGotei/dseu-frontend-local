@@ -8,6 +8,10 @@ import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 export const toAdd = [
   {
+    fileName: "Last Opportunity to Pay Your semester fee/previous fee dues",
+    fileLink: "https://dseu.samarth.edu.in/index.php/site/login"
+  }, 
+  {
     fileName: "Guidelines of Diploma Admission through Multiple Entry Multiple Exit (Against Vacant Seats)",
     fileLink: "/diploma_lateral_entry.pdf"
   },

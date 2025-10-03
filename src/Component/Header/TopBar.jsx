@@ -6,7 +6,7 @@ const facultyLoginSamarth = "https://dseu.samarth.ac.in/index.php/site/login";
 const studentLoginSamarth = "https://dseu.samarth.edu.in/index.php/site/login";
 
 const menuItems = [
-  { label: "Examination", type: "link", to: "/examination" },
+  // { label: "Examination", type: "link", to: "/examination" },
   { label: "Tenders", type: "link", to: "/tenders" },
   { label: "Admin Login", type: "link", to: "/admin-login" },
   { label: "Faculty Login", type: "modal" }, // special modal
@@ -37,10 +37,10 @@ const TopBar = () => {
   return (
     <>
       {/* Top bar menu */}
-      <div className="flex flex-row justify-center md:justify-end md:mr-16 items-center text-[0.55rem] md:text-md space-x-0.5 md:space-x-1 px-2 md:px-0 bg-white rounded-b-xl flex-wrap gap-y-2 mt-1 md:mt-0">
+      <div className="flex flex-row justify-center md:justify-end md:mr-16 items-center text-[0.55rem] md:text-md space-x-0.5 md:space-x-1 px-2 md:px-0 bg-white rounded-b-xl flex-wrap gap-y-2 mt-1 sm:mt-0">
         {menuItems.map((item, idx) => {
           const commonClasses =
-            "relative px-0.5 md:px-1 py-1 text-[0.55rem] md:text-[0.8rem] text-[#005CB9] font-normal transition-transform duration-300 group whitespace-nowrap";
+            "relative px-0.5 md:px-1 py-1 text-[0.55rem] sm:text-[0.85rem] md:text-[1rem] text-[#005CB9] font-normal transition-transform duration-300 group whitespace-nowrap";
 
           const spanClasses =
             "bg-[#E4F7F5] px-1 md:px-3 py-1.5 rounded-b-xl group-hover:bg-blue-500 group-hover:text-white group-hover:shadow-md transition-all duration-300";
