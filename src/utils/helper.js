@@ -10,6 +10,20 @@ export const unslugify = (slug) => {
   return slug.replace(/-/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
 };
 
+export const formatDate = (dateString) => {
+  if (!dateString || dateString === "N/A") return "N/A";
+  try {
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-IN", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+  } catch {
+    return "N/A";
+  }
+};
+
 export const getCategoryFullname = (category) => {
   let fullform;
 
@@ -77,18 +91,18 @@ export const getStatusFromAction = (action) => {
 
 // normalize data coming from api
 export const normalize = (n) => {
-    const name =
-      n?.fileName ??
-      n?.title ??
-      n?.name ??
-      n?.headline ??
-      n?.text ??
-      "";
-    const link =
-      n?.fileLink ??
-      n?.url ??
-      n?.link ??
-      n?.href ??
-      "";
-    return { fileName: name, fileLink: link };
-  };
+  const name =
+    n?.fileName ??
+    n?.title ??
+    n?.name ??
+    n?.headline ??
+    n?.text ??
+    "";
+  const link =
+    n?.fileLink ??
+    n?.url ??
+    n?.link ??
+    n?.href ??
+    "";
+  return { fileName: name, fileLink: link };
+};

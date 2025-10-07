@@ -56,61 +56,12 @@ const InformationBulletin = () => {
       link: "https://drive.google.com/file/d/1AQC5LFPX3j4B0hX7Ut1avU6n1qughj3z/view",
     },
     {
-      name: "Guidelines of Diploma Admission through Multiple Entry Multiple Exit (Against Vacant Seats)",
-      link: "/diploma_lateral_entry.pdf",
-    },
-    {
-      name: "B.Tech Spot Admissions 2025-26: Multi-Entry Route for Diploma Passed Students",
-      link: "https://drive.google.com/file/d/1hnO-QUNHQDuttY6EOMDaMP13eIW47Vuz/view",
-    },
-    {
-      link: "Walk-in Admissions for Diploma programs are open till 30th September 2025 (AY 2025-26)",
-    },
-    {
-      name: "Guidelines for Walk-In Admissions – UG, PG & B.Tech programs (15–30 September)",
-      link: "https://drive.google.com/file/d/1Zvh62-LBf9XaLOw0-844tvTHgeQGrOA8/view",
-    },
-    {
-      name: "Diploma waiting list for 15th September",
-      link: "https://drive.google.com/file/d/1aq8iR0kMsgmGVOj3h_O8fcsFct-1A10p/view",
-    },
-    {
-      name: "Diploma waiting list students may get admission opportunity as per availability of seats.",
-    },
-    {
-      name: "Admission Offer for Waitlisted Candidates - Diploma Programs (FY 2025-26)",
-      link: "https://drive.google.com/file/d/1bBQ4aLtFtTM3Nc7Uq6GjkYObb3UB14FX/view",
-    },
-    {
-      name: "UG Sliding Allocation result is now live.",
-      link: "/UG_SLIDING_ALLOCATION.pdf",
-    },
-    {
-      name: "Btech Internal Sliding Allocation result",
-      link: "/BTECH_SLIDING_ALLOCATION.pdf",
-    },
-    {
       name: "Information Bulletin 2025",
       link: "https://drive.google.com/file/d/16mO1wuwK40lwRe4uAz5_iDT5aqtqBFsY/view",
     },
     {
-      name: "Registrations are now open for B.S. Optometry and B.Des Jewellery Design programs until 3rd September",
-      link: "https://dseuadm.samarth.edu.in/ug/",
-    },
-    {
-      name: "Seat Confirmation Process - PG",
-      link: "/seat-confirmation-pg.pdf",
-    },
-    {
       name: "Commencement of Classes for New Batch - Academic Session 2025-26",
       link: "https://drive.google.com/file/d/1vc-p-RJUSlpxtyCs5d-QglEr6nxwoXsN/view",
-    },
-    {
-      name: "All candidates who have already paid the fees in Round 1 do not need to pay again, even after upgradation.",
-    },
-    {
-      name: "Postgraduate results are now available!",
-      link: "https://dseu.ac.in/admission/result/pg",
     },
     {
       name: "How to Pay Your Admission Fees Online (Step-by-Step Guide)",

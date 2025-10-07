@@ -4,7 +4,6 @@ import ExaminationSecond from "./ExaminationSecond";
 import ExaminationThird from "./ExaminationThird";
 
 const Examination = lazy(() => import("../Examination/Examination"));
-const ExaminationSection = lazy(() => import("../Examination/ExaminationSection"));
 
 export const examinationRoutes = (
     <>

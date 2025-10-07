@@ -11,17 +11,17 @@ export const toAdd = [
     fileName: "Last Opportunity to Pay Your semester fee/previous fee dues",
     fileLink: "https://dseu.samarth.edu.in/index.php/site/login"
   }, 
-  {
-    fileName: "Guidelines of Diploma Admission through Multiple Entry Multiple Exit (Against Vacant Seats)",
-    fileLink: "/diploma_lateral_entry.pdf"
-  },
-  {
-    fileName: "B.Tech Spot Admissions 2025-26: Multi-Entry Route for Diploma Passed Students",
-    fileLink: "https://drive.google.com/file/d/1hnO-QUNHQDuttY6EOMDaMP13eIW47Vuz/view"
-  },
-  {
-    fileName: "Walk-in Admissions for Diploma programs are open till 30th September 2025 (AY 2025-26)"
-  }
+  // {
+  //   fileName: "Guidelines of Diploma Admission through Multiple Entry Multiple Exit (Against Vacant Seats)",
+  //   fileLink: "/diploma_lateral_entry.pdf"
+  // },
+  // {
+  //   fileName: "B.Tech Spot Admissions 2025-26: Multi-Entry Route for Diploma Passed Students",
+  //   fileLink: "https://drive.google.com/file/d/1hnO-QUNHQDuttY6EOMDaMP13eIW47Vuz/view"
+  // },
+  // {
+  //   fileName: "Walk-in Admissions for Diploma programs are open till 30th September 2025 (AY 2025-26)"
+  // }
 ];
 
 const AnnouncementStrip = () => {
