@@ -1,25 +1,20 @@
-const REGISTRARINFO = {
-    name: "Mr. Vivek Agarwal",
-    designation: "Registrar",
-    university: "Delhi Skill and Entrepreneurship University (DSEU)",
-    profileOverview:
-      "Mr. Vivek Agarwal is a dynamic professional with a multifaceted background in steel manufacturing, civil services, intellectual property, and public administration. A distinguished officer from the Delhi, Andaman and Nicobar Islands Civil Services (DANICS) cadre, Mr. Agarwal brings a wealth of administrative expertise and operational excellence to his role as Registrar at DSEU.\n\nAn alumnus of IIT Kanpur, he holds a B.Tech in Materials and Metallurgical Engineering, combining a strong technical foundation with extensive experience in governance and public systems management.",
-    careerHighlights: [
-      "Formerly associated with Tata Steel, where he oversaw operations and managed the entire manufacturing chain for tubes with a focus on quality assurance.",
-      "Co-founder of an Intellectual Property firm, specializing in patents research, invalidation, prior art searches, and freedom-to-operate analysis.",
-      "Served as Additional District Magistrate, responsible for law and order, land revenue, disaster preparedness, and public welfare schemes in Delhi.",
-      "Held the post of Additional Commissioner of GST, spearheading tax compliance, revenue collection, and administration.",
-      "Played key roles in disaster management, election processes, and initiatives for cultural preservation and heritage vibrancy in Delhi."
-    ],
-    coreStrengths: [
-      "Strategic planning and leadership in governance",
-      "Stakeholder collaboration and public service innovation",
-      "Deep understanding of legal, regulatory, and departmental systems",
-      "Passion for arts, culture, and public engagement"
-    ],
-    message:
-      "I believe in creating systems that empower institutions and people alike. At DSEU, my commitment lies in building robust administrative processes that support our mission of transforming skill education and making a meaningful impact in the lives of students and society."
-  };
-  
-  export {REGISTRARINFO};
-  
+export const REGISTRARINFO = {
+  name: "Prof. (Dr.) Gagan Dhawan",
+  designation: "Registrar",
+  university: "Delhi Skill and Entrepreneurship University (DSEU)",
+
+  profileOverview: `
+    Prof. (Dr.) Gagan Dhawan completed his graduation and post-graduation at the <b>University of Delhi, India</b>. 
+    He received the <i>Universitas 21 Fellowship</i> for a <b>Master’s in Bioinformatics</b> at the University of Edinburgh, UK, 
+    and the <i>UGC-Raman Award</i> for postdoctoral research at the University of Massachusetts, Boston, USA. 
+    He is a Fellow of the Royal Society of Chemistry (FRSC), UK, and a <i>Chartered Chemist (CChem)</i>. 
+    Recognized for his excellence in teaching, he received the <i>Meritorious Teacher Award (2014)</i> and <b>INSA Teachers Award (2020)</b>. 
+    He currently serves as a Council Member at the National Commission for Allied and Healthcare Professions (NCAHP), 
+    under the Ministry of Health and Family Welfare, Government of India. 
+    His research focuses on developing <i>novel small-molecule inhibitors</i> and <b>natural polymer-based self-assembled nanostructures</b> 
+    for biomedical applications.
+  `,
+
+  message:
+    "Education is more than knowledge; it's the ability to create change. DSEU empowers learners with the skills, confidence, and mindset to tackle challenges and shape a better society.",
+};

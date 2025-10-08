@@ -1,27 +1,28 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
-
 import Tooltip from "../Reusable/Tooltip";
-
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 export const toAdd = [
   {
+    fileName: "DSEU is celebrating its 6th foundation from 8th-11th October 2025 across various campuses",
+    specialColor: true
+  },
+  {
+    fileName: "6th Foundation Day Expert Lecture: Prof. Pratibha Jolly, FNASc, FinstP(UK)  on “Science, Society and Enterprise: Reimagining Future of Work” – 8 Oct 2025",
+    fileLink: "https://drive.google.com/file/d/1pl_m7Jr1NB1Dn322x_8763X9WmpV1Xfv/view",
+    specialColor: true
+  },
+  {
+    fileName: "6th Foundation Day Expert Lecture: Prof. Dhiraj Kumar on “The Design Mindset in the Age of Innovation” – 8 Oct 2025",
+    fileLink: "https://drive.google.com/file/d/1MO9C7uGRovpWZ39oT1so40dv-F0q48Fe/view",
+    specialColor: true
+  },
+  {
     fileName: "Last Opportunity to Pay Your semester fee/previous fee dues",
     fileLink: "https://dseu.samarth.edu.in/index.php/site/login"
-  }, 
-  // {
-  //   fileName: "Guidelines of Diploma Admission through Multiple Entry Multiple Exit (Against Vacant Seats)",
-  //   fileLink: "/diploma_lateral_entry.pdf"
-  // },
-  // {
-  //   fileName: "B.Tech Spot Admissions 2025-26: Multi-Entry Route for Diploma Passed Students",
-  //   fileLink: "https://drive.google.com/file/d/1hnO-QUNHQDuttY6EOMDaMP13eIW47Vuz/view"
-  // },
-  // {
-  //   fileName: "Walk-in Admissions for Diploma programs are open till 30th September 2025 (AY 2025-26)"
-  // }
+  },
 ];
 
 const AnnouncementStrip = () => {
@@ -61,8 +62,7 @@ const AnnouncementStrip = () => {
   if (!announcements || announcements.length === 0) {
     return (
       <div className="flex items-center justify-center h-12 bg-white border-y border-gray-200 w-full text-sm sm:text-base text-gray-500 italic text-center">
-        No announcements at the moment. Please check back soon or Check your
-        internet!
+        No announcements at the moment. Please check back soon or check your internet!
       </div>
     );
   }
@@ -81,32 +81,38 @@ const AnnouncementStrip = () => {
       </div>
       <div className="h-10 flex items-center overflow-hidden relative w-full text-xs sm:text-sm md:text-base">
         <div className="animate-marquee inline-flex items-center absolute whitespace-nowrap">
-          {announcements.map((announcement, index) =>
-            announcement.fileLink ? (
+          {announcements.map((announcement, index) => {
+            const textColorClass = announcement.specialColor
+              ? "text-orange-400 font-semibold"
+              : "text-blue-600";
+
+            const linkContent = (
+              <>
+                {announcement.fileLink && <ExternalLink className="w-4 h-4 mr-2" />}
+                <span>{announcement.fileName}</span>
+                <span className="new-badge ml-2">New</span>
+                {index !== announcements.length - 1 && (
+                  <span className="mx-4 text-gray-400">|</span>
+                )}
+              </>
+            );
+
+            return announcement.fileLink ? (
               <a
                 key={index}
                 href={announcement.fileLink}
-                className="flex items-center hover:text-blue-800 transition-colors mx-4 text-blue-600"
+                className={`flex items-center hover:text-blue-800 transition-colors mx-4 ${textColorClass}`}
                 target={announcement.samePage ? "_self" : "_blank"}
                 rel={announcement.samePage ? undefined : "noopener noreferrer"}
               >
-                <ExternalLink className="w-4 h-4 mr-2" />
-                <span>{announcement.fileName}</span>
-                <span className="new-badge ml-2">New</span>
-                {index !== announcements.length - 1 && (
-                  <span className="mx-4 text-gray-400">|</span>
-                )}
+                {linkContent}
               </a>
             ) : (
-              <div key={index} className="flex items-center text-blue-600 mx-4">
-                <span>{announcement.fileName}</span>
-                <span className="new-badge ml-2">New</span>
-                {index !== announcements.length - 1 && (
-                  <span className="mx-4 text-gray-400">|</span>
-                )}
+              <div key={index} className={`flex items-center mx-4 ${textColorClass}`}>
+                {linkContent}
               </div>
-            )
-          )}
+            );
+          })}
         </div>
       </div>
     </div>

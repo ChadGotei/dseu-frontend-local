@@ -11,14 +11,14 @@ import Banner5 from "../../assets/DSEULogo/BANNER-DESIGN-5.jpg";
 import Banner6 from "../../assets/DSEULogo/BANNER-DESIGN-9.jpg";
 import TirangaImage from '../../assets/DSEULogo/BANNER-DESIGN-8.png'
 import Image7 from "../../assets/7.png";
+import foundationDay1 from '../../assets/BannerImg/foundationday1.png'
 
 const HomeBody = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
-    { image: TirangaImage },
-    // { image: Banner6 },
-    { image: admissionbanner },
+    // { image: admissionbanner },
+    { image: foundationDay1 },
     { image: dseuPic1 },
     { image: banner },
     { image: Image6 },
@@ -58,7 +58,7 @@ const HomeBody = () => {
             <img
               src={slide.image}
               alt={`Slide ${index + 1}`}
-              className={`w-full h-full brightness-110 contrast-105 ${slide.image === admissionbanner || slide.image === TirangaImage || slide.image === Banner6
+              className={`w-full h-full brightness-110 contrast-105 ${slide.image === foundationDay1 || slide.image === TirangaImage || slide.image === Banner6 
                 ? "object-contain"
                 : "object-cover"
                 }`}
