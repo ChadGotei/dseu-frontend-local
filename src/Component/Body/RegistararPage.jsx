@@ -12,7 +12,7 @@ const RegistrarPage = () => {
           <img
             src={gagandhawan}
             alt={name}
-            className="rounded-xl shadow-md min-w-[250px] object-cover h-[300px]"
+            className="rounded-full shadow-md min-w-[250px] object-cover h-[300px]"
           />
           <div className="mt-4 text-center md:text-left">
             <h1 className="text-2xl md:text-[1.7rem] font-bold text-blue-600">{name}</h1>

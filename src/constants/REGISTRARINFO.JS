@@ -4,15 +4,7 @@ export const REGISTRARINFO = {
   university: "Delhi Skill and Entrepreneurship University (DSEU)",
 
   profileOverview: `
-    Prof. (Dr.) Gagan Dhawan completed his graduation and post-graduation at the <b>University of Delhi, India</b>. 
-    He received the <i>Universitas 21 Fellowship</i> for a <b>Master’s in Bioinformatics</b> at the University of Edinburgh, UK, 
-    and the <i>UGC-Raman Award</i> for postdoctoral research at the University of Massachusetts, Boston, USA. 
-    He is a Fellow of the Royal Society of Chemistry (FRSC), UK, and a <i>Chartered Chemist (CChem)</i>. 
-    Recognized for his excellence in teaching, he received the <i>Meritorious Teacher Award (2014)</i> and <b>INSA Teachers Award (2020)</b>. 
-    He currently serves as a Council Member at the National Commission for Allied and Healthcare Professions (NCAHP), 
-    under the Ministry of Health and Family Welfare, Government of India. 
-    His research focuses on developing <i>novel small-molecule inhibitors</i> and <b>natural polymer-based self-assembled nanostructures</b> 
-    for biomedical applications.
+    Prof. Dr. Gagan Dhawan completed his graduation and post-graduation at the University of Delhi, India. He received the Universitas 21 Fellowship for a Master’s in Bioinformatics at the University of Edinburgh, UK, and the UGC-Raman Award for postdoctoral research at the University of Massachusetts, Boston, USA. He is a Fellow of the Indian Chemical Society (FICS), Chartered Chemist (CChem), and Fellow of the Royal Society of Chemistry (FRSC), UK. Recognized for teaching excellence, he received the Meritorious Teacher Award (2014) and INSA Teachers Award (2020). He serves as a Council Member at the National Commission for Allied and Healthcare Professions (NCAHP), under the Ministry of Health and Family Welfare, Government of India. His research focuses on novel small-molecule inhibitors and natural polymer based smart self-assembled nanostructures for biomedical applications.
   `,
 
   message:
