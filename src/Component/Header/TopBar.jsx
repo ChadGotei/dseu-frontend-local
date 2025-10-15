@@ -1,32 +1,44 @@
-import { useState, useEffect } from "react";
-import { X, UserCheck } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { X, UserCheck, ChevronDown } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
 const facultyLoginSamarth = "https://dseu.samarth.ac.in/index.php/site/login";
 const studentLoginSamarth = "https://dseu.samarth.edu.in/index.php/site/login";
 
 const menuItems = [
-  // { label: "Examination", type: "link", to: "/examination" },
+  {
+    label: "Examination",
+    type: "dropdown",
+    items: [
+      { label: "Notices", to: "/examination?section=notices" },
+      { label: "Fee Link", to: "/examination?section=feeLink"},
+      { label: "Results", to: "/examination?section=results" },
+      { label: "Datesheet", to: "/examination?section=datesheet" },
+    ],
+  },
   { label: "Tenders", type: "link", to: "/tenders" },
   { label: "Admin Login", type: "link", to: "/admin-login" },
-  { label: "Faculty Login", type: "modal" }, // special modal
+  { label: "Faculty Login", type: "modal" },
   { label: "Student Login", type: "external", href: studentLoginSamarth },
+  { label: "Alumni", type: "link", to: "/alumni" },
   {
     label: "Grievance form",
     type: "link",
     to: "/grievance-form",
     extra: <span className="hidden md:inline">&nbsp;& RTI</span>,
   },
-  { label: "Alumni", type: "link", to: "/alumni" },
 ];
 
 const TopBar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
   const navigate = useNavigate();
+  const dropdownRef = useRef(null);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
+  // Disable body scroll when modal is open
   useEffect(() => {
     document.body.style.overflow = isModalOpen ? "hidden" : "auto";
     return () => {
@@ -34,17 +46,69 @@ const TopBar = () => {
     };
   }, [isModalOpen]);
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const toggleDropdown = (label) => {
+    setOpenDropdown((prev) => (prev === label ? null : label));
+  };
+
   return (
     <>
       {/* Top bar menu */}
-      <div className="flex flex-row justify-center md:justify-end md:mr-16 items-center text-[0.55rem] md:text-md space-x-0.5 md:space-x-1 px-2 md:px-0 bg-white rounded-b-xl flex-wrap gap-y-2 mt-1 sm:mt-0">
+      <div className="flex flex-row justify-center md:justify-end md:mr-8 items-center text-[0.55rem] md:text-md space-x-0.5 md:space-x-1 px-2 md:px-0 bg-white rounded-b-xl flex-wrap  relative z-[50]">
         {menuItems.map((item, idx) => {
           const commonClasses =
-            "relative px-0.5 md:px-1 py-1 text-[0.55rem] sm:text-[0.85rem] md:text-[1rem] text-[#005CB9] font-normal transition-transform duration-300 group whitespace-nowrap";
+            "relative px-0.5 md:px-1 py-1 text-[0.55rem] sm:text-[0.85rem] md:text-[0.85rem] text-[#005CB9] font-normal transition-transform duration-300 group whitespace-nowrap";
 
           const spanClasses =
-            "bg-[#E4F7F5] px-1 md:px-3 py-1.5 rounded-b-xl group-hover:bg-blue-500 group-hover:text-white group-hover:shadow-md transition-all duration-300";
+            "bg-[#E4F7F5] px-1 md:px-3 py-1.5 rounded-b-xl group-hover:bg-blue-500 group-hover:text-white group-hover:shadow-md transition-all duration-300 flex items-center";
 
+          // 🔹 Dropdown Menu
+          if (item.type === "dropdown") {
+            const isOpen = openDropdown === item.label;
+            return (
+              <div key={idx} ref={dropdownRef} className={`${commonClasses} cursor-pointer`}>
+                <div
+                  onClick={() => toggleDropdown(item.label)}
+                  className={`${spanClasses} ${isOpen ? "bg-blue-500 text-white shadow-md" : ""}`}
+                >
+                  {item.label}
+                  <ChevronDown
+                    size={14}
+                    className={`ml-1 mt-[2px] transition-transform duration-200 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </div>
+
+                {isOpen && (
+                  <div className="absolute top-full left-0 mt-1 w-28 sm:w-40 bg-white border border-gray-200 rounded-xl shadow-lg z-[10000] animate-fadeIn">
+                    {item.items.map((subItem, subIdx) => (
+                      <Link
+                        key={subIdx}
+                        to={subItem.to}
+                        className="block px-3 md:px-4 py-2 text-[0.6rem] md:text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700 transition"
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        {subItem.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          }
+
+          // 🔹 Regular internal link
           if (item.type === "link") {
             return (
               <Link key={idx} to={item.to} className={commonClasses}>
@@ -55,6 +119,7 @@ const TopBar = () => {
             );
           }
 
+          // 🔹 External link
           if (item.type === "external") {
             return (
               <a
@@ -69,13 +134,10 @@ const TopBar = () => {
             );
           }
 
+          // 🔹 Modal trigger
           if (item.type === "modal") {
             return (
-              <div
-                key={idx}
-                onClick={openModal}
-                className={`${commonClasses} cursor-pointer`}
-              >
+              <div key={idx} onClick={openModal} className={`${commonClasses} cursor-pointer`}>
                 <span className={spanClasses}>{item.label}</span>
               </div>
             );
@@ -84,7 +146,7 @@ const TopBar = () => {
           return null;
         })}
       </div>
-      
+
       {/* ------------------- */}
       {/* Faculty Login Modal */}
       {isModalOpen && (

@@ -43,7 +43,7 @@ function App() {
             {adminPanelRoutes}
             {resultRoutes}
             {otherRoutes}
-            {/* {examinationRoutes} */}
+            {examinationRoutes}
             {researchRoutes}
           </Route>
 

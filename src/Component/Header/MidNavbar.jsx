@@ -426,7 +426,7 @@ const ResponsiveHeader = () => {
                   >
                     <Link
                       to={item.path || "#"}
-                      className="group inline-flex items-center md:text-sm lg:text-base font-medium text-[#005CB9] hover:text-blue-800 whitespace-nowrap relative lg:px-1 py-1"
+                      className="group inline-flex items-center md:text-sm lg:text-[0.9rem] font-medium text-[#005CB9] hover:text-blue-800 whitespace-nowrap relative lg:px-1 py-1"
                     >
                       {item.name}
                       {item.dropdownItems && (
