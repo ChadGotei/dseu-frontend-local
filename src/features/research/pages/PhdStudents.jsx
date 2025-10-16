@@ -2,10 +2,6 @@ import React, { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 
-// TODO: make a go back button that would redirect to /reserch
-// TODO: replace demo data with original data
-// TODO: add API if the data is going to be dynamic
-
 // Demo departments
 const demoDepartments = [
   { _id: "1", key: "computer-science", name: "Computer Science" },
@@ -14,7 +10,7 @@ const demoDepartments = [
   { _id: "4", key: "civil", name: "Civil Engineering" },
 ];
 
-// Demo PhD students mapped by department key
+// Demo PhD students mapped by department key (unchanged)
 const demoPhdStudents = {
   "computer-science": [
     {
@@ -23,6 +19,7 @@ const demoPhdStudents = {
       enrollment: "CS2023PHD01",
       specialization: "Machine Learning",
       supervisor: "Dr. A. Sharma",
+      rac: "Dr. Gaurav Sharma , Dr. Abhishak Sharma",
     },
     {
       id: "p2",
@@ -30,6 +27,7 @@ const demoPhdStudents = {
       enrollment: "CS2023PHD02",
       specialization: "Cyber Security",
       supervisor: "Dr. B. Gupta",
+      rac: "Dr. Ankit , Dr. Mohit",
     },
   ],
   ece: [
@@ -39,6 +37,7 @@ const demoPhdStudents = {
       enrollment: "ECE2023PHD01",
       specialization: "VLSI Design",
       supervisor: "Dr. C. Mehta",
+      rac: "Dr. Varnit , Dr. Pankaj",
     },
     {
       id: "p4",
@@ -46,6 +45,7 @@ const demoPhdStudents = {
       enrollment: "ECE2023PHD02",
       specialization: "Wireless Communication",
       supervisor: "Dr. D. Reddy",
+      rac: "RAC 2024",
     },
   ],
   mechanical: [
@@ -55,6 +55,7 @@ const demoPhdStudents = {
       enrollment: "ME2023PHD01",
       specialization: "Robotics",
       supervisor: "Dr. E. Kumar",
+      rac: "RAC 2023",
     },
   ],
   civil: [
@@ -64,6 +65,39 @@ const demoPhdStudents = {
       enrollment: "CE2023PHD01",
       specialization: "Structural Engineering",
       supervisor: "Dr. F. Singh",
+      rac: "RAC 2022",
+    },
+  ],
+};
+
+// Academic year data (new)
+const academicYearData = {
+  "2024-2025": [
+    {
+      id: "y1",
+      name: "Ravi Kumar",
+      supervisor: "Dr. A. Sharma",
+      rac: "RAC 2024",
+    },
+    {
+      id: "y2",
+      name: "Priya Singh",
+      supervisor: "Dr. B. Gupta",
+      rac: "RAC 2024",
+    },
+  ],
+  "2025-2026": [
+    {
+      id: "y3",
+      name: "Amit Verma",
+      supervisor: "Dr. C. Mehta",
+      rac: "RAC 2025",
+    },
+    {
+      id: "y4",
+      name: "Sneha Iyer",
+      supervisor: "Dr. D. Reddy",
+      rac: "RAC 2025",
     },
   ],
 };
@@ -79,7 +113,6 @@ const PhdStudents = () => {
 
   const [deptKey, setDeptKey] = useState(initialDept);
 
-  // sync state + URL with valid dept
   useEffect(() => {
     if (!isValidDept) {
       setSearchParams({ dept: defaultDept });
@@ -135,8 +168,8 @@ const PhdStudents = () => {
           PhD Students
         </h1>
 
-        {/* Student list */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Student cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
           {phdStudents.map((student) => (
             <div
               key={student.id}
@@ -160,6 +193,40 @@ const PhdStudents = () => {
             </p>
           )}
         </div>
+
+        {/* Academic Year-wise Tables */}
+        <div className="space-y-10">
+          {Object.entries(academicYearData).map(([year, students]) => (
+            <div key={year} className="overflow-x-auto">
+              <h2 className="text-2xl font-semibold mb-4 text-center text-blue-700">
+                Academic Year: {year}
+              </h2>
+              <table className="min-w-full border border-gray-300 bg-white shadow-md rounded-lg overflow-hidden">
+                <thead className="bg-blue-500 text-white">
+                  <tr>
+                    <th className="px-4 py-2 text-left">S.No</th>
+                    <th className="px-4 py-2 text-left">Name of Student</th>
+                    <th className="px-4 py-2 text-left">Supervisor</th>
+                    <th className="px-4 py-2 text-left">RAC</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {students.map((s, index) => (
+                    <tr
+                      key={s.id}
+                      className="border-t hover:bg-blue-50 transition-colors"
+                    >
+                      <td className="px-4 py-2">{index + 1}</td>
+                      <td className="px-4 py-2">{s.name}</td>
+                      <td className="px-4 py-2">{s.supervisor}</td>
+                      <td className="px-4 py-2">{s.rac}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -170,8 +237,7 @@ const handleDeptChange = (key, setDeptKey, setSearchParams) => {
   setSearchParams({ dept: key });
 };
 
-// TODO: Make a reusable component for this
-// Mobile select bar
+// Mobile select bar (unchanged)
 const MobileSelectBar = React.memo(({ deptKey, setDeptKey, data }) => {
   const [isOpen, setIsOpen] = useState(false);
 
