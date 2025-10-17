@@ -1,84 +1,30 @@
-import React, { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
+import HeadingText from "../../../Component/Reusable/HeadingText";
+import MobileSelectBar from "../components/MobileSelectbar";
+import departmentData from "../data/list_of_supervisors.json";
 
-// Demo departments
-const demoDepartments = [
-  { _id: "1", key: "computer-science", name: "Computer Science" },
-  { _id: "2", key: "ece", name: "Electronics & Communication" },
-  { _id: "3", key: "mechanical", name: "Mechanical Engineering" },
-  { _id: "4", key: "civil", name: "Civil Engineering" },
-];
+const departments = Object.keys(departmentData).map((key, index) => ({
+  _id: String(index + 1),
+  key: key,
+  name: departmentData[key].name || "Unnamed Department",
+}));
 
-// Demo supervisors (faculty) mapped by department key
-const demoSupervisors = {
-  "computer-science": [
-    {
-      id: "s1",
-      name: "Dr. A. Sharma",
-      designation: "Professor",
-      specialization: "Artificial Intelligence",
-      currentStudents: 5,
-      vacancy: 2,
-    },
-    {
-      id: "s2",
-      name: "Dr. B. Gupta",
-      designation: "Associate Professor",
-      specialization: "Data Science",
-      currentStudents: 4,
-      vacancy: 3,
-    },
-  ],
-  ece: [
-    {
-      id: "s3",
-      name: "Dr. C. Mehta",
-      designation: "Professor",
-      specialization: "VLSI Design",
-      currentStudents: 6,
-      vacancy: 1,
-    },
-    {
-      id: "s4",
-      name: "Dr. D. Reddy",
-      designation: "Assistant Professor",
-      specialization: "Signal Processing",
-      currentStudents: 3,
-      vacancy: 4,
-    },
-  ],
-  mechanical: [
-    {
-      id: "s5",
-      name: "Dr. E. Kumar",
-      designation: "Professor",
-      specialization: "Thermodynamics",
-      currentStudents: 5,
-      vacancy: 2,
-    },
-  ],
-  civil: [
-    {
-      id: "s6",
-      name: "Dr. F. Singh",
-      designation: "Associate Professor",
-      specialization: "Structural Engineering",
-      currentStudents: 4,
-      vacancy: 3,
-    },
-  ],
-};
+const supervisorsByDept = Object.entries(departmentData).reduce(
+  (acc, [key, value]) => {
+    acc[key] = value.supervisors || [];
+    return acc;
+  },
+  {}
+);
 
-const defaultDept = "computer-science";
+const defaultDept = departments[0]?.key || "";
 
 const Supervisors = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const deptFromQuery = searchParams.get("dept");
-
-  const isValidDept = demoDepartments.some((d) => d.key === deptFromQuery);
+  const isValidDept = departments.some((d) => d.key === deptFromQuery);
   const initialDept = isValidDept ? deptFromQuery : defaultDept;
-
   const [deptKey, setDeptKey] = useState(initialDept);
 
   useEffect(() => {
@@ -90,101 +36,96 @@ const Supervisors = () => {
     }
   }, [deptFromQuery, isValidDept, setSearchParams, deptKey]);
 
+  const handleDeptChange = (key) => {
+    setDeptKey(key);
+    setSearchParams({ dept: key });
+  };
+
   const departmentButtons = useMemo(() => {
-    return demoDepartments.map((dept) => (
+    return departments.map((dept) => (
       <button
         key={dept._id}
-        className={`flex items-center justify-center p-2 rounded-md transition-colors ${
-          deptKey === dept.key
-            ? "bg-blue-500 text-white"
-            : "bg-white hover:bg-blue-100 text-gray-700"
-        } shadow`}
-        onClick={() => handleDeptChange(dept.key, setDeptKey, setSearchParams)}
+        className={`flex items-center justify-center p-2 rounded-md transition-colors ${deptKey === dept.key
+          ? "bg-blue-600 text-white"
+          : "bg-white hover:bg-blue-100 text-gray-700"
+          } shadow`}
+        onClick={() => handleDeptChange(dept.key)}
       >
         <span className="text-center p-1">{dept.name}</span>
       </button>
     ));
   }, [deptKey]);
 
-  const supervisors = demoSupervisors[deptKey] || [];
+  const supervisors = supervisorsByDept[deptKey] || [];
 
   return (
     <div className="flex w-full my-10 text-gray-800 flex-col md:flex-row md:px-10 px-6 gap-5 lg:gap-10 md:gap-3">
-      {/* Sidebar */}
-      <div className="w-1/5 h-fit md:sticky top-0 bg-gray-100 p-5 rounded-lg shadow-md my-10 hidden md:block">
+      <div
+        className="w-[250px] min-w-[230px] h-fit md:sticky top-0 bg-gray-100 p-5 rounded-lg shadow-md my-10 hidden md:block max-h-[80vh] overflow-y-scroll scrollbar-blue"
+      >
         <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-4 text-[#333]">
           Departments
         </h3>
         <div className="grid grid-cols-1 gap-3">{departmentButtons}</div>
       </div>
+    
+      <div className="md:hidden block">
+        <HeadingText heading={"Supervisors"} />
+      </div>
 
-      {/* Mobile sidebar */}
-      <h1 className="text-center text-3xl font-bold block md:hidden">
-        Supervisors
-      </h1>
       <MobileSelectBar
         deptKey={deptKey}
-        setDeptKey={(key) => handleDeptChange(key, setDeptKey, setSearchParams)}
-        data={demoDepartments}
+        setDeptKey={handleDeptChange}
+        data={departments}
       />
 
       <div className="flex-1 flex flex-col">
-        <h1 className="text-center text-4xl mt-6 mb-10 font-bold md:block hidden">
-          Supervisors
-        </h1>
+        <div className="text-center text-4xl mt-6 mb-10 font-bold md:block hidden">
+          <HeadingText
+            heading={`Department of ${departments.find((d) => d.key === deptKey)?.name || "Supervisors"
+              }`}
+          />
+        </div>
 
-        {/* Faculty cards */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          {supervisors.map((sup) => (
-            <div
-              key={sup.id}
-              className="p-4 border rounded-lg shadow-sm bg-white hover:shadow-md transition"
-            >
-              <h4 className="font-bold text-blue-700 text-lg">{sup.name}</h4>
-              <p className="text-gray-600 text-sm">{sup.designation}</p>
-              <p className="text-gray-500 text-sm italic">
-                {sup.specialization}
-              </p>
-            </div>
-          ))}
-          {supervisors.length === 0 && (
-            <p className="text-gray-600 text-center">No supervisors found.</p>
-          )}
-        </div> */}
-
-        {/* Table Section */}
         <div className="overflow-x-auto">
           <table className="min-w-full border border-gray-300 rounded-lg bg-white shadow-md">
             <thead className="bg-blue-500 text-white">
-              <tr>
+              <tr className="text-xs md:text-sm lg:text-base">
                 <th className="px-4 py-2 text-left">S.No.</th>
                 <th className="px-4 py-2 text-left">Name of Supervisor</th>
                 <th className="px-4 py-2 text-left">Designation</th>
-                <th className="px-4 py-2 text-left">No. of Current Students</th>
-                <th className="px-4 py-2 text-left">Vacancy Available</th>
+                <th className="px-4 py-2 text-left">Supervisor ID</th>
                 <th className="px-4 py-2 text-left">Specialization</th>
               </tr>
             </thead>
-            <tbody>
-              {supervisors.map((sup, index) => (
-                <tr
-                  key={sup.id}
-                  className={`border-t hover:bg-blue-50 transition`}
-                >
-                  <td className="px-4 py-2">{index + 1}</td>
-                  <td className="px-4 py-2 font-medium text-blue-700">
-                    {sup.name}
-                  </td>
-                  <td className="px-4 py-2">{sup.designation}</td>
-                  <td className="px-4 py-2 text-center">
-                    {sup.currentStudents}
-                  </td>
-                  <td className="px-4 py-2 text-center">{sup.vacancy}</td>
-                  <td className="px-4 py-2 italic text-gray-600">
-                    {sup.specialization}
+            <tbody className="text-xs md:text-sm lg:text-[0.95rem]">
+              {supervisors.length > 0 ? (
+                supervisors.map((sup, index) => (
+                  <tr
+                    key={sup.supervisor_id || index}
+                    className="border-t hover:bg-blue-50 transition"
+                  >
+                    <td className="px-4 py-2">{index + 1}</td>
+                    <td className="px-4 py-2 font-medium text-blue-700">
+                      {sup.name || "-"}
+                    </td>
+                    <td className="px-4 py-2">{sup.designation || "-"}</td>
+                    <td className="px-4 py-2">{sup.supervisor_id || "-"}</td>
+                    <td className="px-4 py-2 italic text-gray-600">
+                      {sup.specialization || "-"}
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td
+                    colSpan="5"
+                    className="text-center py-6 text-gray-500 italic"
+                  >
+                    No supervisors found.
                   </td>
                 </tr>
-              ))}
+              )}
             </tbody>
           </table>
         </div>
@@ -192,50 +133,5 @@ const Supervisors = () => {
     </div>
   );
 };
-
-const handleDeptChange = (key, setDeptKey, setSearchParams) => {
-  setDeptKey(key);
-  setSearchParams({ dept: key });
-};
-
-// Mobile select bar
-const MobileSelectBar = React.memo(({ deptKey, setDeptKey, data }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const selectedDept = useMemo(() => {
-    return data.find((dept) => dept.key === deptKey);
-  }, [data, deptKey]);
-
-  return (
-    <div className="md:hidden w-full flex justify-center items-center mb-4 relative">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-[90%] max-w-md flex items-center justify-between px-4 py-3 border border-blue-500 rounded-md bg-white text-blue-500 font-medium shadow-md"
-      >
-        {selectedDept ? selectedDept.name : "Select a department"}
-        <ChevronDown className="w-5 h-5" />
-      </button>
-
-      {isOpen && (
-        <div className="absolute top-12 w-[90%] max-w-md bg-white border border-gray-300 shadow-md rounded-md overflow-hidden z-10">
-          {data.map((dept) => (
-            <button
-              key={dept._id}
-              className={`w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-500 transition-colors ${
-                deptKey === dept.key ? "bg-blue-500 text-white" : ""
-              }`}
-              onClick={() => {
-                setDeptKey(dept.key);
-                setIsOpen(false);
-              }}
-            >
-              {dept.name}
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-});
 
 export default Supervisors;
