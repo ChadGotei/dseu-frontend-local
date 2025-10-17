@@ -142,8 +142,8 @@ export const navItems = [
       { name: "PhD Students", path: "/research/phd-students" },
       { name: "Ordinance", path: "/research/ordinance" },
       {
-        name: "Doctoral Research Committee",
-        path: "/research/doctoral-research-committee",
+        name: "Department Research Committee",
+        path: "/research/department-research-committee",
       },
       { name: "Information Brochure", path: "/research/information-brochure" },
       { name: "Notices/Orders", path: "/research/notices" },
