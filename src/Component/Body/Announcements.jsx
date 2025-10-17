@@ -5,10 +5,10 @@ import Tooltip from "../Reusable/Tooltip";
 import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 export const toAdd = [
-  {
-    fileName: "Last Opportunity to Pay Your semester fee/previous fee dues",
-    fileLink: "https://dseu.samarth.edu.in/index.php/site/login"
-  },
+  // {
+  //   fileName: "Last Opportunity to Pay Your semester fee/previous fee dues",
+  //   fileLink: "https://dseu.samarth.edu.in/index.php/site/login"
+  // },
 ];
 
 const AnnouncementStrip = () => {

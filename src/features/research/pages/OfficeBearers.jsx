@@ -1,7 +1,7 @@
-const deanPhoto =
-  "https://via.placeholder.com/200x200.png?text=Dean+Photo";
-const arPhoto =
-  "https://via.placeholder.com/200x200.png?text=AR+Photo";
+import { girishKumar, parvathyUnnikrishan } from "../../../assets/team-dseu";
+
+const deanPhoto = girishKumar
+const arPhoto = parvathyUnnikrishan
 
 const OfficeBearers = () => {
   return (
@@ -63,7 +63,7 @@ const OfficeBearers = () => {
 
         {/* Profile Info */}
         <div className="text-center md:text-left">
-          <h2 className="text-2xl font-bold text-blue-700">Dr. Parvath</h2>
+          <h2 className="text-2xl font-bold text-blue-700">Ms. Parvathy Unnikrishnan</h2>
           <p className="text-gray-600 font-medium mt-1">Assistant Registrar (Research)</p>
           <p className="mt-4 text-gray-700 leading-relaxed">
             Dr. Parvath has been contributing significantly to the development
@@ -75,7 +75,7 @@ const OfficeBearers = () => {
           <ul className="mt-4 space-y-2 text-gray-600 text-sm">
             <li>
               <span className="font-semibold">Email:</span>{" "}
-              parvath@dseu.ac.in
+              Parvathy.Unnikrishnan@dseu.ac.in
             </li>
             <li>
               <span className="font-semibold">Office:</span> Block A, Room 208
