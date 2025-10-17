@@ -1,332 +1,377 @@
 {
-    "department_of_innovation_and_entrepreneurship": [
-        {
-            "name": "Prof. Shruti Tripathi",
-            "designation": "Professor",
-            "supervisor_id": "DSEU/Mgt/RS/0001",
-            "slug": "shruti-tripathi"
-        }
-    ],
-    "department_of_ibm": [
-        {
-            "name": "Prof. N. Jena",
-            "designation": "Professor",
-            "supervisor_id": "DSEU/Mgt/RS/0002",
-            "slug": "n-jena"
-        }
-    ],
-    "department_of_business_administration": [
-        {
-            "name": "Dr. Harvinder Kaur",
-            "designation": "Lecturer",
-            "supervisor_id": "DSEU/Mgt/RS/0003",
-            "slug": "harvinder-kaur"
-        }
-    ],
-    "department_of_bfsi": [
-        {
-            "name": "Dr. Parul Kumar",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/Mgt/RS/0004",
-            "slug": "parul-kumar"
-        },
-        {
-            "name": "Dr. Preeti Bedi",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/Mgt/RS/0005",
-            "slug": "preeti-bedi"
-        },
-        {
-            "name": "Dr. Lata Rani",
-            "designation": "Associate Professor",
-            "supervisor_id": "DSEU/Mgt/RS/0007",
-            "slug": "lata-rani"
-        },
-        {
-            "name": "Dr. Punita Duhan",
-            "designation": "Lecturer",
-            "supervisor_id": "DSEU/Mgt/RS/0008",
-            "slug": "punita-duhan"
-        }
-    ],
-    "department_of_bpm": [
-        {
-            "name": "Dr. Amit Singh Khokhar",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/Mgt/RS/0006",
-            "slug": "amit-singh-khokhar"
-        }
-    ],
-    "department_of_computer_science_engineering": [
-        {
-            "name": "Dr. Sushil Kumar",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/CSE/RS/0001",
-            "slug": "sushil-kumar"
-        },
-        {
-            "name": "Dr. Anu Saini",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/CSE/RS/0002",
-            "slug": "anu-saini"
-        },
-        {
-            "name": "Dr. Amit Kharpede",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/CSE/RS/0003",
-            "slug": "amit-kharpede"
-        },
-        {
-            "name": "Dr. Pramod Kumar Goyal",
-            "designation": "Lecturer",
-            "supervisor_id": "DSEU/CSE/RS/0004",
-            "slug": "pramod-kumar-goyal"
-        }
-    ],
-    "department_of_computer_science_and_applications": [
-        {
-            "name": "Dr. Girish Kumar Sharma",
-            "designation": "Professor",
-            "supervisor_id": "DSEU/CSA/RS/0001",
-            "slug": "girish-kumar-sharma"
-        },
-        {
-            "name": "Dr. Kavita Khanna",
-            "designation": "Campus Director",
-            "supervisor_id": "DSEU/CSA/RS/0002",
-            "slug": "kavita-khanna"
-        },
-        {
-            "name": "Dr. Pankaj Lathar",
-            "designation": "Associate Professor",
-            "supervisor_id": "DSEU/CSA/RS/0003",
-            "slug": "pankaj-lathar"
-        },
-        {
-            "name": "Dr. Shrikant Patel",
-            "designation": "Associate Professor",
-            "supervisor_id": "DSEU/CSA/RS/0004",
-            "slug": "shrikant-patel"
-        },
-        {
-            "name": "Dr. S.P. Ajith Kumar",
-            "designation": "Lecturer",
-            "supervisor_id": "DSEU/CSA/RS/0005",
-            "slug": "sp-ajith-kumar"
-        },
-        {
-            "name": "Dr. Vicky Kumar",
-            "designation": "Lecturer",
-            "supervisor_id": "DSEU/CSA/RS/0006",
-            "slug": "vicky-kumar"
-        },
-        {
-            "name": "Dr. Mamta Mittal",
-            "designation": "Associate Professor",
-            "supervisor_id": "DSEU/CSA/RS/0007",
-            "slug": "mamta-mittal"
-        }
-    ],
-    "department_of_electronics_and_communication_engineering": [
-        {
-            "name": "Prof. Vibhakar Shrimali",
-            "designation": "Professor",
-            "supervisor_id": "DSEU/ECE/RS/0001",
-            "slug": "vibhakar-shrimali"
-        },
-        {
-            "name": "Dr. Krishna Singh",
-            "designation": "Associate Professor",
-            "supervisor_id": "DSEU/ECE/RS/0003",
-            "slug": "krishna-singh"
-        },
-        {
-            "name": "Dr. Rohit Anand",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/ECE/RS/0002",
-            "slug": "rohit-anand"
-        },
-        {
-            "name": "Dr. Surendra K. Gupta",
-            "designation": "Lecturer",
-            "supervisor_id": "DSEU/ECE/RS/0004",
-            "slug": "surendra-k-gupta"
-        }
-    ],
-    "department_of_electrical_engineering": [
-        {
-            "name": "Dr. Jyoti Kulkarni",
-            "designation": "Lecturer",
-            "supervisor_id": "DSEU/EE/RS/0001",
-            "slug": "jyoti-kulkarni"
-        }
-    ],
-    "department_of_civil_engineering": [
-        {
-            "name": "Dr. Umesh Chand",
-            "designation": "Lecturer",
-            "supervisor_id": "DSEU/CE/RS/0001",
-            "slug": "umesh-chand"
-        }
-    ],
-    "department_of_allied_medical_science": [
-        {
-            "name": "Prof. Gagan Dhawan",
-            "designation": "Professor",
-            "supervisor_id": "DSEU/AMS/RS/0001",
-            "slug": "gagan-dhawan"
-        },
-        {
-            "name": "Dr. A Vamsi",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/AMS/RS/0002",
-            "slug": "a-vamsi"
-        },
-        {
-            "name": "Dr. B. Shanmugasundaram",
-            "designation": "Lecturer",
-            "supervisor_id": "DSEU/AMS/RS/0003",
-            "slug": "b-shanmugasundaram"
-        }
-    ],
-    "department_of_biotechnology_and_bioinformatics": [
-        {
-            "name": "Prof. Gagan Dhawan",
-            "designation": "Professor",
-            "supervisor_id": "DSEU/BB/RS/0001",
-            "slug": "gagan-dhawan"
-        }
-    ],
-    "department_of_sustainability_sciences": [
-        {
-            "name": "Prof. Kamna Sachdeva",
-            "designation": "Professor",
-            "supervisor_id": "DSEU/SS/RS/0001",
-            "slug": "kamna-sachdeva"
-        },
-        {
-            "name": "Dr. Ashima Sharma",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/SS/RS/0002",
-            "slug": "ashima-sharma"
-        }
-    ],
-    "department_of_pharmaceutical_sciences": [
-        {
-            "name": "Dr. Monica Chopra",
-            "designation": "Lecturer (Campus Director)",
-            "supervisor_id": "DSEU/PS/RS/0001",
-            "slug": "monica-chopra"
-        }
-    ],
-    "department_of_mechanical_engineering": [
-        {
-            "name": "Dr. Arindam Kumar Chanda",
-            "designation": "Professor",
-            "supervisor_id": "DSEU/ME/RS/0001",
-            "slug": "arindam-kumar-chanda"
-        },
-        {
-            "name": "Dr. Pankaj Kumar Singh",
-            "designation": "Campus Director",
-            "supervisor_id": "DSEU/ME/RS/0002",
-            "slug": "pankaj-kumar-singh"
-        },
-        {
-            "name": "Dr. Narayan Agrawal",
-            "designation": "Associate Professor",
-            "supervisor_id": "DSEU/ME/RS/0003",
-            "slug": "narayan-agrawal"
-        },
-        {
-            "name": "Dr. Kanwar Jeet Singh",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/ME/RS/0004",
-            "slug": "kanwar-jeet-singh"
-        },
-        {
-            "name": "Dr. Dayanidhi Krishana Pathak",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/ME/RS/0005",
-            "slug": "dayanidhi-krishana-pathak"
-        },
-        {
-            "name": "Dr. Vaibhav Chandra",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/ME/RS/0006",
-            "slug": "vaibhav-chandra"
-        },
-        {
-            "name": "Dr. Vineet Kumar",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/ME/RS/0007",
-            "slug": "vineet-kumar"
-        },
-        {
-            "name": "Dr. Anurag Dixit",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/ME/RS/0008",
-            "slug": "anurag-dixit"
-        },
-        {
-            "name": "Dr. Rishu Sharma",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/ME/RS/0009",
-            "slug": "rishu-sharma"
-        },
-        {
-            "name": "Dr. Praveen Kumar",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/ME/RS/0010",
-            "slug": "praveen-kumar"
-        },
-        {
-            "name": "Dr. Anil Kumar",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/ME/RS/0011",
-            "slug": "anil-kumar"
-        },
-        {
-            "name": "Dr. Gaurav Arora",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/ME/RS/0012",
-            "slug": "gaurav-arora"
-        },
-        {
-            "name": "Dr. Bhajneet Singh",
-            "designation": "Assistant Professor",
-            "supervisor_id": "DSEU/ME/RS/0013",
-            "slug": "bhajneet-singh"
-        },
-        {
-            "name": "Dr. Sanjeev Kumar",
-            "designation": "Lecturer",
-            "supervisor_id": "DSEU/ME/RS/0014",
-            "slug": "sanjeev-kumar"
-        },
-        {
-            "name": "Dr. Ajay Chillar",
-            "designation": "Lecturer",
-            "supervisor_id": "DSEU/ME/RS/0015",
-            "slug": "ajay-chillar"
-        },
-        {
-            "name": "Dr. Nanak Ram",
-            "designation": "Lecturer",
-            "supervisor_id": "DSEU/ME/RS/0016",
-            "slug": "nanak-ram"
-        },
-        {
-            "name": "Dr. Brijesh Dagar",
-            "designation": "Lecturer",
-            "supervisor_id": "DSEU/ME/RS/0017",
-            "slug": "brijesh-dagar"
-        },
-        {
-            "name": "Dr. Prabhakar Sharma",
-            "designation": "Lecturer",
-            "supervisor_id": "DSEU/ME/RS/0018",
-            "slug": "prabhakar-sharma"
-        }
-    ]
+    "department_of_innovation_and_entrepreneurship": {
+        "name": "Department of Innovation And Entrepreneurship",
+        "supervisors": [
+            {
+                "name": "Prof. Shruti Tripathi",
+                "designation": "Professor",
+                "supervisor_id": "DSEU/Mgt/RS/0001",
+                "slug": "shruti-tripathi"
+            }
+        ]
+    },
+    "department_of_ibm": {
+        "name": "Department of Ibm",
+        "supervisors": [
+            {
+                "name": "Prof. N. Jena",
+                "designation": "Professor",
+                "supervisor_id": "DSEU/Mgt/RS/0002",
+                "slug": "n-jena"
+            }
+        ]
+    },
+    "department_of_business_administration": {
+        "name": "Department of Business Administration",
+        "supervisors": [
+            {
+                "name": "Dr. Harvinder Kaur",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/Mgt/RS/0003",
+                "slug": "harvinder-kaur"
+            }
+        ]
+    },
+    "department_of_bfsi": {
+        "name": "Department of Bfsi",
+        "supervisors": [
+            {
+                "name": "Dr. Parul Kumar",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/Mgt/RS/0004",
+                "slug": "parul-kumar"
+            },
+            {
+                "name": "Dr. Preeti Bedi",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/Mgt/RS/0005",
+                "slug": "preeti-bedi"
+            },
+            {
+                "name": "Dr. Lata Rani",
+                "designation": "Associate Professor",
+                "supervisor_id": "DSEU/Mgt/RS/0007",
+                "slug": "lata-rani"
+            },
+            {
+                "name": "Dr. Punita Duhan",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/Mgt/RS/0008",
+                "slug": "punita-duhan"
+            }
+        ]
+    },
+    "department_of_bpm": {
+        "name": "Department of Bpm",
+        "supervisors": [
+            {
+                "name": "Dr. Amit Singh Khokhar",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/Mgt/RS/0006",
+                "slug": "amit-singh-khokhar"
+            }
+        ]
+    },
+    "department_of_computer_science_engineering": {
+        "name": "Department of Computer Science Engineering",
+        "supervisors": [
+            {
+                "name": "Dr. Sushil Kumar",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/CSE/RS/0001",
+                "slug": "sushil-kumar"
+            },
+            {
+                "name": "Dr. Anu Saini",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/CSE/RS/0002",
+                "slug": "anu-saini"
+            },
+            {
+                "name": "Dr. Amit Kharpede",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/CSE/RS/0003",
+                "slug": "amit-kharpede"
+            },
+            {
+                "name": "Dr. Pramod Kumar Goyal",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/CSE/RS/0004",
+                "slug": "pramod-kumar-goyal"
+            }
+        ]
+    },
+    "department_of_computer_science_and_applications": {
+        "name": "Department of Computer Science And Applications",
+        "supervisors": [
+            {
+                "name": "Dr. Girish Kumar Sharma",
+                "designation": "Professor",
+                "supervisor_id": "DSEU/CSA/RS/0001",
+                "slug": "girish-kumar-sharma"
+            },
+            {
+                "name": "Dr. Kavita Khanna",
+                "designation": "Campus Director",
+                "supervisor_id": "DSEU/CSA/RS/0002",
+                "slug": "kavita-khanna"
+            },
+            {
+                "name": "Dr. Pankaj Lathar",
+                "designation": "Associate Professor",
+                "supervisor_id": "DSEU/CSA/RS/0003",
+                "slug": "pankaj-lathar"
+            },
+            {
+                "name": "Dr. Shrikant Patel",
+                "designation": "Associate Professor",
+                "supervisor_id": "DSEU/CSA/RS/0004",
+                "slug": "shrikant-patel"
+            },
+            {
+                "name": "Dr. S.P. Ajith Kumar",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/CSA/RS/0005",
+                "slug": "sp-ajith-kumar"
+            },
+            {
+                "name": "Dr. Vicky Kumar",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/CSA/RS/0006",
+                "slug": "vicky-kumar"
+            },
+            {
+                "name": "Dr. Mamta Mittal",
+                "designation": "Associate Professor",
+                "supervisor_id": "DSEU/CSA/RS/0007",
+                "slug": "mamta-mittal"
+            }
+        ]
+    },
+    "department_of_electronics_and_communication_engineering": {
+        "name": "Department of Electronics And Communication Engineering",
+        "supervisors": [
+            {
+                "name": "Prof. Vibhakar Shrimali",
+                "designation": "Professor",
+                "supervisor_id": "DSEU/ECE/RS/0001",
+                "slug": "vibhakar-shrimali"
+            },
+            {
+                "name": "Dr. Krishna Singh",
+                "designation": "Associate Professor",
+                "supervisor_id": "DSEU/ECE/RS/0003",
+                "slug": "krishna-singh"
+            },
+            {
+                "name": "Dr. Rohit Anand",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/ECE/RS/0002",
+                "slug": "rohit-anand"
+            },
+            {
+                "name": "Dr. Surendra K. Gupta",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/ECE/RS/0004",
+                "slug": "surendra-k-gupta"
+            }
+        ]
+    },
+    "department_of_electrical_engineering": {
+        "name": "Department of Electrical Engineering",
+        "supervisors": [
+            {
+                "name": "Dr. Jyoti Kulkarni",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/EE/RS/0001",
+                "slug": "jyoti-kulkarni"
+            }
+        ]
+    },
+    "department_of_civil_engineering": {
+        "name": "Department of Civil Engineering",
+        "supervisors": [
+            {
+                "name": "Dr. Umesh Chand",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/CE/RS/0001",
+                "slug": "umesh-chand"
+            }
+        ]
+    },
+    "department_of_allied_medical_science": {
+        "name": "Department of Allied Medical Science",
+        "supervisors": [
+            {
+                "name": "Prof. Gagan Dhawan",
+                "designation": "Professor",
+                "supervisor_id": "DSEU/AMS/RS/0001",
+                "slug": "gagan-dhawan"
+            },
+            {
+                "name": "Dr. A Vamsi",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/AMS/RS/0002",
+                "slug": "a-vamsi"
+            },
+            {
+                "name": "Dr. B. Shanmugasundaram",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/AMS/RS/0003",
+                "slug": "b-shanmugasundaram"
+            }
+        ]
+    },
+    "department_of_biotechnology_and_bioinformatics": {
+        "name": "Department of Biotechnology And Bioinformatics",
+        "supervisors": [
+            {
+                "name": "Prof. Gagan Dhawan",
+                "designation": "Professor",
+                "supervisor_id": "DSEU/BB/RS/0001",
+                "slug": "gagan-dhawan"
+            }
+        ]
+    },
+    "department_of_sustainability_sciences": {
+        "name": "Department of Sustainability Sciences",
+        "supervisors": [
+            {
+                "name": "Prof. Kamna Sachdeva",
+                "designation": "Professor",
+                "supervisor_id": "DSEU/SS/RS/0001",
+                "slug": "kamna-sachdeva"
+            },
+            {
+                "name": "Dr. Ashima Sharma",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/SS/RS/0002",
+                "slug": "ashima-sharma"
+            }
+        ]
+    },
+    "department_of_pharmaceutical_sciences": {
+        "name": "Department of Pharmaceutical Sciences",
+        "supervisors": [
+            {
+                "name": "Dr. Monica Chopra",
+                "designation": "Lecturer (Campus Director)",
+                "supervisor_id": "DSEU/PS/RS/0001",
+                "slug": "monica-chopra"
+            }
+        ]
+    },
+    "department_of_mechanical_engineering": {
+        "name": "Department of Mechanical Engineering",
+        "supervisors": [
+            {
+                "name": "Dr. Arindam Kumar Chanda",
+                "designation": "Professor",
+                "supervisor_id": "DSEU/ME/RS/0001",
+                "slug": "arindam-kumar-chanda"
+            },
+            {
+                "name": "Dr. Pankaj Kumar Singh",
+                "designation": "Campus Director",
+                "supervisor_id": "DSEU/ME/RS/0002",
+                "slug": "pankaj-kumar-singh"
+            },
+            {
+                "name": "Dr. Narayan Agrawal",
+                "designation": "Associate Professor",
+                "supervisor_id": "DSEU/ME/RS/0003",
+                "slug": "narayan-agrawal"
+            },
+            {
+                "name": "Dr. Kanwar Jeet Singh",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/ME/RS/0004",
+                "slug": "kanwar-jeet-singh"
+            },
+            {
+                "name": "Dr. Dayanidhi Krishana Pathak",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/ME/RS/0005",
+                "slug": "dayanidhi-krishana-pathak"
+            },
+            {
+                "name": "Dr. Vaibhav Chandra",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/ME/RS/0006",
+                "slug": "vaibhav-chandra"
+            },
+            {
+                "name": "Dr. Vineet Kumar",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/ME/RS/0007",
+                "slug": "vineet-kumar"
+            },
+            {
+                "name": "Dr. Anurag Dixit",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/ME/RS/0008",
+                "slug": "anurag-dixit"
+            },
+            {
+                "name": "Dr. Rishu Sharma",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/ME/RS/0009",
+                "slug": "rishu-sharma"
+            },
+            {
+                "name": "Dr. Praveen Kumar",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/ME/RS/0010",
+                "slug": "praveen-kumar"
+            },
+            {
+                "name": "Dr. Anil Kumar",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/ME/RS/0011",
+                "slug": "anil-kumar"
+            },
+            {
+                "name": "Dr. Gaurav Arora",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/ME/RS/0012",
+                "slug": "gaurav-arora"
+            },
+            {
+                "name": "Dr. Bhajneet Singh",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/ME/RS/0013",
+                "slug": "bhajneet-singh"
+            },
+            {
+                "name": "Dr. Sanjeev Kumar",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/ME/RS/0014",
+                "slug": "sanjeev-kumar"
+            },
+            {
+                "name": "Dr. Ajay Chillar",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/ME/RS/0015",
+                "slug": "ajay-chillar"
+            },
+            {
+                "name": "Dr. Nanak Ram",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/ME/RS/0016",
+                "slug": "nanak-ram"
+            },
+            {
+                "name": "Dr. Brijesh Dagar",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/ME/RS/0017",
+                "slug": "brijesh-dagar"
+            },
+            {
+                "name": "Dr. Prabhakar Sharma",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/ME/RS/0018",
+                "slug": "prabhakar-sharma"
+            }
+        ]
+    }
 }
