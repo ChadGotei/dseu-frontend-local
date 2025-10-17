@@ -1,6 +1,6 @@
 {
     "department_of_innovation_and_entrepreneurship": {
-        "name": "Department of Innovation And Entrepreneurship",
+        "name": "Innovation And Entrepreneurship",
         "supervisors": [
             {
                 "name": "Prof. Shruti Tripathi",
@@ -11,7 +11,7 @@
         ]
     },
     "department_of_ibm": {
-        "name": "Department of Ibm",
+        "name": "Ibm",
         "supervisors": [
             {
                 "name": "Prof. N. Jena",
@@ -22,7 +22,7 @@
         ]
     },
     "department_of_business_administration": {
-        "name": "Department of Business Administration",
+        "name": "Business Administration",
         "supervisors": [
             {
                 "name": "Dr. Harvinder Kaur",
@@ -33,7 +33,7 @@
         ]
     },
     "department_of_bfsi": {
-        "name": "Department of Bfsi",
+        "name": "Bfsi",
         "supervisors": [
             {
                 "name": "Dr. Parul Kumar",
@@ -62,7 +62,7 @@
         ]
     },
     "department_of_bpm": {
-        "name": "Department of Bpm",
+        "name": "Bpm",
         "supervisors": [
             {
                 "name": "Dr. Amit Singh Khokhar",
@@ -73,7 +73,7 @@
         ]
     },
     "department_of_computer_science_engineering": {
-        "name": "Department of Computer Science Engineering",
+        "name": "Computer Science Engineering",
         "supervisors": [
             {
                 "name": "Dr. Sushil Kumar",
@@ -102,7 +102,7 @@
         ]
     },
     "department_of_computer_science_and_applications": {
-        "name": "Department of Computer Science And Applications",
+        "name": "Computer Science And Applications",
         "supervisors": [
             {
                 "name": "Dr. Girish Kumar Sharma",
@@ -149,7 +149,7 @@
         ]
     },
     "department_of_electronics_and_communication_engineering": {
-        "name": "Department of Electronics And Communication Engineering",
+        "name": "Electronics And Communication Engineering",
         "supervisors": [
             {
                 "name": "Prof. Vibhakar Shrimali",
@@ -178,7 +178,7 @@
         ]
     },
     "department_of_electrical_engineering": {
-        "name": "Department of Electrical Engineering",
+        "name": "Electrical Engineering",
         "supervisors": [
             {
                 "name": "Dr. Jyoti Kulkarni",
@@ -189,7 +189,7 @@
         ]
     },
     "department_of_civil_engineering": {
-        "name": "Department of Civil Engineering",
+        "name": "Civil Engineering",
         "supervisors": [
             {
                 "name": "Dr. Umesh Chand",
@@ -200,7 +200,7 @@
         ]
     },
     "department_of_allied_medical_science": {
-        "name": "Department of Allied Medical Science",
+        "name": "Allied Medical Science",
         "supervisors": [
             {
                 "name": "Prof. Gagan Dhawan",
@@ -223,7 +223,7 @@
         ]
     },
     "department_of_biotechnology_and_bioinformatics": {
-        "name": "Department of Biotechnology And Bioinformatics",
+        "name": "Biotechnology And Bioinformatics",
         "supervisors": [
             {
                 "name": "Prof. Gagan Dhawan",
@@ -234,7 +234,7 @@
         ]
     },
     "department_of_sustainability_sciences": {
-        "name": "Department of Sustainability Sciences",
+        "name": "Sustainability Sciences",
         "supervisors": [
             {
                 "name": "Prof. Kamna Sachdeva",
@@ -251,7 +251,7 @@
         ]
     },
     "department_of_pharmaceutical_sciences": {
-        "name": "Department of Pharmaceutical Sciences",
+        "name": "Pharmaceutical Sciences",
         "supervisors": [
             {
                 "name": "Dr. Monica Chopra",
@@ -262,7 +262,7 @@
         ]
     },
     "department_of_mechanical_engineering": {
-        "name": "Department of Mechanical Engineering",
+        "name": "Mechanical Engineering",
         "supervisors": [
             {
                 "name": "Dr. Arindam Kumar Chanda",
