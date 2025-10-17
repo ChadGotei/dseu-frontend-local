@@ -6,20 +6,6 @@ import { useNoticesBySection } from "../../hooks/useNoticesBySection";
 
 export const toAdd = [
   {
-    fileName: "DSEU is celebrating its 6th foundation from 8th-11th October 2025 across various campuses",
-    specialColor: true
-  },
-  {
-    fileName: "6th Foundation Day Expert Lecture: Prof. Pratibha Jolly, FNASc, FinstP(UK)  on “Science, Society and Enterprise: Reimagining Future of Work” – 8 Oct 2025",
-    fileLink: "https://drive.google.com/file/d/1pl_m7Jr1NB1Dn322x_8763X9WmpV1Xfv/view",
-    specialColor: true
-  },
-  {
-    fileName: "6th Foundation Day Expert Lecture: Prof. Dhiraj Kumar on “The Design Mindset in the Age of Innovation” – 8 Oct 2025",
-    fileLink: "https://drive.google.com/file/d/1MO9C7uGRovpWZ39oT1so40dv-F0q48Fe/view",
-    specialColor: true
-  },
-  {
     fileName: "Last Opportunity to Pay Your semester fee/previous fee dues",
     fileLink: "https://dseu.samarth.edu.in/index.php/site/login"
   },

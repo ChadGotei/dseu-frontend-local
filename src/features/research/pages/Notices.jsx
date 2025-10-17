@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 
 const Notices = () => {
   const notices = [
@@ -78,7 +78,7 @@ const Notices = () => {
 
   const categories = ["All", "Admission", "Regulation", "Meeting", "Workshop", "Academic", "Funding", "General"];
 
-  const [selectedCategory, setSelectedCategory] = React.useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filteredNotices = selectedCategory === "All"
     ? notices
@@ -96,11 +96,10 @@ const Notices = () => {
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded-lg font-medium transition ${
-              selectedCategory === category
+            className={`px-4 py-2 rounded-lg font-medium transition ${selectedCategory === category
                 ? "bg-blue-600 text-white shadow-md"
                 : "bg-white text-gray-700 hover:bg-blue-50 border border-gray-300"
-            }`}
+              }`}
           >
             {category}
           </button>
@@ -112,9 +111,8 @@ const Notices = () => {
         {filteredNotices.map((notice) => (
           <div
             key={notice.id}
-            className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition border-l-4 ${
-              notice.important ? "border-red-500" : "border-blue-500"
-            }`}
+            className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition border-l-4 ${notice.important ? "border-red-500" : "border-blue-500"
+              }`}
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
               <div className="flex-1">

@@ -8,19 +8,15 @@ import Banner3 from "../../assets/DSEULogo/BANNER-DESIGN-3.jpg";
 import Banner4 from "../../assets/DSEULogo/BANNER-DESIGN-4.jpg";
 import Banner5 from "../../assets/DSEULogo/BANNER-DESIGN-5.jpg";
 import Image7 from "../../assets/7.png";
-import fd1 from "../../assets/BannerImg/foundationday2.jpg";
-import fd2 from "../../assets/BannerImg/foundationday3.jpg";
-import fd3 from "../../assets/BannerImg/foundationday4.jpg";
-import fd4 from "../../assets/BannerImg/foundationday5.jpg";
 
 const HomeBody = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
-    { image: fd2, size: "cover" },
-    { image: fd4, size: "cover" },
-    { image: fd1, size: "cover" },
-    { image: fd3, size: "cover" },
+    // { image: fd2, size: "cover" },
+    // { image: fd4, size: "cover" },
+    // { image: fd1, size: "cover" },
+    // { image: fd3, size: "cover" },
     { image: dseuPic1 },
     { image: banner },
     { image: Image6 },

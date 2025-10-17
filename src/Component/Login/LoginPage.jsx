@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 
@@ -26,18 +26,25 @@ const LoginPage = () => {
 
   const mutation = useMutation({
     mutationFn: () => {
-      console.log("Logging in with:", { email, password });
+      // console.log("Logging in with:", { email, password });
       return login({ email, password });
     },
     onSuccess: async () => {
       const facultyData = await getFacutlyByEmail(email);
+
+      if (!facultyData) {
+        showErrorToast("No faculty found for this email.");
+        return;
+      }
+
       sessionStorage.setItem("facultyId", facultyData._id);
       sessionStorage.setItem("email", email);
       showSuccessToast("Logged in successfully!");
       setLoginSuccess(true);
     },
     onError: (error) => {
-      console.log(error?.response?.data?.message);
+      // console.log(error?.response?.data?.message);
+      console.error(error)
 
       showErrorToast(
         error?.response?.data?.message || "Login failed. Please try again."
@@ -153,17 +160,16 @@ const LoginPage = () => {
               <button
                 type="submit"
                 disabled={mutation.isPending || isLoggedIn}
-                className={`w-full text-white py-3 rounded-lg text-lg font-bold hover:opacity-90 transition ${
-                  mutation.isPending || isLoggedIn
-                    ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-gradient-to-r from-[#0073e6] to-[#005bb5]"
-                }`}
+                className={`w-full text-white py-3 rounded-lg text-lg font-bold hover:opacity-90 transition ${mutation.isPending || isLoggedIn
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-gradient-to-r from-[#0073e6] to-[#005bb5]"
+                  }`}
               >
                 {mutation.isPending
                   ? "Logging in..."
                   : isLoggedIn
-                  ? "Already Logged In"
-                  : "Login"}
+                    ? "Already Logged In"
+                    : "Login"}
               </button>
 
               {isLoggedIn && (

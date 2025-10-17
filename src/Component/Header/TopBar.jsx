@@ -11,7 +11,11 @@ const menuItems = [
     type: "dropdown",
     items: [
       { label: "Notices", to: "/examination?section=notices" },
-      { label: "Fee Link", to: "/examination?section=feeLink"},
+      {
+        label: "Fee Portal",
+        to: "https://eazypay.icicibank.com/eazypayLink?P1=iHSKEXeO8j51e9k+lFEY3w==",
+        seperatePage: true
+      },
       { label: "Results", to: "/examination?section=results" },
       { label: "Datesheet", to: "/examination?section=datesheet" },
     ],
@@ -84,31 +88,52 @@ const TopBar = () => {
                   {item.label}
                   <ChevronDown
                     size={14}
-                    className={`ml-1 mt-[2px] transition-transform duration-200 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
+                    className={`ml-1 mt-[2px] transition-transform duration-200 ${isOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </div>
 
                 {isOpen && (
                   <div className="absolute top-full left-0 mt-1 w-28 sm:w-40 bg-white border border-gray-200 rounded-xl shadow-lg z-[10000] animate-fadeIn">
-                    {item.items.map((subItem, subIdx) => (
-                      <Link
-                        key={subIdx}
-                        to={subItem.to}
-                        className="block px-3 md:px-4 py-2 text-[0.6rem] md:text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700 transition"
-                        onClick={() => setOpenDropdown(null)}
-                      >
-                        {subItem.label}
-                      </Link>
-                    ))}
+                    {item.items.map((subItem, subIdx) => {
+
+                      // dealing with external links
+                      const handleClick = () => {
+                        setOpenDropdown(null);
+                        if (subItem.seperatePage) {
+                          if (subItem.to.startsWith("http")) {
+                            window.open(subItem.to, "_blank");
+                          } else {
+                            window.location.href = subItem.to;
+                          }
+                        }
+                      };
+
+                      return (
+                        <Link
+                          key={subIdx}
+                          to={subItem.to}
+                          className="block px-3 md:px-4 py-2 text-[0.6rem] md:text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700 transition"
+                          onClick={(e) => {
+                            if (subItem.seperatePage) {
+                              e.preventDefault(); // Prevent react-router navigation
+                              handleClick();
+                            } else {
+                              setOpenDropdown(null);
+                            }
+                          }}
+                        >
+                          {subItem.label}
+                        </Link>
+                      );
+                    })}
                   </div>
                 )}
+
               </div>
             );
           }
 
-          // 🔹 Regular internal link
           if (item.type === "link") {
             return (
               <Link key={idx} to={item.to} className={commonClasses}>

@@ -3,7 +3,7 @@ import api from "./api";
 import { baseUrl } from '../constants/LOCALES.JS';
 
 const getAuthHeaders = () => {
-  const token = localStorage.getItem("token");
+  const token = sessionStorage.getItem("token");
   return token ? { Authorization: `Bearer ${token}` } : {};
 };
 
@@ -21,9 +21,9 @@ export const getDepartments = async () => {
 
 export const getFaculties = async () => {
   try {
-    const response = await api.get("/faculty?limit=1000", {
-      headers: getAuthHeaders(),
-    });
+    const response = await api.get("/faculty?limit=1000");
+
+    // console.log(response.data.data.faculty);
     return response.data.data.faculty;
   } catch (error) {
     console.error("Error fetching faculties:", error.response?.data || error.message);
@@ -214,9 +214,12 @@ export const login = async ({ email, password }) => {
       { email, password }
     );
 
+    sessionStorage.setItem("token", response.data.token);
+    sessionStorage.setItem("role", response.data.role)
+
     return response.data;
   } catch (error) {
-    console.error("Error while logging:", error);
+    // console.error("Error while logging:", error);
     throw error;
   }
 };
@@ -455,4 +458,17 @@ export const fetchSectionNotices = async (sectionKeys, apiBase) => {
     })
   );
   return results;
+};
+
+// get examinations notices
+export const getExaminationsBySection = async (section) => {
+  try {
+    if (!section) throw new Error("Section is required to fetch examination data.");
+
+    const res = await api.get(`/exam?section=${section}`);
+    return res.data?.data.exams ?? [];
+  } catch (error) {
+    console.error("Error fetching examinations by section:", error);
+    throw error;
+  }
 };

@@ -4,10 +4,24 @@ import { baseUrl } from '../constants/LOCALES.JS';
 
 export const getFacutlyByEmail = async (email) => {
   const allFaculties = await getFaculties();
-  const res = allFaculties.find((faculty) => faculty.email === email);
 
-  return res;
-}
+  if (!Array.isArray(allFaculties)) {
+    console.error("getFaculties() did not return an array:", allFaculties);
+    return null;
+  }
+
+  const res = allFaculties.find(
+    (faculty) =>
+      faculty.email?.toLowerCase().trim() === email?.toLowerCase().trim()
+  );
+
+  if (!res) {
+    console.warn(`Faculty not found for email: ${email}`);
+  }
+
+  return res || null;
+};
+
 
 export const updateFacultyOverview = async (overviewText, facultyId) => {
   const token = sessionStorage.getItem("token");
