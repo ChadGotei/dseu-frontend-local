@@ -168,7 +168,7 @@ const PhdStudents = () => {
           PhD Students
         </h1>
 
-        {/* Student cards */}
+        {/* Student cards
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
           {phdStudents.map((student) => (
             <div
@@ -192,7 +192,7 @@ const PhdStudents = () => {
               No PhD students found.
             </p>
           )}
-        </div>
+        </div> */}
 
         {/* Academic Year-wise Tables */}
         <div className="space-y-10">
