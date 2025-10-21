@@ -12,10 +12,7 @@ const DoctoralResearchCommittee = lazy(() =>
   import("./pages/DoctoralResearchCommittee")
 );
 const Notices = lazy(() => import("./pages/Notices"));
-// const InformationBrochure = lazy(() => import("./pages/InformationBrochure"));
-// const AdmissionPortal = lazy(() =>
-//   import("./pages/AdmissionPortal")
-// );
+const SupervisorsBySlug = lazy(() => import("./components/SupervisorBySlug"));
 
 export const researchRoutes = (
   <>
@@ -34,5 +31,6 @@ export const researchRoutes = (
     />
     <Route path="/research/notices" element={<Notices />} />
     <Route path="/research/admission-portal" element={<UnderConstruction />} />
+    <Route path="/research/supervisor/:slug" element={<SupervisorsBySlug />} />
   </>
 );

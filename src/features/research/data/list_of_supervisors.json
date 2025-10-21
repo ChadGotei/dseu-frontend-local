@@ -97,7 +97,8 @@
                 "name": "Dr. Pramod Kumar Goyal",
                 "designation": "Lecturer",
                 "supervisor_id": "DSEU/CSE/RS/0004",
-                "slug": "pramod-kumar-goyal"
+                "slug": "pramod-kumar-goyal",
+                "hasData": true
             }
         ]
     },
@@ -108,7 +109,8 @@
                 "name": "Dr. Girish Kumar Sharma",
                 "designation": "Professor",
                 "supervisor_id": "DSEU/CSA/RS/0001",
-                "slug": "girish-kumar-sharma"
+                "slug": "girish-kumar-sharma",
+                "hasData": true
             },
             {
                 "name": "Dr. Kavita Khanna",
@@ -304,7 +306,8 @@
                 "name": "Dr. Vineet Kumar",
                 "designation": "Assistant Professor",
                 "supervisor_id": "DSEU/ME/RS/0007",
-                "slug": "vineet-kumar"
+                "slug": "vineet-kumar",
+                "hasData": true
             },
             {
                 "name": "Dr. Anurag Dixit",
@@ -334,7 +337,8 @@
                 "name": "Dr. Gaurav Arora",
                 "designation": "Assistant Professor",
                 "supervisor_id": "DSEU/ME/RS/0012",
-                "slug": "gaurav-arora"
+                "slug": "gaurav-arora",
+                "hasData": true
             },
             {
                 "name": "Dr. Bhajneet Singh",
@@ -358,7 +362,8 @@
                 "name": "Dr. Nanak Ram",
                 "designation": "Lecturer",
                 "supervisor_id": "DSEU/ME/RS/0016",
-                "slug": "nanak-ram"
+                "slug": "nanak-ram",
+                "hasData": true
             },
             {
                 "name": "Dr. Brijesh Dagar",
@@ -370,7 +375,8 @@
                 "name": "Dr. Prabhakar Sharma",
                 "designation": "Lecturer",
                 "supervisor_id": "DSEU/ME/RS/0018",
-                "slug": "prabhakar-sharma"
+                "slug": "prabhakar-sharma",
+                "hasData": true
             }
         ]
     }

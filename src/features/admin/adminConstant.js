@@ -34,10 +34,7 @@ const getSectionOptions = () => [
     { value: "board of management", label: "MOM Board of Management" },
     { value: "academic council", label: "MOM Academic Council" },
     { value: "finance comittee", label: "MOM Finance Committee" },
-    { value: "exam datesheet", label: "Examination - Datesheet" },
-    { value: "exam results", label: "Examination - Results" },
-    { value: "exam fee", label: "Examination - Fee Links" },
-    { value: "exam notices", label: "Examination - Notices" }
+    { value: "research" , label: "Research notices" },
 ];
 
 // for information bulletion 
@@ -73,10 +70,7 @@ const getSectionName = (section) => {
         case "board of management": return "MOM Board of Management";
         case "academic council": return "MOM Academic Council";
         case "finance comittee": return "MOM Finance Committee";
-        case "exam datesheet": return "Examination - Datesheet";
-        case "exam results": return "Examination - Results";
-        case "exam fee": return "Examination - Fee Links";
-        case "exam notices": return "Examination - Notices";
+        case "research": return "Research Notices";
         default: return section;
     }
 };

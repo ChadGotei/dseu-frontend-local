@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import withAuthProtection from "./withAuthProtection";
-import { uploadPdf } from "../../utils/apiservice";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+
+import withAuthProtection from "./withAuthProtection";
+import { uploadPdf } from "../../utils/apiservice";
 import { DesktopNav, MobileNav, navTabs as tabs } from "./AdminNavBar";
 import { SESSION_EXPIRE } from "../../constants/LOCALES.JS";
 
@@ -84,13 +85,10 @@ const AdminDashboard = () => {
           { value: "ad circulars", label: "Circulars" },
           { value: "ad important forms", label: "Important Forms" },
         ];
-      case "examination":
+      case "research":
         return [
-          { value: "exam datesheet", label: "Datesheet" },
-          { value: "exam results", label: "Results" },
-          { value: "exam fee", label: "Fee Links" },
-          { value: "exam notices", label: "Notices" },
-        ];
+          { value: "research", label: "Research" }
+        ]
       default:
         return [];
     }

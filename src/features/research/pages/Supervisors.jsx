@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import HeadingText from "../../../Component/Reusable/HeadingText";
 import MobileSelectBar from "../components/MobileSelectbar";
 import departmentData from "../data/list_of_supervisors.json";
@@ -21,6 +21,8 @@ const supervisorsByDept = Object.entries(departmentData).reduce(
 const defaultDept = departments[0]?.key || "";
 
 const Supervisors = () => {
+  const navigate = useNavigate();
+
   const [searchParams, setSearchParams] = useSearchParams();
   const deptFromQuery = searchParams.get("dept");
   const isValidDept = departments.some((d) => d.key === deptFromQuery);
@@ -40,6 +42,11 @@ const Supervisors = () => {
     setDeptKey(key);
     setSearchParams({ dept: key });
   };
+
+  const handleClickSupervisor = (hasData, slug) => {
+    if (!hasData) return;
+    return navigate(`/research/supervisor/${slug}`);
+  }
 
   const departmentButtons = useMemo(() => {
     return departments.map((dept) => (
@@ -68,7 +75,7 @@ const Supervisors = () => {
         </h3>
         <div className="grid grid-cols-1 gap-3">{departmentButtons}</div>
       </div>
-    
+
       <div className="md:hidden block">
         <HeadingText heading={"Supervisors"} />
       </div>
@@ -103,7 +110,8 @@ const Supervisors = () => {
                 supervisors.map((sup, index) => (
                   <tr
                     key={sup.supervisor_id || index}
-                    className="border-t hover:bg-blue-50 transition"
+                    className={`border-t hover:bg-blue-50 transition ${sup.hasData === true ? 'cursor-pointer' : 'cursor-default'}`}
+                    onClick={() => handleClickSupervisor(sup.hasData ?? false, sup.slug)}
                   >
                     <td className="px-4 py-2">{index + 1}</td>
                     <td className="px-4 py-2 font-medium text-blue-700">

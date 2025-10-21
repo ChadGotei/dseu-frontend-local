@@ -1,0 +1,283 @@
+{
+    "gaurav-arora": {
+        "slug": "gaurav-arora",
+        "basic_info": {
+            "full_name": "Dr. Gaurav Arora",
+            "designation": "Assistant Professor",
+            "faculty": "Regular",
+            "department": "Tool and Production Engineering",
+            "official_email": "gaurav.arora@dseu.ac.in",
+            "contact_number": "9899833325",
+            "office_address": "DSEU Wazirpur Campus, Shalimar Bagh, Delhi-110052"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D. (Mechanical Engineering)",
+            "alma_mater": "Gautam Buddha University, 2019",
+            "experience_years": "13 Years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Composite Materials, Product Design and Manufacturing, Additive Manufacturing, Die Casting and Injection Moulding process.",
+            "specific_research_interests": "Composites, Die Manufacturing, Mechanical Alloying, Characterization",
+            "publications_last_5_years": "04 Papers in Journal; 03 Book Chapters and 01 Book",
+            "patents": "",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "02 Ongoing",
+            "masters_dissertations_guided": "31 Students"
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": "ISTE (Lifetime)"
+        },
+        "web_links": {
+            "faculty_profile_page": "",
+            "google_scholar": "https://scholar.google.com/citations?user=Rl6O3EYAAAAJ&hl=en",
+            "orcid": "0000-0002-8614-2098",
+            "researchgate_orcid_scopus": "",
+            "linkedin": ""
+        },
+        "photo_url": "/images/supervisors/gaurav-arora.jpg"
+    },
+    "prabhakar-sharma": {
+        "slug": "prabhakar-sharma",
+        "basic_info": {
+            "full_name": "Dr Prabhakar Sharma",
+            "designation": "Lecturer",
+            "faculty": "Engineering",
+            "department": "Mechanical Engineering",
+            "official_email": "prabhakar.sharma@dseu.ac.in",
+            "contact_number": "",
+            "office_address": "GND DSEU Rohini Campus, Delhi"
+        },
+        "academic_background": {
+            "highest_qualification": "PhD",
+            "alma_mater": "DCRUSTM, 2021",
+            "experience_years": "15 Years"
+        },
+        "research_profile": {
+            "broad_research_areas": "AI, Renewable Energy, Optimization",
+            "specific_research_interests": "AI; ML; Renewable Energy; Combustion; Dual-Fuel Engine; Sustainability; Optimization; MCDM",
+            "publications_last_5_years": "More than 100",
+            "patents": "04 German Patents; 01 Japanese patent; 03 Indian Patents",
+            "projects": "",
+            "collaborations": "More than 70 International Collaborative papers with universities from Canada; UAE, KSA, Malaysia; Australia; Vietnam; England etc. Multiple research Papers with IITs, NITs and other universities of National Importance."
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "01 Ongoing",
+            "masters_dissertations_guided": ""
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": ""
+        },
+        "web_links": {
+            "faculty_profile_page": "",
+            "google_scholar": "https://scholar.google.com/citations?user=GHOt3iUAAAAJ&hl=en",
+            "researchgate_orcid_scopus": "https://www.scopus.com/pages/organization/60282982",
+            "linkedin": ""
+        },
+        "photo_url": "/images/supervisors/prabhakar-sharma.jpg"
+    },
+    "pramod-kumar-goyal": {
+        "slug": "pramod-kumar-goyal",
+        "basic_info": {
+            "full_name": "Dr. Pramod Kumar Goyal",
+            "designation": "Lecturer",
+            "faculty": "Faculty of Computational and IT Enabled Skills (FCITES)",
+            "department": "Computer Science Engineering",
+            "official_email": "pramod.k.goyal@dseu.ac.in",
+            "contact_number": "9868211274",
+            "office_address": "DSEU Pusa-1 Campus, Delhi"
+        },
+        "academic_background": {
+            "highest_qualification": "PhD",
+            "alma_mater": "Jawaharlal Nehru University, Delhi (2018)",
+            "experience_years": "27 years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Wireless Networks, Internet of Things",
+            "specific_research_interests": "Heterogeneous Wireless Networks, Handoff Management, Game Theory Applications in Wireless Networks, IoT Applications in Smart Cities, Vehicular Networks & Sustainable Development",
+            "publications_last_5_years": "06",
+            "patents": "",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "",
+            "masters_dissertations_guided": ""
+        },
+        "administrative_roles": {
+            "boards_committees": "Member, University Court, DSEU; Member, Academic Council, DSEU; Member, Central Purchase Committee, DSEU; Member, Admission Committee for 10th passed based programs, DSEU; Head of Department, Department of Computer Science Engineering, DSEU; Campus Director, DSEU Pusa-1 Campus, Delhi",
+            "professional_memberships": ""
+        },
+        "web_links": {
+            "faculty_profile_page": "",
+            "google_scholar": "",
+            "researchgate_orcid_scopus": "https://orcid.org/0000-0002-8390-9273",
+            "linkedin": ""
+        },
+        "photo_url": "/images/supervisors/pramod-kumar-goyal.jpg"
+    },
+    "vineet-kumar": {
+        "slug": "vineet-kumar",
+        "basic_info": {
+            "full_name": "Dr. Vineet Kumar",
+            "designation": "Assistant Professor",
+            "faculty": "Permanent",
+            "department": "Mechanical & Automation Engineering Department",
+            "official_email": "vineet.kumar@dseu.ac.in",
+            "contact_number": "7906411630",
+            "office_address": "DSEU Okhla-1 Campus Phase-III, New Delhi-110020"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "IIT Roorkee (2015)",
+            "experience_years": "25 Years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Fatigue Fracture, Materials Characterization, Modelling and Simulation, Composite Materials",
+            "specific_research_interests": "Modelling and Simulation",
+            "publications_last_5_years": "7 Journal Papers, multiple conference papers and book chapters",
+            "patents": "1 Patent (Composition of Eco-Friendly Green Composites with Basalt and Jute Fibers for Sustainable Agricultural Application, Application No. 202411006014 A, Publication Date: 09/02/2024)",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "",
+            "masters_dissertations_guided": ""
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": ""
+        },
+        "web_links": {
+            "faculty_profile_page": "",
+            "google_scholar": "https://scholar.google.co.in/citations?hl=en&user=GQg0JIgAAAAJ",
+            "researchgate_orcid_scopus": "",
+            "linkedin": ""
+        },
+        "photo_url": "/images/supervisors/vineet-kumar.jpg"
+    },
+    "nanak-ram": {
+        "slug": "nanak-ram",
+        "basic_info": {
+            "full_name": "Dr. Nanak Ram",
+            "designation": "Lecturer",
+            "faculty": "Faculty of Mechanical Engineering",
+            "department": "Mechanical Engineering",
+            "official_email": "nanak.ram@dseu.ac.in",
+            "contact_number": "",
+            "office_address": "GND DSEU Campus, Sec-15, Rohini, Delhi-110089"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "Delhi Technological University (DTU), Delhi (2023)",
+            "experience_years": "22 years Teaching Experience"
+        },
+        "research_profile": {
+            "broad_research_areas": "Material Development & Characterization, Wear",
+            "specific_research_interests": "SiMoCr Ductile Cast Iron, Fracture Toughness, Wear, Finite Element (FE) Simulations",
+            "publications_last_5_years": "05",
+            "patents": "",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "",
+            "masters_dissertations_guided": ""
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": "IEI"
+        },
+        "web_links": {
+            "faculty_profile_page": "",
+            "google_scholar": "https://scholar.google.com/citations?hl=en&user=HUC4gi8AAAAJ",
+            "researchgate_orcid_scopus": "https://orcid.org/0000-0002-9431-6609",
+            "linkedin": ""
+        },
+        "photo_url": "/images/supervisors/nanak-ram.jpg"
+    },
+    "girish-kumar-sharma": {
+        "slug": "girish-kumar-sharma",
+        "basic_info": {
+            "full_name": "Dr. Girish Kumar Sharma",
+            "designation": "Professor & Dean (Research)",
+            "faculty": "Faculty of Computational Skills & IT Enabled Skills",
+            "department": "Computer Science & Applications",
+            "official_email": "girish.k.sharma@dseu.ac.in",
+            "contact_number": "",
+            "office_address": "Bhai Parmanand DSEU Shakarpur Campus, Shakarpur, Delhi-110092"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "Gurukul Kangri University, Haridwar (2005) — Thesis: “Applications of Graph Theoretic and Queueing Theoretic Models in Distributed Operating System Architecture”",
+            "experience_years": "29 Years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Data Mining, Machine Learning, Quantum Machine Learning, Theoretical Computer Science",
+            "specific_research_interests": "Quantum Machine Learning and Classical Machine Learning",
+            "publications_last_5_years": "10",
+            "patents": "",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "06 (Completed) + 02 (Ongoing)",
+            "masters_dissertations_guided": "More than 150"
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": "Life Member of ISTE; Member, Computer Society of India; Member, Association of Computing Machinery (ACM)"
+        },
+        "web_links": {
+            "faculty_profile_page": "https://www.dseu.ac.in/dept/67dbf40f8d17c538db56677b",
+            "google_scholar": "https://scholar.google.com/citations?user=Y4_XOP4AAAAJ&hl=en",
+            "researchgate_orcid_scopus": "https://www.researchgate.net/Girish, https://orcid.org/0000-0003-4512-8932, https://www.scopus.com/authid/detail.uri?authorId=57213751323",
+            "linkedin": "https://www.linkedin.com/in/girishkumarsharma"
+        },
+        "photo_url": "/images/supervisors/girish-kumar-sharma.jpg"
+    },
+    "dinesh-yadav": {
+        "slug": "dinesh-yadav",
+        "basic_info": {
+            "full_name": "Dr. Dinesh Yadav",
+            "designation": "Lecturer (Senior Scale)",
+            "faculty": "Faculty of Engineering & Technology",
+            "department": "Mechanical Engineering",
+            "official_email": "dinesh.yadav@dseu.ac.in",
+            "contact_number": "8700279287",
+            "office_address": "GND DSEU Rohini Campus, Delhi"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "Jagan Nath University (2025)",
+            "experience_years": "15 Years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Sustainable Manufacturing, Industrial Engineering, Reverse Supply Chain, Operations Management, Renewable Energy Waste Management",
+            "specific_research_interests": "Photovoltaic (PV) Waste, Reverse Supply Chain, MCDM Techniques, Solar Panel",
+            "publications_last_5_years": "07",
+            "patents": "",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "0",
+            "masters_dissertations_guided": "0"
+        },
+        "administrative_roles": {
+            "boards_committees": "Member, Editorial Board — Transnational Supply Chain Resilience (Explorer Press Ltd.); Member, Editorial Board — World Journal of Engineering (Royal Publications)",
+            "professional_memberships": ""
+        },
+        "web_links": {
+            "faculty_profile_page": "https://dseu.ac.in/faculty/67fcb6a3594afd76950ae34c",
+            "google_scholar": "https://scholar.google.com/citations?authuser=1&user=YJQgZOUAAAAJ",
+            "researchgate_orcid_scopus": "https://orcid.org/0000-0001-8672-7603",
+            "linkedin": ""
+        },
+        "photo_url": "/images/supervisors/dinesh-yadav.jpg"
+    }
+}

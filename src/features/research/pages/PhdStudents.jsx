@@ -1,116 +1,24 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
+import MobileSelectBar from "../components/MobileSelectbar";
+import phdData from "../data/phd_students_2023.json";
 
-// Demo departments
-const demoDepartments = [
-  { _id: "1", key: "computer-science", name: "Computer Science" },
-  { _id: "2", key: "ece", name: "Electronics & Communication" },
-  { _id: "3", key: "mechanical", name: "Mechanical Engineering" },
-  { _id: "4", key: "civil", name: "Civil Engineering" },
-];
+const departments = Object.keys(phdData.departments).map((key, index) => ({
+  _id: String(index + 1),
+  key,
+  name: key.replace(/_/g, " "),
+}));
 
-// Demo PhD students mapped by department key (unchanged)
-const demoPhdStudents = {
-  "computer-science": [
-    {
-      id: "p1",
-      name: "Ravi Kumar",
-      enrollment: "CS2023PHD01",
-      specialization: "Machine Learning",
-      supervisor: "Dr. A. Sharma",
-      rac: "Dr. Gaurav Sharma , Dr. Abhishak Sharma",
-    },
-    {
-      id: "p2",
-      name: "Priya Singh",
-      enrollment: "CS2023PHD02",
-      specialization: "Cyber Security",
-      supervisor: "Dr. B. Gupta",
-      rac: "Dr. Ankit , Dr. Mohit",
-    },
-  ],
-  ece: [
-    {
-      id: "p3",
-      name: "Amit Verma",
-      enrollment: "ECE2023PHD01",
-      specialization: "VLSI Design",
-      supervisor: "Dr. C. Mehta",
-      rac: "Dr. Varnit , Dr. Pankaj",
-    },
-    {
-      id: "p4",
-      name: "Sneha Iyer",
-      enrollment: "ECE2023PHD02",
-      specialization: "Wireless Communication",
-      supervisor: "Dr. D. Reddy",
-      rac: "RAC 2024",
-    },
-  ],
-  mechanical: [
-    {
-      id: "p5",
-      name: "Arjun Nair",
-      enrollment: "ME2023PHD01",
-      specialization: "Robotics",
-      supervisor: "Dr. E. Kumar",
-      rac: "RAC 2023",
-    },
-  ],
-  civil: [
-    {
-      id: "p6",
-      name: "Neha Gupta",
-      enrollment: "CE2023PHD01",
-      specialization: "Structural Engineering",
-      supervisor: "Dr. F. Singh",
-      rac: "RAC 2022",
-    },
-  ],
-};
-
-// Academic year data (new)
-const academicYearData = {
-  "2024-2025": [
-    {
-      id: "y1",
-      name: "Ravi Kumar",
-      supervisor: "Dr. A. Sharma",
-      rac: "RAC 2024",
-    },
-    {
-      id: "y2",
-      name: "Priya Singh",
-      supervisor: "Dr. B. Gupta",
-      rac: "RAC 2024",
-    },
-  ],
-  "2025-2026": [
-    {
-      id: "y3",
-      name: "Amit Verma",
-      supervisor: "Dr. C. Mehta",
-      rac: "RAC 2025",
-    },
-    {
-      id: "y4",
-      name: "Sneha Iyer",
-      supervisor: "Dr. D. Reddy",
-      rac: "RAC 2025",
-    },
-  ],
-};
-
-const defaultDept = "computer-science";
+const studentsByDept = phdData.departments;
+const academicYear = phdData.academic_year || "2023";
+const defaultDept = departments[0]?.key || "";
 
 const PhdStudents = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const deptFromQuery = searchParams.get("dept");
 
-  const isValidDept = demoDepartments.some((d) => d.key === deptFromQuery);
+  const isValidDept = departments.some((d) => d.key === deptFromQuery);
   const initialDept = isValidDept ? deptFromQuery : defaultDept;
-
   const [deptKey, setDeptKey] = useState(initialDept);
 
   useEffect(() => {
@@ -122,159 +30,101 @@ const PhdStudents = () => {
     }
   }, [deptFromQuery, isValidDept, setSearchParams, deptKey]);
 
-  const departmentButtons = useMemo(() => {
-    return demoDepartments.map((dept) => (
-      <button
-        key={dept._id}
-        className={`flex items-center justify-center p-2 rounded-md transition-colors ${
-          deptKey === dept.key
-            ? "bg-blue-500 text-white"
-            : "bg-white hover:bg-blue-100 text-gray-700"
-        } shadow`}
-        onClick={() => handleDeptChange(dept.key, setDeptKey, setSearchParams)}
-      >
-        <span className="text-center p-1">{dept.name}</span>
-      </button>
-    ));
-  }, [deptKey]);
+  const handleDeptChange = (key) => {
+    setDeptKey(key);
+    setSearchParams({ dept: key });
+  };
 
-  const phdStudents = demoPhdStudents[deptKey] || [];
+  const departmentButtons = useMemo(
+    () =>
+      departments.map((dept) => (
+        <button
+          key={dept._id}
+          className={`flex items-center justify-center p-2 rounded-md transition-colors ${
+            deptKey === dept.key
+              ? "bg-blue-600 text-white"
+              : "bg-white hover:bg-blue-100 text-gray-700"
+          } shadow`}
+          onClick={() => handleDeptChange(dept.key)}
+        >
+          <span className="text-center p-1 capitalize">{dept.name}</span>
+        </button>
+      )),
+    [deptKey]
+  );
+
+  const students = studentsByDept[deptKey] || [];
 
   return (
     <div className="flex w-full my-10 text-gray-800 flex-col md:flex-row md:px-10 px-6 gap-5 lg:gap-10 md:gap-3">
       {/* Sidebar */}
-      <div className="w-1/5 h-fit md:sticky top-0 bg-gray-100 p-5 rounded-lg shadow-md my-10 hidden md:block">
+      <div className="w-[250px] min-w-[230px] h-fit md:sticky top-0 bg-gray-100 p-5 rounded-lg shadow-md my-10 hidden md:block">
         <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-4 text-[#333]">
           Departments
         </h3>
         <div className="grid grid-cols-1 gap-3">{departmentButtons}</div>
       </div>
 
-      {/* Mobile department select */}
-      <h1 className="text-center text-3xl font-bold block md:hidden">
+      {/* Mobile View */}
+      <div className="md:hidden block text-center text-2xl font-bold">
         PhD Students
-      </h1>
+      </div>
       <MobileSelectBar
         deptKey={deptKey}
-        setDeptKey={(key) =>
-          handleDeptChange(key, setDeptKey, setSearchParams)
-        }
-        data={demoDepartments}
+        setDeptKey={handleDeptChange}
+        data={departments}
       />
 
-      {/* Main content */}
+      {/* Main Content */}
       <div className="flex-1 flex flex-col">
-        <h1 className="text-center text-4xl mt-6 mb-10 font-bold md:block hidden">
-          PhD Students
+        <div className="text-center mt-6 mb-2 font-bold text-blue-700">
+          Academic Year: {academicYear}
+        </div>
+
+        <h1 className="text-center text-3xl mb-6 font-bold md:block hidden">
+          Department of{" "}
+          {departments.find((d) => d.key === deptKey)?.name || "PhD Students"}
         </h1>
 
-        {/* Student cards
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-          {phdStudents.map((student) => (
-            <div
-              key={student.id}
-              className="p-4 border rounded-lg shadow-sm bg-white hover:shadow-md transition"
-            >
-              <h4 className="font-bold text-blue-700 text-lg">{student.name}</h4>
-              <p className="text-gray-600 text-sm">
-                Enrollment: {student.enrollment}
-              </p>
-              <p className="text-gray-500 text-sm italic">
-                Specialization: {student.specialization}
-              </p>
-              <p className="text-gray-600 text-sm">
-                Supervisor: {student.supervisor}
-              </p>
-            </div>
-          ))}
-          {phdStudents.length === 0 && (
-            <p className="text-gray-600 text-center">
-              No PhD students found.
-            </p>
-          )}
-        </div> */}
-
-        {/* Academic Year-wise Tables */}
-        <div className="space-y-10">
-          {Object.entries(academicYearData).map(([year, students]) => (
-            <div key={year} className="overflow-x-auto">
-              <h2 className="text-2xl font-semibold mb-4 text-center text-blue-700">
-                Academic Year: {year}
-              </h2>
-              <table className="min-w-full border border-gray-300 bg-white shadow-md rounded-lg overflow-hidden">
-                <thead className="bg-blue-500 text-white">
-                  <tr>
-                    <th className="px-4 py-2 text-left">S.No</th>
-                    <th className="px-4 py-2 text-left">Name of Student</th>
-                    <th className="px-4 py-2 text-left">Supervisor</th>
-                    <th className="px-4 py-2 text-left">RAC</th>
+        <div className="overflow-x-auto">
+          <table className="min-w-full border border-gray-300 rounded-lg bg-white shadow-md">
+            <thead className="bg-blue-500 text-white">
+              <tr className="text-xs md:text-sm lg:text-base">
+                <th className="px-4 py-2 text-left">S.No.</th>
+                <th className="px-4 py-2 text-left">Name</th>
+                <th className="px-4 py-2 text-left">Supervisor</th>
+                <th className="px-4 py-2 text-left">RAC</th>
+              </tr>
+            </thead>
+            <tbody className="text-xs md:text-sm lg:text-[0.95rem]">
+              {students.length > 0 ? (
+                students.map((s, index) => (
+                  <tr
+                    key={index}
+                    className="border-t hover:bg-blue-50 transition"
+                  >
+                    <td className="px-4 py-2">{index + 1}</td>
+                    <td className="px-4 py-2">{s.name || "-"}</td>
+                    <td className="px-4 py-2">{s.supervisor || "-"}</td>
+                    <td className="px-4 py-2">{s.RAC || "-"}</td>
                   </tr>
-                </thead>
-                <tbody>
-                  {students.map((s, index) => (
-                    <tr
-                      key={s.id}
-                      className="border-t hover:bg-blue-50 transition-colors"
-                    >
-                      <td className="px-4 py-2">{index + 1}</td>
-                      <td className="px-4 py-2">{s.name}</td>
-                      <td className="px-4 py-2">{s.supervisor}</td>
-                      <td className="px-4 py-2">{s.rac}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          ))}
+                ))
+              ) : (
+                <tr>
+                  <td
+                    colSpan="4"
+                    className="text-center py-6 text-gray-500 italic"
+                  >
+                    No students found.
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   );
 };
-
-const handleDeptChange = (key, setDeptKey, setSearchParams) => {
-  setDeptKey(key);
-  setSearchParams({ dept: key });
-};
-
-// Mobile select bar (unchanged)
-const MobileSelectBar = React.memo(({ deptKey, setDeptKey, data }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const selectedDept = useMemo(() => {
-    return data.find((dept) => dept.key === deptKey);
-  }, [data, deptKey]);
-
-  return (
-    <div className="md:hidden w-full flex justify-center items-center mb-4 relative">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-[90%] max-w-md flex items-center justify-between px-4 py-3 border border-blue-500 rounded-md bg-white text-blue-500 font-medium shadow-md"
-      >
-        {selectedDept ? selectedDept.name : "Select a department"}
-        <ChevronDown className="w-5 h-5" />
-      </button>
-
-      {isOpen && (
-        <div className="absolute top-12 w-[90%] max-w-md bg-white border border-gray-300 shadow-md rounded-md overflow-hidden z-10">
-          {data.map((dept) => (
-            <button
-              key={dept._id}
-              className={`w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-500 transition-colors ${
-                deptKey === dept.key ? "bg-blue-500 text-white" : ""
-              }`}
-              onClick={() => {
-                setDeptKey(dept.key);
-                setIsOpen(false);
-              }}
-            >
-              {dept.name}
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-});
 
 export default PhdStudents;
