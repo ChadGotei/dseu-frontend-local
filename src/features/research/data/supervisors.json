@@ -244,7 +244,7 @@
     "slug": "dinesh-yadav",
     "basic_info": {
       "full_name": "Dr. Dinesh Yadav",
-      "designation": "Lecturer (Senior Scale)",
+      "designation": "Lecturer",
       "faculty": "Faculty of Engineering & Technology",
       "department": "Mechanical Engineering",
       "official_email": "dinesh.yadav@dseu.ac.in",
@@ -358,7 +358,7 @@
       "researchgate_orcid_scopus": "",
       "linkedin": ""
     },
-    "photo_url": "/images/supervisors/umesh-chand.png"
+    "photo_url": "/images/supervisors/umesh-chand.jpg"
   },
   "sp-ajith-kumar": {
     "slug": "sp-ajith-kumar",
@@ -398,6 +398,6 @@
       "researchgate_orcid_scopus": "",
       "linkedin": ""
     },
-    "photo_url": "/images/supervisors/ajith-singh.jpeg"
+    "photo_url": "/images/supervisors/s-p-ajith-kumar.jpg"
   }
 }
