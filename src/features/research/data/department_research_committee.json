@@ -1,0 +1,366 @@
+{
+    "Allied Medical Science": {
+        "members": [
+            {
+                "name": "Prof. Gagan Dhawan, DSEU",
+                "role": "Convener"
+            },
+            {
+                "name": "Prof. Kamna Sachdeva, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Prof. A.K. Dubey, Netaji Subhash University of Technology, Dwarka",
+                "role": "External Expert"
+            },
+            {
+                "name": "Prof. K.S Baghotia, Indira Gandhi Hospital, Dwarka",
+                "role": "External Expert"
+            },
+            {
+                "name": "Prof. Geeta Aggarwal, Delhi Pharmaceutical Sciences Research University",
+                "role": "External Expert"
+            }
+        ]
+    },
+    "Banking, Financial Services and Insurance": {
+        "members": [
+            {
+                "name": "Prof. Shruti Tripathi, DSEU",
+                "role": "Convener"
+            },
+            {
+                "name": "Prof. N Jena, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Dr. Harvinder Kaur, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Prof. Aditya P. Tripathi, Shyam Lal College, Delhi University",
+                "role": "External"
+            },
+            {
+                "name": "Prof. Sujit Kumar, Dr. Bhim Rao Ambedkar College, Delhi University",
+                "role": "External"
+            }
+        ]
+    },
+    "Biotechnology and Bioinformatics": {
+        "members": [
+            {
+                "name": "Prof. Gagan Dhawan, DSEU",
+                "role": "Convener"
+            },
+            {
+                "name": "Prof. Kamna Sachdeva, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Prof. A.K. Dubey, Netaji Subhash University of Technology, Dwarka",
+                "role": "External Expert"
+            },
+            {
+                "name": "Prof. K.S Baghotia, Indira Gandhi Hospital, Dwarka",
+                "role": "External Expert"
+            },
+            {
+                "name": "Prof. Geeta Aggarwal, Delhi Pharmaceutical Sciences Research University",
+                "role": "External Expert"
+            }
+        ]
+    },
+    "Business Process Management": {
+        "members": [
+            {
+                "name": "Prof. Shruti Tripathi, DSEU",
+                "role": "Convener"
+            },
+            {
+                "name": "Prof. N Jena, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Dr. Harvinder Kaur, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Prof. Aditya P. Tripathi, Shyam Lal College, Delhi University",
+                "role": "External"
+            },
+            {
+                "name": "Prof. Sujit Kumar, Dr. Bhim Rao Ambedkar College, Delhi University",
+                "role": "External"
+            }
+        ]
+    },
+    "Computer Applications": {
+        "members": [
+            {
+                "name": "Prof. Girish Kumar Sharma",
+                "role": "Convener"
+            },
+            {
+                "name": "Dr. Pramod Kumar Goyal",
+                "role": "Member"
+            },
+            {
+                "name": "Dr. Pankaj Lathar",
+                "role": "Member"
+            },
+            {
+                "name": "Mr. Shrikant Patel",
+                "role": "Member"
+            },
+            {
+                "name": "Prof. R.K. Agarwal, JNU",
+                "role": "External"
+            }
+        ]
+    },
+    "Electronics and Communication Engineer": {
+        "members": [
+            {
+                "name": "Prof. Vibhakar Shrimali",
+                "role": "Convener"
+            },
+            {
+                "name": "Dr. Krishna Singh",
+                "role": "Member"
+            },
+            {
+                "name": "Dr. Rohit Anand",
+                "role": "Member"
+            },
+            {
+                "name": "Dr. Dipankar Mishra",
+                "role": "Member"
+            },
+            {
+                "name": "Prof. Neeta Pandey. DTU",
+                "role": "External"
+            }
+        ]
+    },
+    "European Languages": {
+        "members": [
+            {
+                "name": "Prof. Subhashish Banerjee, DSEU",
+                "role": "Convener"
+            },
+            {
+                "name": "Prof. Sampurnananda Mishra, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Dr. Jayini Adhyapak, Deen Dayal Upadhyaya, Delhi University",
+                "role": "External Expert"
+            },
+            {
+                "name": "Prof. Prasannanshu, National Law University, Delhi",
+                "role": "External Expert"
+            },
+            {
+                "name": "Prof. Tanushree Choudhary, Netaji Subhash University of Technology, Delhi",
+                "role": "External Expert"
+            },
+            {
+                "name": "Dr. Meenakshi Sundriyal, Jawaharlal Nehru University, Delhi",
+                "role": "External Expert"
+            }
+        ]
+    },
+    "Innovation and Entrepreneurship": {
+        "members": [
+            {
+                "name": "Prof. Shruti Tripathi, DSEU",
+                "role": "Convener"
+            },
+            {
+                "name": "Prof. N Jena, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Dr. Harvinder Kaur, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Prof. Aditya P. Tripathi, Shyam Lal College, Delhi University",
+                "role": "External"
+            },
+            {
+                "name": "Prof. Sujit Kumar, Dr. Bhim Rao Ambedkar College, Delhi University",
+                "role": "External"
+            }
+        ]
+    },
+    "International Business Management": {
+        "members": [
+            {
+                "name": "Prof. Shruti Tripathi, DSEU",
+                "role": "Convener"
+            },
+            {
+                "name": "Prof. N Jena, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Dr. Harvinder Kaur, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Prof. Aditya P. Tripathi, Shyam Lal College, Delhi University",
+                "role": "External"
+            },
+            {
+                "name": "Prof. Sujit Kumar, Dr. Bhim Rao Ambedkar College, Delhi University",
+                "role": "External"
+            }
+        ]
+    },
+    "Mathematics": {
+        "members": [
+            {
+                "name": "Dr. K.K. Prasad, DSEU",
+                "role": "Convener"
+            },
+            {
+                "name": "Prof. Sangita Kansal, Delhi Technological University",
+                "role": "External Expert"
+            },
+            {
+                "name": "Prof. Dinesh Khattar, Kirori Mal College, Delhi University",
+                "role": "External Expert"
+            },
+            {
+                "name": "Prof. Chaman Singh, Acharya Narendra Dev College, Delhi University",
+                "role": "External Expert"
+            },
+            {
+                "name": "Prof. Shiv Kr. Sahdev, Shivaji College, Delhi University",
+                "role": "External Expert"
+            }
+        ]
+    },
+    "Mechanical Engineering": {
+        "members": [
+            {
+                "name": "Prof. Arindam Kumar Chanda",
+                "role": "Convener"
+            },
+            {
+                "name": "Prof. Ajay Kumar Singholi",
+                "role": "Member"
+            },
+            {
+                "name": "Dr. Rajat Pardal",
+                "role": "Member"
+            },
+            {
+                "name": "Dr. A.K. Ahluwalia",
+                "role": "Member"
+            },
+            {
+                "name": "Prof. D.S. Nagesh. DTU",
+                "role": "External"
+            }
+        ]
+    },
+    "Office Management": {
+        "members": [
+            {
+                "name": "Prof. Shruti Tripathi, DSEU",
+                "role": "Convener"
+            },
+            {
+                "name": "Prof. N Jena, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Dr. Harvinder Kaur, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Prof. Aditya P. Tripathi, Shyam Lal College, Delhi University",
+                "role": "External"
+            },
+            {
+                "name": "Prof. Sujit Kumar, Dr. Bhim Rao Ambedkar College, Delhi University",
+                "role": "External"
+            }
+        ]
+    },
+    "Pharmaceutical Science": {
+        "members": [
+            {
+                "name": "Prof. Gagan Dhawan, DSEU",
+                "role": "Convener"
+            },
+            {
+                "name": "Prof. Kamna Sachdeva, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Prof. A.K. Dubey, Netaji Subhash University of Technology, Dwarka",
+                "role": "External Expert"
+            },
+            {
+                "name": "Prof. K.S Baghotia, Indira Gandhi Hospital, Dwarka",
+                "role": "External Expert"
+            },
+            {
+                "name": "Prof. Geeta Aggarwal, Delhi Pharmaceutical Sciences Research University",
+                "role": "External Expert"
+            }
+        ]
+    },
+    "Retail Management": {
+        "members": [
+            {
+                "name": "Prof. Shruti Tripathi, DSEU",
+                "role": "Convener"
+            },
+            {
+                "name": "Prof. N Jena, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Dr. Harvinder Kaur, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Prof. Aditya P. Tripathi, Shyam Lal College, Delhi University",
+                "role": "External"
+            },
+            {
+                "name": "Prof. Sujit Kumar, Dr. Bhim Rao Ambedkar College, Delhi University",
+                "role": "External"
+            }
+        ]
+    },
+    "Sustainability Sciences": {
+        "members": [
+            {
+                "name": "Prof. Gagan Dhawan, DSEU",
+                "role": "Convener"
+            },
+            {
+                "name": "Prof. Kamna Sachdeva, DSEU",
+                "role": "Member"
+            },
+            {
+                "name": "Prof. A.K. Dubey, Netaji Subhash University of Technology, Dwarka",
+                "role": "External Expert"
+            },
+            {
+                "name": "Prof. K.S Baghotia, Indira Gandhi Hospital, Dwarka",
+                "role": "External Expert"
+            },
+            {
+                "name": "Prof. Geeta Aggarwal, Delhi Pharmaceutical Sciences Research University",
+                "role": "External Expert"
+            }
+        ]
+    }
+}
