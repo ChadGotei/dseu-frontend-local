@@ -68,7 +68,8 @@
                 "name": "Dr. Amit Singh Khokhar",
                 "designation": "Assistant Professor",
                 "supervisor_id": "DSEU/Mgt/RS/0006",
-                "slug": "amit-singh-khokhar"
+                "slug": "amit-singh-khokhar",
+                "hasData": true
             }
         ]
     },
@@ -134,7 +135,8 @@
                 "name": "Dr. S.P. Ajith Kumar",
                 "designation": "Lecturer",
                 "supervisor_id": "DSEU/CSA/RS/0005",
-                "slug": "sp-ajith-kumar"
+                "slug": "sp-ajith-kumar",
+                "hasData": true
             },
             {
                 "name": "Dr. Vicky Kumar",
@@ -179,90 +181,6 @@
             }
         ]
     },
-    "department_of_electrical_engineering": {
-        "name": "Electrical Engineering",
-        "supervisors": [
-            {
-                "name": "Dr. Jyoti Kulkarni",
-                "designation": "Lecturer",
-                "supervisor_id": "DSEU/EE/RS/0001",
-                "slug": "jyoti-kulkarni"
-            }
-        ]
-    },
-    "department_of_civil_engineering": {
-        "name": "Civil Engineering",
-        "supervisors": [
-            {
-                "name": "Dr. Umesh Chand",
-                "designation": "Lecturer",
-                "supervisor_id": "DSEU/CE/RS/0001",
-                "slug": "umesh-chand"
-            }
-        ]
-    },
-    "department_of_allied_medical_science": {
-        "name": "Allied Medical Science",
-        "supervisors": [
-            {
-                "name": "Prof. Gagan Dhawan",
-                "designation": "Professor",
-                "supervisor_id": "DSEU/AMS/RS/0001",
-                "slug": "gagan-dhawan"
-            },
-            {
-                "name": "Dr. A Vamsi",
-                "designation": "Assistant Professor",
-                "supervisor_id": "DSEU/AMS/RS/0002",
-                "slug": "a-vamsi"
-            },
-            {
-                "name": "Dr. B. Shanmugasundaram",
-                "designation": "Lecturer",
-                "supervisor_id": "DSEU/AMS/RS/0003",
-                "slug": "b-shanmugasundaram"
-            }
-        ]
-    },
-    "department_of_biotechnology_and_bioinformatics": {
-        "name": "Biotechnology And Bioinformatics",
-        "supervisors": [
-            {
-                "name": "Prof. Gagan Dhawan",
-                "designation": "Professor",
-                "supervisor_id": "DSEU/BB/RS/0001",
-                "slug": "gagan-dhawan"
-            }
-        ]
-    },
-    "department_of_sustainability_sciences": {
-        "name": "Sustainability Sciences",
-        "supervisors": [
-            {
-                "name": "Prof. Kamna Sachdeva",
-                "designation": "Professor",
-                "supervisor_id": "DSEU/SS/RS/0001",
-                "slug": "kamna-sachdeva"
-            },
-            {
-                "name": "Dr. Ashima Sharma",
-                "designation": "Assistant Professor",
-                "supervisor_id": "DSEU/SS/RS/0002",
-                "slug": "ashima-sharma"
-            }
-        ]
-    },
-    "department_of_pharmaceutical_sciences": {
-        "name": "Pharmaceutical Sciences",
-        "supervisors": [
-            {
-                "name": "Dr. Monica Chopra",
-                "designation": "Lecturer (Campus Director)",
-                "supervisor_id": "DSEU/PS/RS/0001",
-                "slug": "monica-chopra"
-            }
-        ]
-    },
     "department_of_mechanical_engineering": {
         "name": "Mechanical Engineering",
         "supervisors": [
@@ -271,6 +189,13 @@
                 "designation": "Professor",
                 "supervisor_id": "DSEU/ME/RS/0001",
                 "slug": "arindam-kumar-chanda"
+            },
+            {
+                "name": "Dr. Dinesh Yadav",
+                "designation": "Lecturer",
+                "supervisor_id": "",
+                "slug": "dinesh-yadav",
+                "hasData": true
             },
             {
                 "name": "Dr. Pankaj Kumar Singh",
@@ -377,6 +302,91 @@
                 "supervisor_id": "DSEU/ME/RS/0018",
                 "slug": "prabhakar-sharma",
                 "hasData": true
+            }
+        ]
+    },
+    "department_of_electrical_engineering": {
+        "name": "Electrical Engineering",
+        "supervisors": [
+            {
+                "name": "Dr. Jyoti Kulkarni",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/EE/RS/0001",
+                "slug": "jyoti-kulkarni"
+            }
+        ]
+    },
+    "department_of_civil_engineering": {
+        "name": "Civil Engineering",
+        "supervisors": [
+            {
+                "name": "Dr. Umesh Chand",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/CE/RS/0001",
+                "slug": "umesh-chand",
+                "hasData": true
+            }
+        ]
+    },
+    "department_of_allied_medical_science": {
+        "name": "Allied Medical Science",
+        "supervisors": [
+            {
+                "name": "Prof. Gagan Dhawan",
+                "designation": "Professor",
+                "supervisor_id": "DSEU/AMS/RS/0001",
+                "slug": "gagan-dhawan"
+            },
+            {
+                "name": "Dr. A Vamsi",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/AMS/RS/0002",
+                "slug": "a-vamsi"
+            },
+            {
+                "name": "Dr. B. Shanmugasundaram",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/AMS/RS/0003",
+                "slug": "b-shanmugasundaram"
+            }
+        ]
+    },
+    "department_of_biotechnology_and_bioinformatics": {
+        "name": "Biotechnology And Bioinformatics",
+        "supervisors": [
+            {
+                "name": "Prof. Gagan Dhawan",
+                "designation": "Professor",
+                "supervisor_id": "DSEU/BB/RS/0001",
+                "slug": "gagan-dhawan"
+            }
+        ]
+    },
+    "department_of_sustainability_sciences": {
+        "name": "Sustainability Sciences",
+        "supervisors": [
+            {
+                "name": "Prof. Kamna Sachdeva",
+                "designation": "Professor",
+                "supervisor_id": "DSEU/SS/RS/0001",
+                "slug": "kamna-sachdeva"
+            },
+            {
+                "name": "Dr. Ashima Sharma",
+                "designation": "Assistant Professor",
+                "supervisor_id": "DSEU/SS/RS/0002",
+                "slug": "ashima-sharma"
+            }
+        ]
+    },
+    "department_of_pharmaceutical_sciences": {
+        "name": "Pharmaceutical Sciences",
+        "supervisors": [
+            {
+                "name": "Dr. Monica Chopra",
+                "designation": "Lecturer (Campus Director)",
+                "supervisor_id": "DSEU/PS/RS/0001",
+                "slug": "monica-chopra"
             }
         ]
     }
