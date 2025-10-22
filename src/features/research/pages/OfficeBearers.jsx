@@ -1,5 +1,6 @@
 import { officeBearers } from "../data/officeBearers";
 
+//? Correct information to be added
 const OfficeBearers = () => {
   return (
     <div className="w-full px-6 md:px-10 py-10 flex flex-col items-center text-gray-800">

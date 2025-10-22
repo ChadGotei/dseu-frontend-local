@@ -279,5 +279,125 @@
             "linkedin": ""
         },
         "photo_url": "/images/supervisors/dinesh-yadav.jpg"
+    },
+    "amit-singh-khokhar": {
+        "slug": "amit-singh-khokhar",
+        "basic_info": {
+            "full_name": "Dr. Amit Singh Khokhar",
+            "designation": "Assistant Professor",
+            "faculty": "Faculty of Business Finance and Managerial Skills",
+            "department": "Business Process Management / Economics",
+            "official_email": "amit.s.khokhar@dseu.ac.in",
+            "contact_number": "",
+            "office_address": "DSEU Vivek Vihar Campus"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D. (Economics)",
+            "alma_mater": "IGNOU",
+            "experience_years": "10 Years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Economics",
+            "specific_research_interests": "Development Economics; Entrepreneurship & Economic Development; Economics of Sustainability",
+            "publications_last_5_years": "3",
+            "patents": "",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "",
+            "masters_dissertations_guided": ""
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": ""
+        },
+        "web_links": {
+            "faculty_profile_page": "https://dseu.ac.in/faculty/67fcb6a3594afd76950ae304",
+            "google_scholar": "https://scholar.google.com/citations?user=RqkJM-sAAAAJ&hl=en",
+            "researchgate_orcid_scopus": "",
+            "linkedin": "https://www.linkedin.com/in/dr-amit-singh-khokhar-02238846/"
+        },
+        "photo_url": "/images/supervisors/amit-singh-khokhar.jpg"
+    },
+    "umesh-chand": {
+        "slug": "umesh-chand",
+        "basic_info": {
+            "full_name": "Dr. Umesh Chand",
+            "designation": "Associate Professor",
+            "faculty": "Faculty of Engineering and Technology",
+            "department": "Civil Engineering",
+            "official_email": "ucs_2chand@yahoo.co.in",
+            "contact_number": "9868028760",
+            "office_address": "DSEU Pusa Campus, Delhi Skill and Entrepreneurship University, Delhi, India"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D. (Structural Health Monitoring)",
+            "alma_mater": "Motilal Nehru National Institute of Technology, Allahabad (2017)",
+            "experience_years": "30 Years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Concrete Technology, Composite Materials, High Performance Concrete, Structural Health Monitoring, Glass Fibre Reinforced Polymer",
+            "specific_research_interests": "Structural Health Monitoring, Composite Materials, Smart Materials, High-Performance Concrete, Earthquake Resistant Design",
+            "publications_last_5_years": "8 Papers (2017–2024)",
+            "patents": "",
+            "projects": "",
+            "collaborations": "Presented in International and National Conferences including NIT Durgapur, NIT Kurukshetra, NIT Jalandhar, and IEEE Las Vegas 2024"
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "",
+            "masters_dissertations_guided": ""
+        },
+        "administrative_roles": {
+            "boards_committees": "Served as Vice Principal, Principal, and Lecturer under Directorate of Technical Education, Govt. of Delhi",
+            "professional_memberships": "Member, Indian Society for Technical Education (ISTE), New Delhi; Member, Institute of Engineers (India), Kolkata"
+        },
+        "web_links": {
+            "faculty_profile_page": "",
+            "google_scholar": "",
+            "researchgate_orcid_scopus": "",
+            "linkedin": ""
+        },
+        "photo_url": "/images/supervisors/umesh-chand.jpg"
+    },
+    "sp-ajith-kumar": {
+        "slug": "sp-ajith-kumar",
+        "basic_info": {
+            "full_name": "Dr. S. P. Ajith Kumar",
+            "designation": "Lecturer (Selection Grade - II)",
+            "faculty": "Faculty of Computer Science and Engineering / Application",
+            "department": "Computer Science and Engineering / Application",
+            "official_email": "s.p.kumar@dseu.ac.in",
+            "contact_number": "",
+            "office_address": "Bhai Parmanand DSEU Campus, Shakarpur, Delhi – 110092"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D. in Computer Science & Technology",
+            "alma_mater": "Manav Rachna University (2023)",
+            "experience_years": "27+ Years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Computer Science & Engineering / Application",
+            "specific_research_interests": "Machine Learning (ML); Deep Learning (DL); Artificial Neural Networks (ANN); Ad hoc Networks; Opportunistic Networks; Internet of Things (IoT)",
+            "publications_last_5_years": "3",
+            "patents": "",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "",
+            "masters_dissertations_guided": ""
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": ""
+        },
+        "web_links": {
+            "faculty_profile_page": "",
+            "google_scholar": "",
+            "researchgate_orcid_scopus": "",
+            "linkedin": ""
+        },
+        "photo_url": "/images/supervisors/s-p-ajith-kumar.jpg"
     }
 }

@@ -4,10 +4,11 @@ import HeadingText from "../../../Component/Reusable/HeadingText";
 import MobileSelectBar from "../components/MobileSelectbar";
 import departmentData from "../data/list_of_supervisors.json";
 
+//? Specizliation is not provided to us
 const departments = Object.keys(departmentData).map((key, index) => ({
   _id: String(index + 1),
   key: key,
-  name: departmentData[key].name || "Unnamed Department",
+  name: departmentData[key].name || "Department",
 }));
 
 const supervisorsByDept = Object.entries(departmentData).reduce(

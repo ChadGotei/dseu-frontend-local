@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ChevronLeft, Mail, Phone, BookOpen, Clock, Globe, Link } from 'lucide-react';
+import { ChevronLeft, Mail, BookOpen, Clock, Globe, Link } from 'lucide-react';
 import supervisorDetailsData from '../data/supervisors.json';
 import LinkButton from "../components/LinkButton";
 
@@ -10,13 +10,32 @@ const Supervisor = () => {
 
   const supervisor = supervisorDetailsData[slug];
 
-  const sections = useMemo(() => ([
-    { key: 'basic-info', label: 'Basic Info', icon: <Mail size={16} /> },
-    { key: 'academic', label: 'Academic Background', icon: <BookOpen size={16} /> },
-    { key: 'research', label: 'Research Profile', icon: <Globe size={16} /> },
-    { key: 'supervision', label: 'PHD Supervision', icon: <Clock size={16} /> },
-    { key: 'web-links', label: 'Web Links', icon: <Link size={16} /> },
-  ]), []);
+  const sections = useMemo(() => {
+    const allSections = [
+      { key: 'basic-info', label: 'Basic Info', icon: <Mail size={16} />, data: supervisor.basic_info },
+      { key: 'academic', label: 'Academic Background', icon: <BookOpen size={16} />, data: supervisor.academic_background },
+      { key: 'research', label: 'Research Profile', icon: <Globe size={16} />, data: supervisor.research_profile },
+      { key: 'supervision', label: 'PhD Supervision', icon: <Clock size={16} />, data: supervisor.phd_supervision && supervisor.administrative_roles },
+      { key: 'web-links', label: 'Web Links', icon: <Link size={16} />, data: supervisor.web_links },
+    ];
+
+    const hasValidData = (data) => {
+      if (!data) return false;
+      if (typeof data === 'string') return data.trim() !== '';
+      if (typeof data === 'object') {
+        return Object.values(data).some(val => {
+          if (Array.isArray(val)) return val.length > 0;
+          if (typeof val === 'object') return hasValidData(val);
+          return val && val.toString().trim() !== '';
+        });
+      }
+      return false;
+    };
+
+    return allSections.filter(section => hasValidData(section.data)); //? display only where there is data
+    // return allSections;  ? dislay all
+  }, [supervisor]);
+
 
   const [activeSection, setActiveSection] = useState(sections[0].key);
 
@@ -41,7 +60,7 @@ const Supervisor = () => {
         className="ml-3 mb-6 px-4 py-2 bg-blue-500 text-gray-100 rounded transition-colors text-xs flex flex-row items-center justify-center hover:text-blue-500 hover:bg-gray-100 border border-transparent hover:border-blue-500 hover:shadow-md"
       >
         <ChevronLeft size={16} />
-        Back to Supervisors
+        Back
       </button>
 
       <div className="flex flex-col md:flex-row gap-8 lg:gap-10">
@@ -93,7 +112,7 @@ const Supervisor = () => {
           {/* Basic Info Section */}
           <SectionContainer id="basic-info" title="Basic Information" isActive={activeSection === 'basic-info'}>
             <DetailItem icon={<Mail size={16} />} label="Email" value={basic_info.official_email} link={`mailto:${basic_info.official_email}`} />
-            <DetailItem icon={<Phone size={16} />} label="Contact" value={basic_info.contact_number} />
+            {/* <DetailItem icon={<Phone size={16} />} label="Contact" value={basic_info.contact_number} /> */}
             <DetailItem icon={<Globe size={16} />} label="Department" value={basic_info.department} />
             <DetailItem icon={<BookOpen size={16} />} label="Faculty Type" value={basic_info.faculty} />
             <DetailItem icon={<Clock size={16} />} label="Designation" value={basic_info.designation} />

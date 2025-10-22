@@ -1,8 +1,9 @@
-import React, { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import MobileSelectBar from "../components/MobileSelectbar";
 import phdData from "../data/phd_students_2023.json";
 
+//? data of more years to be provided
 const departments = Object.keys(phdData.departments).map((key, index) => ({
   _id: String(index + 1),
   key,
@@ -40,11 +41,10 @@ const PhdStudents = () => {
       departments.map((dept) => (
         <button
           key={dept._id}
-          className={`flex items-center justify-center p-2 rounded-md transition-colors ${
-            deptKey === dept.key
+          className={`flex items-center justify-center p-2 rounded-md transition-colors ${deptKey === dept.key
               ? "bg-blue-600 text-white"
               : "bg-white hover:bg-blue-100 text-gray-700"
-          } shadow`}
+            } shadow`}
           onClick={() => handleDeptChange(dept.key)}
         >
           <span className="text-center p-1 capitalize">{dept.name}</span>
