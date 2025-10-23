@@ -1,21 +1,18 @@
 import activity1 from "/src/assets/Activities/Activities1.jpg";
-import activity2 from "/src/assets/Activities/Activities2.jpeg";
-import activity3 from "/src/assets/Activities/Activities3.jpeg";
-import activity4 from "/src/assets/Activities/Activities4.jpeg";
-import activity5 from "/src/assets/Activities/Activities5.jpeg";
-import activity6 from "/src/assets/Activities/Activities6.jpeg";
+import activity2 from "/src/assets/Activities/Activities2.jpg";
+import activity3 from "/src/assets/Activities/Activities3.jpg";
+import activity4 from "/src/assets/Activities/Activities4.jpg";
+import activity5 from "/src/assets/Activities/Activities5.jpg";
+import activity6 from "/src/assets/Activities/Activities6.jpg";
 import activity7 from "/src/assets/Activities/Activities7.jpeg";
-import activity8 from "/src/assets/Activities/Activities8.jpeg";
-import activity9 from "/src/assets/Activities/Activities9.jpg";
+// import activity9 from "/src/assets/Activities/Activities9.jpg";
 import activity10 from "/src/assets/Activities/Activities10.jpg";
 import activity11 from "/src/assets/Activities/Activities11.jpg";
-import activity13 from "/src/assets/Activities/Activities13.jpg";
-import activity14 from "/src/assets/Activities/Activities14.jpg";
-import activity15 from "/src/assets/Activities/Activities15.jpg";
-import activity16 from "/src/assets/Activities/Activities16.jpg";
-import activity17 from "/src/assets/Activities/Activities17.jpg";
+// import activity14 from "/src/assets/Activities/Activities14.jpg";
+// import activity15 from "/src/assets/Activities/Activities15.jpg";
+// import activity16 from "/src/assets/Activities/Activities16.jpg";  
 import activity18 from "/src/assets/Activities/Activities18.jpg";
-import activity19 from "../assets/Activities/Activities19.jpg"
+import activity19 from "../assets/Activities/Activities19.jpg";
 
 import thumbnail1 from "/src/assets/thumbnail/thumbnail1.jpg";
 import thumbnail3 from "/src/assets/thumbnail/thumbnail3.jpg";
@@ -23,26 +20,28 @@ import thumbnail4 from "/src/assets/thumbnail/thumbnail4.jpg";
 import thumbnail5 from "/src/assets/thumbnail/thumbnail5.jpg";
 import thumbnail6 from "/src/assets/thumbnail/thumbnail6.jpg";
 
-import admissionthumb from '../assets/thumbnail/admission.png'
+import admissionthumb from '../assets/thumbnail/admission.png';
 
 export const allImages = [
   activity1,
-  activity19,
+  activity2,
+  activity3,
+  activity4,
+  activity5,
+  activity6,
   activity7,
-  activity9,
   activity10,
   activity11,
-  activity14,
-  activity15,
-  activity16,
   activity18,
+  activity19,
 ];
+
 
 export const priorityVideo = {
   thumbnail: admissionthumb,
   title: "DSEU Admission form filling steps",
   subheading: "",
-  link: "https://youtu.be/MB3TbJOf0S4", 
+  link: "https://youtu.be/MB3TbJOf0S4",
 };
 
 export const videoData = [

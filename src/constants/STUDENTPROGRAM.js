@@ -1,12 +1,27 @@
-import achievement1 from "../assets/achievements/Achievements1.jpg";
 import achievement2 from "../assets/achievements/Achievements2.jpeg";
 import achievement3 from "../assets/achievements/Achievements3.jpeg";
-import achievement5 from "../assets/achievements/Achievements5.jpg";
-import achievement4 from "../assets/achievements/Achievements4.jpg";
 import achievement6 from "../assets/achievements/Achievements6.jpg";
 import achievement7 from "../assets/achievements/Achievements7.jpg";
 import achievement8 from "../assets/achievements/Achievements8.jpg";
+import achievement9 from "../assets/achievements/Achievements9.jpg";
+import achievement10 from "../assets/achievements/Achievements10.jpg";
+import achievement11 from "../assets/achievements/Achievements11.jpg";
+import achievement12 from "../assets/achievements/Achivements12.jpg";
+import achievement13 from "../assets/achievements/Achivements13.jpg";
 import study from '../assets/achievements/study.jpg'
+
+const carouselItems = [
+    { image: achievement12 },
+    { image: achievement9 },
+    { image: achievement10 },
+    { image: achievement11 },
+    { image: achievement13 },
+    { image: achievement6 },
+    { image: achievement7 },
+    { image: achievement8 },
+    { image: achievement2 },
+    { image: achievement3 },
+];
 
 const programs = {
     DIPLOMA: [
@@ -34,16 +49,5 @@ const programs = {
         { code: "Civil", name: "Civil Engineering" },
     ],
 };
-
-const carouselItems = [
-    { image: achievement6 },
-    { image: achievement7 },
-    { image: achievement8 },
-    { image: achievement4 },
-    { image: achievement1 },
-    { image: achievement2 },
-    { image: achievement3 },
-    { image: achievement5 },
-];
 
 export { carouselItems, programs, study };

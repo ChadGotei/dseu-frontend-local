@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import dseuPic1 from "../../assets/BannerImg/dseuPic1.jpg";
+import banner6 from "../../assets/BannerImg/bannerimg2.jpg";
 import banner from "../../assets/DSEULogo/Banner.jpg";
 import Image6 from "../../assets/DSEULogo/BANNER-DESIGN-1.jpg";
 import Banner3 from "../../assets/DSEULogo/BANNER-DESIGN-3.jpg";
-import Banner4 from "../../assets/DSEULogo/BANNER-DESIGN-4.jpg";
 import Banner5 from "../../assets/DSEULogo/BANNER-DESIGN-5.jpg";
 import Image7 from "../../assets/7.png";
 
@@ -13,16 +13,12 @@ const HomeBody = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
-    // { image: fd2, size: "cover" },
-    // { image: fd4, size: "cover" },
-    // { image: fd1, size: "cover" },
-    // { image: fd3, size: "cover" },
+    { image: banner6 },
     { image: dseuPic1 },
     { image: banner },
     { image: Image6 },
     { image: Image7 },
     { image: Banner3 },
-    { image: Banner4 },
     { image: Banner5 },
   ];
 
@@ -77,9 +73,8 @@ const HomeBody = () => {
             <img
               src={slide.image}
               alt={`Slide ${index + 1}`}
-              className={`relative z-10 w-full h-full ${
-                slide.size === "cover" ? "object-contain" : "object-cover"
-              }`}
+              className={`relative z-10 w-full h-full ${slide.size === "cover" ? "object-contain" : "object-cover"
+                }`}
             />
           </div>
         ))}
@@ -105,9 +100,8 @@ const HomeBody = () => {
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${
-                currentIndex === index ? "bg-white" : "bg-white/50"
-              }`}
+              className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${currentIndex === index ? "bg-white" : "bg-white/50"
+                }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
