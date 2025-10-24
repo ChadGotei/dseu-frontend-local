@@ -13,6 +13,7 @@ const StudentEvents = () => {
   const [carouselImages, setCarouselImages] = useState([]);
   const [randomVideos, setRandomVideos] = useState([]);
 
+  // Load images and videos once
   useEffect(() => {
     setCarouselImages(allImages);
 
@@ -22,6 +23,7 @@ const StudentEvents = () => {
     setRandomVideos([priorityVideo, ...otherVideos.slice(0, 3)]);
   }, []);
 
+  // Auto-slide effect
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) =>
@@ -39,7 +41,9 @@ const StudentEvents = () => {
           <h2 className="text-2xl font-bold text-blue-800 border-l-4 border-blue-800 pl-3">
             STUDENT EVENTS & ACTIVITIES
           </h2>
+
           <div className="relative overflow-hidden rounded-lg h-[400px]">
+            {/* Slides */}
             {carouselImages.map((img, index) => (
               <div
                 key={index}
@@ -55,10 +59,47 @@ const StudentEvents = () => {
                 />
               </div>
             ))}
+
+            {/* Prev Button */}
+            <button
+              onClick={() =>
+                setCurrentSlide((prev) =>
+                  prev === 0 ? carouselImages.length - 1 : prev - 1
+                )
+              }
+              className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/40 text-white text-2xl p-2 rounded-full hover:bg-black/60 transition"
+            >
+              ❮
+            </button>
+
+            {/* Next Button */}
+            <button
+              onClick={() =>
+                setCurrentSlide((prev) =>
+                  prev === carouselImages.length - 1 ? 0 : prev + 1
+                )
+              }
+              className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/40 text-white text-2xl p-2 rounded-full hover:bg-black/60 transition"
+            >
+              ❯
+            </button>
+
+            {/* Dots Indicator */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+              {carouselImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition ${
+                    index === currentSlide ? "bg-white" : "bg-gray-400"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Grid Section */}
+        {/* Video Grid Section */}
         <div className="space-y-4">
           <h2 className="text-2xl font-bold text-blue-800 border-l-4 border-blue-800 pl-3">
             VOICE OF DSEU
@@ -80,7 +121,6 @@ const StudentEvents = () => {
                     <h3 className="font-semibold text-lg">{video.title}</h3>
                     <p className="text-sm">{video.subheading}</p>
                   </div>
-                  <div className="absolute bottom-0 right-4 mb-4"></div>
                 </div>
               </button>
             ))}
