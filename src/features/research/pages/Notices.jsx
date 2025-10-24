@@ -9,12 +9,13 @@ import UploadModal from "../../admin/UploadModal";
 
 const Notices = () => {
   const [page, setPage] = useState(1);
-  const [limit] = useState(10);
+  const [limit] = useState(5);
   const [notices, setNotices] = useState([]);
   const [totalPages, setTotalPages] = useState(1);
   const [showModal, setShowModal] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [inputField, setInputField] = useState("");
+  const [query, setQuery] = useState("");
 
   const token = sessionStorage.getItem("token");
   const currentRole = sessionStorage.getItem("currentRole");
@@ -25,7 +26,7 @@ const Notices = () => {
     }
   }, [currentRole, token]);
 
-  const { data, isLoading } = useNoticesBySection("research", false, limit, page, inputField);
+  const { data, isLoading } = useNoticesBySection("research", false, limit, page, query);
 
   useEffect(() => {
     if (data && data.data) {
@@ -34,10 +35,21 @@ const Notices = () => {
     }
   }, [data]);
 
+  const handleSearch = () => {
+    setQuery(inputField.trim());
+    setPage(1); 
+  };
+
   const handlePageChange = (selectedItem) => {
     const newPage = selectedItem.selected + 1;
     setPage(newPage);
   };
+
+  const handleClearFilter = () => {
+    setQuery("");
+    setInputField("");
+    setPage(1);
+  }
 
   return (
     <div className="w-full px-6 md:px-10 py-10 text-gray-800">
@@ -52,6 +64,8 @@ const Notices = () => {
             setInputField={setInputField}
             includeUpload={true}
             handleShowModal={() => setShowModal(true)}
+            handleSearch={handleSearch}
+            handleClearFilter={handleClearFilter}
             containerClass="flex flex-row justify-between md:gap-3 gap-2"
           />
         </div>

@@ -1,39 +1,57 @@
 import { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import MobileSelectBar from "../components/MobileSelectbar";
-import phdData from "../data/phd_students_2023.json";
-
-//? data of more years to be provided
-const departments = Object.keys(phdData.departments).map((key, index) => ({
-  _id: String(index + 1),
-  key,
-  name: key.replace(/_/g, " "),
-}));
-
-const studentsByDept = phdData.departments;
-const academicYear = phdData.academic_year || "2023";
-const defaultDept = departments[0]?.key || "";
+import phdDataAll from "../data/phd_students.json";
 
 const PhdStudents = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const deptFromQuery = searchParams.get("dept");
 
+  const academicYears = phdDataAll.years.map((y) => y.academic_year);
+
+  const yearFromQuery = searchParams.get("year") || academicYears[0];
+  const selectedYearData =
+    phdDataAll.years.find((y) => y.academic_year === yearFromQuery) ||
+    phdDataAll.years[0];
+
+  const departments = Object.keys(selectedYearData.departments).map(
+    (key, index) => ({
+      _id: String(index + 1),
+      key,
+      name: key.replace(/_/g, " "),
+    })
+  );
+
+  const studentsByDept = selectedYearData.departments;
+  const defaultDept = departments[0]?.key || "";
+  const deptFromQuery = searchParams.get("dept");
   const isValidDept = departments.some((d) => d.key === deptFromQuery);
   const initialDept = isValidDept ? deptFromQuery : defaultDept;
+
   const [deptKey, setDeptKey] = useState(initialDept);
+  const [selectedYear, setSelectedYear] = useState(yearFromQuery);
 
   useEffect(() => {
     if (!isValidDept) {
-      setSearchParams({ dept: defaultDept });
+      setSearchParams({ dept: defaultDept, year: selectedYear });
       setDeptKey(defaultDept);
     } else if (deptFromQuery !== deptKey) {
       setDeptKey(deptFromQuery);
     }
-  }, [deptFromQuery, isValidDept, setSearchParams, deptKey]);
+  }, [deptFromQuery, isValidDept, setSearchParams, deptKey, selectedYear]);
 
   const handleDeptChange = (key) => {
     setDeptKey(key);
-    setSearchParams({ dept: key });
+    setSearchParams({ dept: key, year: selectedYear });
+  };
+
+  const handleYearChange = (year) => {
+    const yearData =
+      phdDataAll.years.find((y) => y.academic_year === year) ||
+      phdDataAll.years[0];
+    const firstDept = Object.keys(yearData.departments)[0] || "";
+    setSelectedYear(year);
+    setDeptKey(firstDept);
+    setSearchParams({ year, dept: firstDept });
   };
 
   const departmentButtons = useMemo(
@@ -42,18 +60,39 @@ const PhdStudents = () => {
         <button
           key={dept._id}
           className={`flex items-center justify-center p-2 rounded-md transition-colors ${deptKey === dept.key
-              ? "bg-blue-600 text-white"
-              : "bg-white hover:bg-blue-100 text-gray-700"
+            ? "bg-blue-600 text-white"
+            : "bg-white hover:bg-blue-100 text-gray-700"
             } shadow`}
           onClick={() => handleDeptChange(dept.key)}
         >
           <span className="text-center p-1 capitalize">{dept.name}</span>
         </button>
       )),
-    [deptKey]
+    [deptKey, departments]
   );
 
   const students = studentsByDept[deptKey] || [];
+  const yearButtons = (
+    <div className="flex flex-wrap items-center justify-center gap-3 mb-8 mt-4 bg-gray-50 px-4 py-3 rounded-xl shadow-sm">
+
+      <div className="text-lg md:text-xl font-semibold text-gray-800 mr-3">
+        Academic Year:
+      </div>
+      
+      {academicYears.map((year) => (
+        <button
+          key={year}
+          onClick={() => handleYearChange(year)}
+          className={`px-4 py-2 rounded-lg font-medium text-sm md:text-base border transition-all duration-200 ${selectedYear === year
+            ? "bg-blue-600 text-white border-blue-600 shadow-md scale-[1.05]"
+            : "bg-white text-gray-700 border-gray-300 hover:bg-blue-50 hover:border-blue-400"
+            }`}
+        >
+          {year}
+        </button>
+      ))}
+    </div>
+  );
 
   return (
     <div className="flex w-full my-10 text-gray-800 flex-col md:flex-row md:px-10 px-6 gap-5 lg:gap-10 md:gap-3">
@@ -77,9 +116,8 @@ const PhdStudents = () => {
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col">
-        <div className="text-center mt-6 mb-2 font-bold text-blue-700">
-          Academic Year: {academicYear}
-        </div>
+        {/* Year Tabs */}
+        <div className="text-center mt-2 mb-4">{yearButtons}</div>
 
         <h1 className="text-center text-3xl mb-6 font-bold md:block hidden">
           Department of{" "}

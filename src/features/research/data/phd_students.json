@@ -1,0 +1,116 @@
+{
+    "years": [
+        {
+            "academic_year": "2022-23",
+            "departments": {
+                "Computer Science and Engineering": [
+                    {
+                        "name": "Prabhu Narayan",
+                        "supervisor": "Dr. Mamta Mittal",
+                        "RAC": "Dr. Vicky Kumar, Dr. S.P Ajith Kumar"
+                    },
+                    {
+                        "name": "Medhavi Pandey",
+                        "supervisor": "Dr. Shrikant Patel",
+                        "RAC": "Dr. Pankaj Lathar, Dr. Vicky Kumar"
+                    }
+                ],
+                "Computer Applications": [
+                    {
+                        "name": "Priyanka Gupta",
+                        "supervisor": "Prof. Girish Sharma",
+                        "RAC": "Dr. Pankaj Lathar, Dr. Shrikant Patel"
+                    },
+                    {
+                        "name": "Aarti Goyal",
+                        "supervisor": "Dr. Vicky Kumar",
+                        "RAC": "Dr. Girish Sharma, Dr. S.P Ajith"
+                    }
+                ]
+            }
+        },
+        {
+            "academic_year": "2023-24",
+            "departments": {
+                "Computer Science and Engineering": [
+                    {
+                        "name": "Inderjeet",
+                        "supervisor": "Dr. Pankaj Lathar",
+                        "RAC": "-"
+                    },
+                    {
+                        "name": "Pooja Gupta",
+                        "supervisor": "Dr. Pankaj Lathar",
+                        "RAC": "-"
+                    },
+                    {
+                        "name": "Harminder Singh Bhatia",
+                        "supervisor": "Dr. Girish Kumar Sharma",
+                        "RAC": "-"
+                    }
+                ],
+                "Computer Applications": [
+                    {
+                        "name": "Sudipta Acharjee",
+                        "supervisor": "Dr. Pankaj Lathar",
+                        "RAC": "-"
+                    }
+                ],
+                "Mechanical Engineering": [
+                    {
+                        "name": "Neeraj Kant",
+                        "supervisor": "Dr. Prabhakar Sharma",
+                        "RAC": "-"
+                    },
+                    {
+                        "name": "Raghav Kumar Thakur",
+                        "supervisor": "Dr. Prabhakar Sharma",
+                        "RAC": "-"
+                    },
+                    {
+                        "name": "Vinayak Vijay Ketkar",
+                        "supervisor": "Dr. Vaibhav Sharma",
+                        "RAC": "-"
+                    },
+                    {
+                        "name": "Jitender Kumar Goyal",
+                        "supervisor": "Dr. Gaurav Arora",
+                        "RAC": "-"
+                    }
+                ],
+                "Electronics and Communication Engineering": [
+                    {
+                        "name": "Shagun Malhotra",
+                        "supervisor": "Dr. Surendra K. Gupta",
+                        "RAC": "-"
+                    },
+                    {
+                        "name": "Kumar Brajesh Chandra",
+                        "supervisor": "Dr. Surendra Kumar Gupta",
+                        "RAC": "-"
+                    },
+                    {
+                        "name": "Chandan Kumar",
+                        "supervisor": "Dr. Surendra Kumar Gupta",
+                        "RAC": "-"
+                    },
+                    {
+                        "name": "Aman Saini",
+                        "supervisor": "Dr. Rohit Anand",
+                        "RAC": "-"
+                    },
+                    {
+                        "name": "Venkateshwari P",
+                        "supervisor": "Dr. Rohit Anand",
+                        "RAC": "-"
+                    },
+                    {
+                        "name": "Anand Kumar",
+                        "supervisor": "Dr. Krishna Singh",
+                        "RAC": "-"
+                    }
+                ]
+            }
+        }
+    ]
+}

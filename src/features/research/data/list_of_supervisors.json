@@ -11,7 +11,7 @@
         ]
     },
     "department_of_ibm": {
-        "name": "Ibm",
+        "name": "International Business Management",
         "supervisors": [
             {
                 "name": "Prof. N. Jena",
@@ -33,7 +33,7 @@
         ]
     },
     "department_of_bfsi": {
-        "name": "Bfsi",
+        "name": "Banking, Financial Services and Insurance",
         "supervisors": [
             {
                 "name": "Dr. Parul Kumar",
@@ -62,7 +62,7 @@
         ]
     },
     "department_of_bpm": {
-        "name": "Bpm",
+        "name": "Business Process Management",
         "supervisors": [
             {
                 "name": "Dr. Amit Singh Khokhar",
