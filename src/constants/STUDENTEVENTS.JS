@@ -23,12 +23,12 @@ import thumbnail6 from "/src/assets/thumbnail/thumbnail6.jpg";
 import admissionthumb from '../assets/thumbnail/admission.png';
 
 export const allImages = [
-  activity1,
-  activity2,
   activity3,
   activity4,
+  activity2,
   activity5,
   activity6,
+  activity1,
   activity7,
   activity10,
   activity11,
