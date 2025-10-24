@@ -37,7 +37,7 @@ const Notices = () => {
 
   const handleSearch = () => {
     setQuery(inputField.trim());
-    setPage(1); 
+    setPage(1);
   };
 
   const handlePageChange = (selectedItem) => {
