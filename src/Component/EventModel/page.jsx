@@ -45,11 +45,12 @@ const Page = () => {
 
         <div className="text-gray-800 text-sm sm:text-base leading-relaxed space-y-4">
           <p>
-            Applications are invited for the post of <strong>Controller of Finance</strong>.
+            Applications are invited for the post of{" "}
+            <strong>Controller of Finance</strong>.
           </p>
 
           <p>
-            <strong>Last date to apply📅:</strong> 31<sup>st</sup> October 2025
+            <strong>Last date to apply📅:</strong> 15<sup>th</sup> November 2025
           </p>
 
           <a
