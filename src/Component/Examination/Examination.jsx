@@ -1,156 +1,106 @@
-import { useEffect, useMemo, useState } from "react";
-import { useLocation } from "react-router-dom";
-import HeadingText from "../Reusable/HeadingText";
-import ExaminationLoading from "../ShimmerUI/ExaminationLoading";
+import { useEffect, useState } from "react";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Listbox } from "@headlessui/react";
+
+const examinationNav = [
+  { label: "Notices", to: "/examination/notices" },
+  { label: "Results", to: "/examination/results" },
+  { label: "Datesheet", to: "/examination/datesheet" },
+  { label: "Fee Portal", to: "https://eazypay.icicibank.com/eazypayLink?P1=iHSKEXeO8j51e9k+lFEY3w==", external: true },
+];
 
 const Examination = () => {
   const location = useLocation();
-  const params = new URLSearchParams(location.search);
-  const rawSection = params.get("section") || "notices";
+  const navigate = useNavigate();
+  const [selected, setSelected] = useState(examinationNav[0]);
 
-  // mapping frontend url sections with readable names
-  const sectionMap = {
-    notices: "exam notices",
-    results: "exam results",
-    datesheet: "exam datesheet",
-    fee: "exam fee",
-  };
-
-  const section = sectionMap[rawSection] || "exam notices";
-  const [isLoading, setIsLoading] = useState(true);
-
-  const sectionHeadings = {
-    "exam notices": "Examination Notices",
-    "exam results": "Examination Results",
-    "exam datesheet": "Examination Datesheet",
-    "exam fee": "Examination Fee Links",
-  };
-
-  // Simulate a loading delay for shimmer effect
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 800);
-    return () => clearTimeout(timer);
-  }, [section]);
-
-  // 🎯 DEMO STATIC DATA
-  const demoData = useMemo(() => {
-    const today = new Date();
-    const pdf =
-      "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
-
-    switch (section) {
-      case "exam notices":
-        return [
-          {
-            title: "Notice: Re-evaluation process for Semester II exams (test)",
-            fileLink: pdf,
-            createdAt: new Date(today.setDate(today.getDate() - 1)),
-          },
-          {
-            title:
-              "Important: Internal assessment submission deadline extended (test)",
-            fileLink: pdf,
-            createdAt: new Date(today.setDate(today.getDate() - 3)),
-          },
-          {
-            title: "Holiday Notice: University closed on 31st October (test)",
-            fileLink: pdf,
-            createdAt: new Date(today.setDate(today.getDate() - 5)),
-          },
-        ];
-
-      case "exam results":
-        return [
-          {
-            title: "Result: Diploma in Computer Engineering (Jan–June 2025) (test only)",
-            fileLink: pdf,
-            createdAt: new Date(today.setDate(today.getDate() - 2)),
-          },
-          {
-            title: "Result: BCA Semester IV (May 2025) (test ony)",
-            fileLink: pdf,
-            createdAt: new Date(today.setDate(today.getDate() - 4)),
-          },
-          {
-            title: "Result: B.Tech Semester VI (April 2025) (test only)",
-            fileLink: pdf,
-            createdAt: new Date(today.setDate(today.getDate() - 6)),
-          },
-        ];
-
-      case "exam datesheet":
-        return [
-          {
-            title: "Datesheet: B.Tech Semester VI (Nov 2025 Exams) (test only)",
-            fileLink: pdf,
-            createdAt: new Date(today.setDate(today.getDate() - 1)),
-          },
-          {
-            title: "Datesheet: Diploma in ECE (Nov 2025) (test only)",
-            fileLink: pdf,
-            createdAt: new Date(today.setDate(today.getDate() - 2)),
-          },
-          {
-            title: "Datesheet: BCA Semester V (Nov 2025) (test only)",
-            fileLink: pdf,
-            createdAt: new Date(today.setDate(today.getDate() - 3)),
-          },
-        ];
-
-      case "exam fee":
-        return []; // per your request, no demo data
-
-      default:
-        return [];
+    if (location.pathname === "/examination") {
+      navigate("/examination/notices", { replace: true });
     }
-  }, [section]);
+    // Update select if navigation changed
+    const found = examinationNav.find((item) => !item.external && item.to === location.pathname);
+    if (found) setSelected(found);
+  }, [location.pathname, navigate]);
 
-  const heading = sectionHeadings[section] || "Examination Notices";
+  const handleDropdownChange = (item) => {
+    setSelected(item);
+    if (item.external) {
+      window.open(item.to, "_blank");
+    } else {
+      navigate(item.to);
+    }
+  };
 
   return (
-    <div className="py-8 sm:py-10 px-3 sm:px-10 bg-[#f8fafc]">
-      <HeadingText heading={heading} headingCN="text-blue-900" />
-
-      {/* Table */}
-      <div className="max-w-5xl mx-auto mt-6 sm:mt-8 bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
-        <div className="flex justify-between bg-blue-900 text-white text-xs sm:text-sm md:text-base font-semibold px-3 sm:px-6 py-2 sm:py-3">
-          <div className="flex-1">Title / Notices</div>
-          <div className="w-32 sm:w-40 text-right">Uploading Date</div>
-        </div>
-
-        <div className="divide-y divide-gray-200 text-xs sm:text-sm md:text-base">
-          {isLoading ? (
-            <ExaminationLoading />
-          ) : demoData.length > 0 ? (
-            demoData.map((item, idx) => (
-              <div
-                key={idx}
-                className="flex justify-between items-center px-3 sm:px-6 py-2.5 sm:py-3 hover:bg-blue-50 transition"
-              >
-                {item.fileLink ? (
-                  <a
-                    href={item.fileLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-700 hover:underline flex-1 pr-2"
-                  >
-                    {item.title}
-                  </a>
-                ) : (
-                  <div>{item.title}</div>
-                )}
-                <div className="w-32 sm:w-40 text-right text-gray-700">
-                  {new Date(item.createdAt).toLocaleDateString("en-IN")}
-                </div>
-              </div>
-            ))
-          ) : (
-            <div className="text-center py-6 text-gray-500 text-sm">
-              No links found for this section.
-            </div>
-          )}
-        </div>
+    <div className="flex flex-col md:flex-row md:justify-center bg-[#f8fafc] min-h-screen">
+      {/* Mobile Dropdown Sidebar */}
+      <div className="w-full max-w-xs mx-auto mt-4 md:hidden">
+        <Listbox value={selected} onChange={handleDropdownChange}>
+          <div className="relative">
+            <Listbox.Button className="w-full cursor-pointer rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 text-blue-900 font-bold">
+              {selected.label}
+            </Listbox.Button>
+            <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none z-50">
+              {examinationNav.map((item) => (
+                <Listbox.Option
+                  key={item.label}
+                  value={item}
+                  className={({ active }) =>
+                    `cursor-pointer select-none px-4 py-2 ${
+                      active ? "bg-blue-100 text-blue-900" : "text-gray-900"
+                    }`}
+                >
+                  {item.label}
+                </Listbox.Option>
+              ))}
+            </Listbox.Options>
+          </div>
+        </Listbox>
       </div>
+
+      {/* Desktop Sidebar */}
+      <aside className="hidden md:block w-72 max-w-full bg-white rounded-xl border border-gray-200 shadow-sm p-7 flex flex-col mt-14 mr-8">
+        <h2 className="font-bold text-xl text-blue-900 mb-6 text-left">Examination</h2>
+        <div className="flex flex-col gap-5">
+          {examinationNav.map(item => {
+            const isActive = location.pathname === item.to;
+            const base =
+              "block text-center px-4 py-5 rounded-xl font-semibold text-[1.1rem] border transition-colors";
+            const active =
+              "border-blue-500 text-blue-800 bg-blue-50 shadow";
+            const inactive =
+              "border-gray-200 text-gray-800 bg-white hover:bg-blue-50 hover:text-blue-900";
+            if (item.external) {
+              return (
+                <a
+                  key={item.label}
+                  href={item.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={base + " " + inactive}
+                >
+                  {item.label}
+                </a>
+              );
+            } else {
+              return (
+                <Link
+                  key={item.label}
+                  to={item.to}
+                  className={base + " " + (isActive ? active : inactive)}
+                >
+                  {item.label}
+                </Link>
+              );
+            }
+          })}
+        </div>
+      </aside>
+      {/* Main Content */}
+      <main className="flex-1 w-full max-w-5xl px-3 sm:px-6 md:px-8 py-6 md:py-12">
+        <Outlet />
+      </main>
     </div>
   );
 };

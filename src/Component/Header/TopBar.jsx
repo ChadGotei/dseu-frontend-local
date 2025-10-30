@@ -8,17 +8,8 @@ const studentLoginSamarth = "https://dseu.samarth.edu.in/index.php/site/login";
 const menuItems = [
   {
     label: "Examination",
-    type: "dropdown",
-    items: [
-      { label: "Notices", to: "/examination?section=notices" },
-      {
-        label: "Fee Portal",
-        to: "https://eazypay.icicibank.com/eazypayLink?P1=iHSKEXeO8j51e9k+lFEY3w==",
-        seperatePage: true
-      },
-      { label: "Results", to: "/examination?section=results" },
-      { label: "Datesheet", to: "/examination?section=datesheet" },
-    ],
+    type: "link",
+    to: "/examination"
   },
   { label: "Tenders", type: "link", to: "/tenders" },
   { label: "Admin Login", type: "link", to: "/admin-login" },
