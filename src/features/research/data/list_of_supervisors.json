@@ -36,12 +36,6 @@
         "name": "Banking, Financial Services and Insurance",
         "supervisors": [
             {
-                "name": "Dr. Parul Kumar",
-                "designation": "Assistant Professor",
-                "supervisor_id": "DSEU/Mgt/RS/0004",
-                "slug": "parul-kumar"
-            },
-            {
                 "name": "Dr. Preeti Bedi",
                 "designation": "Assistant Professor",
                 "supervisor_id": "DSEU/Mgt/RS/0005",
@@ -112,12 +106,6 @@
                 "supervisor_id": "DSEU/CSA/RS/0001",
                 "slug": "girish-kumar-sharma",
                 "hasData": true
-            },
-            {
-                "name": "Dr. Kavita Khanna",
-                "designation": "Campus Director",
-                "supervisor_id": "DSEU/CSA/RS/0002",
-                "slug": "kavita-khanna"
             },
             {
                 "name": "Dr. Pankaj Lathar",

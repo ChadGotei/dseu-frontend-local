@@ -20,6 +20,10 @@ const AdminDashboard = () => {
   const [vacancy, setVacancy] = useState("");
   const [applyError, setApplyError] = useState("");
 
+  // TODO: COMPLETE THESE TWO FIELDS
+  const [orderDate, setOrderDate] = useState("");
+  const [orderNumber, setOrderNumber] = useState("");
+
   const fileInputRef = useRef(null);
 
   const queryClient = useQueryClient();
@@ -277,6 +281,29 @@ const AdminDashboard = () => {
               </div>
             </>
           )}
+
+
+          {activeTabLabel === "Research" && <>
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Enter the order number
+              </label>
+              <input
+                type="text"
+                value={apply}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  setApply(val);
+                  if (val && !urlPattern.test(val)) {
+                    setApplyError("Invalid URL format");
+                  } else {
+                    setApplyError("");
+                  }
+                }}
+                className="w-full bg-gray-100 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+          </>}
 
           <div className={`${activeTabLabel === "Administration" && "hidden"}`}>
             <label className="block text-sm font-semibold text-gray-700 mb-2">

@@ -6,7 +6,6 @@ const officeBearers = [
         title: "Dean Research",
         photo: girishKumar,
         email: "girish.kumar@dseu.ac.in",
-        office: "Block A, Room 210",
         description: `Prof. Girish Kumar has been actively engaged in research and academic administration. 
       His areas of interest include research policy, innovation, and interdisciplinary studies. 
       He has published several papers and guided numerous research scholars.`,
@@ -16,10 +15,6 @@ const officeBearers = [
         title: "Assistant Registrar (Research)",
         photo: parvathyUnnikrishan,
         email: "Parvathy.Unnikrishnan@dseu.ac.in",
-        office: "Block A, Room 208",
-        description: `Dr. Parvathy has been contributing significantly to the development and coordination of 
-      research activities. She supports academic research initiatives, policy implementation, and research 
-      data management at DSEU.`,
     },
 ];
 

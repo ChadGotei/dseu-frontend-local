@@ -19,6 +19,7 @@ const UploadModal = ({
   veryLargeModal = false,
   isVacancy = false,
   sectionArray = false,
+  isOrderDate = false,
 }) => {
   const [name, setName] = useState("");
   const [file, setFile] = useState(null);
@@ -28,6 +29,10 @@ const UploadModal = ({
   const [applyLink, setApplyLink] = useState("");
   const [vacancy, setVacancy] = useState("");
   const [sectionFromArray, setSectionFromArray] = useState("");
+
+  // research purposes
+  const [orderDate, setOrderDate] = useState("");
+  const [orderNumber, setOrderNumber] = useState("");
 
   const queryClient = useQueryClient();
   const navigate = useNavigate();
@@ -73,6 +78,12 @@ const UploadModal = ({
       formData.append("section", sectionFromArray);
     } else {
       formData.append("section", section);
+    }
+
+    if (isOrderDate) {
+      // order date for the research 
+      formData.append("orderDate", orderDate);
+      formData.append("orderNumber", orderNumber);
     }
 
     if (autoArchive && validUntil) {
@@ -208,6 +219,36 @@ const UploadModal = ({
                 className="w-full bg-gray-100 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-2 border-blue-200"
               />
             </div>
+          )}
+
+          {isOrderDate && (
+            <>
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Order Date
+                </label>
+                <input
+                  type="string"
+                  value={orderDate}
+                  onChange={(e) => setOrderDate(e.target.value)}
+                  placeholder="10/05/2024"
+                  className="w-full bg-gray-100 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-2 border-blue-200"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Order Number
+                </label>
+                <input
+                  type="string"
+                  value={orderNumber}
+                  onChange={(e) => setOrderNumber(e.target.value)}
+                  placeholder="Example: F. No: xyz"
+                  className="w-full bg-gray-100 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-2 border-blue-200"
+                />
+              </div>
+            </>
           )}
 
           {isVacancy && (

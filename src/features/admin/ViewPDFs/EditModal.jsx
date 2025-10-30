@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import toast from "react-hot-toast";
 
 import { SESSION_EXPIRE } from "../../../constants/LOCALES.JS";
@@ -15,6 +15,8 @@ const EditModal = ({ onClose, setShowModal, data, showEditModal }) => {
   const [endDate, setEndDate] = useState(data.endDate?.split("T")[0] || "");
   const [vacancies, setVacancies] = useState(data.vacancies || "");
   const [apply, setApply] = useState(data.apply || "");
+  const [orderNumber, setOrderNumber] = useState(data.orderNumber || "");
+  const [orderDate, setOrderDate] = useState(data.orderDate || "");
 
   const queryClient = useQueryClient();
   const navigate = useNavigate();
@@ -55,6 +57,12 @@ const EditModal = ({ onClose, setShowModal, data, showEditModal }) => {
     if (endDate) formData.append("endDate", new Date(endDate).toISOString());
     if (apply) formData.append("apply", apply);
     if (vacancies) formData.append("vacancies", vacancies);
+
+    if (section === "research") {
+      if (orderNumber) formData.append("orderNumber", orderNumber);
+      if (orderDate)
+        formData.append("orderDate", new Date(orderDate).toISOString());
+    }
 
     mutation.mutate({ id: data._id, formData });
   };
@@ -115,10 +123,11 @@ const EditModal = ({ onClose, setShowModal, data, showEditModal }) => {
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
               className="w-full bg-gray-100 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-2 border-blue-200"
-              //   min={}
+            //   min={}
             />
           </div>
 
+          {/* apply link and vacancies for job portal only */}
           {isJobPortal(section) && (
             /* As these are the only sections where vacancies and apply link are needed */
             <>
@@ -143,6 +152,37 @@ const EditModal = ({ onClose, setShowModal, data, showEditModal }) => {
                   type="number"
                   value={vacancies}
                   onChange={(e) => setVacancies(e.target.value)}
+                  className="w-full bg-gray-100 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-2 border-blue-200"
+                />
+              </div>
+            </>
+          )}
+
+          {/* ✅ Research Fields */}
+          {section === "research" && (
+            <>
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Order Number
+                </label>
+                <input
+                  type="text"
+                  value={orderNumber}
+                  onChange={(e) => setOrderNumber(e.target.value)}
+                  placeholder="e.g., DSEU/Research/2023/10"
+                  className="w-full bg-gray-100 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-2 border-blue-200"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Order Date
+                </label>
+                <input
+                  type="text"
+                  value={orderDate}
+                  placeholder="eg: 10/05/2024"
+                  onChange={(e) => setOrderDate(e.target.value)}
                   className="w-full bg-gray-100 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-2 border-blue-200"
                 />
               </div>

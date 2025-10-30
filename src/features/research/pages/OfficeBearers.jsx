@@ -30,11 +30,16 @@ const OfficeBearers = () => {
 
             <ul className="mt-4 space-y-2 text-gray-600 text-sm">
               <li>
-                <span className="font-semibold">Email:</span> {person.email}
+                <span className="font-semibold">Email:</span>
+                <a
+                  href={`mailto:${person.email}`}
+                  className="cursor-pointer text-blue-600 hover:underline"
+                >
+                  {" "}{person.email}
+                </a>
+
               </li>
               <li>
-                <span className="font-semibold">Office:</span> <span className="text-blue-600">{person.office}
-                </span>
               </li>
             </ul>
           </div>
