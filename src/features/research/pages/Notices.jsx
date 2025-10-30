@@ -111,13 +111,7 @@ const Notices = () => {
 
                     {/* Order Dated */}
                     <td className="px-4 py-3 text-gray-700">
-                      {notice.orderDate
-                        ? new Date(notice.orderDate).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "short",
-                          day: "numeric",
-                        })
-                        : "-"}
+                      {notice.orderDate || "-"}
                     </td>
 
                     {/* View Link */}

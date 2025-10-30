@@ -61,7 +61,7 @@ const EditModal = ({ onClose, setShowModal, data, showEditModal }) => {
     if (section === "research") {
       if (orderNumber) formData.append("orderNumber", orderNumber);
       if (orderDate)
-        formData.append("orderDate", new Date(orderDate).toISOString());
+        formData.append("orderDate", orderDate);
     }
 
     mutation.mutate({ id: data._id, formData });
