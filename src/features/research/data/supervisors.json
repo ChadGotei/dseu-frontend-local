@@ -1,4 +1,373 @@
 {
+    "ashima-sharma": {
+        "slug": "ashima-sharma",
+        "basic_info": {
+            "full_name": "Dr. Ashima Sharma",
+            "designation": "Assistant Professor",
+            "faculty": "The Faculty of Converging Scientific and Technological Skills (FCSTS)",
+            "department": "Department of Sustainability Sciences",
+            "official_email": "ashima.sharma@dseu.ac.in",
+            "contact_number": "",
+            "office_address": "DSEU Dwarka Campus, Sector 9, Delhi-110077"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "Academy of Scientific and Innovative Research (AcSIR), CSIR National Physical Laboratory, 2019",
+            "experience_years": "7 years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Air quality, air pollution impact assessment, climate change, sustainability",
+            "specific_research_interests": "Atmospheric trace pollutants, regional air quality monitoring, air pollution assessment and health risk analysis, climate–air quality interactions, sustainable waste management",
+            "publications_last_5_years": "02 journal publications, 02 book chapters, and 02 conference proceedings",
+            "patents": "",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "",
+            "masters_dissertations_guided": "03"
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": "Life Member, Environment and Social Development Association (ESDA)"
+        },
+        "web_links": {
+            "faculty_profile_page": "",
+            "google_scholar": "https://scholar.google.com/citations?user=AVJx-54AAAAJ&hl=en",
+            "orcid": "",
+            "researchgate_orcid_scopus": "https://www.researchgate.net/profile/Ashima-Sharma-5?ev=hdr_xprf",
+            "linkedin": "https://www.linkedin.com/in/dr-ashima-sharma-45a22aa0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        },
+        "photo_url": "/images/supervisors/ashima-sharma.jpeg"
+    },
+    "rohit-anand": {
+        "slug": "rohit-anand",
+        "basic_info": {
+            "full_name": "Dr. Rohit Anand",
+            "designation": "Assistant Professor",
+            "faculty": "G.B. Pant DSEU Campus, New Delhi - 110020",
+            "department": "Electronics & Communication Engineering",
+            "official_email": "rohit.anand@dseu.ac.in",
+            "contact_number": "+91-9416281993, +91-9466994669",
+            "office_address": "Room No. 105, G.B. Pant DSEU Campus, Okhla Industrial Estate, Phase-III, New Delhi - 20"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "I.K.G. Punjab Technical University, Punjab (2021)",
+            "experience_years": "23 years teaching experience / 12 years research experience"
+        },
+        "research_profile": {
+            "broad_research_areas": "Microwave engineering, image processing, wireless communication, optimization, optical communication, IoT",
+            "specific_research_interests": "Microwave engineering, image processing, wireless communication, optimization, optical communication, IoT",
+            "publications_last_5_years": "19 papers in SCI/Scopus indexed journals",
+            "patents": "04",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "04 ongoing",
+            "masters_dissertations_guided": "12 M.Tech. dissertations completed"
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": "Life Member of ISTE"
+        },
+        "web_links": {
+            "faculty_profile_page": "www.dseu.ac.in/faculty/67fcb6a3594afd76950ae416",
+            "google_scholar": "https://scholar.google.com/citations?user=eioTgBYAAAAJ&hl=en",
+            "orcid": "0000-0002-3782-0163",
+            "researchgate_orcid_scopus": "https://www.researchgate.net/profile/Rohit-Anand-9?ev=hdr_xprf",
+            "linkedin": ""
+        },
+        "photo_url": "/images/supervisors/rohit-anand.jpeg"
+    },
+    "narayan-agarwal": {
+        "slug": "narayan-agarwal",
+        "basic_info": {
+            "full_name": "Dr. Narayan Agarwal",
+            "designation": "Associate Professor",
+            "faculty": "Engineering/Technology",
+            "department": "Mechanical/Tool Engineering",
+            "official_email": "narayan.agrawal@dseu.ac.in",
+            "contact_number": "9868547128",
+            "office_address": "DSEU Okhla Campus, Phase-II, Okhla, New Delhi-110020"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "Delhi University (NSIT Delhi), 2010",
+            "experience_years": "20 years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Manufacturing systems, production engineering, decision-making techniques, green manufacturing, tool engineering",
+            "specific_research_interests": "Analytic Hierarchy Process (AHP), production control policies, green and biodegradable cutting fluids, supplier selection using fuzzy logic, simulation-based manufacturing systems, advanced machining processes",
+            "publications_last_5_years": "15 approximately",
+            "patents": "",
+            "projects": "Co-PI: DST-SYST Project on Green Cutting Fluids (₹34 Lakhs, 3 years, 2020–2023); Co-PI: DST Project on Biodegradable Cutting Fluid (₹17.7 Lakhs, 2018–2020)",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "03 Ph.D. students (01 completed and 02 ongoing)",
+            "masters_dissertations_guided": "More than 20 M.Tech. dissertations"
+        },
+        "administrative_roles": {
+            "boards_committees": "Associate Campus Director, DSEU Okhla Campus",
+            "professional_memberships": "Life Member ISTE (LM 103775); CEGR (LM 103775); IAENG (ID 63716)"
+        },
+        "web_links": {
+            "faculty_profile_page": "",
+            "google_scholar": "https://scholar.google.com/citations?hl=en&user=ZBPuWOUAAAAJ",
+            "orcid": "",
+            "researchgate_orcid_scopus": "",
+            "linkedin": "https://in.linkedin.com/in/narayan-agrawal-a02a3542"
+        },
+        "photo_url": "/images/supervisors/narayan-agarwal.jpeg"
+    },
+    "jyoti-kulkarni": {
+        "slug": "jyoti-kulkarni",
+        "basic_info": {
+            "full_name": "Dr. Jyoti Kulkarni",
+            "designation": "Lecturer",
+            "faculty": "Faculty of Electronics and Electrical Engineering Skills (FEEES)",
+            "department": "Electrical Engineering",
+            "official_email": "Jyoti.kulkarni@dseu.ac.in",
+            "contact_number": "9013261414",
+            "office_address": "PUSA Campus-I, DSEU"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "DTU, 2020",
+            "experience_years": "26"
+        },
+        "research_profile": {
+            "broad_research_areas": "Renewable energy",
+            "specific_research_interests": "Converter for grid interfacing of renewable energy, multilevel converter",
+            "publications_last_5_years": "4",
+            "patents": "",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "",
+            "masters_dissertations_guided": ""
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": "Institute of Engineers"
+        },
+        "web_links": {
+            "faculty_profile_page": "https://dseu.ac.in/faculty/67fcb6a3594afd76950ae365",
+            "google_scholar": "https://scholar.google.com/citations?user=XBm1ifAAAAAJ&hl=en",
+            "orcid": "0000-0001-6593-0784",
+            "researchgate_orcid_scopus": "https://www.researchgate.net/profile/Jyoti-Kulkarni-8",
+            "linkedin": "https://www.linkedin.com/in/dr-jyoti-kulkarni-b9756113a/"
+        },
+        "photo_url": "/images/supervisors/jyoti-kulkarni.jpeg"
+    },
+    "kanwarjeet-singh": {
+        "slug": "kanwarjeet-singh",
+        "basic_info": {
+            "full_name": "Dr. Kanwarjeet Singh",
+            "designation": "Assistant Professor",
+            "faculty": "Mechanical Engineering",
+            "department": "Tool and Production Engineering",
+            "official_email": "kanwarjeet.singh@dseu.ac.in",
+            "contact_number": "",
+            "office_address": "DSEU Wazirpur Campus"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D. Mechanical Engineering",
+            "alma_mater": "Gautam Buddha University, 2019",
+            "experience_years": "15 years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Manufacturing, surface coating, microwave hybrid heating (cladding, joining, and composites), injection moulding, plastic processing",
+            "specific_research_interests": "Manufacturing, surface coating, microwave hybrid heating (cladding, joining, and composites), injection moulding, plastic processing",
+            "publications_last_5_years": "12 papers in the last 5 years",
+            "patents": "",
+            "projects": "Completed DST Research Project no SP/YO/060/2017 as Co-Investigator titled 'Noval Biodegradable Cutting Fluid Development for Industrial Application'",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "Guiding one Ph.D. student",
+            "masters_dissertations_guided": "Guided more than 40 M.Tech. students"
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": "Life Member of International Association of Engineers (IAENG); Life Member of Indian Society for Technical Education; Life Member of The Robotics Society (TRS)"
+        },
+        "web_links": {
+            "faculty_profile_page": "",
+            "google_scholar": "https://scholar.google.com/citations?hl=en&user=4ocO3fQAAAAJ",
+            "orcid": "https://orcid.org/0000-0002-0619-8543",
+            "researchgate_orcid_scopus": "",
+            "linkedin": ""
+        },
+        "photo_url": "/images/supervisors/kanwarjeet-singh.jpeg"
+    },
+    "monica-chopra": {
+        "slug": "monica-chopra",
+        "basic_info": {
+            "full_name": "Dr. Monica Chopra",
+            "designation": "Lecturer (Campus Director)",
+            "faculty": "Permanent",
+            "department": "Department of Pharmaceutical Science",
+            "official_email": "monica.chopra@dseu.ac.in",
+            "contact_number": "9810166159",
+            "office_address": "J-1/63, Flat A, Gupta Colony, Khirki Extension, Malviya Nagar, New Delhi-110017"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "Jamia Hamdard University, New Delhi (1998)",
+            "experience_years": "27 years including 2 years of post-doctoral research work at National Institute of Immunology, New Delhi (1999-2001)"
+        },
+        "research_profile": {
+            "broad_research_areas": "Pharmacy, Pharmaceutical Chemistry, Synthetic Chemistry",
+            "specific_research_interests": "Doctorate and post-doctoral research experience as a pharmacist and pharmaceutical chemist with over 27 years of research experience in pharmaceutical chemistry and modern analytical techniques, and over 27 years of teaching experience mainly in pharmaceutical chemistry, drug design, modern analytical techniques, pharmacology, toxicology, and pharmacognosy. Academic background in pharmacy, pharmaceutical and synthetic chemistry. Knowledge of good laboratory practices and medical databases.",
+            "publications_last_5_years": "01",
+            "patents": "",
+            "projects": "AICTE Major Research Project (2009-2012): 'Synthesis of Carbodithioic acid esters of N-ethylmaleimide as potential Spermicides' (Rs. 20.00 Lakhs grant). UGC Major Research Project (2011-2014): 'Synthesis, Characterization, QSAR and biological evaluation of some novel pyrrolidine based DPP-4 inhibitors' (Rs. 7,97,800 grant).",
+            "collaborations": "National Institute of Immunology, Aruna Asaf Ali Marg, New Delhi (1999-2001) — Post-doctoral research on 'Synthesis of some early and related parasitic glycosyl phosphatidyl inositol (GPI) cell surface molecules and their application in Protein Kinase C Inhibition Studies' funded by the Department of Biotechnology, Ministry of Health, Government of India."
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "02 Ph.D. students (Pharmacy) — Ms. Divya (2014) and Ms. Mani Sharma (2014)",
+            "masters_dissertations_guided": "10 Master of Pharmacy students guided between 2007 and 2014"
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": "Registered Pharmacist with Delhi Pharmacy Council; Life Member of Indian Pharmacy Graduates Association (IPGA); Life Member of Association of Pharmaceutical Teachers of India (APTI)"
+        },
+        "web_links": {
+            "faculty_profile_page": "https://dseu.ac.in/campus/dseu-dheerpur-campus",
+            "google_scholar": "",
+            "orcid": "",
+            "researchgate_orcid_scopus": "",
+            "linkedin": "https://in.linkedin.com/in/monica-chopra-7b59a47b"
+        },
+        "photo_url": "/images/supervisors/monica-chopra.jpeg"
+    },
+    "charu-gaur": {
+        "slug": "charu-gaur",
+        "basic_info": {
+            "full_name": "Dr. Charu Gaur",
+            "designation": "Assistant Professor",
+            "faculty": "Faculty of Scientific Skills",
+            "department": "Physics",
+            "official_email": "charu.gaur@dseu.ac.in",
+            "contact_number": "",
+            "office_address": "Maa Anandmayee Marg, Okhla Phase II, New Delhi-110020"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "IIT Delhi, 2019",
+            "experience_years": "15 years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Applied optics",
+            "specific_research_interests": "Phase imaging, computational imaging",
+            "publications_last_5_years": "08",
+            "patents": "Design patent 01",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "Nil",
+            "masters_dissertations_guided": "Nil"
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": "Lifetime member, Indian Association of Physics Teachers; IEEE Member"
+        },
+        "web_links": {
+            "faculty_profile_page": "",
+            "google_scholar": "https://scholar.google.com/citations?user=n0TO3_sAAAAJ&hl=en&oi=ao",
+            "orcid": "",
+            "researchgate_orcid_scopus": "https://www.scopus.com/authid/detail.uri?authorId=56850481500",
+            "linkedin": "charu-gaur-5729b31a"
+        },
+        "photo_url": "/images/supervisors/charu-gaur.jpeg"
+    },
+    "vaibhav-chandra": {
+        "slug": "vaibhav-chandra",
+        "basic_info": {
+            "full_name": "Dr. Vaibhav Chandra",
+            "designation": "Assistant Professor",
+            "faculty": "Permanent/Regular",
+            "department": "Department of Mechanical Engineering",
+            "official_email": "vaibhav.chandra@dseu.ac.in",
+            "contact_number": "9268253421",
+            "office_address": "DSEU Wazirpur Campus, Wazirpur Industrial Area, Delhi-110052"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "Indian Institute of Technology Delhi, Mechanical Engineering Department, 2021",
+            "experience_years": "13 years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Production engineering, sheet metal forming, machining process, design, optimization, injection moulding, tool engineering",
+            "specific_research_interests": "Advanced machining process, sustainable manufacturing, optimization on machining process, injection moulding process and its optimization, mould design and development, sheet metal forming, advanced sheet metal forming, tribological behavior in bulk and sheet forming, friction and lubrication technique, forming limit analysis",
+            "publications_last_5_years": "04 papers in journals and 17 papers in international conferences",
+            "patents": "Nil",
+            "projects": "Nil",
+            "collaborations": "Nil"
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "01 ongoing",
+            "masters_dissertations_guided": "Approximately 25 M.Tech dissertations guided"
+        },
+        "administrative_roles": {
+            "boards_committees": "Nominated as a Member of Curriculum Review Committee for B.Tech and M.Tech courses at DSEU level",
+            "professional_memberships": "Lifetime member of VIBHA India; Lifetime member of The Institution of Engineers (India)"
+        },
+        "web_links": {
+            "faculty_profile_page": "",
+            "google_scholar": "https://scholar.google.com/citations?user=PDfFMhYAAAAJ&hl=en",
+            "orcid": "0000-0003-0303-4591",
+            "researchgate_orcid_scopus": "",
+            "linkedin": ""
+        },
+        "photo_url": "/images/supervisors/vaibhav-chandra.jpeg"
+    },
+    "krishna-singh": {
+        "slug": "krishna-singh",
+        "basic_info": {
+            "full_name": "Dr. Krishna Singh",
+            "designation": "",
+            "faculty": "Electronics",
+            "department": "Electronics and Communication Engineering",
+            "official_email": "krishna.singh@dseu.ac.in",
+            "contact_number": "",
+            "office_address": "G. B. Pant DSEU Okhla I Campus"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "IIT Roorkee",
+            "experience_years": "31 years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Signal and image processing, machine learning and deep learning, all areas of communication engineering",
+            "specific_research_interests": "Signal and image processing using machine learning and deep learning",
+            "publications_last_5_years": "20+",
+            "patents": "",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "2 completed, 1 thesis submitted, 1 ongoing",
+            "masters_dissertations_guided": "20+"
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": "Senior Member IEEE, Fellow Member IETE, Life Member ISTE"
+        },
+        "web_links": {
+            "faculty_profile_page": "https://dseu.ac.in/dept/67dbf40f8d17c538db56677d",
+            "google_scholar": "https://scholar.google.com/citations?user=eHT1PlwAAAAJ&hl=en",
+            "orcid": "0000-0003-1909-1320",
+            "researchgate_orcid_scopus": "https://www.researchgate.net/profile/Krishna-Singh-40",
+            "linkedin": ""
+        },
+        "photo_url": "/images/supervisors/krishna-singh.jpeg"
+    },
     "gaurav-arora": {
         "slug": "gaurav-arora",
         "basic_info": {
@@ -115,7 +484,7 @@
         "web_links": {
             "faculty_profile_page": "",
             "google_scholar": "",
-            "researchgate_orcid_scopus": "https://orcid.org/0000-0002-8390-9273",
+            "researchgate_orcid_scopus": "0000-0002-8390-9273",
             "linkedin": ""
         },
         "photo_url": "/images/supervisors/pramod-kumar-goyal.png"
@@ -195,7 +564,7 @@
         "web_links": {
             "faculty_profile_page": "",
             "google_scholar": "https://scholar.google.com/citations?hl=en&user=HUC4gi8AAAAJ",
-            "researchgate_orcid_scopus": "https://orcid.org/0000-0002-9431-6609",
+            "researchgate_orcid_scopus": "0000-0002-9431-6609",
             "linkedin": ""
         },
         "photo_url": "/images/supervisors/nanak-ram.jpeg"
@@ -275,7 +644,7 @@
         "web_links": {
             "faculty_profile_page": "https://dseu.ac.in/faculty/67fcb6a3594afd76950ae34c",
             "google_scholar": "https://scholar.google.com/citations?authuser=1&user=YJQgZOUAAAAJ",
-            "researchgate_orcid_scopus": "https://orcid.org/0000-0001-8672-7603",
+            "researchgate_orcid_scopus": "0000-0001-8672-7603",
             "linkedin": ""
         },
         "photo_url": "/images/supervisors/dinesh-yadav.jpg"

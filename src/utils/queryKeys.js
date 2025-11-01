@@ -21,6 +21,9 @@ export const QUERY_KEYS = Object.freeze({
     GET_EXAMINATION_NOTICES: "examination",
 
     // result
-    GET_PROGRAM_AND_CAMPUS_DETAILS_BY_DEGREE: "programAndCampusDetailsByDegree"
+    GET_PROGRAM_AND_CAMPUS_DETAILS_BY_DEGREE: "programAndCampusDetailsByDegree",
+
+    // examination
+    GET_EXAMINATIONS: "getExaminations"
 });
 

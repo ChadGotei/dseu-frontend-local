@@ -10,6 +10,23 @@ const Supervisor = () => {
 
   const supervisor = supervisorDetailsData[slug];
 
+  if (!supervisor) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[50vh] bg-gradient-to-b from-gray-50 to-white text-center px-6">
+          <p className="text-gray-600 mb-6">
+            The supervisor you’re trying to view doesn’t exist or the link is incorrect.
+          </p>
+          <button
+            onClick={() => navigate('/research/supervisors')}
+            className="px-5 py-2.5 bg-blue-600 text-white rounded-md font-medium shadow hover:bg-blue-700 hover:shadow-lg transition-all"
+          >
+            Go to Supervisors
+          </button>
+      </div>
+    );
+  }
+
+
   const sections = useMemo(() => {
     const allSections = [
       { key: 'basic-info', label: 'Basic Info', icon: <Mail size={16} />, data: supervisor.basic_info },

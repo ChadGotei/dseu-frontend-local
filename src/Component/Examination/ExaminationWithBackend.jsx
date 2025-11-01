@@ -1,28 +1,40 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Listbox } from "@headlessui/react";
+import { useQuery } from "@tanstack/react-query";
+
 import HeadingText from "../Reusable/HeadingText";
-import { examinationNav, examinationData } from "./examinationData";
 import ExaminationSidebar from "./ExaminationSidebar";
+
+import { examinationNav } from "./examinationData";
+import { QUERY_KEYS } from "../../utils/queryKeys";
+import { getExaminationsBySection } from "../../utils/apiservice";
 
 const Examination = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
   const params = new URLSearchParams(location.search);
-  const sectionParam = params.get("section") || "exam notices";
+  const sectionParam = params.get("section") || "notices";
 
   const [selected, setSelected] = useState(
     examinationNav.find((item) => item.key === sectionParam) || examinationNav[0]
   );
 
-  // Keep state in sync with URL param
+  // Update when URL changes
   useEffect(() => {
     const current = examinationNav.find((item) => item.key === sectionParam);
     if (current && current.key !== selected.key) {
       setSelected(current);
     }
   }, [sectionParam]);
+
+  const { data, isLoading, isError } = useQuery({
+    queryKey: [QUERY_KEYS.GET_EXAMINATIONS, selected.key],
+    queryFn: () => getExaminationsBySection(selected.key),
+    enabled: !!selected.key,
+    staleTime: 5 * 60 * 1000,
+  });
 
   const handleChange = (item) => {
     setSelected(item);
@@ -33,45 +45,48 @@ const Examination = () => {
     }
   };
 
-  // Map your "exam ..." keys to actual data keys in examinationData
-  const sectionKeyMap = {
-    "exam notices": "notices",
-    "exam results": "results",
-    "exam datesheet": "datesheet",
-    "exam fee-link": "fee-link",
-  };
+  const renderContent = () => {
+    if (isLoading)
+      return (
+        <p className="text-center text-gray-500 mt-6 animate-pulse">
+          Loading {selected.label}...
+        </p>
+      );
 
-  const renderTableSection = (key, heading) => {
-    const dataKey = sectionKeyMap[key]; // map to real key
-    const data = examinationData[dataKey];
+    if (isError)
+      return (
+        <p className="text-center text-red-600 mt-6">
+          Failed to load examination data.
+        </p>
+      );
 
     if (!data || data.length === 0)
-      return <p className="text-gray-500 mt-6">No records found.</p>;
+      return <p className="text-center text-gray-500 mt-6">No documents found.</p>;
 
     return (
       <div>
-        <HeadingText heading={heading} headingCN="text-blue-900" />
+        <HeadingText heading={selected.label} headingCN="text-blue-900" />
         <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 mt-10">
           <div className="flex justify-between bg-blue-900 text-white font-semibold px-6 py-3">
             <div className="flex-1">Title / File</div>
-            <div className="w-40 text-right">Uploading Date</div>
+            <div className="w-40 text-right">Uploaded</div>
           </div>
           <div className="divide-y divide-gray-200">
-            {data.map((item, idx) => (
+            {data.map((doc, idx) => (
               <div
                 key={idx}
                 className="flex justify-between items-center px-6 py-3 hover:bg-blue-50 transition"
               >
                 <a
-                  href={item.fileLink}
+                  href={doc.fileLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-700 hover:underline flex-1 pr-2 text-xs sm:text-sm lg:text-base"
+                  className="text-blue-700 hover:underline flex-1 pr-2 text-xs sm:text-sm md:text-base"
                 >
-                  {item.title}
+                  {doc.title}
                 </a>
-                <div className="w-40 text-right text-gray-700 text-xs sm:text-sm lg:text-base">
-                  {item.createdAt.toLocaleDateString("en-IN")}
+                <div className="w-40 text-right text-gray-700 text-xs sm:text-sm md:text-base">
+                  {new Date(doc.createdAt).toLocaleDateString("en-IN")}
                 </div>
               </div>
             ))}
@@ -81,23 +96,8 @@ const Examination = () => {
     );
   };
 
-  const renderContent = () => {
-    switch (selected.key) {
-      case "exam notices":
-        return renderTableSection("exam notices", "Examination Notices");
-      case "exam results":
-        return renderTableSection("exam results", "Examination Results");
-      case "exam datesheet":
-        return renderTableSection("exam datesheet", "Examination Datesheet");
-      case "exam fee-link":
-        return renderTableSection("exam fee-link", "Fee Links");
-      default:
-        return <p>No data found.</p>;
-    }
-  };
-
   return (
-    <div className="flex flex-col md:flex-row md:justify-center bg-[#f8fafc] py-10">
+    <div className="flex flex-col md:flex-row md:justify-center bg-[#f8fafc] min-h-screen">
       {/* Mobile Dropdown */}
       <div className="w-full max-w-xs mx-auto mt-4 md:hidden">
         <Listbox value={selected} onChange={handleChange}>
@@ -112,9 +112,7 @@ const Examination = () => {
                   value={item}
                   className={({ active }) =>
                     `cursor-pointer select-none px-4 py-2 ${
-                      active
-                        ? "bg-blue-100 text-blue-900"
-                        : "text-gray-900"
+                      active ? "bg-blue-100 text-blue-900" : "text-gray-900"
                     }`
                   }
                 >

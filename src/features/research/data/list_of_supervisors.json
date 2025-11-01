@@ -153,13 +153,15 @@
                 "name": "Dr. Krishna Singh",
                 "designation": "Associate Professor",
                 "supervisor_id": "DSEU/ECE/RS/0003",
-                "slug": "krishna-singh"
+                "slug": "krishna-singh",
+                "hasData": true
             },
             {
                 "name": "Dr. Rohit Anand",
                 "designation": "Assistant Professor",
                 "supervisor_id": "DSEU/ECE/RS/0002",
-                "slug": "rohit-anand"
+                "slug": "rohit-anand",
+                "hasData": true
             },
             {
                 "name": "Dr. Surendra K. Gupta",
@@ -195,13 +197,15 @@
                 "name": "Dr. Narayan Agrawal",
                 "designation": "Associate Professor",
                 "supervisor_id": "DSEU/ME/RS/0003",
-                "slug": "narayan-agrawal"
+                "slug": "narayan-agarwal",
+                "hasData": true
             },
             {
                 "name": "Dr. Kanwar Jeet Singh",
                 "designation": "Assistant Professor",
                 "supervisor_id": "DSEU/ME/RS/0004",
-                "slug": "kanwar-jeet-singh"
+                "slug": "kanwarjeet-singh",
+                "hasData": true
             },
             {
                 "name": "Dr. Dayanidhi Krishana Pathak",
@@ -213,7 +217,8 @@
                 "name": "Dr. Vaibhav Chandra",
                 "designation": "Assistant Professor",
                 "supervisor_id": "DSEU/ME/RS/0006",
-                "slug": "vaibhav-chandra"
+                "slug": "vaibhav-chandra",
+                "hasData": true
             },
             {
                 "name": "Dr. Vineet Kumar",
@@ -257,7 +262,8 @@
                 "name": "Dr. Bhajneet Singh",
                 "designation": "Assistant Professor",
                 "supervisor_id": "DSEU/ME/RS/0013",
-                "slug": "bhajneet-singh"
+                "slug": "bhajneet-singh",
+                "hasData": true
             },
             {
                 "name": "Dr. Sanjeev Kumar",
@@ -300,7 +306,8 @@
                 "name": "Dr. Jyoti Kulkarni",
                 "designation": "Lecturer",
                 "supervisor_id": "DSEU/EE/RS/0001",
-                "slug": "jyoti-kulkarni"
+                "slug": "jyoti-kulkarni",
+                "hasData": true
             }
         ]
     },
@@ -363,7 +370,8 @@
                 "name": "Dr. Ashima Sharma",
                 "designation": "Assistant Professor",
                 "supervisor_id": "DSEU/SS/RS/0002",
-                "slug": "ashima-sharma"
+                "slug": "ashima-sharma",
+                "hasData": true
             }
         ]
     },
@@ -374,7 +382,20 @@
                 "name": "Dr. Monica Chopra",
                 "designation": "Lecturer (Campus Director)",
                 "supervisor_id": "DSEU/PS/RS/0001",
-                "slug": "monica-chopra"
+                "slug": "monica-chopra",
+                "hasData": true
+            }
+        ]
+    },
+    "department_of_physics": {
+        "name": "Physics",
+        "supervisors": [
+            {
+                "name": "Dr. Charu Gaur",
+                "designation": "Assistant Professor",
+                "supervisor_id": "-",
+                "slug": "charu-gaur",
+                "hasData": true
             }
         ]
     }
