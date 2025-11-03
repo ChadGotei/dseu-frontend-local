@@ -3,7 +3,7 @@
 export const examinationNav = [
   { label: "Notices", key: "exam notices" },
   { label: "Results", key: "exam results" },
-  { label: "Datesheet", key: "exam datesheet" },
+  // { label: "Datesheet", key: "exam datesheet" },
   {
     label: "Fee Links",
     key: "exam fee-link",
@@ -36,18 +36,18 @@ export const examinationData = {
       createdAt: new Date(Date.now() - 4 * 86400000),
     },
   ],
-  datesheet: [
-    {
-      title: "B.Tech Semester VI (Nov 2025 Exams)",
-      fileLink: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-      createdAt: new Date(Date.now() - 1 * 86400000),
-    },
-    {
-      title: "Diploma in ECE (Nov 2025)",
-      fileLink: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-      createdAt: new Date(Date.now() - 2 * 86400000),
-    },
-  ],
+  // datesheet: [
+  //   {
+  //     title: "B.Tech Semester VI (Nov 2025 Exams)",
+  //     fileLink: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+  //     createdAt: new Date(Date.now() - 1 * 86400000),
+  //   },
+  //   {
+  //     title: "Diploma in ECE (Nov 2025)",
+  //     fileLink: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+  //     createdAt: new Date(Date.now() - 2 * 86400000),
+  //   },
+  // ],
   "fee-link": [
     {
       title: "Issue of Provisional/Migration Fee Portal",

@@ -167,7 +167,8 @@
                 "name": "Dr. Surendra K. Gupta",
                 "designation": "Lecturer",
                 "supervisor_id": "DSEU/ECE/RS/0004",
-                "slug": "surendra-k-gupta"
+                "slug": "surendra-kumar-gupta",
+                "hasData": true
             }
         ]
     },
@@ -269,7 +270,8 @@
                 "name": "Dr. Sanjeev Kumar",
                 "designation": "Lecturer",
                 "supervisor_id": "DSEU/ME/RS/0014",
-                "slug": "sanjeev-kumar"
+                "slug": "sanjeev-kumar",
+                "hasData": true
             },
             {
                 "name": "Dr. Ajay Chillar",

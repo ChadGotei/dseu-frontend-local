@@ -1,4 +1,4 @@
-import { Plus, FileSearch, PersonStanding, LogOut } from "lucide-react";
+import { Plus, FileSearch, LogOut } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import withAuthProtection from "./withAuthProtection";
@@ -19,12 +19,6 @@ const dashboardItems = [
     path: "/admin/view-pdfs",
     icon: FileSearch,
   },
-  {
-    id: "result",
-    label: "Add Student",
-    path: "/admin/result/add-student",
-    icon: PersonStanding,
-  },
 ];
 
 const Dashboard = () => {
@@ -32,12 +26,13 @@ const Dashboard = () => {
 
   const handleLogout = () => {
     sessionStorage.clear();
-    showSuccessToast("User logged our successfuly!")
+    showSuccessToast("User logged out successfully!");
     navigate("/admin-login");
   };
 
   return (
     <div className="flex flex-col min-h-[92vh] md:min-h-[70vh] items-center justify-center px-4 bg-gray-50 relative">
+      {/* Logout Button */}
       <button
         onClick={handleLogout}
         className="
@@ -52,15 +47,17 @@ const Dashboard = () => {
         Logout
       </button>
 
+      {/* Heading */}
       <HeadingText
         heading="Dashboard"
         headingCN="text-4xl md:text-5xl font-bold mb-2 text-center"
       />
 
+      {/* Dashboard Grid */}
       <div
         className="
-          grid w-full max-w-5xl mt-8 gap-5
-          grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
+          grid w-full max-w-3xl mt-10 gap-6
+          grid-cols-1 sm:grid-cols-2
         "
       >
         {dashboardItems.map(({ id, label, path, icon: Icon }) => (
@@ -70,8 +67,8 @@ const Dashboard = () => {
             aria-label={label}
             onClick={() => navigate(path)}
             className="
-              group relative flex flex-col items-center justify-center
-              rounded-2xl border border-gray-200 bg-white p-6 sm:p-8
+              group flex flex-col items-center justify-center
+              rounded-2xl border border-gray-200 bg-white p-8
               shadow-md transition
               hover:shadow-xl hover:border-blue-500 hover:bg-blue-50
               focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2
@@ -81,13 +78,13 @@ const Dashboard = () => {
             <span
               className="
                 inline-flex items-center justify-center
-                h-24 w-24 md:h-[140px] md:w-[140px]
+                h-24 w-24 md:h-[120px] md:w-[120px]
                 rounded-xl border border-dashed border-gray-200
                 transition
                 group-hover:border-blue-300
               "
             >
-              <Icon className="h-12 w-12 md:h-16 md:w-16 text-gray-400 transition-colors group-hover:text-blue-500" />
+              <Icon className="h-12 w-12 md:h-14 md:w-14 text-gray-400 transition-colors group-hover:text-blue-500" />
             </span>
 
             <span className="mt-4 text-base md:text-lg font-semibold text-gray-700 transition-colors group-hover:text-blue-600">

@@ -1,4 +1,87 @@
 {
+    "sanjeev-kumar": {
+        "slug": "sanjeev-kumar",
+        "basic_info": {
+            "full_name": "Dr. Sanjeev Kumar",
+            "designation": "Lecturer (Sr. Scale)",
+            "faculty": "Engineering and Technology",
+            "department": "Mechanical Engineering",
+            "official_email": "sanjeev.kumar2@dseu.ac.in",
+            "contact_number": "9810491711",
+            "office_address": "GND DSEU Rohini Campus, Delhi"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "Delhi Technological University, Delhi, 2024",
+            "experience_years": "14 years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Renewable energy, supply chain, life cycle analysis, production engineering",
+            "specific_research_interests": "",
+            "publications_last_5_years": "7",
+            "patents": "",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "",
+            "masters_dissertations_guided": ""
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": ""
+        },
+        "web_links": {
+            "faculty_profile_page": "https://dseu.ac.in/faculty/67fcb6a3594afd76950ae3c0",
+            "google_scholar": "https://scholar.google.com/citations?hl=en&user=5BZuBbUAAAAJ",
+            "orcid": "0000-0002-8119-8594",
+            "researchgate_orcid_scopus": "",
+            "linkedin": "https://www.linkedin.com/in/sanjeev-kumar-b913397a/"
+        },
+        "photo_url": "/images/supervisors/sanjeev-kumar.jpeg"
+    },
+    "surendra-kumar-gupta": {
+        "slug": "surendra-kumar-gupta",
+        "basic_info": {
+            "full_name": "Dr. Surendra Kumar Gupta",
+            "designation": "Lecturer",
+            "faculty": "Electronics Engineering (ECE)",
+            "department": "Electronics Engineering (ECE)",
+            "official_email": "surendra.k.gupta@dseu.ac.in",
+            "contact_number": "+91 9818034426",
+            "office_address": "Ambedkar DSEU Campus, Shakarpur, Delhi-110092"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "Uttarakhand Technical University, Dehradun, India, 2015",
+            "experience_years": "25 years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Micro-strip antennas, IoTs, automation and robotics",
+            "specific_research_interests": "Micro-strip antennas / printed antennas, smart antennas, 5G/6G network structures, IoTs, wireless communications, digital automation, and robotics",
+            "publications_last_5_years": "30",
+            "patents": "",
+            "projects": "",
+            "collaborations": "",
+            "books_published": "02 international publications — 1. Printed Antenna: Theory and Design (Taylor & Francis, International) 2. Printed Antennas for 5G Networks (Springer, International)"
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "03",
+            "masters_dissertations_guided": ""
+        },
+        "administrative_roles": {
+            "boards_committees": "BoS (ECE), DSEU",
+            "professional_memberships": "IEEE (Member), IEI (Member)"
+        },
+        "web_links": {
+            "faculty_profile_page": "",
+            "google_scholar": "",
+            "orcid": "",
+            "researchgate_orcid_scopus": "https://www.researchgate.net/profile/Surendra-Gupta-9",
+            "linkedin": "https://www.linkedin.com/in/dr-surendra-k-gupta-0924aa31/"
+        },
+        "photo_url": "/images/supervisors/surendra-kumar-gupta.jpeg"
+    },
     "ashima-sharma": {
         "slug": "ashima-sharma",
         "basic_info": {
