@@ -13,15 +13,15 @@ const Supervisor = () => {
   if (!supervisor) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[50vh] bg-gradient-to-b from-gray-50 to-white text-center px-6">
-          <p className="text-gray-600 mb-6">
-            The supervisor you’re trying to view doesn’t exist or the link is incorrect.
-          </p>
-          <button
-            onClick={() => navigate('/research/supervisors')}
-            className="px-5 py-2.5 bg-blue-600 text-white rounded-md font-medium shadow hover:bg-blue-700 hover:shadow-lg transition-all"
-          >
-            Go to Supervisors
-          </button>
+        <p className="text-gray-600 mb-6">
+          The supervisor you’re trying to view doesn’t exist or the link is incorrect.
+        </p>
+        <button
+          onClick={() => navigate('/research/supervisors')}
+          className="px-5 py-2.5 bg-blue-600 text-white rounded-md font-medium shadow hover:bg-blue-700 hover:shadow-lg transition-all"
+        >
+          Go to Supervisors
+        </button>
       </div>
     );
   }
@@ -133,7 +133,7 @@ const Supervisor = () => {
             <DetailItem icon={<Globe size={16} />} label="Department" value={basic_info.department} />
             <DetailItem icon={<BookOpen size={16} />} label="Faculty Type" value={basic_info.faculty} />
             <DetailItem icon={<Clock size={16} />} label="Designation" value={basic_info.designation} />
-            <DetailItem icon={<Globe size={16} />} label="Office Address" value={basic_info.office_address} fullWidth={true} />
+            <DetailItem icon={<Globe size={16} />} label="Office Location" value={basic_info.office_address} fullWidth={true} />
           </SectionContainer>
 
           {/* Academic Background Section */}

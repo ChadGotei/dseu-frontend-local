@@ -17,7 +17,8 @@
                 "name": "Prof. N. Jena",
                 "designation": "Professor",
                 "supervisor_id": "DSEU/Mgt/RS/0002",
-                "slug": "n-jena"
+                "slug": "n-jena",
+                "hasData": true
             }
         ]
     },
@@ -39,13 +40,15 @@
                 "name": "Dr. Preeti Bedi",
                 "designation": "Assistant Professor",
                 "supervisor_id": "DSEU/Mgt/RS/0005",
-                "slug": "preeti-bedi"
+                "slug": "preeti-bedi",
+                "hasData": true
             },
             {
                 "name": "Dr. Lata Rani",
                 "designation": "Associate Professor",
                 "supervisor_id": "DSEU/Mgt/RS/0007",
-                "slug": "lata-rani"
+                "slug": "lata-rani",
+                "hasData": true
             },
             {
                 "name": "Dr. Punita Duhan",
@@ -244,7 +247,8 @@
                 "name": "Dr. Praveen Kumar",
                 "designation": "Assistant Professor",
                 "supervisor_id": "DSEU/ME/RS/0010",
-                "slug": "praveen-kumar"
+                "slug": "praveen-kumar",
+                "hasData": true
             },
             {
                 "name": "Dr. Anil Kumar",
@@ -277,7 +281,8 @@
                 "name": "Dr. Ajay Chillar",
                 "designation": "Lecturer",
                 "supervisor_id": "DSEU/ME/RS/0015",
-                "slug": "ajay-chillar"
+                "slug": "ajay-chillar",
+                "hasData": true
             },
             {
                 "name": "Dr. Nanak Ram",

@@ -1,4 +1,209 @@
 {
+    "n-jena": {
+        "slug": "n-jena",
+        "basic_info": {
+            "full_name": "Prof. (Dr.) N. Jena",
+            "designation": "Professor",
+            "faculty": "Regular",
+            "department": "International Business Management",
+            "official_email": "narender.jena@dseu.ac.in",
+            "contact_number": "9650192158",
+            "office_address": "BTC Building, DSEU PUSA-II, New Delhi-110012"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D. – Supply Chain Management",
+            "alma_mater": "Indian Institute of Foreign Trade, Qutab Institutional Area, Ministry of Commerce, New Delhi, 2016",
+            "experience_years": "15 years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Sustainable logistics, logistics cost, networking design, and public policy",
+            "specific_research_interests": "Logistics cost optimization models, supply chain networking and route planning",
+            "publications_last_5_years": "13 papers",
+            "patents": "",
+            "projects": "Completed",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "",
+            "masters_dissertations_guided": "03"
+        },
+        "administrative_roles": {
+            "boards_committees": "Member, IRT New Delhi",
+            "professional_memberships": "Member, Material Management Review"
+        },
+        "web_links": {
+            "faculty_profile_page": "",
+            "google_scholar": "",
+            "orcid": "",
+            "researchgate_orcid_scopus": "",
+            "linkedin": ""
+        },
+        "photo_url": "/images/supervisors/n-jena.jpeg"
+    },
+    "lata-rani": {
+        "slug": "lata-rani",
+        "basic_info": {
+            "full_name": "Dr. Lata Rani",
+            "designation": "Associate Professor",
+            "faculty": "Faculty of Business, Finance & Managerial Skills",
+            "department": "Department of Banking, Financial Services and Insurance",
+            "official_email": "lata.rani@dseu.ac.in",
+            "contact_number": "9414242009, 8920344545",
+            "office_address": "Delhi Skill and Entrepreneurship University, Dwarka Sector-9, New Delhi-110077"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "Indira Gandhi National Open University (A Central University), 2016",
+            "experience_years": ""
+        },
+        "research_profile": {
+            "broad_research_areas": "Finance and accounting",
+            "specific_research_interests": "Behavioral finance, corporate governance, banking",
+            "publications_last_5_years": "12",
+            "patents": "1",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "",
+            "masters_dissertations_guided": ""
+        },
+        "administrative_roles": {
+            "boards_committees": "Permanent Member, All India Commerce Association; Permanent Member, All India Accounting Association",
+            "professional_memberships": ""
+        },
+        "web_links": {
+            "faculty_profile_page": "https://dseu.ac.in/dept/67dbf40f8d17c538db566778",
+            "google_scholar": "https://scholar.google.com/citations?user=eTsBXFEAAAAJ&hl=en",
+            "orcid": "",
+            "researchgate_orcid_scopus": "https://www.researchgate.net/profile/Lata-Rani-6?ev=hdr_xprf",
+            "linkedin": "https://www.linkedin.com/in/dr-lata-rani-a75b4242/"
+        },
+        "photo_url": "/images/supervisors/lata-rani.jpeg"
+    },
+    "praveen-kumar": {
+        "slug": "praveen-kumar",
+        "basic_info": {
+            "full_name": "Dr. Praveen Kumar",
+            "designation": "Assistant Professor",
+            "faculty": "Permanent/Regular",
+            "department": "Mechanical Engineering",
+            "official_email": "praveen.kumar@dseu.ac.in",
+            "contact_number": "9899399004",
+            "office_address": "DSEU Wazirpur Campus, Wazirpur Industrial Area, Delhi-110052"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D. – Sheet Metal Forming, Production Engineering",
+            "alma_mater": "Gautam Buddha University, Greater Noida, Uttar Pradesh, 2021",
+            "experience_years": "13.4 years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Sheet metal forming, friction stir welding, materials, manufacturing process, optimization, production engineering, and machining processes",
+            "specific_research_interests": "Sheet metal forming, advanced sheet metal forming, tribological behavior in bulk and sheet forming, friction and lubrication technique, finite element (FE) simulation of forming processes, forming limit analysis, smart manufacturing & digital integration, FSW of aluminium alloys & aluminium matrix composites (AMC), optimization",
+            "publications_last_5_years": "10 journal papers and 16 international conference papers",
+            "patents": "Granted one international patent and published one Indian patent",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "01 ongoing (since 2023)",
+            "masters_dissertations_guided": "25 M.Tech. dissertations guided"
+        },
+        "administrative_roles": {
+            "boards_committees": "Member of Review and redefine the curriculum of diploma course in Tool and Die Making running under DSEU, Delhi (08-06-2021); Member of organizing committee in ICSET-2022 (IFERP); Member of International/National Advisory Board/Technical Program/Reviewer Committee for 'International Conference on Engineering, Education and Entrepreneurship' (2019)",
+            "professional_memberships": "Lifetime Member, IAENG (International Association of Engineers); Lifetime Member, IFERP (Institute for Engineering Research and Publication); Lifetime Member, The Robotics Society"
+        },
+        "web_links": {
+            "faculty_profile_page": "",
+            "google_scholar": "",
+            "orcid": "0009-0004-3537-4835",
+            "researchgate_orcid_scopus": "",
+            "linkedin": ""
+        },
+        "photo_url": "/images/supervisors/praveen-kumar.jpeg"
+    },
+    "ajay-chillar": {
+        "slug": "ajay-chillar",
+        "basic_info": {
+            "full_name": "Ajay Chhillar",
+            "designation": "Lecturer",
+            "faculty": "Engineering and Technology",
+            "department": "Mechanical Engineering",
+            "official_email": "ajay.chhillar@dseu.ac.in",
+            "contact_number": "",
+            "office_address": "GND Rohini DSEU Campus"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "DCRUST, Murthal, 2017",
+            "experience_years": "17 years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Mechanical design and renewable energy",
+            "specific_research_interests": "Meshless techniques, plasticity, biofuels",
+            "publications_last_5_years": "07",
+            "patents": "",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "",
+            "masters_dissertations_guided": ""
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": "IEI"
+        },
+        "web_links": {
+            "faculty_profile_page": "",
+            "google_scholar": "",
+            "orcid": "",
+            "researchgate_orcid_scopus": "",
+            "linkedin": ""
+        },
+        "photo_url": "/images/supervisors/ajay-chhillar.jpeg"
+    },
+    "preeti-bedi": {
+        "slug": "preeti-bedi",
+        "basic_info": {
+            "full_name": "Dr. Preeti Bedi",
+            "designation": "Assistant Professor",
+            "faculty": "Faculty of Business, Finance and Managerial Skills (FBFMS)",
+            "department": "Banking, Financial Services and Insurance",
+            "official_email": "preeti.bedi@dseu.ac.in",
+            "contact_number": "",
+            "office_address": "Bhai Parmanand DSEU Campus"
+        },
+        "academic_background": {
+            "highest_qualification": "Ph.D.",
+            "alma_mater": "IGNOU, 2023",
+            "experience_years": "12 years"
+        },
+        "research_profile": {
+            "broad_research_areas": "Finance, sustainability, CSR",
+            "specific_research_interests": "CSR, CSP, sustainability, financial performance, finance",
+            "publications_last_5_years": "07",
+            "patents": "Design Patent: 'AI-based Kiosk for Financial Estimates and Quotes', Design No. 436007-001, issued on 21/01/2025",
+            "projects": "",
+            "collaborations": ""
+        },
+        "phd_supervision": {
+            "phd_students_supervised": "",
+            "masters_dissertations_guided": ""
+        },
+        "administrative_roles": {
+            "boards_committees": "",
+            "professional_memberships": ""
+        },
+        "web_links": {
+            "faculty_profile_page": "https://dseu.ac.in/faculty/67fcb6a3594afd76950ae30d",
+            "google_scholar": "",
+            "orcid": "",
+            "researchgate_orcid_scopus": "https://www.researchgate.net/profile/Preeti-Bedi?ev=hdr_xprf",
+            "linkedin": "https://www.linkedin.com/in/dr-preeti-bedi-b12447121/"
+        },
+        "photo_url": "/images/supervisors/preeti-bedi.jpeg"
+    },
     "sanjeev-kumar": {
         "slug": "sanjeev-kumar",
         "basic_info": {
@@ -389,9 +594,9 @@
             "broad_research_areas": "Production engineering, sheet metal forming, machining process, design, optimization, injection moulding, tool engineering",
             "specific_research_interests": "Advanced machining process, sustainable manufacturing, optimization on machining process, injection moulding process and its optimization, mould design and development, sheet metal forming, advanced sheet metal forming, tribological behavior in bulk and sheet forming, friction and lubrication technique, forming limit analysis",
             "publications_last_5_years": "04 papers in journals and 17 papers in international conferences",
-            "patents": "Nil",
-            "projects": "Nil",
-            "collaborations": "Nil"
+            "patents": "",
+            "projects": "",
+            "collaborations": ""
         },
         "phd_supervision": {
             "phd_students_supervised": "01 ongoing",
