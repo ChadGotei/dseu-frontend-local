@@ -11,7 +11,6 @@ import Logo from "../Reusable/Logo";
 
 import { navItems, carouselImages } from "../../constants/NAV-DATA.JS";
 
-
 //? for mobile view
 const SidebarNav = ({ isOpen, onClose, navItems }) => {
   // Sidebar component code remains unchanged
@@ -90,8 +89,9 @@ const SidebarNav = ({ isOpen, onClose, navItems }) => {
                     )}
                     {item.dropdownItems && (
                       <ChevronDown
-                        className={`ml-2 transition-transform duration-200 ${openDropdown === item.name ? "rotate-180" : ""
-                          }`}
+                        className={`ml-2 transition-transform duration-200 ${
+                          openDropdown === item.name ? "rotate-180" : ""
+                        }`}
                       />
                     )}
                   </div>
@@ -138,10 +138,11 @@ const SidebarNav = ({ isOpen, onClose, navItems }) => {
                                 )}
                                 {subItem.dropdownItems && (
                                   <ChevronDown
-                                    className={`w-4 h-4 ml-2 transition-transform duration-200 ${openNestedDropdown === subItem.name
-                                      ? "rotate-180"
-                                      : ""
-                                      }`}
+                                    className={`w-4 h-4 ml-2 transition-transform duration-200 ${
+                                      openNestedDropdown === subItem.name
+                                        ? "rotate-180"
+                                        : ""
+                                    }`}
                                   />
                                 )}
                               </div>
@@ -410,8 +411,10 @@ const ResponsiveHeader = () => {
       {/* Enhanced Desktop Navigation Bar */}
 
       <div className="hidden md:block bg-gradient-to-r from-blue-50 to-blue-100 shadow-lg shadow-blue-500/30 rounded-3xl mx-auto my-4 sticky top-0 z-50 md:w-[97%] lg:w-[96%] xl:w-[95%]">
-        <nav className="max-w-7xl mx-auto"> { /* // TODO: ml-7 2xl:mx-auto: to be added */}
-          <div className="flex justify-between items-center md:h-24 xl:h-16">
+        <nav className="max-w-7xl mx-auto">
+          {" "}
+          {/* // TODO: ml-7 2xl:mx-auto: to be added */}
+          <div className="flex justify-between items-center md:h-24 xl:h-16 2xl:mx-auto">
             <div className="flex items-center space-x-5 md:flex-wrap xl:flex-nowrap md:ml-5 lg:ml-0">
               {navItems.map((item) => (
                 <div
@@ -431,8 +434,9 @@ const ResponsiveHeader = () => {
                       {item.name}
                       {item.dropdownItems && (
                         <ChevronDown
-                          className={`ml-0.5 h-3 w-3 transition-transform duration-300 ${openDropdown === item.name ? "rotate-180" : ""
-                            }`}
+                          className={`ml-0.5 h-3 w-3 transition-transform duration-300 ${
+                            openDropdown === item.name ? "rotate-180" : ""
+                          }`}
                         />
                       )}
 
@@ -495,10 +499,11 @@ const ResponsiveHeader = () => {
                                   <span>{subItem.name}</span>
                                   {subItem.dropdownItems && (
                                     <ChevronDown
-                                      className={`inline-block ml-2 h-4 w-4 transition-transform duration-300 ${openNestedDropdown === subItem.name
-                                        ? "rotate-180"
-                                        : "rotate-270"
-                                        }`}
+                                      className={`inline-block ml-2 h-4 w-4 transition-transform duration-300 ${
+                                        openNestedDropdown === subItem.name
+                                          ? "rotate-180"
+                                          : "rotate-270"
+                                      }`}
                                     />
                                   )}
                                 </span>
