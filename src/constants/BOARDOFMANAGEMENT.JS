@@ -10,10 +10,10 @@ const boardOfManagement = [
     },
     {
         id: 2,
-        name: "Mr. Vivek Agarwal",
+        name: "Prof. Gagan Dhawan",
         designation: "Member Secretary",
         category: "Registrar",
-        src: vivekAggrawal,
+        src: registarar,
     },
     {
         id: 3,

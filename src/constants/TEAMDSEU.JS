@@ -73,8 +73,8 @@ const members = [
   },
   {
     id: 3,
-    name: "Mr. Vivek Agarwal",
-    src: vivekAggarwal,
+    name: "Prof. Gagan Dhawan",
+    src: gagandhawan,
     designation: "Registrar",
     category: "Registrar",
   },
