@@ -49,11 +49,10 @@ const JobListings = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`p-4 text-left transition-colors duration-200 ${
-                activeTab === tab.id
+              className={`p-4 text-left transition-colors duration-200 ${activeTab === tab.id
                   ? "bg-blue-100 text-black"
                   : "hover:bg-blue-100 text-black"
-              }`}
+                }`}
             >
               {tab.label}
             </button>
@@ -109,7 +108,7 @@ const JobListings = () => {
                         <td className="p-2 border">{index + 1}</td>
                         <td className="p-2 border">{item.fileName}</td>
                         <td className="p-2 border">
-                          <a
+                          {item.fileLink ? <a
                             href={item.fileLink}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -117,7 +116,7 @@ const JobListings = () => {
                           >
                             Notice{" "}
                             <FileText className="text-red-500" size={16} />
-                          </a>
+                          </a> : "-"}
                         </td>
                         <td className="p-2 border">
                           {item.vacancies ? item.vacancies : "-"}
@@ -125,8 +124,8 @@ const JobListings = () => {
                         <td className="p-2 border">
                           {item.uploadedAt
                             ? new Date(item.uploadedAt).toLocaleDateString(
-                                "en-GB"
-                              )
+                              "en-GB"
+                            )
                             : "-"}
                         </td>
                         <td className="p-2 border">
@@ -213,11 +212,10 @@ const MobileBar = ({ activeTab, setActiveTab }) => {
         <button
           key={tab.id}
           onClick={() => setActiveTab(tab.id)}
-          className={`p-1 flex-1 text-center text-sm font-medium transition-colors duration-200 rounded-lg shadow-sm ${
-            activeTab === tab.id
+          className={`p-1 flex-1 text-center text-sm font-medium transition-colors duration-200 rounded-lg shadow-sm ${activeTab === tab.id
               ? "bg-blue-600 text-white"
               : "bg-gray-200 text-black hover:bg-gray-300"
-          }`}
+            }`}
         >
           {tab.label}
         </button>

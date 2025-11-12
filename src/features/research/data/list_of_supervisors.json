@@ -97,6 +97,18 @@
                 "supervisor_id": "DSEU/CSE/RS/0004",
                 "slug": "pramod-kumar-goyal",
                 "hasData": true
+            },
+            {
+                "name": "Dr. Indu Chhillar",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/CSE/RS/0005",
+                "slug": "indu-chhillar"
+            },
+            { 
+                "name": "Dr. Akhileshwar Prasad Agrawal",
+                "designation": "Lecturer",
+                "supervisor_id": "DSEU/CSE/RS/0006",
+                "slug": "akhileshwar-prasad-agrawal"
             }
         ]
     },
