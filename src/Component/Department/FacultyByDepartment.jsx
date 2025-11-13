@@ -26,6 +26,7 @@ const subCategories = [
   "Associate Professor",
   "Assistant Professor",
   "Lecturer",
+  "Emeritus Professor"
 ];
 
 const FacultyByDepartment = ({ deptId }) => {
