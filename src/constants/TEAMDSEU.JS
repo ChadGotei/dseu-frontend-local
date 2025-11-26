@@ -52,6 +52,7 @@ import {
   shubhaGV,
   rituSareen,
   shubhamChakraborty,
+  sumanDhawan,
 } from "../assets/team-dseu";
 
 
@@ -183,14 +184,6 @@ const members = [
     designation: "Campus Director - DSEU Dwarka Campus",
     category: "Campus Directors",
   },
-
-  {
-    id: 19,
-    name: "Mr. Porusu Ramanaiah",
-    src: porusuRamananiah,
-    designation: "Campus Director - DSEU Jaffarpur Campus",
-    category: "Campus Directors",
-  },
   {
     id: 20,
     name: "Dr. Pramod Kumar Goyal",
@@ -230,7 +223,7 @@ const members = [
     id: 25,
     name: "Prof. Shruti Tripathi",
     src: shrutiTripathi,
-    designation: "Campus Director - Kasturba DSEU Campus",
+    designation: "Campus Director - GB Pant DSEU Campus",
     category: "Campus Directors",
   },
   {
@@ -242,9 +235,16 @@ const members = [
   },
   {
     id: 27,
-    name: "Prof. Vibhakar Shrimali",
-    src: vibhakarShrimali,
-    designation: "Campus Director - GB Pant DSEU Campus",
+    name: "Dr. Suman Dhawan",
+    src: sumanDhawan,
+    designation: "Campus Director - Kasturba DSEU Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 19,
+    name: "Dr. S.V. Vageesha",
+    src: svVageesha,
+    designation: "Campus Director - DSEU Jaffarpur Campus",
     category: "Campus Directors",
   },
   {

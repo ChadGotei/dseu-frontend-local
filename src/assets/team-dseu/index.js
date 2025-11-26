@@ -51,7 +51,7 @@ import arindamKumarChanda from './arindamKumarChanda.jpeg';
 import ranbirSinghSharma from './ranbirSinghSharma.jpeg';
 import arunDabas from './arunDabas.png';
 import shubhamChakraborty from './shubhamChakraborty.jpeg';
-
+import sumanDhawan from "./sumanDhawan.jpeg"
 
 export {
     agrimTomar,
@@ -107,4 +107,5 @@ export {
     rituSareen,
     ranbirSinghSharma,
     shubhamChakraborty,
+    sumanDhawan
 };
