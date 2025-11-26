@@ -36,7 +36,7 @@ const page = () => {
       <OurPartners />
       <News />
       <EventsAndActivities />
-      <EventModel />
+      {/* <EventModel /> */}
     </>
   );
 };
