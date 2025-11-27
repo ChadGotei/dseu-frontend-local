@@ -405,17 +405,5 @@
                 "hasData": true
             }
         ]
-    },
-    "department_of_physics": {
-        "name": "Physics",
-        "supervisors": [
-            {
-                "name": "Dr. Charu Gaur",
-                "designation": "Assistant Professor",
-                "supervisor_id": "-",
-                "slug": "charu-gaur",
-                "hasData": true
-            }
-        ]
     }
 }
