@@ -6,11 +6,11 @@ const facultyLoginSamarth = "https://dseu.samarth.ac.in/index.php/site/login";
 const studentLoginSamarth = "https://dseu.samarth.edu.in/index.php/site/login";
 
 const menuItems = [
-  // {
-  //   label: "Examination",
-  //   type: "link",
-  //   to: "/examination",
-  // },
+  {
+    label: "Examination",
+    type: "link",
+    to: "/examination",
+  },
   { label: "Tenders", type: "link", to: "/tenders" },
   { label: "Admin Login", type: "link", to: "/admin-login" },
   { label: "Faculty Login", type: "modal" },
