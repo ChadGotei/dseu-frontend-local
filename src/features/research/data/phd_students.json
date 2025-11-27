@@ -3,6 +3,12 @@
     "Computer Science and Engineering": [
       {
         "academic_year": "2022-23",
+        "name": "Ms. Deepika Kirti",
+        "supervisor": "Dr. Sushil Kumar",
+        "RAC": "Dr. Amit Ramesh Khaparade, Dr. Anu Saini"
+      },
+      {
+        "academic_year": "2022-23",
         "name": "Prabhu Narayan",
         "supervisor": "Dr. Mamta Mittal",
         "RAC": "Dr. Vicky Kumar, Dr. S.P Ajith Kumar"
@@ -17,19 +23,19 @@
         "academic_year": "2023-24",
         "name": "Inderjeet",
         "supervisor": "Dr. Pankaj Lathar",
-        "RAC": "-"
+        "RAC": "Dr. Anu Saini, Dr. Shri Kant Patel"
       },
       {
         "academic_year": "2023-24",
         "name": "Pooja Gupta",
         "supervisor": "Dr. Pankaj Lathar",
-        "RAC": "-"
+        "RAC": "Dr. Shri Kant Patel, Dr. Vicky Kumar"
       },
       {
         "academic_year": "2023-24",
         "name": "Harminder Singh Bhatia",
         "supervisor": "Dr. Girish Kumar Sharma",
-        "RAC": "-"
+        "RAC": "Dr. Vicky Kumar, Dr. Sushil Kumar"
       }
     ],
     "Computer Applications": [
@@ -49,7 +55,7 @@
         "academic_year": "2023-24",
         "name": "Sudipta Acharjee",
         "supervisor": "Dr. Pankaj Lathar",
-        "RAC": "-"
+        "RAC": "Dr. Indu Chillar, Dr. Sushil Kumar"
       }
     ],
     "Mechanical Engineering": [
