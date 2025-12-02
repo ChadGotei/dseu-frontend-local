@@ -346,6 +346,20 @@ const members = [
     src: kamnaSachdeva,
     designation: "Director Academics",
     category: "Director Academics"
+  },
+  {
+    id: 43,
+    name: "Dr. Pankaj Lathar",
+    src: pankajLathar,
+    designation: "Joint Director Public Relation",
+    category: "Joint Director"
+  },
+  {
+    id: 44,
+    name: "Dr. Suman Dhawan",
+    src: sumanDhawan,
+    designation: "Joint Director Parternship",
+    category: "Joint Director"
   }
 ];
 
