@@ -255,13 +255,6 @@ const members = [
     category: "Officers",
   },
   {
-    id: 28,
-    name: "Mr. Mukesh Kumar Gupta",
-    src: mukeshKumarGupta,
-    designation: "OSD (Legal/RTI)",
-    category: "Officers",
-  },
-  {
     id: 30,
     name: "Ms. Parvathy Unnikrishnan",
     src: parvathyUnnikrishan,
@@ -348,6 +341,13 @@ const members = [
     category: "Director Academics"
   },
   {
+    id: 28,
+    name: "Mr. Mukesh Kumar Gupta",
+    src: mukeshKumarGupta,
+    designation: "Joint Director Legal",
+    category: "Joint Director",
+  },
+  {
     id: 43,
     name: "Dr. Pankaj Lathar",
     src: pankajLathar,
@@ -360,7 +360,7 @@ const members = [
     src: sumanDhawan,
     designation: "Joint Director Parternship",
     category: "Joint Director"
-  }
+  },
 ];
 
 export { members };
