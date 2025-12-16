@@ -349,7 +349,8 @@
                 "name": "Prof. Gagan Dhawan",
                 "designation": "Professor",
                 "supervisor_id": "DSEU/AMS/RS/0001",
-                "slug": "gagan-dhawan"
+                "slug": "gagan-dhawan",
+                "hasData": true
             },
             {
                 "name": "Dr. A Vamsi",
@@ -383,7 +384,8 @@
                 "name": "Prof. Kamna Sachdeva",
                 "designation": "Professor",
                 "supervisor_id": "DSEU/SS/RS/0001",
-                "slug": "kamna-sachdeva"
+                "slug": "kamna-sachdeva",
+                "hasData": true
             },
             {
                 "name": "Dr. Ashima Sharma",

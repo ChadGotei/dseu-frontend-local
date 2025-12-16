@@ -1,4 +1,83 @@
 {
+    "gagan-dhawan": {
+    "slug": "gagan-dhawan",
+    "basic_info": {
+      "full_name": "Prof. Dr. Gagan Dhawan",
+      "designation": "Professor and Dean",
+      "faculty": "Faculty of Allied Medical Sciences and Healthcare Skills (FAMSHS)",
+      "department": "Allied Medical Sciences",
+      "official_email": "gagan.dhawan@dseu.ac.in",
+      "contact_number": "9891086006",
+      "office_address": "DSEU HQ"
+    },
+    "academic_background": {
+      "highest_qualification": "Ph.D.; Post Doc (University of Massachusetts, Boston, USA)",
+      "alma_mater": "CSIR-IGIB & University of Delhi (2010)",
+      "experience_years": "25+ years"
+    },
+    "research_profile": {
+      "broad_research_areas": "Allied Medical Sciences; Biotechnology & Bioinformatics",
+      "specific_research_interests": "Nanomedicine; Computational Drug Design",
+      "publications_last_5_years": "20",
+      "projects": "05",
+      "collaborations": "National: 02; International: 04"
+    },
+    "phd_supervision": {
+      "phd_students_supervised": "03+03",
+      "masters_dissertations_guided": "01"
+    },
+    "administrative_roles": {
+      "boards_committees": "Council Member, National Commission for Allied and Healthcare Professions (NCAHP), Ministry of Health and Family Welfare (MoHFW), Government of India",
+      "professional_memberships": "Fellow, Indian Chemical Society (FICS); Chartered Chemist (CChem), Royal Society of Chemistry, London, UK; Fellow, Royal Society of Chemistry (FRSC), London, UK"
+    },
+    "web_links": {
+      "faculty_profile_page": "https://dseu.ac.in/dept/67dbf40f8d17c538db566775",
+      "google_scholar": "https://scholar.google.com/citations?user=68xd5s8AAAAJ&hl=en&oi=ao",
+      "researchgate_orcid_scopus": "https://orcid.org/0000-0001-7492-225X",
+      "linkedin": "https://www.linkedin.com/in/gagan-dhawan-0013/"
+    },
+    "photo_url": "/images/supervisors/gagan-dhawan.jpg"
+  },
+  "kamna-sachdeva": {
+    "slug": "kamna-sachdeva",
+    "basic_info": {
+      "full_name": "Dr. Kamna Sachdeva",
+      "designation": "Professor",
+      "faculty": "The Faculty of Converging Scientific and Technological Skills (FCSTS)",
+      "department": "Sustainability Sciences",
+      "official_email": "kamna.sachdeva@dseu.ac.in",
+      "contact_number": "+91-9891065393",
+      "office_address": "Room No. 125, First Floor, DSEU, Sector-9, Dwarka, Delhi"
+    },
+    "academic_background": {
+      "highest_qualification": "PhD",
+      "alma_mater": "Jawaharlal Nehru University, New Delhi (2008)",
+      "experience_years": "18+ years"
+    },
+    "research_profile": {
+      "broad_research_areas": "Urban transport planning and climate change; Air pollution and climate change linkages; Air Quality Management",
+      "specific_research_interests": "Health risk assessment and climate change; Sustainable urban transport management; Air quality management; Air pollution and climate change linkages",
+      "publications_last_5_years": "15",
+      "patents": "N/A",
+      "projects": "Multiple consultancy and funded research projects including DST-SERB, MOEFCC, ICIMOD (Nepal), and CPCB funded projects as Principal Investigator / Co-Principal Investigator",
+      "collaborations": "National and international collaborations through multi-institutional research projects"
+    },
+    "phd_supervision": {
+      "phd_students_supervised": "9 (Completed / Submitted / Ongoing)",
+      "masters_dissertations_guided": "105"
+    },
+    "administrative_roles": {
+      "boards_committees": "Women in Chemistry – SHE IS 75 Women in Chemistry; Featured in UNESCO publication; Board of Study Member – Institute of Hotel & Tourism Management, MDU Rohtak; Young Scientist Award – DST; Senior Research Fellowship (UGC); Junior Research Fellowship (UGC); Earthian Award (WIPRO)",
+      "professional_memberships": "Member, European Geosciences Union"
+    },
+    "web_links": {
+      "faculty_profile_page": "",
+      "google_scholar": "https://scholar.google.com/citations?user=wDBDZTQAAAAJ&hl=en",
+      "researchgate_orcid_scopus": "https://orcid.org/0000-0001-7056-1493",
+      "linkedin": "https://www.linkedin.com/in/prof-dr-kamna-sachdeva-62611034/"
+    },
+    "photo_url": "/images/supervisors/kamna-sachdeva.jpg"
+  },
   "n-jena": {
     "slug": "n-jena",
     "basic_info": {
