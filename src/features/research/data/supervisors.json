@@ -11,8 +11,8 @@
       "office_address": "DSEU HQ"
     },
     "academic_background": {
-      "highest_qualification": "Ph.D.; Post Doc (University of Massachusetts, Boston, USA)",
-      "alma_mater": "CSIR-IGIB & University of Delhi (2010)",
+      "highest_qualification": "Ph.D.\n Post Doc",
+      "alma_mater": "CSIR-IGIB\n University of Delhi\n University of Edinburgh, UK\n University of Massachusetts, Boston, USA",
       "experience_years": "25+ years"
     },
     "research_profile": {
@@ -28,12 +28,15 @@
     },
     "administrative_roles": {
       "boards_committees": "Council Member, National Commission for Allied and Healthcare Professions (NCAHP), Ministry of Health and Family Welfare (MoHFW), Government of India",
-      "professional_memberships": "Fellow, Indian Chemical Society (FICS); Chartered Chemist (CChem), Royal Society of Chemistry, London, UK; Fellow, Royal Society of Chemistry (FRSC), London, UK"
+      "professional_memberships": "Fellow Indian Chemical Society (FICS)\n Chartered Chemist (CChem), Royal Society of Chemistry, London, UK\n Fellow, Royal Society of Chemistry (FRSC), London, UK"
     },
     "web_links": {
       "faculty_profile_page": "https://dseu.ac.in/dept/67dbf40f8d17c538db566775",
       "google_scholar": "https://scholar.google.com/citations?user=68xd5s8AAAAJ&hl=en&oi=ao",
-      "researchgate_orcid_scopus": "https://orcid.org/0000-0001-7492-225X",
+      "orcid": "0000-0001-7492-225X",
+      "scopus_id": "57195371195",
+      "researcher_link": "https://www.impactio.com/researcher/gagan-dhawan",
+      "researcher_id": "AAM-5360-2020",
       "linkedin": "https://www.linkedin.com/in/gagan-dhawan-0013/"
     },
     "photo_url": "/images/supervisors/gagan-dhawan.jpg"

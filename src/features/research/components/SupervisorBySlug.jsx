@@ -170,6 +170,12 @@ const Supervisor = () => {
               {web_links.orcid && (
                 <LinkButton href={`https://orcid.org/${web_links.orcid}`}>ORCID: {web_links.orcid}</LinkButton>
               )}
+              {web_links.scopus_id && (
+                <LinkButton href={`https://www.scopus.com/authid/detail.uri?authorId=${web_links.scopus_id}`}>Scopus ID: {web_links.scopus_id}</LinkButton>
+              )}
+              {web_links.researcher_link && web_links.researcher_id && (
+                <LinkButton href={web_links.researcher_link}>Researcher ID: {web_links.researcher_id}</LinkButton>
+              )}
               {web_links.researchgate_orcid_scopus && (
                 <LinkButton href={web_links.researchgate_orcid_scopus}>ResearchGate/Scopus</LinkButton>
               )}
@@ -219,7 +225,10 @@ const DetailItem = ({ icon, label, value, link, fullWidth = false, isList = fals
       ) : isList ? (
         <p className="text-gray-700 mt-0.5 break-words italic text-sm">{value}</p>
       ) : (
-        <p className="text-gray-700 mt-0.5 font-semibold break-words">{value}</p>
+        <p className="text-gray-700 mt-0.5 font-semibold break-words whitespace-pre-line">
+          {value}
+        </p>
+
       )}
     </div>
   );
