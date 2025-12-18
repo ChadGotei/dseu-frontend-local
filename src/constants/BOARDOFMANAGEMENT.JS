@@ -1,5 +1,5 @@
 import { registarar, VC } from '../assets/advisory-board';
-import { jpSaini, deshmukh, girishKumar, vivekAggrawal, vibhakarShrimali, kamnaSachdeva, shrutiTripathi, dttesecratory, placeholder, njena, principalSecratory } from '../assets/board-of-management/boardOfManagement';
+import { jpSaini, deshmukh, girishKumar, vivekAggrawal, vibhakarShrimali, kamnaSachdeva, shrutiTripathi, dttesecratory, placeholder, njena, principalSecratory, rajivVerma, sectDtte } from '../assets/board-of-management/boardOfManagement';
 const boardOfManagement = [
     {
         id: 1,
@@ -75,10 +75,10 @@ const boardOfManagement = [
     },
     {
         id: 11,
-        name: "Ms. Nandini Paliwal",
+        name: "Sh. Pandurang K Pole, IAS",
         designation: "Secretary DTTE",
         category: "Secretaries",
-        src: dttesecratory,
+        src: sectDtte,
     }
 ];
 

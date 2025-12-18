@@ -11,5 +11,7 @@ import shrutiTripathi from './shrutiTripathi.png';
 import vibhakarShrimali from './vibhakarShrimali.jpg';
 import placeholder from './placeholder.jpg';
 import njena from './njena.jpg'
+import rajivVerma from './rajivVerma.jpg'
+import sectDtte from './sectDtte.jpg';
 
-export {njena, deshmukh, girishKumar, jpSaini, principalSecratory, secratory, drpankajlathar, dttesecratory,vivekAggrawal, vibhakarShrimali, kamnaSachdeva, shrutiTripathi, placeholder };
+export {njena, deshmukh, girishKumar, jpSaini, principalSecratory, secratory, drpankajlathar, dttesecratory,vivekAggrawal, vibhakarShrimali, kamnaSachdeva, shrutiTripathi, placeholder, rajivVerma, sectDtte };
