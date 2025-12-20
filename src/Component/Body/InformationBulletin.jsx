@@ -51,6 +51,9 @@ const InformationBulletin = () => {
   // Documents to inject manually (Admission section extras)
   const admissionManuals = [
     {
+      name: "The Spring Session admission Registration for year AY 2025-26 will be open soon."
+    },
+    {
       name: "Refund form 2025 admissions",
       link: "https://drive.google.com/file/d/1AQC5LFPX3j4B0hX7Ut1avU6n1qughj3z/view",
     },
