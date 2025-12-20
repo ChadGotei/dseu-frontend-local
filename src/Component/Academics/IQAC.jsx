@@ -131,10 +131,10 @@ const IQAC = () => {
           <p className="text-sm md:text-base text-gray-700">
             For queries, suggestions, or collaborations, reach out to the head of the committee –{" "}
             <Link
-              to="/faculty/67fcb6a3594afd76950ae309"
+              to="/faculty/67fcb6a3594afd76950ae307"
               className="text-blue-500 hover:text-blue-700"
             >
-              <span className="hover:underline">Prof. Kamna Sachdeva</span>
+              <span className="hover:underline">Prof. Dr. Gagan Dhawan</span>
             </Link>
           </p>
         </motion.div>
