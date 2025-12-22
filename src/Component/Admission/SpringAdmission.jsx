@@ -1,5 +1,5 @@
 import { useRef, useState } from "react"
-import ProgramPopup from "./UI/Programpopup"
+import ProgramPopup from "./UI/ProgramPopup";
 
 const programs = [
     {
