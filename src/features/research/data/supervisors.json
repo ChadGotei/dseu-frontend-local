@@ -1,5 +1,48 @@
 {
-    "gagan-dhawan": {
+  "anantabotla-vamsi": {
+    "slug": "anantabotla-vamsi",
+    "basic_info": {
+      "full_name": "Dr. Anantabotla Vamsi Mohan",
+      "designation": "Associate Campus Director / Lecturer",
+      "faculty": "Faculty of Allied Medical Science",
+      "department": "Medical Laboratory Science",
+      "official_email": "anantabotla.vamsimohan@dseu.ac.in",
+      "contact_number": "",
+      "office_address": "Delhi Skill and Entrepreneurship University (DSEU), Dwarka Campus, New Delhi"
+    },
+    "academic_background": {
+      "highest_qualification": "Ph.D. (Medical Microbiology)",
+      "alma_mater": "Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER), Puducherry (2020)",
+      "experience_years": "6 years"
+    },
+    "research_profile": {
+      "broad_research_areas": "Medical Microbiology, Parasitology, Mycology, Infectious Diseases",
+      "specific_research_interests": "Medical microbiology with emphasis on parasitology, mycology, and infectious diseases,\n Malaria biology, epidemiology, and drug resistance in Plasmodium vivax and Plasmodium falciparum,\n Genetic diversity and population structure of malaria parasites,\n Host–pathogen interactions in parasitic and fungal infections,\n Laboratory-based diagnosis and surveillance of infectious diseases in public health settings",
+      "publications_last_5_years": "05 peer-reviewed publications",
+      "patents": "Nil",
+      "projects": "Doctoral research on genotyping of drug-resistance genes in Plasmodium vivax isolates from different regions of India",
+      "collaborations": ""
+    },
+    "phd_supervision": {
+      "phd_students_supervised": "Completed: Nil\n Ongoing: To be updated",
+      "masters_dissertations_guided": ""
+    },
+    "administrative_roles": {
+      "boards_committees": "Associate Campus Director, DSEU Dwarka Campus,\n Lecturer, Allied Medical Science,\n Former Branch In-Charge, Medical Laboratory Technology, DSEU Dwarka Campus,\n Programme Anchor – B. Optometry Programme,\n Member, Board of Studies (BoS), Delhi Skill and Entrepreneurship University,\n Member, Board of Studies (BoS), Assam Down Town University,\n External Member, School Research Committee, Mohan Babu University,\n External Examiner for various universities across Delhi NCR and other regions",
+      "professional_memberships": ""
+    },
+    "awards_honors": {
+      "awards": "Travel Grant Awardee – ASM Microbe 2019, San Francisco, USA"
+    },
+    "web_links": {
+      "faculty_profile_page": "",
+      "google_scholar": "",
+      "researchgate_orcid_scopus": "",
+      "linkedin": ""
+    },
+    "photo_url": "/images/supervisors/a-vamsi.jpg"
+  },
+  "gagan-dhawan": {
     "slug": "gagan-dhawan",
     "basic_info": {
       "full_name": "Prof. Dr. Gagan Dhawan",

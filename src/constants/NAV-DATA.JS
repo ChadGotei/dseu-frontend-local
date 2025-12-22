@@ -52,6 +52,10 @@ export const navItems = [
     name: "Admission",
     dropdownItems: [
       {
+        name: "Spring Admission",
+        path: "/admission/spring-admission"
+      },
+      {
         name: "Admission 2025-26",
         path: "/admission",
       },

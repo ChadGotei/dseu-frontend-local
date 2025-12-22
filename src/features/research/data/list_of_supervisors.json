@@ -353,10 +353,11 @@
                 "hasData": true
             },
             {
-                "name": "Dr. A Vamsi",
+                "name": "Dr. Anantabotla Vamsi",
                 "designation": "Assistant Professor",
                 "supervisor_id": "DSEU/AMS/RS/0002",
-                "slug": "a-vamsi"
+                "slug": "anantabotla-vamsi",
+                "hasData": true
             },
             {
                 "name": "Dr. B. Shanmugasundaram",

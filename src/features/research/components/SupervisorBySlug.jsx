@@ -223,7 +223,7 @@ const DetailItem = ({ icon, label, value, link, fullWidth = false, isList = fals
           {value}
         </a>
       ) : isList ? (
-        <p className="text-gray-700 mt-0.5 break-words italic text-sm">{value}</p>
+        <p className="text-gray-700 mt-0.5 whitespace-pre-line break-words italic text-sm">{value}</p>
       ) : (
         <p className="text-gray-700 mt-0.5 font-semibold break-words whitespace-pre-line">
           {value}

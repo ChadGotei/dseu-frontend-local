@@ -7,9 +7,11 @@ const AdmissionGuidelines = lazy(() => import("../Component/Admission/AdmissionG
 const FeeRefundPolicy = lazy(() => import("../Component/Admission/FeeRefundPolicy"));
 const ProcessAndGuidelines = lazy(() => import("../Component/Admission/ProcessAndGuidelines"));
 const ExtendedBulletin = lazy(() => import("../Component/Information Bulletin/ExtendedBulletin.jsx"));
+const SpringAdmission = lazy(() => import("../Component/Admission/SpringAdmission.jsx"))
 
 export const admissionRoutes = (
   <>
+    <Route path="/admission/spring-admission" element={<SpringAdmission />} />
     <Route path="/admission" element={<AdmissionPage />} />
     <Route path="/admission/guidelines" element={<AdmissionGuidelines />} />
     <Route path="/admission/refund-policy" element={<FeeRefundPolicy />} />
