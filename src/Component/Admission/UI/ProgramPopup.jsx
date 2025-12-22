@@ -1,79 +1,82 @@
-import { useEffect, useRef } from "react";
+import React from "react";
 
 const ProgramPopup = ({ program, onClose }) => {
-    const modalContentRef = useRef(null);
-    if (!program) return null;
+  if (!program) return null;
 
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (modalContentRef.current &&
-                !modalContentRef.current.contains(event.target) 
-            ) {
-                onClose();
-            }
-        }
+  const handleApply = () => {
+    if (program.link && program.link.trim() !== "") {
+      window.open(program.link, "_blank");
+    } else {
+      alert("Application link will be available soon.");
+    }
+  };
 
-        const handleEscapeKey = (event) => {
-            if(event.key === "Escape") onClose();
-        }
+  return (
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4">
+      <div className="bg-white max-w-2xl w-full rounded-lg shadow-lg relative">
 
-        document.addEventListener("mousedown", handleClickOutside);
-        document.addEventListener("keydown", handleEscapeKey);
-
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-            document.removeEventListener("keydown", handleEscapeKey )
-        }
-    }, [onClose])
-
-    return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-            <div className="bg-white w-full max-w-lg rounded-lg shadow-xl p-6 relative animate-fadeIn"
-                ref={modalContentRef}>
-                {/* Close Button */}
-                <button
-                    onClick={onClose}
-                    className="absolute top-3 right-3 text-gray-500 hover:text-red-500 text-xl"
-                >
-                    ✕
-                </button>
-
-                {/* Content */}
-                <h2 className="text-2xl font-bold text-blue-900 mb-4">
-                    {program.name}
-                </h2>
-
-                <div className="flex flex-col gap-4 justify-center">
-                    <div className="space-y-3 text-gray-700">
-                        <p>
-                            <span className="font-semibold">About:</span>{" "}
-                            {program.about}
-                        </p>
-
-                        <p>
-                            <span className="font-semibold">Duration:</span>{" "}
-                            {program.duration}
-                        </p>
-
-                        <p>
-                            <span className="font-semibold">Eligibility:</span>{" "}
-                            {program.eligibility}
-                        </p>
-
-                        <p>
-                            <span className="font-semibold">Fees:</span>{" "}
-                            {program.fees}
-                        </p>
-                    </div>
-
-                    <button className="bg-yellow-100 w-36 mx-auto p-2 rounded-full hover:cursor-pointer  text-gray-600 border-gray-700 border shadow-sm shadow-gray-400 hover:shadow-gray-500 hover:scale-[102%] transition-scale">
-                        Apply Now
-                    </button>
-                </div>
-
-            </div>
+        {/* Header */}
+        <div className="flex justify-between items-center border-b p-4">
+          <h2 className="text-xl font-bold text-blue-900">
+            {program.name}
+          </h2>
+          <button
+            onClick={onClose}
+            className="text-gray-500 hover:text-red-600 text-2xl"
+          >
+            &times;
+          </button>
         </div>
-    )
-}
 
-export default ProgramPopup
+        {/* Body */}
+        <div className="p-5 space-y-4 text-gray-700">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <Info label="Program Level" value={program.programLevel} />
+            <Info label="Campus" value={program.campus} />
+            <Info label="Duration" value={program.duration} />
+            <Info label="Fees" value={program.fees} />
+
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-1">
+              Eligibility
+            </h3>
+            <p className="text-sm leading-relaxed whitespace-pre-line">
+              {program.eligibility || "Not specified"}
+            </p>
+          </div>
+
+        </div>
+
+        {/* Footer */}
+        <div className="flex justify-end gap-3 border-t p-4">
+          <button
+            onClick={onClose}
+            className="px-4 py-2 border rounded-md text-gray-700 hover:bg-gray-100"
+          >
+            Close
+          </button>
+          <button
+            onClick={handleApply}
+            className="px-5 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
+          >
+            Apply Now
+          </button>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+const Info = ({ label, value }) => (
+  <div>
+    <p className="text-sm text-gray-500">{label}</p>
+    <p className="font-medium">{value || "—"}</p>
+  </div>
+);
+
+export default ProgramPopup;
